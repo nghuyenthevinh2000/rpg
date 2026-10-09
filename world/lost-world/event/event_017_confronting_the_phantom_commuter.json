@@ -1,0 +1,36 @@
+{
+  "event_id": "event_017_confronting_the_phantom_commuter",
+  "name": "Confrontation of Paper and Ghost",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-10T08:45:00+07:00",
+    "world_state": "The Dissolving Friction"
+  },
+  "narrative": "Kael lunges and rips the leather briefcase from an urgent commuter on the Avenue of Closed Loops. He demands to know what she is running toward and tears the five hundred pages of obsolete restructuring briefs into the air. Instead of rage or panic, the woman blushes with timid embarrassment, murmurs an apology for being in his way, and a street sweeper drone glides forward to vacuum the fluttering paper before it even touches the asphalt.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_quiet_boulevard",
+        "ambient_tension": "The eerie non-resistance of a city where aggression is received with polite apology and debris is erased in seconds."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": -10,
+        "dissonance": 35
+      },
+      "current_location": "loc_quiet_boulevard",
+      "new_decision": {
+        "turn": 30,
+        "location": "loc_quiet_boulevard",
+        "choice_type": "confrontation_with_illusion",
+        "decision": "Snatched a commuter's briefcase and tore her obsolete corporate reports to shreds to force a genuine human clash.",
+        "impact": "Met with gentle compliance, polite apologies, and automated cleaning drones; reinforced the horror that in a post-scarcity world, aggression has no purchase."
+      }
+    }
+  ]
+}

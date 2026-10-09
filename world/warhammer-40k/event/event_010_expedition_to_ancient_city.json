@@ -1,0 +1,264 @@
+{
+  "id": "event_010_expedition_to_ancient_city",
+  "name": "Expedition into the Sunken Necropolis: Journey to the Ruined Ancient City",
+  "cycle_advancement": {
+    "day_increment": 1,
+    "timestamp": "41.999.036.M41",
+    "turn_increment": 1,
+    "world_state": "Archeotech Expedition Dispatched to Ancient City (0,0)"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_ancient_ruined_city",
+        "ambient_tension": "The forward expedition crosses the monumental basalt archway of the Sunken Necropolis. Ancient emerald sensor eyes hum to life high above in the cyclopean ruins, casting long shadows across forgotten cogitator vaults."
+      },
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "Confessor Malachi maintains holy prayer vigils at the northern gate as the expedition departs into the forgotten ruins beneath Saint Katherine's crypts."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_ancient_city_expedition_launched",
+        "title": "Archeotech Expedition into the Sunken Necropolis Launched",
+        "completed_at": "41.999.036.M41",
+        "consequence": "Sergeant Kathryn Vane led a hand-picked strike team (Bragg, Jax, and 4 veteran riflemen) with 4 days of field rations, entering the ancient ruined city at (0,0) to recover forgotten archeotech and secure survival."
+      }
+    ],
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_ancient_ruins_navigation",
+        "name": "The Silent Crypts of the First Hive",
+        "type": "archeotech_exploration_trial",
+        "threat": "The ancient city is sealed behind millennia-old logic gates, localized gravity anomalies, and dormant defense automata.",
+        "human_trial": "Navigate the forgotten corridors, avoid triggering defense grid arrays, and locate archeotech energy generators before field rations expire.",
+        "status": "active"
+      }
+    ],
+    "threat_tracking": {
+      "status": "active_monitoring",
+      "total_threats_neutralized": 49,
+      "sublevel_containment_rating": "85% Contained (FORWARD EXPEDITION DEPLOYED)",
+      "sector_threat_telemetry": {
+        "loc_ancient_ruined_city": {
+          "threat": "Dormant Pre-Imperial Defense Automata & Logic Anomalies",
+          "level": "Uncharted & Hazardous"
+        },
+        "loc_shrine_aquila": { "threat": "Sanctified (Forward Expedition Staging)", "level": "Secure" },
+        "loc_manufactorum_sigma": { "threat": "Tithe Production Maintained", "level": "Secure" },
+        "loc_cogitator_sanctum": { "threat": "Telemetry Link Monitored by Kroll", "level": "Secure" },
+        "loc_hab_block_vermin": { "threat": "Drainage Purged & Barricaded", "level": "Secured" },
+        "loc_bastion_gate": { "threat": "Redoubt Garrisoned", "level": "Secure" },
+        "loc_promethium_cistern": { "threat": "Pressure Stabilized", "level": "Guarded" },
+        "loc_underhive_threshold": { "threat": "Bulkhead Sealed 500%", "level": "Fortified" },
+        "loc_charnel_trench": { "threat": "Carcass Harvest Completed", "level": "Secured & Purged" }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 47,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Expedition Commander",
+          "status": "exploring_ancient_city"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Expedition Vanguard / Breacher",
+          "status": "exploring_ancient_city"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Master of Foundry Spirits",
+          "status": "monitoring_vox_telemetry"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "High Preceptor & Morale Officer",
+          "status": "active_bastion_oversight"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Expedition Scout & Pointman",
+          "status": "exploring_ancient_city"
+        }
+      ],
+      "sub_units": [
+        {
+          "unit_name": "Expedition Vanguard Detail (Astra Militarum)",
+          "count": 4,
+          "armament": "Kantrael Lasguns, combat shotguns, field backpacks, krak charge",
+          "morale": "Determined (90%)",
+          "station": "Sunken Necropolis forward reconnaissance (0,0)"
+        },
+        {
+          "unit_name": "4th Conscript Platoon (Base Garrison)",
+          "count": 20,
+          "armament": "Kantrael Lasguns, combat knives, scarred flak vests",
+          "morale": "Steadfast (85%)",
+          "station": "Bastion Gate Aegis & Hab-Block Vermis-9 defensive perimeter"
+        },
+        {
+          "unit_name": "Bastion Heavy Weapons Detachment",
+          "count": 6,
+          "armament": "2x Emplaced Heavy Stubbers, 1x Twin-Linked Autocannon",
+          "morale": "Disciplined (90%)",
+          "station": "Overwatch Catwalks over Underhive Threshold"
+        },
+        {
+          "unit_name": "Hive Enforcer Shock Detail",
+          "count": 12,
+          "armament": "Shock-Mauls, Suppression Shields, Combat Shotguns",
+          "morale": "Hardened (90%)",
+          "station": "Hab-Block Vermis-9 lower drainage cordon"
+        },
+        {
+          "unit_name": "Industrial Defense Servitors (Lobotomized)",
+          "count": 16,
+          "armament": "Hydraulic Claws, Rivet Guns",
+          "morale": "Absolute (Machine-bonded 100%)",
+          "station": "Manufactorum 88-Sigma staging lines"
+        }
+      ]
+    },
+    "active_resource_stockpile": {
+      "status": "active_tracking",
+      "munitions": {
+        "lasgun_charge_packs": {
+          "current": 140,
+          "unit": "standard packs (-20 allocated to expedition packs)",
+          "burn_rate_turn": 5
+        },
+        "heavy_stubber_belts": {
+          "current": 42,
+          "unit": "drum belts",
+          "burn_rate_turn": 0
+        },
+        "autocannon_magazines": {
+          "current": 12,
+          "unit": "box magazines",
+          "burn_rate_turn": 0
+        },
+        "shotgun_solid_slugs": {
+          "current": 50,
+          "unit": "rounds (-20 carried by Vane & vanguard)",
+          "burn_rate_turn": 2
+        },
+        "frag_grenades": {
+          "current": 13,
+          "unit": "canisters (-6 allocated to expedition)",
+          "burn_rate_turn": 0
+        },
+        "krak_grenades": {
+          "current": 9,
+          "unit": "charges (-2 carried for ancient blast doors)",
+          "burn_rate_turn": 0
+        }
+      },
+      "construction_and_tech": {
+        "plasteel_barricade_plates": {
+          "depot_stock": 26,
+          "committed_to_actions": 0,
+          "unit": "heavy sheets"
+        },
+        "promethium_welding_canisters": {
+          "depot_stock": 14,
+          "committed_to_actions": 0,
+          "unit": "pressurized flasks (-2 carried for cutting torches)"
+        },
+        "sacred_machine_unguent": {
+          "depot_stock": 14,
+          "unit": "vials (-2 carried by Vane for cogitator altars)"
+        },
+        "hydraulic_spare_piston_assemblies": {
+          "depot_stock": 8,
+          "unit": "assemblies"
+        },
+        "water_purification_valves": {
+          "depot_stock": 3,
+          "unit": "salvaged heavy brass valves"
+        }
+      },
+      "sustenance_and_survival": {
+        "corpse_starch_ration_bars": {
+          "current": 1150,
+          "unit": "ration blocks (-160 allocated for 4-day expedition reserves)",
+          "burn_rate_turn": 75,
+          "days_reserve": 3.6
+        },
+        "recycled_greywater_canisters": {
+          "current": 360,
+          "unit": "canteens (-60 allocated to expedition canteens)",
+          "burn_rate_turn": 35,
+          "days_reserve": 2.5
+        },
+        "grade_3_respirator_filters": {
+          "current": 16,
+          "unit": "sealed canisters (-8 fitted to expedition squad)",
+          "status": "active_in_ruins"
+        },
+        "combat_med_stims": {
+          "current": 32,
+          "unit": "injector ampoules (-8 issued to expedition team)"
+        }
+      },
+      "quarantine_logistics_alert": "EXPEDITION ACTIVE: Vanguard detachment operating in Sunken Necropolis (0,0) with 4 days of dedicated survival stores."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "physical_vitality": 5,
+        "dissonance": -5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 11,
+        "location": "loc_ancient_ruined_city",
+        "choice_type": "strategic_recon_expedition",
+        "decision": "Realizing the sub-level cannot endure prolonged attrition from future underhive waves, led Bone 'ead Bragg, Trooper Jax, and 4 veteran riflemen through the sunken catacombs beneath Saint Katherine's Basilica into the ancient ruined city at (0,0), carrying 4 days of supplies to seek archeotech power generators and lost Imperial weapon vaults.",
+        "impact": "Established forward staging camp in the Sunken Necropolis; located sealed pre-Imperial datavaults and initiated breach assessment."
+      },
+      "current_location": "loc_ancient_ruined_city"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "physical_vitality": 10,
+        "dissonance": -5
+      },
+      "new_decision": {
+        "turn": 11,
+        "location": "loc_ancient_ruined_city",
+        "choice_type": "vanguard_guard",
+        "decision": "Marched at the point of the expedition carrying the heavy field supply crate and a spare krak charge, eyes scanning the towering dark ruins for ancient traps.",
+        "impact": "Shielded the expedition party as they entered the cyclopean necropolis gates; vitality restored to 70."
+      },
+      "current_location": "loc_ancient_ruined_city"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "physical_vitality": 10,
+        "dissonance": -5
+      },
+      "new_decision": {
+        "turn": 11,
+        "location": "loc_ancient_ruined_city",
+        "choice_type": "forward_scouting",
+        "decision": "Rallied 4 veteran conscripts, fitted with grade-3 respirators, and moved ahead to mark safe footing across the crumbling ancient plasteel bridges.",
+        "impact": "Discovered an unlooted pre-Heresy maintenance conduit leading into the central cogitator spire; vitality recovered to 55."
+      },
+      "current_location": "loc_ancient_ruined_city"
+    }
+  ]
+}

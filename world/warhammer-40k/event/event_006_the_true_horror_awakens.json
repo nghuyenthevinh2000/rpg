@@ -1,0 +1,209 @@
+{
+  "id": "event_006_the_true_horror_awakens",
+  "name": "The Reckoning of the Sump: Gorgon-Prime Uncaged",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.032.M41",
+    "turn_increment": 1,
+    "world_state": "Bio-Titanic Apex Confrontation"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_charnel_trench",
+        "ambient_tension": "The subterranean floor has collapsed into a churning lake of boiling chemical sludge. A twenty-ton bio-titan rises from the abyss, shrieking in ultrasonic fury as caustic bile melts ferrocrete bulkheads like tallow."
+      }
+    ]
+  },
+  "progress_updates": {
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_boss_gorgon_matriarch",
+        "name": "The Bio-Titanic Matriarch Eruption",
+        "type": "catastrophic_apex_assault",
+        "threat": "The true Brood-Matriarch has surfaced in the Sump Charnel Ditches; 20 tons of adamantine chitin, scythe-limbs, and pressurized acid cannons.",
+        "human_trial": "Sustain heavy fire under lethal counter-attacks, crack the 70% damage reduction armor with heavy ordnance, or face complete slaughter of the garrison detachment.",
+        "status": "active"
+      }
+    ],
+    "active_combat_encounters": [
+      {
+        "encounter_id": "boss_gorgon_matriarch_prime",
+        "boss_name": "The Sump Gorgon-Gargant: Matriarch Prime",
+        "location": "loc_charnel_trench",
+        "coordinate": {
+          "row": 3,
+          "col": 3
+        },
+        "status": "active",
+        "threat_rating": "Catastrophic (Bio-Titanic Apex)",
+        "current_hp": 450,
+        "max_hp": 450,
+        "current_phase": "Phase 1: Armor Breach & Heavy Ordnance Strike",
+        "phase_progress_percentage": 0,
+        "armor_status": "Adamantine Layered Chitin (70% Damage Reduction against Las/Shotgun)",
+        "round_retaliation_damage": 35,
+        "tactical_requirements": "Requires Heavy Stubber / Autocannon sustained suppression (min 2 belts) and targeted Krak charge / Power Fist assault to crack shell before vital organs can be damaged.",
+        "failure_consequences": "Lethal impalement to engaged officers, total annihilation of conscript detachments in the sector, loss of Sump trench sector."
+      }
+    ],
+    "threat_tracking": {
+      "status": "active_monitoring",
+      "total_threats_neutralized": 48,
+      "sublevel_containment_rating": "55% Contained (ACTIVE BIO-TITAN BREACH)",
+      "kill_tally_by_type": {
+        "decoy_larval_brood_pupa": {
+          "name": "Brood-Larval Decoy Pupa",
+          "count": 1,
+          "classification": "Vanguard Flesh-Husk",
+          "threat_status": "Blown to pieces by Krak Grenade",
+          "notable_kills": [
+            "Decoy Husk: detonated by Sergeant Vane's krak charge, unmasking the True Matriarch sleeping below"
+          ]
+        },
+        "sump_sewer_scuttlers": {
+          "name": "Sump Sewer-Scuttlers",
+          "count": 42,
+          "classification": "Xenos / Underhive Mutant Swarm",
+          "threat_status": "Purged at Hab-Block Vermis-9",
+          "notable_kills": [
+            "Alpha Brood-Scuttler: bisected by Sergeant Kathryn Vane's Chainsword Mk. VII",
+            "4 Heavy Armored Scuttlers: skull-pulped by Bone 'ead Bragg's Power Fist",
+            "Drainage Swarm (37 scuttlers): concentrated lasfire and Trooper Jax's 2 frag canisters"
+          ]
+        },
+        "feral_sump_stalkers": {
+          "name": "Feral Sump Stalkers",
+          "count": 5,
+          "classification": "Mutant Infiltrator Scavengers",
+          "threat_status": "Repelled at Bulkhead 101",
+          "notable_kills": [
+            "5 forward mutant scouts picked off by Bastion Heavy Stubber overwatch during welding phase"
+          ]
+        }
+      },
+      "sector_threat_telemetry": {
+        "loc_shrine_aquila": { "threat": "Sanctified (Macro-Vox Broadcasting)", "level": "Secure" },
+        "loc_manufactorum_sigma": { "threat": "Production Surge Active", "level": "Secure" },
+        "loc_cogitator_sanctum": { "threat": "Machine Protected", "level": "Secure" },
+        "loc_hab_block_vermin": { "threat": "Drainage Purged & Barricaded", "level": "Secured" },
+        "loc_bastion_gate": { "threat": "Fortified Redoubt", "level": "Secure" },
+        "loc_promethium_cistern": { "threat": "Pressure Stabilized", "level": "Guarded" },
+        "loc_underhive_threshold": { "threat": "Bulkhead Sealed 500%", "level": "Fortified" },
+        "loc_charnel_trench": { "threat": "⚠️ BIO-TITAN MATRIARCH ENGAGED (450 HP)", "level": "Catastrophic Peril" }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 59,
+      "command_and_specialists": [
+        { "id": "player_vane", "name": "Sergeant Kathryn Vane", "role": "Garrison Commander", "status": "active_engaged" },
+        { "id": "npc_ogryn_bragg", "name": "Bone 'ead Bragg", "role": "Breacher / Heavy Shock Asset", "status": "wounded_engaged" },
+        { "id": "npc_enginseer_kroll", "name": "Enginseer Fabricator Kroll", "role": "Master of Foundry Spirits", "status": "active" },
+        { "id": "npc_confessor_malachi", "name": "Confessor Preceptor Malachi", "role": "High Preceptor & Morale Officer", "status": "active" },
+        { "id": "npc_trooper_jax", "name": "Conscript Trooper Jax", "role": "Frontline Scout / Sump Guide", "status": "pinned_engaged" }
+      ],
+      "sub_units": [
+        {
+          "unit_name": "4th Conscript Platoon (Astra Militarum)",
+          "count": 36,
+          "armament": "Kantrael Lasguns, combat knives, scarred flak vests",
+          "morale": "Terrified (55%)",
+          "station": "Hab-Block Vermis-9 & Charnel Trench rim (2 conscripts dissolved by acid blast)"
+        },
+        {
+          "unit_name": "Bastion Heavy Weapons Detachment",
+          "count": 6,
+          "armament": "2x Emplaced Heavy Stubbers, 1x Twin-Linked Autocannon",
+          "morale": "Disciplined (85%)",
+          "station": "Overwatch Catwalks over Underhive Threshold"
+        },
+        {
+          "unit_name": "Hive Enforcer Shock Detail",
+          "count": 12,
+          "armament": "Shock-Mauls, Suppression Shields, Combat Shotguns",
+          "morale": "Hardened (85%)",
+          "station": "Hab-Block Vermis-9 lower drainage cordon"
+        },
+        {
+          "unit_name": "Industrial Defense Servitors (Lobotomized)",
+          "count": 16,
+          "armament": "Hydraulic Claws, Rivet Guns",
+          "morale": "Absolute (Machine-bonded 100%)",
+          "station": "Manufactorum 88-Sigma staging lines"
+        }
+      ]
+    },
+    "active_resource_stockpile": {
+      "status": "active_tracking",
+      "munitions": {
+        "lasgun_charge_packs": { "current": 200, "unit": "standard packs (-10 panic fire)", "burn_rate_turn": 5 },
+        "heavy_stubber_belts": { "current": 47, "unit": "drum belts (-2 fired on emergence)", "burn_rate_turn": 0 },
+        "autocannon_magazines": { "current": 18, "unit": "box magazines", "burn_rate_turn": 0 },
+        "shotgun_solid_slugs": { "current": 86, "unit": "rounds (-4 deflected off armor)", "burn_rate_turn": 2 },
+        "frag_grenades": { "current": 26, "unit": "canisters", "burn_rate_turn": 0 },
+        "krak_grenades": { "current": 13, "unit": "charges (CRITICAL: Required to crack boss armor)", "burn_rate_turn": 0 }
+      },
+      "construction_and_tech": {
+        "plasteel_barricade_plates": { "depot_stock": 2, "committed_to_actions": 0, "unit": "heavy sheets" },
+        "promethium_welding_canisters": { "depot_stock": 10, "committed_to_actions": 0, "unit": "pressurized flasks" },
+        "sacred_machine_unguent": { "depot_stock": 13, "unit": "vials (Cult Mechanicus)" },
+        "hydraulic_spare_piston_assemblies": { "depot_stock": 8, "unit": "assemblies" },
+        "water_purification_valves": { "depot_stock": 3, "unit": "salvaged heavy brass valves" }
+      },
+      "sustenance_and_survival": {
+        "corpse_starch_ration_bars": { "current": 1030, "unit": "ration blocks", "burn_rate_turn": 85, "days_reserve": 3.0 },
+        "recycled_greywater_canisters": { "current": 500, "unit": "canteens", "burn_rate_turn": 40, "days_reserve": 3.1 },
+        "grade_3_respirator_filters": { "current": 24, "unit": "sealed canisters", "status": "preserved" },
+        "combat_med_stims": { "current": 33, "unit": "injector ampoules" }
+      },
+      "quarantine_logistics_alert": "CRITICAL COMBAT ALERT: Bio-Titanic apex threat engaged in Charnel Ditches. Armor-cracking weapons and heavy overwatch required immediately."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "physical_vitality": -15,
+        "dissonance": 15
+      },
+      "new_decision": {
+        "turn": 7,
+        "location": "loc_charnel_trench",
+        "choice_type": "life_or_death_crisis",
+        "decision": "Challenged the Emperor for an apex trial: discovered the destroyed beast was merely a larval decoy as the true 20-ton Brood-Matriarch erupted from the slime lake, blasting the trench with caustic bile.",
+        "impact": "Sustained 15 damage from shockwave and shrapnel; locked in life-or-death confrontation with a 450 HP Bio-Titan."
+      },
+      "current_location": "loc_charnel_trench"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "physical_vitality": -25,
+        "dissonance": 10
+      },
+      "new_decision": {
+        "turn": 7,
+        "location": "loc_charnel_trench",
+        "choice_type": "intercept_strike",
+        "decision": "Threw his colossal body in front of Sergeant Vane to take the brunt of Gorgon-Prime's acid vomit; carapace armor melted and flesh blistered.",
+        "impact": "Sustained heavy 25 damage (Vitality 120 -> 95), barely remaining on his feet."
+      },
+      "current_location": "loc_charnel_trench"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "physical_vitality": -10,
+        "dissonance": 20
+      },
+      "new_decision": {
+        "turn": 7,
+        "location": "loc_charnel_trench",
+        "choice_type": "pinned_suppression",
+        "decision": "Blasted backward into the catwalk railings by the beast's tail-lash, screaming as two conscripts beside him were dissolved into slurry.",
+        "impact": "Pinned under iron girders, lasgun power cell sparking in the mud."
+      },
+      "current_location": "loc_charnel_trench"
+    }
+  ]
+}

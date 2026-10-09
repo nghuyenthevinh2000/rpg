@@ -1,0 +1,265 @@
+{
+  "id": "event_017_the_second_charge_clash",
+  "name": "Clash of Faith and Ruin: The Second Charge Fractures Malgakor's Throne",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.043.M41",
+    "turn_increment": 1,
+    "world_state": "The Great Siege of (4,0): Lord Malgakor Mauled (7,298 / 12,500 HP)"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_chaos_stronghold",
+        "ambient_tension": "Lord Malgakor's greatsword 'Soul-Drinker' strikes the basalt courtyard with apocalyptic fury, splintering stone and boiling blood. But Sergeant Vane's Aquila Rosary blazes with pure golden light, deflecting the killing edge as plasma fire engulfs the God-Lord, ripping him down to 7,298 HP."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_chaos_god_throne_fractured",
+        "title": "Malgakor's Divine Cleave Repelled & Daemon-Throne Fractured",
+        "completed_at": "41.999.043.M41",
+        "consequence": "Sergeant Kathryn Vane led the second desperate charge: invoked the Emperor's Rosary to withstand Malgakor's 115-damage Ruin-Edge Cleave, deployed 3 emergency med-stims to save Bragg, Jax, and Kroll, and unleashed 2,407 net plasma damage, driving the God-Lord down to 7,298 / 12,500 HP."
+      }
+    ],
+    "active_combat_encounters": [
+      {
+        "encounter_id": "boss_chaos_lord_malgakor",
+        "boss_name": "Lord Malgakor the Despoiled, God-Champion of the Warp",
+        "location": "loc_chaos_stronghold",
+        "coordinate": {
+          "row": 4,
+          "col": 0
+        },
+        "status": "active",
+        "threat_rating": "DIVINE APEX (LITERAL CHAOS GOD / 12,500 HP)",
+        "current_hp": 7298,
+        "max_hp": 12500,
+        "current_phase": "Phase 3: The Bleeding Demigod & Daemonic Bloodletter Swarm (7,298 / 12,500 HP)",
+        "phase_progress_percentage": 42,
+        "armor_status": "Terminator Plate Fractured & Chipped (Warp Shielding down to 65% DR)",
+        "round_retaliation_damage": 85,
+        "tactical_requirements": "Malgakor has lost over 5,200 HP total! He is surrounded by 6 summoned Bloodletters. The Kastelan Automaton must cleave the daemon escort while Vane and Jax deliver the next plasma burst into his cracked breastplate.",
+        "failure_consequences": "Lethal wipe if the frontline falters."
+      }
+    ],
+    "threat_tracking": {
+      "status": "active_monitoring",
+      "total_threats_neutralized": 51,
+      "sublevel_containment_rating": "70% Contained (MALGAKOR BLOODIED: 5,202 TOTAL DAMAGE DEALT)",
+      "sector_threat_telemetry": {
+        "loc_chaos_stronghold": {
+          "threat": "⚠️ CHAOS GOD MALGAKOR CRITICALLY BLEEDING (7,298 / 12,500 HP)",
+          "level": "Titan-Class Bloodbath"
+        },
+        "loc_ancient_ruined_city": { "threat": "SECURED (Archeotech Looted)", "level": "Claimed & Pacified" },
+        "loc_shrine_aquila": { "threat": "Sanctified (Sol-Aegis Online)", "level": "Impenetrable Safe Zone" },
+        "loc_manufactorum_sigma": { "threat": "Tithe Production at 115% Efficiency", "level": "Secure" },
+        "loc_cogitator_sanctum": { "threat": "Machine Protected & Power Linked", "level": "Secure" },
+        "loc_hab_block_vermin": { "threat": "Defended by Enforcers", "level": "Secured" },
+        "loc_bastion_gate": { "threat": "Staging Redoubt", "level": "Fortified" },
+        "loc_promethium_cistern": { "threat": "Pressure Normalized", "level": "Secured & Sealed" },
+        "loc_underhive_threshold": { "threat": "Forward Chokepoint Active", "level": "Fortified" },
+        "loc_charnel_trench": { "threat": "Cleared Sector", "level": "Secured & Purged" }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 41,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Garrison Commander",
+          "status": "battered_heroic"
+        },
+        {
+          "id": "npc_kastelan_iron_bastion",
+          "name": "Kastelan Automaton 'Iron Bastion'",
+          "role": "Ancient Cybernetica Siege Titan (210/300 HP)",
+          "status": "cleaving_bloodletters"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Titan Breacher / Forward God-Cracker",
+          "status": "stim_surging"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Master of Foundry Spirits",
+          "status": "stim_stabilized"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "High Preceptor & Morale Officer",
+          "status": "chanting_war_prayers"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Plasma Vanguard Marksman",
+          "status": "stim_aiming"
+        }
+      ],
+      "sub_units": [
+        {
+          "unit_name": "Expedition Vanguard Detail (Astra Militarum)",
+          "count": 4,
+          "armament": "Kantrael Lasguns, Mark IV Plasma Guns, Void Carapace",
+          "morale": "Fanatical (100%)",
+          "station": "Citadel inner courtyard breach lines"
+        },
+        {
+          "unit_name": "4th Conscript Platoon (Base Garrison)",
+          "count": 9,
+          "armament": "Kantrael Lasguns, combat knives, scarred flak vests",
+          "morale": "Unshakable Martyrdom (100%)",
+          "station": "Holding courtyard choke-point (3 conscripts killed by Soul-Drinker shockwave)"
+        },
+        {
+          "unit_name": "Bastion Heavy Weapons Detachment",
+          "count": 6,
+          "armament": "2x Emplaced Heavy Stubbers, 1x Twin-Linked Autocannon",
+          "morale": "Disciplined (95%)",
+          "station": "Overwatch catwalks"
+        },
+        {
+          "unit_name": "Hive Enforcer Shock Detail",
+          "count": 12,
+          "armament": "Shock-Mauls, Suppression Shields, Combat Shotguns",
+          "morale": "Hardened (90%)",
+          "station": "Underhive threshold secondary cordon"
+        },
+        {
+          "unit_name": "Industrial Defense Servitors (Lobotomized)",
+          "count": 14,
+          "armament": "Hydraulic Claws, Rivet Guns",
+          "morale": "Absolute (Machine-bonded 100%)",
+          "station": "Hauling ammunition crates"
+        }
+      ]
+    },
+    "active_resource_stockpile": {
+      "munitions": {
+        "lasgun_charge_packs": {
+          "current": 40,
+          "unit": "standard packs (-40 expended)",
+          "burn_rate_turn": 5
+        },
+        "heavy_stubber_belts": {
+          "current": 20,
+          "unit": "drum belts (-12 expended)",
+          "burn_rate_turn": 0
+        },
+        "autocannon_magazines": {
+          "current": 0,
+          "unit": "box magazines (-6 expended into Malgakor's knees)",
+          "burn_rate_turn": 0
+        },
+        "shotgun_solid_slugs": {
+          "current": 0,
+          "unit": "rounds (-20 emptied point-blank)",
+          "burn_rate_turn": 2
+        },
+        "frag_grenades": {
+          "current": 13,
+          "unit": "canisters",
+          "burn_rate_turn": 0
+        },
+        "krak_grenades": {
+          "current": 5,
+          "unit": "charges (-6 detonated on throne pillars)",
+          "burn_rate_turn": 0
+        },
+        "heavy_bolter_drums": {
+          "current": 0,
+          "unit": "drums"
+        },
+        "mark_iv_plasma_guns": {
+          "current": 3,
+          "unit": "archeotech weapons (Overheated but functioning)"
+        }
+      },
+      "construction_and_tech": {
+        "promethium_welding_canisters": {
+          "depot_stock": 4,
+          "committed_to_actions": 0,
+          "unit": "pressurized flasks (-4 burned into daemonettes)"
+        }
+      },
+      "sustenance_and_survival": {
+        "combat_med_stims": {
+          "current": 27,
+          "unit": "injector ampoules (-3 emergency injectors slammed into Bragg, Jax, Kroll)"
+        }
+      },
+      "quarantine_logistics_alert": "GOD-SIEGE ROUND 2 VICTORY: 2,407 net damage dealt! Lord Malgakor driven down to 7,298 HP. 3 med-stims saved heroes from death."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "physical_vitality": -14,
+        "dissonance": 10
+      },
+      "new_decision": {
+        "turn": 17,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "divine_counter_charge",
+        "decision": "Charged directly through Malgakor's Ruin-Edge Cleave, holding up the Bone-Carved Aquila Rosary to deflect the killing soul-blade; slammed 3 combat med-stims into Bragg, Jax, and Kroll while ordering the plasma battery to fire into Malgakor's chest.",
+        "impact": "Saved the dying strike team from death and sheared 2,407 HP off the Chaos God (Vitality 40 -> 26)."
+      },
+      "current_location": "loc_chaos_stronghold"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "physical_vitality": 25,
+        "dissonance": -10
+      },
+      "new_decision": {
+        "turn": 17,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "stim_rebound_grapple",
+        "decision": "Felt the cold burn of the combat stim revitalize his heart; surged off the ground with a war-cry, locking his Power Fist around Malgakor's shin-guard and tearing off an entire ceramite greave.",
+        "impact": "Stabilized from death threshold (Vitality 5 -> 30), crippling Malgakor's mobility."
+      },
+      "current_location": "loc_chaos_stronghold"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "physical_vitality": 25,
+        "dissonance": -15
+      },
+      "new_decision": {
+        "turn": 17,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "plasma_retaliation_killshot",
+        "decision": "Gasping as the stim hit his bloodstream, braced his Mark IV Plasma Gun against the Kastelan's foot and delivered a maximum-power bolt into Malgakor's breastplate, blowing a smoking crater into the daemonic armor.",
+        "impact": "Stabilized from death threshold (Vitality 5 -> 30); delivered over 1,400 plasma damage."
+      },
+      "current_location": "loc_chaos_stronghold"
+    },
+    {
+      "char_file": "enginseer_kroll.json",
+      "stat_deltas": {
+        "physical_vitality": 25,
+        "dissonance": -10
+      },
+      "new_decision": {
+        "turn": 17,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "canticle_overdrive",
+        "decision": "Bypassed fried bionic relays with the medical stim, re-engaging the Kastelan Automaton's battle protocols to cleave through Malgakor's 6 summoned Bloodletters.",
+        "impact": "Stabilized from death threshold (Vitality 5 -> 30); wiped the daemon reinforcements."
+      },
+      "current_location": "loc_chaos_stronghold"
+    }
+  ]
+}

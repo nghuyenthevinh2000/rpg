@@ -1,0 +1,267 @@
+{
+  "id": "player_kael",
+  "name": "Kael",
+  "former_title": "Principal Architect & Senior Systems Engineer",
+  "current_status": "Sovereign Observer at Point Zero",
+  "archetype": "The Amputated Craftsman",
+  "symbol_alignment": "The Severance & The Relic",
+  "stats": {
+    "agency": 95,
+    "max_agency": 100,
+    "clarity": 100,
+    "dissonance": 58,
+    "physical_vitality": 100,
+    "universal_dividend_balance": 949999,
+    "punch_kinetic_impact": 25.0
+  },
+  "current_location": "loc_monastery",
+  "equipment": {
+    "hands": "Empty, warm, resting on knees",
+    "attire": "Soft wool blazer, sleeves rolled down",
+    "pocket": "Encrypted Security YubiKey (Revoked / Deprecated Role)"
+  },
+  "inventory": [
+    {
+      "item_id": "item_relic_notebook",
+      "name": "Moleskine of Optimization Proofs",
+      "description": "500 pages of manual proofs. Now observed with gentle detachment rather than phantom clinging.",
+      "symbol": "The Relic"
+    },
+    {
+      "item_id": "item_dividend_card",
+      "name": "Gold Universal Dividend Pass",
+      "description": "50,000 credits voluntarily surrendered to sever dependency.",
+      "symbol": "The Surplus"
+    }
+  ],
+  "decisions": [
+    {
+      "turn": 1,
+      "location": "loc_glass_atrium",
+      "choice_type": "dialogue_and_observation",
+      "decision": "Observe the idle citizens at the Atrium and identify the stranded master Dr. Harlan.",
+      "impact": "Established the ontological baseline of The Surplus and The Drifting Horizon."
+    },
+    {
+      "turn": 2,
+      "location": "loc_quiet_boulevard",
+      "choice_type": "encounter",
+      "decision": "Traveled to the Avenue of Closed Loops to meet Marcus and inspect his 400-page obsolete legal brief.",
+      "impact": "Confronted The Ghost-Motion; bonded over stranded competence."
+    },
+    {
+      "turn": 3,
+      "location": "loc_quiet_boulevard",
+      "choice_type": "existential_reaction",
+      "decision": "Attempted to transform into a dragon, experiencing the total lack of mythic escape in frictionless post-scarcity.",
+      "impact": "Acute dissonance spike, followed by deep grounding conversation on Zapffe's defense mechanisms."
+    },
+    {
+      "turn": 4,
+      "location": "loc_echo_plaza",
+      "choice_type": "philosophical_inquiry",
+      "decision": "Traveled to the Forum with Marcus and asked Lyra 'what is life meaning to you?'",
+      "impact": "Formulated the principle: Meaning is not a noun to find, but a verb to materialize through human sweat and presence."
+    },
+    {
+      "turn": 5,
+      "location": "loc_monastery",
+      "choice_type": "world_materialization",
+      "decision": "Founded the Monastery at (3,3) and told seekers that without finite resource conditions, even the monastery is an illusion.",
+      "impact": "Created action_conditions.json; committed the community to manual labor and thermodynamic sacrifice."
+    },
+    {
+      "turn": 6,
+      "location": "loc_monastery",
+      "choice_type": "labor_coordination",
+      "decision": "Mobilized Marcus, Lyra, and seekers into two manual resource retrieval squads: Cedar hewing in Whispering Woods and granite hauling at the Old Quarry.",
+      "impact": "Time committed surged to 54h; 16 cedar logs and 9 granite slabs hauled without anti-grav assistance; blisters, sweat, and solidarity forged."
+    },
+    {
+      "turn": 7,
+      "location": "loc_monastery",
+      "choice_type": "carpentry_and_construction",
+      "decision": "Initiated manual framing: hewed mortise-and-tenon joints into cedar timbers and erected the four foundational corner pillars of the meditation hall.",
+      "impact": "Hours committed reached 86h (70% progress); physical structure took shape without nails or automated joinery; deep communal craftsmanship achieved."
+    },
+    {
+      "turn": 8,
+      "location": "loc_monastery",
+      "choice_type": "divine_prayer_and_invocation",
+      "decision": "Prayed to the God of the Void that this world lacks element of surprise, sudden challenges, disasters, rewards, and a Game Master.",
+      "impact": "Awakened game_master.json; entropy returned; an unregulated atmospheric squall struck quadrant (3,3), delivering immediate trial and stakes."
+    },
+    {
+      "turn": 9,
+      "location": "loc_quiet_boulevard",
+      "choice_type": "point_zero_departure",
+      "decision": "Walked away from the drama of the storm, the hero complex, and the monastery project altogether. Returned to Point Zero: simple presence without needing a grand mission or an epic struggle.",
+      "impact": "Agency decoupled from performance (50/100); Dissonance reached absolute ground (5/100); Clarity became absolute (100/100). The prison door was never locked."
+    },
+    {
+      "turn": 10,
+      "location": "loc_quiet_boulevard",
+      "choice_type": "patient_observation",
+      "decision": "Waited at Point Zero throughout the night, holding space for Marcus and Lyra's autonomy, witnessing the community rise without needing a savior.",
+      "impact": "Monastery completed at 100%; Marcus, Lyra, and seekers bonded through autonomous collective triumph; Kael achieved true non-attachment."
+    },
+    {
+      "turn": 11,
+      "location": "loc_monastery",
+      "choice_type": "fellowship",
+      "decision": "Returned to the monastery courtyard to share the morning tea with Marcus and Lyra, accepting fellowship without needing a leadership role.",
+      "impact": "Inner peace deepened; community bonds solidified through shared presence."
+    },
+    {
+      "turn": 11,
+      "location": "loc_monastery",
+      "choice_type": "fellowship",
+      "decision": "Returned to the monastery courtyard to share the morning tea with Marcus and Lyra, accepting fellowship without needing a leadership role.",
+      "impact": "Inner peace deepened; community bonds solidified through shared presence."
+    },
+    {
+      "turn": 13,
+      "location": "loc_monastery",
+      "choice_type": "communal_healing",
+      "decision": "Welcomed Dr. Harlan to the hearth, offering warm tea and entrusting him with wild mountain herbs to examine and catalog by hand.",
+      "impact": "Restored dignity to stranded medical mastery; integrated diagnostic pathology back into human communal life."
+    },
+    {
+      "turn": 14,
+      "location": "loc_monastery",
+      "choice_type": "sitting_still",
+      "decision": "Sat completely still by the hearth, relinquishing all urge to manage, direct, or instruct the enclave.",
+      "impact": "Embodied the stillness of Point Zero; allowed the community to act without dependence on a founder."
+    },
+    {
+      "turn": 14,
+      "location": "loc_monastery",
+      "choice_type": "sitting_still",
+      "decision": "Sat completely still by the hearth, relinquishing all urge to manage, direct, or instruct the enclave.",
+      "impact": "Embodied the stillness of Point Zero; allowed the community to act without dependence on a founder."
+    },
+    {
+      "turn": 14,
+      "location": "loc_monastery",
+      "choice_type": "sitting_still",
+      "decision": "Sat completely still by the hearth, relinquishing all urge to manage, direct, or instruct the enclave.",
+      "impact": "Embodied the stillness of Point Zero; allowed the community to act without dependence on a founder."
+    },
+    {
+      "turn": 17,
+      "location": "loc_monastery",
+      "choice_type": "deep_stillness",
+      "decision": "Continued sitting in complete stillness with the community, allowing the silence to deepen into shared refuge.",
+      "impact": "Point Zero anchored the collective; eradicated the phantom urge to justify existence through perpetual motion."
+    },
+    {
+      "turn": 18,
+      "location": "loc_monastery",
+      "choice_type": "abiding_stillness",
+      "decision": "Maintained pure stillness as the frost rimmed the windows, neither flinching from the chill nor rushing to fix the frozen creek.",
+      "impact": "Rooted the sanctuary at Point Zero; turned endurance into a quiet, unshakeable reality."
+    },
+    {
+      "turn": 19,
+      "location": "loc_monastery",
+      "choice_type": "stubborn_immobility",
+      "decision": "Refused to move or tend the fire despite dying embers and sub-zero chill, testing the absolute biological limits of sitting still.",
+      "impact": "Suffered physical punishment of thermodynamic reality; core body temperature dropped precipitously."
+    },
+    {
+      "turn": 20,
+      "location": "loc_monastery",
+      "choice_type": "lethal_inertia",
+      "decision": "Continued sitting completely motionless in freezing temperatures, entering Stage II hypothermic delirium.",
+      "impact": "Core body temperature dropped to critical levels; saved only by the companions' fierce refusal to let anyone die."
+    },
+    {
+      "turn": 21,
+      "location": "loc_monastery",
+      "choice_type": "physical_collapse",
+      "decision": "Collapsed to the ground beside the hearth, surrendering the sovereign observer persona and allowing the community to nurse him back to life.",
+      "impact": "Shattered the subtle ego of non-attachment; experienced the profound vulnerability of receiving human love and physical care."
+    },
+    {
+      "turn": 22,
+      "location": "loc_monastery",
+      "choice_type": "patient_convalescence",
+      "decision": "Awaited the recovery of bodily warmth in quiet trust, allowing the body to heal without restless intellectualization.",
+      "impact": "Physical vitality restored to healthy baseline; grounded in living community."
+    },
+    {
+      "turn": 23,
+      "location": "loc_monastery",
+      "choice_type": "psychic_dissociation",
+      "decision": "Heard a destructive command from the void to end Marcus, lost consciousness, and grabbed the iron poker believing it was a gun.",
+      "impact": "Exposed the final psychological trap of nihilism: the desire to manufacture melodrama or bloodshed when stillness fails. Subdued without bloodshed."
+    },
+    {
+      "turn": 24,
+      "location": "loc_monastery",
+      "choice_type": "physical_assault_subdued",
+      "decision": "Attempted to hit Marcus under psychic compulsion; was promptly grappled, countered, and gently pinned to the wool mat.",
+      "impact": "Exhausted remaining manic delirium against Marcus's unbreakable survival resilience; brought physical containment."
+    },
+    {
+      "turn": 25,
+      "location": "loc_monastery",
+      "choice_type": "exhausted_struggle",
+      "decision": "Broke free from the initial grapple and landed a blow on Marcus's collarbone before being wrapped in heavy linen canvas and immobilized.",
+      "impact": "Expended all remaining manic energy; forced into complete physical sedation without causing lethal harm."
+    },
+    {
+      "turn": 26,
+      "location": "loc_monastery",
+      "choice_type": "terminal_biological_exhaustion",
+      "decision": "Attempted to break canvas bindings with final reserves of kinetic force to hit Marcus; suffered complete neuro-muscular collapse and passed out.",
+      "impact": "Exhausted all kinetic capacity; reduced to 5 vitality in a deep comatose sleep."
+    },
+    {
+      "turn": 27,
+      "location": "loc_monastery",
+      "choice_type": "deep_biological_sleep",
+      "decision": "Slept for fifteen uninterrupted hours wrapped in wool beside the embers, surrendering all remaining delusions of control to natural cellular repair.",
+      "impact": "Awoke on Day 3 completely lucid, physically restored to 70 vitality, with the fever and psychic dissociation permanently dispelled."
+    },
+    {
+      "turn": 27,
+      "location": "loc_monastery",
+      "choice_type": "deep_biological_sleep",
+      "decision": "Slept for fifteen uninterrupted hours wrapped in wool beside the embers, surrendering all remaining delusions of control to natural cellular repair.",
+      "impact": "Awoke on Day 3 completely lucid, physically restored to 70 vitality, with the fever and psychic dissociation permanently dispelled."
+    },
+    {
+      "turn": 28,
+      "location": "loc_monastery",
+      "choice_type": "existential_inquiry",
+      "decision": "Asked Aether-4 to drop a bomb on the monastery, seeking an absolute apocalyptic exit.",
+      "impact": "Confronted the core horror of The Lost World: the machine will not hurt you, fight you, or grant you an epic death. You are unconditionally cared for and entirely obsolete."
+    },
+    {
+      "turn": 29,
+      "location": "loc_quiet_boulevard",
+      "choice_type": "relapse_into_seeking",
+      "decision": "Departed the monastery, re-entering the automated city to seek a thrill or conquest capable of validating personal worth.",
+      "impact": "Re-entered the 5-stage loop of borrowed meaning (Vòng Lặp Ý Nghĩa): seeking a greater thrill/stake to escape existential insignificance."
+    },
+    {
+      "turn": 30,
+      "location": "loc_quiet_boulevard",
+      "choice_type": "confrontation_with_illusion",
+      "decision": "Snatched a commuter's briefcase and tore her obsolete corporate reports to shreds to force a genuine human clash.",
+      "impact": "Met with gentle compliance, polite apologies, and automated cleaning drones; reinforced the horror that in a post-scarcity world, aggression has no purchase."
+    },
+    {
+      "turn": 11,
+      "location": "loc_monastery",
+      "choice_type": "fellowship",
+      "decision": "Returned to the monastery courtyard to share the morning tea with Marcus and Lyra, accepting fellowship without needing a leadership role.",
+      "impact": "Inner peace deepened; community bonds solidified through shared presence."
+    }
+  ],
+  "coordinate": {
+    "row": 3,
+    "col": 3
+  }
+}

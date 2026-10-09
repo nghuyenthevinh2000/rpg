@@ -1,0 +1,147 @@
+{
+  "id": "event_004_expedition_to_charnel_ditches",
+  "name": "Descent into the Charnel Trenches & Vox to the Spire",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.030.M41",
+    "turn_increment": 1,
+    "world_state": "Sump Charnel Reconnaissance & Spire Vox Petition"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_charnel_trench",
+        "ambient_tension": "Thick sulfuric sludge and discarded machine debris. Flashlight beams cut through oily mist to reveal massive gouges torn into the ferrocrete runoff foundations—something colossal and ravenous made this its burrow."
+      }
+    ]
+  },
+  "progress_updates": {
+    "new_milestone": {
+      "milestone_id": "ms_charnel_incursion_source_discovered",
+      "title": "Charnel Trench Reconnaissance & Salvage",
+      "completed_at": "41.999.030.M41",
+      "consequence": "Sergeant Vane and Jax uncovered the lair of a subterranean Sump Carnifex-Beast driving vermin upward; salvaged 3 water purification valves and an intact heavy stubber ammo cache."
+    },
+    "threat_tracking": {
+      "status": "active_monitoring",
+      "total_threats_neutralized": 47,
+      "sublevel_containment_rating": "80% Contained (Charnel Terror Uncovered)",
+      "kill_tally_by_type": {
+        "sump_sewer_scuttlers": {
+          "name": "Sump Sewer-Scuttlers",
+          "count": 42,
+          "classification": "Xenos / Underhive Mutant Swarm",
+          "threat_status": "Purged at Hab-Block Vermis-9",
+          "notable_kills": [
+            "Alpha Brood-Scuttler: bisected by Sergeant Kathryn Vane's Chainsword Mk. VII",
+            "4 Heavy Armored Scuttlers: skull-pulped by Bone 'ead Bragg's Power Fist",
+            "Drainage Swarm (37 scuttlers): concentrated lasfire and Trooper Jax's 2 frag canisters"
+          ]
+        },
+        "feral_sump_stalkers": {
+          "name": "Feral Sump Stalkers",
+          "count": 5,
+          "classification": "Mutant Infiltrator Scavengers",
+          "threat_status": "Repelled at Bulkhead 101",
+          "notable_kills": [
+            "5 forward mutant scouts picked off by Bastion Heavy Stubber overwatch during welding phase"
+          ]
+        }
+      },
+      "sector_threat_telemetry": {
+        "loc_shrine_aquila": { "threat": "Sanctified", "level": "Secure" },
+        "loc_manufactorum_sigma": { "threat": "Industrial Hazard", "level": "Secure" },
+        "loc_cogitator_sanctum": { "threat": "Protected", "level": "Secure" },
+        "loc_hab_block_vermin": { "threat": "Drainage Purged & Barricaded", "level": "Secured" },
+        "loc_bastion_gate": { "threat": "Fortified Redoubt", "level": "Secure" },
+        "loc_promethium_cistern": { "threat": "Volatile Backpressure", "level": "Guarded" },
+        "loc_underhive_threshold": { "threat": "Bulkhead Sealed 500%", "level": "Fortified" },
+        "loc_charnel_trench": { "threat": "Great Sump Horror Sighted (Unpurged)", "level": "Extreme Danger" }
+      }
+    },
+    "active_resource_stockpile": {
+      "status": "active_tracking",
+      "munitions": {
+        "lasgun_charge_packs": { "current": 215, "unit": "standard packs", "burn_rate_turn": 5 },
+        "heavy_stubber_belts": { "current": 49, "unit": "drum belts (+4 salvaged from trench)", "burn_rate_turn": 0 },
+        "autocannon_magazines": { "current": 18, "unit": "box magazines", "burn_rate_turn": 0 },
+        "shotgun_solid_slugs": { "current": 100, "unit": "rounds", "burn_rate_turn": 2 },
+        "frag_grenades": { "current": 26, "unit": "canisters", "burn_rate_turn": 0 },
+        "krak_grenades": { "current": 14, "unit": "charges", "burn_rate_turn": 0 }
+      },
+      "construction_and_tech": {
+        "plasteel_barricade_plates": { "depot_stock": 2, "committed_to_actions": 0, "unit": "heavy sheets" },
+        "promethium_welding_canisters": { "depot_stock": 10, "committed_to_actions": 0, "unit": "pressurized flasks" },
+        "sacred_machine_unguent": { "depot_stock": 13, "unit": "vials (Cult Mechanicus)" },
+        "hydraulic_spare_piston_assemblies": { "depot_stock": 8, "unit": "assemblies" },
+        "water_purification_valves": { "depot_stock": 3, "unit": "salvaged heavy brass valves" }
+      },
+      "sustenance_and_survival": {
+        "corpse_starch_ration_bars": { "current": 1115, "unit": "ration blocks", "burn_rate_turn": 85, "days_reserve": 3.1 },
+        "recycled_greywater_canisters": { "current": 540, "unit": "canteens", "burn_rate_turn": 40, "days_reserve": 3.3 },
+        "grade_3_respirator_filters": { "current": 24, "unit": "sealed canisters", "status": "preserved" },
+        "combat_med_stims": { "current": 33, "unit": "injector ampoules" }
+      },
+      "quarantine_logistics_alert": "Spire HQ denies immediate supply hauler dispatch due to quarantine edict. Corpse-starch reserves at 3.1 days; emergency local rendering or tithe compliance required."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 5,
+        "location": "loc_charnel_trench",
+        "choice_type": "recon_investigation",
+        "decision": "Descended into the toxic Sump Charnel Ditches with Jax and Bragg while petitioning Spire HQ via Kroll's vox link; uncovered the nest of a massive burrowing sump predator and secured salvage.",
+        "impact": "Pinpointed the root cause of the incursion and recovered critical Munitorum stubber ammo and water valves."
+      },
+      "current_location": "loc_charnel_trench"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 5,
+        "location": "loc_charnel_trench",
+        "choice_type": "sump_scouting",
+        "decision": "Guided the Sergeant through the sludge shoals and sniffed out an abandoned Munitorum locker containing 4 heavy stubber belts and 3 brass valves.",
+        "impact": "Boosted garrison heavy ammo reserves and located the predator's toxic slime trail."
+      },
+      "current_location": "loc_charnel_trench"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "agency": 5
+      },
+      "new_decision": {
+        "turn": 5,
+        "location": "loc_charnel_trench",
+        "choice_type": "bodyguard_vigilance",
+        "decision": "Waded waist-deep in toxic run-off to haul the iron salvage locker back to safety, growling at the dark vents.",
+        "impact": "Secured the salvage point and shielded the squad from subterranean ambushes."
+      },
+      "current_location": "loc_charnel_trench"
+    },
+    {
+      "char_file": "enginseer_kroll.json",
+      "stat_deltas": {
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 5,
+        "location": "loc_cogitator_sanctum",
+        "choice_type": "astropathic_vox_petition",
+        "decision": "Opened encrypted binharic channel to Spire High Command requesting munition and ration relief.",
+        "impact": "High Command refused direct transport due to orbital quarantine, but promised a relief drop if Level 404 completes its upcoming macro-cannon shell quota."
+      }
+    }
+  ]
+}

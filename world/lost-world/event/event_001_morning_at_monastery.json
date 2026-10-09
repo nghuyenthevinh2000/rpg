@@ -1,0 +1,70 @@
+{
+  "id": "event_001_morning_at_monastery",
+  "name": "The Gathering at the Hearth",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "2026-10-09T07:30:00+07:00",
+    "turn_increment": 1,
+    "world_state": "The Warmth of Fellowship"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "The fragrance of boiled cedar tea and freshly baked bread; a living sanctuary where tired citizens learn to sit together."
+      }
+    ]
+  },
+  "progress_updates": {
+    "new_milestone": {
+      "milestone_id": "ms_hearth_consecrated",
+      "title": "First Communal Meal",
+      "completed_at": "2026-10-09T07:30:00+07:00",
+      "consequence": "Manual sustenance proven viable; 12 citizens partake in food prepared entirely by hand."
+    },
+    "clear_active_disasters": true
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": 5,
+        "dissonance": -2,
+        "physical_vitality": 3
+      },
+      "new_decision": {
+        "turn": 11,
+        "location": "loc_monastery",
+        "choice_type": "fellowship",
+        "decision": "Returned to the monastery courtyard to share the morning tea with Marcus and Lyra, accepting fellowship without needing a leadership role.",
+        "impact": "Inner peace deepened; community bonds solidified through shared presence."
+      },
+      "current_location": "loc_monastery"
+    },
+    {
+      "char_file": "marcus.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 2,
+        "dissonance": -2
+      },
+      "new_decision": {
+        "turn": 11,
+        "decision": "Poured hand-boiled tea for Kael, marking the official opening of the Monastery of the Unplugged Lantern.",
+        "impact": "Former litigator fully transitions to hospitable keeper."
+      }
+    },
+    {
+      "char_file": "lyra.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 2
+      },
+      "new_decision": {
+        "turn": 11,
+        "decision": "Inscribed the first verse of the Monastery Chronicle onto a seasoned cedar tablet.",
+        "impact": "Literature anchored to living community rather than digital voids."
+      }
+    }
+  ]
+}

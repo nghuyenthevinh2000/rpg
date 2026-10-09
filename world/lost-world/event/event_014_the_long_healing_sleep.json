@@ -1,0 +1,85 @@
+{
+  "event_id": "event_014_the_long_healing_sleep",
+  "name": "The Great Unconscious Renewal",
+  "cycle_advancement": {
+    "day_increment": 1,
+    "turn_increment": 1,
+    "timestamp": "2026-10-10T06:30:00+07:00",
+    "world_state": "The Morning of the Mended Hearth"
+  },
+  "narrative": "Kael sleeps deeply for fifteen uninterrupted hours beside the warm granite hearth. The heavy canvas bindings are loosened by Dr. Harlan once the fever breaks. As sleep purges neural inflammation, the body does its ancient cellular work: glycogen stores replenish, cardiovascular rhythms normalize, and delirium evaporates into thin mountain dawn. Marcus keeps the fire stoked with dry cedar splits all night, and Lyra boils fresh tea. Day 3 breaks over quadrant (3,3) in quiet, restorative light.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "Golden morning light filters through the cedar eaves; the smell of baking hand-milled flatbread and steeped spruce tea fills the warm, peaceful sanctuary."
+      }
+    ]
+  },
+  "progress_updates": {
+    "clear_active_disasters": true,
+    "completed_milestone": {
+      "milestone_id": "ms_fever_and_struggle_overcome",
+      "title": "Purging of the Void & Communal Forgiveness",
+      "completed_at": "2026-10-10T06:30:00+07:00",
+      "consequence": "The psychotic delirium of the Void is purged through natural biological sleep and unconditional communal fellowship. The Salt & Spark crisis is contained by Marcus's continuous hearth watch."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": 40,
+        "clarity": 10,
+        "dissonance": -2,
+        "physical_vitality": 65
+      },
+      "new_decision": {
+        "turn": 27,
+        "location": "loc_monastery",
+        "choice_type": "deep_biological_sleep",
+        "decision": "Slept for fifteen uninterrupted hours wrapped in wool beside the embers, surrendering all remaining delusions of control to natural cellular repair.",
+        "impact": "Awoke on Day 3 completely lucid, physically restored to 70 vitality, with the fever and psychic dissociation permanently dispelled."
+      }
+    },
+    {
+      "char_file": "marcus.json",
+      "stat_deltas": {
+        "agency": 10,
+        "clarity": 5,
+        "physical_vitality": 35
+      },
+      "new_decision": {
+        "turn": 27,
+        "decision": "Kept the night watch alone, tending the fire and baking flatbread on hot hearth stones for Kael and Lyra.",
+        "impact": "Collarbone bruise bound and healing; vitality restored to 60 through food and fire."
+      }
+    },
+    {
+      "char_file": "lyra.json",
+      "stat_deltas": {
+        "agency": 10,
+        "clarity": 5,
+        "physical_vitality": 35
+      },
+      "new_decision": {
+        "turn": 27,
+        "decision": "Rested peacefully by the hearth wall through the night, waking early to steep spruce tips and spring meltwater.",
+        "impact": "Vitality restored to 60; spirit clear and calm."
+      }
+    },
+    {
+      "char_file": "dr_harlan.json",
+      "stat_deltas": {
+        "agency": 10,
+        "clarity": 5,
+        "physical_vitality": 35
+      },
+      "new_decision": {
+        "turn": 27,
+        "decision": "Unbound Kael's canvas wraps at midnight after checking pulse and respiration, confirming complete neurological recovery.",
+        "impact": "Witnessed the triumph of natural restorative medicine."
+      }
+    }
+  ]
+}

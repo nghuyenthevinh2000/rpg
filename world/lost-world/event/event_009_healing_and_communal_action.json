@@ -1,0 +1,86 @@
+{
+  "event_id": "event_009_healing_and_communal_action",
+  "name": "The Convalescence & The Shared Sledge",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-09T13:30:00+07:00",
+    "world_state": "Convalescence beside the Living Flame"
+  },
+  "narrative": "Kael lies still, awaiting the return of physical strength. While he rests under the wool blankets, Marcus and Lyra refuse to let the freeze claim their drinking water. Equipped with iron chisels and a wooden sledge, they trek to the frozen runoff, break the surface ice by hand, and haul back thirty gallons of crystal-clear mountain water to boil over the hearth.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "The roar of the hearth fire fills the hall; clay jars of boiling meltwater steam merrily beside the drying herbal bundles."
+      }
+    ]
+  },
+  "progress_updates": {
+    "clear_active_disasters": true,
+    "completed_milestone": {
+      "milestone_id": "ms_ice_harvest_accomplished",
+      "title": "Manual Ice & Water Harvest",
+      "completed_at": "2026-10-09T13:30:00+07:00",
+      "consequence": "The Silent Freeze at the Runoff overcome through physical communal labor; thirty gallons of potable water secured."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": 10,
+        "clarity": 5,
+        "dissonance": -3,
+        "physical_vitality": 20
+      },
+      "new_decision": {
+        "turn": 22,
+        "location": "loc_monastery",
+        "choice_type": "patient_convalescence",
+        "decision": "Awaited the recovery of bodily warmth in quiet trust, allowing the body to heal without restless intellectualization.",
+        "impact": "Physical vitality restored to healthy baseline; grounded in living community."
+      }
+    },
+    {
+      "char_file": "marcus.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 2,
+        "dissonance": -1,
+        "physical_vitality": 5
+      },
+      "new_decision": {
+        "turn": 22,
+        "decision": "Hauled a timber sledge to the frozen runoff with Lyra, chiseling through six inches of creek ice to harvest water blocks.",
+        "impact": "Secured winter hydration for the sanctuary through physical sweat."
+      }
+    },
+    {
+      "char_file": "lyra.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 2,
+        "physical_vitality": 5
+      },
+      "new_decision": {
+        "turn": 22,
+        "decision": "Assisted in hauling ice blocks, stacking them beside the hearth, and boiling water for herbal teas and communal stew.",
+        "impact": "Turned an environmental threat into communal nourishment."
+      }
+    },
+    {
+      "char_file": "dr_harlan.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 2,
+        "physical_vitality": 5
+      },
+      "new_decision": {
+        "turn": 22,
+        "decision": "Kept watch over Kael's vitals, changing warm stone compresses and administering warm pine-needle decoction.",
+        "impact": "Witnessed the patient cross back into vigorous physiological equilibrium."
+      }
+    }
+  ]
+}

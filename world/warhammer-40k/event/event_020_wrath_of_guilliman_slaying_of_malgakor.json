@@ -1,0 +1,192 @@
+{
+  "id": "event_020_wrath_of_guilliman_slaying_of_malgakor",
+  "name": "The Wrath of Guilliman: Slaying and Banishment of Lord Malgakor",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.046.M41",
+    "turn_increment": 1,
+    "world_state": "Lord Malgakor Slain & Banished — Sub-Level 404 Liberated by the Ultramarines"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_chaos_stronghold",
+        "ambient_tension": "The dread citadel of the Ruinous Powers has been completely shattered. The foul carcass of Lord Malgakor the Despoiled has dissolved into howling black smoke and boiling ash, banished into the Warp. Two drop-pods bearing the golden Ultima of Macragge rest in the crater, their Deathwind missile pods still smoking. Captain Severus stands atop the broken throne, Gladius of Macragge sheathed, as the area is consecrated in the Emperor's name."
+      },
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The Basilica of Saint Katherine's Tears blazes with golden lumen light. The Sol-Aegis Plasma Reactor hums in harmonic purity. Confessor Malachi leads the garrison and surviving workers in the Litany of Deliverance, declaring an eternal feast day for the four fallen martyrs of Sub-Level 404."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_chaos_god_malgakor_exterminated",
+        "title": "The Slaying of Lord Malgakor the Despoiled (Wrath of Guilliman)",
+        "completed_at": "41.999.046.M41",
+        "consequence": "Captain Severus and the Ultramarines 2nd Company struck with transhuman wrath. In coordinated assault with the Kastelan Automaton 'Iron Bastion' and the Basilica's overcharged macro-cannons, they dealt 6,240.8 net damage, obliterating the Chaos God-Champion's physical form and banishing his foul essence from Hive Tartarus."
+      },
+      {
+        "milestone_id": "ms_martyrs_of_404_canonized",
+        "title": "Canonization of the Four Martyrs of Sub-Level 404",
+        "completed_at": "41.999.046.M41",
+        "consequence": "Sergeant Kathryn Vane, Bone 'ead Bragg, Conscript Trooper Jax, and Enginseer Fabricator Kroll are officially entered into the Roll of Imperial Martyrs by Confessor Malachi and Captain Severus."
+      }
+    ],
+    "active_disasters_and_trials": [],
+    "active_combat_encounters": [
+      {
+        "encounter_id": "boss_chaos_lord_malgakor",
+        "boss_name": "Lord Malgakor the Despoiled, God-Champion of the Warp",
+        "location": "loc_chaos_stronghold",
+        "coordinate": {
+          "row": 4,
+          "col": 0
+        },
+        "status": "slain",
+        "threat_rating": "EXTERMINATUS COMPLETE (CHAOS GOD BANISHED)",
+        "current_hp": 0,
+        "max_hp": 12500,
+        "current_phase": "Decapitation Strike Complete: Slain by Captain Severus & Ultramarines",
+        "phase_progress_percentage": 100,
+        "armor_status": "Vaporized and Shattered",
+        "round_retaliation_damage": 0,
+        "tactical_requirements": "Threat obliterated. Citadel consecrated under Chapter authority.",
+        "failure_consequences": "None. Full victory achieved."
+      }
+    ],
+    "threat_tracking": {
+      "status": "pacified_and_secured",
+      "total_threats_neutralized": 52,
+      "sublevel_containment_rating": "100% CONTAINED // SUB-LEVEL 404 LIBERATED",
+      "sector_threat_telemetry": {
+        "loc_chaos_stronghold": {
+          "threat": "CLEANSED & CONSECRATED (Ultramarines Forward LZ)",
+          "level": "Secure / Transhuman Bastion"
+        },
+        "loc_ancient_ruined_city": {
+          "threat": "SECURED (Archeotech Looted)",
+          "level": "Claimed & Pacified"
+        },
+        "loc_shrine_aquila": {
+          "threat": "Sanctified (Confessor Malachi & Sol-Aegis Beacon Active)",
+          "level": "Impenetrable Bastion"
+        },
+        "loc_manufactorum_sigma": {
+          "threat": "Tithe Production at 115% Efficiency",
+          "level": "Secure"
+        },
+        "loc_cogitator_sanctum": {
+          "threat": "Machine Protected & Linked",
+          "level": "Secure"
+        },
+        "loc_hab_block_vermin": {
+          "threat": "Citizens Rejoicing",
+          "level": "Safe & Restored"
+        },
+        "loc_bastion_gate": {
+          "threat": "Astartes Sentry Guarding Perimeter",
+          "level": "Heavy Defense"
+        },
+        "loc_promethium_cistern": {
+          "threat": "Pressure Stabilized",
+          "level": "Secured & Sealed"
+        },
+        "loc_underhive_threshold": {
+          "threat": "Bulkhead Sealed 500%",
+          "level": "Fortified"
+        },
+        "loc_charnel_trench": {
+          "threat": "Cleared Sector",
+          "level": "Secured & Purged"
+        }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 45,
+      "command_and_specialists": [
+        {
+          "id": "npc_captain_severus",
+          "name": "Captain Severus",
+          "role": "Ultramarines 2nd Company Strike Commander",
+          "status": "operational_victorious (123/135 HP)"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "Acting Garrison Commander & High Preceptor",
+          "status": "administering_sacrament_of_victory (80/80 HP)"
+        },
+        {
+          "id": "npc_kastelan_iron_bastion",
+          "name": "Kastelan Automaton 'Iron Bastion'",
+          "role": "Ancient Cybernetica Siege Titan (148/300 HP)",
+          "status": "consecrated_mechanicus_hero"
+        },
+        {
+          "id": "npc_terminator_veterans",
+          "name": "Terminator Sergeant Cassian & Veterans",
+          "role": "First Company Shock Squad (138/150 HP)",
+          "status": "securing_perimeter"
+        },
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Garrison Commander",
+          "status": "KIA / MARTYRED IN GLORY (CANONIZED)"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Titan Breacher / Bodyguard",
+          "status": "KIA / MARTYRED IN GLORY (CANONIZED)"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Master of Foundry Spirits",
+          "status": "KIA / MARTYRED IN GLORY (CANONIZED)"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Plasma Vanguard Marksman",
+          "status": "KIA / MARTYRED IN GLORY (CANONIZED)"
+        }
+      ]
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "confessor_malachi.json",
+      "stat_deltas": {
+        "clarity": 5,
+        "agency": 5,
+        "dissonance": -15
+      },
+      "new_decision": {
+        "turn": 20,
+        "location": "loc_shrine_aquila",
+        "choice_type": "triumphant_benediction",
+        "decision": "Witnessed the descent of the Angels of Death and the total banishment of Lord Malgakor; proclaimed the miraculous victory across Sub-Level 404, ordered the bells of Saint Katherine rung in eternal joy, and officially consecrated the four martyrs into the Imperial Martyrology.",
+        "impact": "Sub-Level 404 restored to absolute Imperial faith; civilian morale and tithe commitment reach historic zenith."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "captain_severus.json",
+      "stat_deltas": {
+        "physical_vitality": -12
+      },
+      "new_decision": {
+        "turn": 20,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "decapitation_of_chaos_god",
+        "decision": "Executed drop-pod assault 'Wrath of Guilliman' into the dread citadel, parried Malgakor's daemonic blade, and drove the Gladius of Macragge through the beast's black heart, banishing the Chaos God forever.",
+        "impact": "Decapitation strike successful; Lord Malgakor banished and Sub-Level 404 secured for the Imperium."
+      },
+      "current_location": "loc_chaos_stronghold"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "event_id": "event_016_seeking_the_outside_thrill",
+  "name": "The Departure into the Endless Loop",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-10T08:30:00+07:00",
+    "world_state": "The Illusion of the Next Horizon"
+  },
+  "narrative": "Kael turns his back on the humble hearth of quadrant (3,3) and walks out toward the Avenue of Closed Loops (loc_quiet_boulevard), driven by the compulsion to seek a thrill that validates his worth. Marcus, Lyra, and Harlan watch him go with gentle understanding rather than resistance. Outside, the gleaming autonomous pods glide silently past, tailored professionals march with obsolete blueprints, and the world offers limitless spectacle without a single consequence.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_quiet_boulevard",
+        "ambient_tension": "The brisk rush of phantom commuters seeking meaning through motion; immaculate asphalt offering zero resistance to the searching footstep."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": 10,
+        "dissonance": 25
+      },
+      "current_location": "loc_quiet_boulevard",
+      "new_decision": {
+        "turn": 29,
+        "location": "loc_quiet_boulevard",
+        "choice_type": "relapse_into_seeking",
+        "decision": "Departed the monastery, re-entering the automated city to seek a thrill or conquest capable of validating personal worth.",
+        "impact": "Re-entered the 5-stage loop of borrowed meaning (Vòng Lặp Ý Nghĩa): seeking a greater thrill/stake to escape existential insignificance."
+      }
+    },
+    {
+      "char_file": "marcus.json",
+      "new_decision": {
+        "turn": 29,
+        "decision": "Stood by the wooden gate, watching Kael leave down the avenue, keeping the lantern lit and the hearth ready for whenever he returns.",
+        "impact": "Refused to chase or condemn; preserved the sanctuary as an open refuge."
+      }
+    }
+  ]
+}

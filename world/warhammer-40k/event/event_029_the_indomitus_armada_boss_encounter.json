@@ -1,0 +1,88 @@
+{
+  "id": "event_029_the_indomitus_armada_boss_encounter",
+  "name": "The Siege of the Ten Titans: The Indomitus Chapter Fleet Boss Engagement",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.055.M41",
+    "turn_increment": 1,
+    "world_state": "Fleet Encounter Active: Kathryn Vane Faces the 100,000 HP Ultramarines Armada"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_orbital_fleet_killzone",
+        "ambient_tension": "The orbital horizon is an unbroken wall of ceramite, macro-battery barrels, and blue void shields. 10 Ultramarines capital warships—bearing 100,000 combined structural HP and hundreds of lance batteries—aim their broadsides straight down into Hive Tartarus."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_chapter_fleet_engaged",
+        "title": "The Full Chapter Fleet Encounter Formally Engaged",
+        "completed_at": "41.999.055.M41",
+        "consequence": "Kathryn Vane, The Void Ascendant, scanned the heavens and identified the combined might of the Ultramarines Indomitus Retribution Fleet: a staggering 100,000 HP armada commanded by First Captain Agemman, armed with cyclonic planet-killer torpedoes."
+      }
+    ],
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_the_fleet_blockade_clash",
+        "name": "The Siege of the Ten Titans (Armada vs Void Avatar)",
+        "type": "planetary_fleet_siege",
+        "threat": "The Ultramarines Chapter Armada (100,000 HP, 10 Capital Ships) is preparing a simultaneous cyclonic broadside to annihilate Hive Tartarus and Kathryn Vane.",
+        "human_trial": "Break through the orbital void shields and systematically dismantle the Chapter Fleet using the combined apocalyptic might of the Void Singularity and Lord Malgakor's immortal essence.",
+        "status": "active"
+      }
+    ],
+    "threat_tracking": {
+      "status": "fleet_boss_encounter_active",
+      "total_threats_neutralized": 54,
+      "sublevel_containment_rating": "⚠️ CHAPTER-LEVEL EXTINCTION THREAT // 100,000 HP ARMADA LOCKED",
+      "sector_threat_telemetry": {
+        "loc_orbital_fleet_killzone": {
+          "threat": "⚠️ ULTRAMARINES INDOMITUS ARMADA (100,000 HP / 10 WARSHIPS)",
+          "level": "Chapter-Strength Bio-Void Apex"
+        },
+        "loc_shrine_aquila": {
+          "threat": "👑 KATHRYN VANE (528 HP) // VOID SINGULARITY READY",
+          "level": "Ascended Avatar Bastion"
+        }
+      }
+    },
+    "active_combat_encounters": [
+      {
+        "encounter_id": "boss_ultramarines_indomitus_armada",
+        "boss_name": "The Ultramarines Indomitus Retribution Armada (10 Capital Warships)",
+        "location": "loc_orbital_fleet_killzone",
+        "coordinate": {
+          "row": 0,
+          "col": 4
+        },
+        "status": "active",
+        "threat_rating": "CHAPTER-STRENGTH FLEET APEX (100,000 HP ARMADA)",
+        "current_hp": 100000,
+        "max_hp": 100000,
+        "current_phase": "Phase 1: Orbital Macro-Battery & Cyclonic Torpedo Bombardment Grid (100,000 / 100,000 HP)",
+        "phase_progress_percentage": 0,
+        "armor_status": "Overlapping Chapter Void Shields (75% Damage Reduction)",
+        "round_retaliation_damage": 250,
+        "tactical_requirements": "The armada possesses 100,000 HP behind layered void shields. The Void Ascendant must unleash planetary-scale void singularities, shatter their void shields, or board the flagship 'Pride of Macragge' to decapitate First Captain Agemman.",
+        "failure_consequences": "Total glassing of Hive Tartarus by cyclonic torpedoes."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {},
+      "new_decision": {
+        "turn": 30,
+        "location": "loc_shrine_aquila",
+        "choice_type": "targeting_the_100k_fleet",
+        "decision": "Scanned the tactical auspex and map to assess the approaching Chapter armada: ten capital warships with over 100,000 combined HP and massive planet-cleaving firepower; stood firm atop the floating Basilica ruins, channeling the full abyssal power of Malgakor to wage war against the entire fleet.",
+        "impact": "Engaged the 100,000 HP Ultramarines Armada in direct, apocalyptic combat."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

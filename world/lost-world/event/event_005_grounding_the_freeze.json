@@ -1,0 +1,63 @@
+{
+  "event_id": "event_005_grounding_the_freeze",
+  "name": "The Stillness Meets the Cold",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-09T10:30:00+07:00",
+    "world_state": "The Threshold of Natural Cold"
+  },
+  "narrative": "Kael continues to sit unmoving. The mountain frost deepens, freezing the stone creek at the boundary. The cold enters the meditation hall, touching the skin of the four companions. In their shared stillness, the cold is not treated as a defect to be eliminated by technology, but as a plain physical reality to be met when ready.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "A crystalline chill clings to the eaves; the hearth embers glow like a solitary star against the encroaching mountain frost."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": 0,
+        "clarity": 0,
+        "dissonance": 0,
+        "physical_vitality": 1
+      },
+      "new_decision": {
+        "turn": 18,
+        "location": "loc_monastery",
+        "choice_type": "abiding_stillness",
+        "decision": "Maintained pure stillness as the frost rimmed the windows, neither flinching from the chill nor rushing to fix the frozen creek.",
+        "impact": "Rooted the sanctuary at Point Zero; turned endurance into a quiet, unshakeable reality."
+      }
+    },
+    {
+      "char_file": "marcus.json",
+      "stat_deltas": {
+        "agency": 1,
+        "clarity": 1,
+        "dissonance": -1
+      },
+      "new_decision": {
+        "turn": 18,
+        "decision": "Pulled his woolen collar closer, remaining seated beside Kael, feeling the genuine bite of cold without panic.",
+        "impact": "Traded the artificial numbness of post-scarcity for raw biological presence."
+      }
+    },
+    {
+      "char_file": "dr_harlan.json",
+      "stat_deltas": {
+        "agency": 1,
+        "clarity": 1,
+        "dissonance": -2
+      },
+      "new_decision": {
+        "turn": 18,
+        "decision": "Watched frost crystallize on the window frame, observing the physiological response of his own shivering body with calm curiosity.",
+        "impact": "Reclaimed the physician's intimate relationship with mortal vulnerability."
+      }
+    }
+  ]
+}

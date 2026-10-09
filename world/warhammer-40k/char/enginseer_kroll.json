@@ -1,0 +1,120 @@
+{
+  "id": "npc_enginseer_kroll",
+  "name": "Enginseer Fabricator Kroll",
+  "title": "Adept of the Cult Mechanicus / Master of the Foundry Spirits",
+  "archetype": "The Augmented Tech-Priest",
+  "current_status": "KIA / PURGED BY ASTARTES SANCTION",
+  "race": "mechanicus_cyborg",
+  "current_location": "loc_shrine_aquila",
+  "coordinate": {
+    "row": 1,
+    "col": 1
+  },
+  "stats": {
+    "strength": 75,
+    "agility": 30,
+    "physical_vitality": 0,
+    "agency": 80,
+    "clarity": 155,
+    "psychic_aptitude": 0,
+    "dissonance": 50,
+    "punch_kinetic_impact": 77.0,
+    "applied_equipment_modifiers": {
+      "strength": 25,
+      "clarity": 40,
+      "physical_vitality": 10,
+      "agency": -5
+    }
+  },
+  "traits": [
+    {
+      "trait_id": "trait_bionic_endurance",
+      "name": "Augmetic Flesh-Replacement"
+    },
+    {
+      "trait_id": "trait_cold_logic",
+      "name": "Cold Logic (Cant Mechanicus)"
+    },
+    {
+      "trait_id": "trait_necrodermis_cellular_weave",
+      "name": "Necrodermis Chrono-Weave (The Silent King's Grace)"
+    }
+  ],
+  "equipment": {
+    "primary": "item_omnissian_power_axe",
+    "attire": "item_tech_robes_lead",
+    "cybernetics": "item_cortex_implant"
+  },
+  "decisions": [
+    {
+      "turn": 1,
+      "location": "loc_cogitator_sanctum",
+      "choice_type": "techno_ritual",
+      "decision": "Applied blessed unguent #44 to the cooling manifolds of the primary shell-press cogitators.",
+      "impact": "Prevented thermal overload and preserved manufacturing output."
+    },
+    {
+      "turn": 2,
+      "location": "loc_cogitator_sanctum",
+      "choice_type": "machine_rite",
+      "decision": "Transmitted thermal-weld sacrifice subroutines to Servitors 09 & 14 to crush the sulfur bypass valve shut, then blessed the plasma cutters at Bulkhead 101 with sacred unguent #44.",
+      "impact": "Eliminated the toxic leak with optimal resource economy and doubled bulkhead welding rate."
+    },
+    {
+      "turn": 5,
+      "location": "loc_cogitator_sanctum",
+      "choice_type": "astropathic_vox_petition",
+      "decision": "Opened encrypted binharic channel to Spire High Command requesting munition and ration relief.",
+      "impact": "High Command refused direct transport due to orbital quarantine, but promised a relief drop if Level 404 completes its upcoming macro-cannon shell quota."
+    },
+    {
+      "turn": 6,
+      "location": "loc_manufactorum_sigma",
+      "choice_type": "tithe_acceleration",
+      "decision": "Utilized command autonomy to integrate salvaged brass water valves into the shell-press cooling lines, accelerating the second macro-shell tithe batch by 30%.",
+      "impact": "Brought the level within reach of earning the Spire's emergency supply drop."
+    },
+    {
+      "turn": 14,
+      "location": "loc_promethium_cistern",
+      "choice_type": "autonomous_techno_triumph",
+      "decision": "Communed with the newly bound Kastelan Automaton, directing it to form a thermal shield wedge against the 2,000-degree promethium jet; sacrificed 2 defense servitors to clamp the flange, and manually quenched the isolation valve with sacred unguents.",
+      "impact": "Single-handedly saved Sub-Level 404 from catastrophic explosion; restored full fuel stability and elevated sector containment to 98%."
+    },
+    {
+      "turn": 14,
+      "location": "loc_promethium_cistern",
+      "choice_type": "autonomous_techno_triumph",
+      "decision": "Communed with the newly bound Kastelan Automaton, directing it to form a thermal shield wedge against the 2,000-degree promethium jet; sacrificed 2 defense servitors to clamp the flange, and manually quenched the isolation valve with sacred unguents.",
+      "impact": "Single-handedly saved Sub-Level 404 from catastrophic explosion; restored full fuel stability and elevated sector containment to 98%."
+    },
+    {
+      "turn": 16,
+      "location": "loc_chaos_stronghold",
+      "choice_type": "cybernetica_assault",
+      "decision": "Marched at the flank of Kastelan Automaton 'Iron Bastion', directing heavy phosphor bursts and autocannon fire into the ziggurat flanks; took daemonic lightning arc across bionic torso.",
+      "impact": "Coordinated suppression fire, breaking the daemon engines (Vitality 85 -> 68)."
+    },
+    {
+      "turn": 17,
+      "location": "loc_chaos_stronghold",
+      "choice_type": "canticle_overdrive",
+      "decision": "Bypassed fried bionic relays with the medical stim, re-engaging the Kastelan Automaton's battle protocols to cleave through Malgakor's 6 summoned Bloodletters.",
+      "impact": "Stabilized from death threshold (Vitality 5 -> 30); wiped the daemon reinforcements."
+    },
+    {
+      "turn": 18,
+      "location": "loc_chaos_stronghold",
+      "choice_type": "final_canticle_of_the_omnissiah",
+      "decision": "Buried his Omnissian Power Axe into the Citadel's core logic conduit, discharging sacred binary lightning through Malgakor's cybernetics before collapsing into the scrap slag.",
+      "impact": "Fell in glorious combat (Vitality 5 -> 0, KIA), transferring primary command override of the Kastelan Automaton to the garrison."
+    },
+    {
+      "turn": 22,
+      "location": "loc_shrine_aquila",
+      "choice_type": "resurrected_by_silent_king",
+      "decision": "Rebooted augmetic cortex to discover forbidden living-metal necrodermis seamlessly repairing synthetic conduits; offered a hushed binary prayer to the Omnissiah.",
+      "impact": "Restored to life with upgraded Mechanicus-Xenos hybrid augmetic stability."
+    }
+  ]
+}

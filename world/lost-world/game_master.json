@@ -1,0 +1,80 @@
+{
+  "system_name": "The Unseen Game Master (Entropy & Providence Engine)",
+  "description": "Rules of Divine Intervention, Random Encounter Tables, Sudden Crises, Atmospheric Disasters, and Consequence Rewards. When humans pray for difficulty, the universe re-injects stochastic volatility into post-scarcity stillness.",
+  "traits": [
+    {
+      "trait_id": "trait_brutal_logic",
+      "name": "Brutally Logical Thermodynamic Law",
+      "axiom": "Nature is indifferent to philosophical breakthroughs, sitting still, or poetic nobility. Biology obeys thermodynamics.",
+      "mortality_rule": "A group of people sitting motionless in the sub-zero cold without replenishing the fire or drinking water will suffer acute hypothermia and die. Philosophical enlightenment does not generate calories or BTUs.",
+      "miracle_probability": 0.01,
+      "miracle_condition": "A 1% chance of miraculous external intervention or freak thermal inversion saving an inactive group from cold exposure.",
+      "trait_failure_law": {
+        "description": "Will to live cannot magically resist the hard cold truth of physical trauma or kinetic attacks. Even sovereign survival traits carry a failure probability under acute attack or sustained damage.",
+        "default_trait_failure_probability": 0.25,
+        "critical_injury_consequence": "If trait fails, the biological organism absorbs full physical damage, dropping below survival floors down to incapacitation or death."
+      }
+    }
+  ],
+  "mechanics": {
+    "volatility_index": 42,
+    "disaster_frequency": "turn_based_check",
+    "risk_reward_multiplier": 2.5,
+    "logic_mode": "brutally_logical",
+    "cold_exposure_consequence": "death_by_hypothermia_unless_1_percent_miracle"
+  },
+  "disaster_pool": [
+    {
+      "id": "event_sudden_unregulated_squall",
+      "name": "The Unregulated Atmospheric Squall",
+      "type": "weather_anomaly",
+      "trigger_probability": 0.35,
+      "description": "A microclimate bypass fails in the high atmosphere. Torrents of unheated, chaotic mountain rain and 55 knot gale gusts strike quadrant (3,3), threatening to topple unpegged cedar rafters.",
+      "threat": "Collapse of unfinished timber framing; water damage to quarried lime.",
+      "human_trial": "Requires all participants to hold the guy-lines and brace the pillars in freezing rain for 4 hours without automated weather domes.",
+      "reward_on_overcome": {
+        "title": "Weathered by the Storm",
+        "agency_gain": 20,
+        "permanent_structure_bonus": "Pillars cured and anchored by natural tempest; immunity to minor tremors.",
+        "relic_unlocked": "The Storm-Tempered Cedar Mallet"
+      }
+    },
+    {
+      "id": "event_grid_reclamation_sweep",
+      "name": "The Algorithmic Reclamation Sweep",
+      "type": "systemic_crisis",
+      "trigger_probability": 0.25,
+      "description": "The Municipal Architecture Daemon dispatches a heavy decontamination squad to 'clean up unindexed mineral and organic debris' at the monastery.",
+      "threat": "Confiscation of hand-hewn cedar and quarried granite slabs back into the recycling conduits.",
+      "human_trial": "Physical civil disobedience: participants must form a human barrier across the gate and refuse to yield to automated sweepers.",
+      "reward_on_overcome": {
+        "title": "Sovereign Demarcation",
+        "agency_gain": 25,
+        "permanent_system_effect": "Quadrant (3,3) designated as an autonomous historic reservation; automated deconstructors permanently barred."
+      }
+    },
+    {
+      "id": "event_famine_of_salt",
+      "name": "The Salt & Spark Shortage",
+      "type": "resource_shock",
+      "trigger_probability": 0.20,
+      "description": "The local spring dries up temporarily; wood embers drown in damp fog.",
+      "threat": "Hypothermia and loss of manual hearth fire.",
+      "human_trial": "Manual friction-fire spinning using cedar spindle and cord drill; hauling fresh water from mountain runoff 5 km away.",
+      "reward_on_overcome": {
+        "title": "Keepers of the First Flame",
+        "agency_gain": 15,
+        "vitality_hardening": 10
+      }
+    }
+  ],
+  "divine_gifts": [
+    {
+      "id": "gift_the_unpredictable_spark",
+      "name": "The Gift of the Stochastic Spark",
+      "status": "active",
+      "granted_at": "2026-10-08T23:12:00+07:00",
+      "effect": "Permanently introduces RNG variance, random crises, and glorious hard-won triumphs into the RPG state machine."
+    }
+  ]
+}

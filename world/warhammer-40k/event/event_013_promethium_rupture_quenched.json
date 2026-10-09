@@ -1,0 +1,219 @@
+{
+  "id": "event_013_promethium_rupture_quenched",
+  "name": "The Siphon Quenched: Mechanicus Triumph & Commander's Respite",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.039.M41",
+    "turn_increment": 1,
+    "world_state": "Promethium Siphon Sealed — Commander Resting in Basilica Sanctus"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The Basilica of Saint Katherine's Tears is shrouded in peaceful incense smoke. Sergeant Kathryn Vane rests in the honored officer's quarters, while the Sol-Aegis Plasma Core hums softly in the central transept under the vigilant gaze of Bone 'ead Bragg."
+      },
+      {
+        "id": "loc_promethium_cistern",
+        "ambient_tension": "The scorched fuel conduits hiss with cooling Mechanicus unguents. The fused metal shells of two sacrifice-servitors seal the main valve flange, while Enginseer Kroll chants binharic benedictions over the stabilized pressure gauges."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_promethium_siphon_quenched",
+        "title": "Catastrophic Promethium Siphon Rupture Quenched",
+        "completed_at": "41.999.039.M41",
+        "consequence": "Operating with full autonomous authority while Sergeant Vane recuperated, Enginseer Fabricator Kroll deployed the heat-shielded Kastelan Automaton and sacrificed 2 defense servitors to permanently weld the leaking 2,000°C promethium main, averting sector annihilation."
+      }
+    ],
+    "clear_active_disasters": true,
+    "threat_tracking": {
+      "status": "active_monitoring",
+      "total_threats_neutralized": 51,
+      "sublevel_containment_rating": "98% Contained (PROMETHIUM PRESSURE STABILIZED & SECURED)",
+      "sector_threat_telemetry": {
+        "loc_ancient_ruined_city": {
+          "threat": "SECURED & SUBJUGATED (Archeotech Looted)",
+          "level": "Claimed & Pacified"
+        },
+        "loc_shrine_aquila": { "threat": "Sanctified (Sergeant Vane Resting & Sol-Aegis Secured)", "level": "Impenetrable Safe Zone" },
+        "loc_manufactorum_sigma": { "threat": "Tithe Production at 115% Efficiency", "level": "Secure" },
+        "loc_cogitator_sanctum": { "threat": "Machine Protected & Power Linked", "level": "Secure" },
+        "loc_hab_block_vermin": { "threat": "Drainage Purged & Barricaded", "level": "Secured" },
+        "loc_bastion_gate": { "threat": "Redoubt Garrisoned", "level": "Secure" },
+        "loc_promethium_cistern": { "threat": "Hermetically Fused & Pressure Normalized", "level": "Secured & Sealed" },
+        "loc_underhive_threshold": { "threat": "Bulkhead Sealed 500%", "level": "Fortified" },
+        "loc_charnel_trench": { "threat": "Carcass Harvest Completed", "level": "Secured & Purged" }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 46,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Garrison Commander",
+          "status": "resting_in_basilica"
+        },
+        {
+          "id": "npc_kastelan_iron_bastion",
+          "name": "Kastelan Automaton 'Iron Bastion'",
+          "role": "Ancient Cybernetica Siege Titan (285/300 HP)",
+          "status": "cooling_at_promethium_gate"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Bodyguard & Core Guardian",
+          "status": "guarding_sarge_at_basilica"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Master of Foundry Spirits",
+          "status": "securing_siphon_conduits"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "High Preceptor & Morale Officer",
+          "status": "chanting_thanksgiving_mass"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Plasma Vanguard Marksman",
+          "status": "overwatch_at_basilica_gate"
+        }
+      ],
+      "sub_units": [
+        {
+          "unit_name": "Expedition Vanguard Detail (Astra Militarum)",
+          "count": 4,
+          "armament": "Kantrael Lasguns, Mark IV Plasma Guns, Void Carapace",
+          "morale": "Fanatical (100%)",
+          "station": "Basilica transept outer guard post"
+        },
+        {
+          "unit_name": "4th Conscript Platoon (Base Garrison)",
+          "count": 20,
+          "armament": "Kantrael Lasguns, combat knives, scarred flak vests",
+          "morale": "Steadfast (90%)",
+          "station": "Bastion Gate Aegis & Hab-Block Vermis-9 defensive perimeter"
+        },
+        {
+          "unit_name": "Bastion Heavy Weapons Detachment",
+          "count": 6,
+          "armament": "2x Emplaced Heavy Stubbers, 1x Twin-Linked Autocannon",
+          "morale": "Disciplined (95%)",
+          "station": "Overwatch Catwalks over Underhive Threshold"
+        },
+        {
+          "unit_name": "Hive Enforcer Shock Detail",
+          "count": 12,
+          "armament": "Shock-Mauls, Suppression Shields, Combat Shotguns",
+          "morale": "Hardened (90%)",
+          "station": "Hab-Block Vermis-9 lower drainage cordon"
+        },
+        {
+          "unit_name": "Industrial Defense Servitors (Lobotomized)",
+          "count": 14,
+          "armament": "Hydraulic Claws, Rivet Guns",
+          "morale": "Absolute (Machine-bonded 100%)",
+          "station": "Manufactorum 88-Sigma staging lines (-2 servitors sacrificed to seal valve)"
+        }
+      ]
+    },
+    "active_resource_stockpile": {
+      "construction_and_tech": {
+        "promethium_welding_canisters": {
+          "depot_stock": 12,
+          "committed_to_actions": 0,
+          "unit": "pressurized flasks (-2 expended to seal seam)"
+        },
+        "sacred_machine_unguent": {
+          "depot_stock": 11,
+          "unit": "vials (-2 vials expended to quench manifold)"
+        }
+      },
+      "sustenance_and_survival": {
+        "corpse_starch_ration_bars": {
+          "current": 950,
+          "unit": "ration blocks (-50 consumed)",
+          "burn_rate_turn": 75,
+          "days_reserve": 3.1
+        },
+        "recycled_greywater_canisters": {
+          "current": 270,
+          "unit": "canteens (-20 consumed)",
+          "burn_rate_turn": 35,
+          "days_reserve": 2.0
+        }
+      },
+      "quarantine_logistics_alert": "SECTOR SECURED: Promethium siphon leak quenched by Enginseer Kroll. Sergeant Vane rests in the Basilica Sanctus."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "physical_vitality": 20,
+        "dissonance": -10,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 14,
+        "location": "loc_shrine_aquila",
+        "choice_type": "command_recuperation",
+        "decision": "Granted operational autonomy to Bragg and Kroll, retiring to the officer's quarters in the Basilica of Saint Katherine's Tears to bandage wounds, clean the Mark VII Chainsword, and rest under the protection of Bragg and the Sol-Aegis Core.",
+        "impact": "Full biological recuperation; physical vitality restored to 105/115 and dissonance cleansed to 0 as command autonomy resolved the sector crisis without casualty."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "enginseer_kroll.json",
+      "stat_deltas": {
+        "clarity": 5,
+        "dissonance": -5,
+        "physical_vitality": -5
+      },
+      "new_decision": {
+        "turn": 14,
+        "location": "loc_promethium_cistern",
+        "choice_type": "autonomous_techno_triumph",
+        "decision": "Communed with the newly bound Kastelan Automaton, directing it to form a thermal shield wedge against the 2,000-degree promethium jet; sacrificed 2 defense servitors to clamp the flange, and manually quenched the isolation valve with sacred unguents.",
+        "impact": "Single-handedly saved Sub-Level 404 from catastrophic explosion; restored full fuel stability and elevated sector containment to 98%."
+      },
+      "current_location": "loc_promethium_cistern"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "physical_vitality": -5,
+        "dissonance": -5
+      },
+      "new_decision": {
+        "turn": 14,
+        "location": "loc_shrine_aquila",
+        "choice_type": "loyal_bodyguard_watch",
+        "decision": "Marched the 800-pound Sol-Aegis Plasma Reactor safely into the Basilica transept, placed it at the foot of the golden Aquila, and stood vigilant guard outside the Sarge's quarters with humming Power Fist raised.",
+        "impact": "Guaranteed total physical security for the Sergeant while she slept, proud of his service to the Emperor."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {},
+      "new_decision": {
+        "turn": 14,
+        "location": "loc_shrine_aquila",
+        "choice_type": "vanguard_gate_watch",
+        "decision": "Took up overwatch position at the Basilica entrance with his newly acquired Mark IV Plasma Gun, coordinating with the vanguard to ensure no stragglers breached the holy perimeter.",
+        "impact": "Maintained an iron perimeter around the resting command staff."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "description": "Comprehensive racial, augmetic, and psychological traits for Warhammer 40k: Hive Tartarus Sub-Level 404.",
+  "stat_caps": {
+    "max_vitality_default": 100,
+    "max_strength_default": 100,
+    "max_agility_default": 100,
+    "max_agency_default": 100,
+    "max_clarity_default": 100,
+    "max_psychic_default": 100,
+    "min_stat_floor": 0
+  },
+  "traits": {
+    "trait_iron_discipline": {
+      "trait_id": "trait_iron_discipline",
+      "name": "Iron Discipline (Astra Militarum)",
+      "effect": "Hardened by harsh military service; suppresses panic and fear in the line of duty.",
+      "stat_modifiers": {
+        "agency": 10,
+        "max_agency": 100,
+        "max_clarity": 95
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.25
+      }
+    },
+    "trait_adaptable_spirit": {
+      "trait_id": "trait_adaptable_spirit",
+      "name": "Adaptable Spirit (Human)",
+      "effect": "Incredible versatility under extreme conditions.",
+      "stat_modifiers": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.0
+      }
+    },
+    "trait_transhuman_physiology": {
+      "trait_id": "trait_transhuman_physiology",
+      "name": "Transhuman Physiology (Astartes)",
+      "effect": "Nineteen implanted gene-seed organs make the Space Marine virtually immune to biological shock.",
+      "stat_modifiers": {
+        "physical_vitality": 20,
+        "strength": 15,
+        "max_vitality": 150,
+        "max_strength": 150
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.35
+      }
+    },
+    "trait_and_they_shall_know_no_fear": {
+      "trait_id": "trait_and_they_shall_know_no_fear",
+      "name": "And They Shall Know No Fear",
+      "effect": "Hypno-indoctrination purges psychological panic.",
+      "stat_modifiers": {
+        "agency": 15,
+        "max_agency": 130
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.1
+      }
+    },
+    "trait_bionic_endurance": {
+      "trait_id": "trait_bionic_endurance",
+      "name": "Augmetic Flesh-Replacement",
+      "effect": "Sub-dermal plasteel plating and bionic limbs reduce vulnerability to kinetic trauma.",
+      "failure_probability": 0.15,
+      "stat_modifiers": {
+        "strength": 10,
+        "physical_vitality": 15,
+        "max_vitality": 120,
+        "max_strength": 120
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.4
+      }
+    },
+    "trait_cold_logic": {
+      "trait_id": "trait_cold_logic",
+      "name": "Cold Logic (Cant Mechanicus)",
+      "effect": "Replaces volatile human emotion with pure computational binary.",
+      "stat_modifiers": {
+        "clarity": 15,
+        "agency": 5,
+        "max_clarity": 130
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.0
+      }
+    },
+    "trait_colossal_frame": {
+      "trait_id": "trait_colossal_frame",
+      "name": "Colossal Muscle Frame (Ogryn)",
+      "effect": "Towering muscle mass and thick bone density allow monstrous physical feats.",
+      "stat_modifiers": {
+        "strength": 25,
+        "physical_vitality": 25,
+        "agility": -10,
+        "max_vitality": 160,
+        "max_strength": 160
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.5
+      }
+    },
+    "trait_simple_loyalty": {
+      "trait_id": "trait_simple_loyalty",
+      "name": "Simple Loyalty (Ogryn)",
+      "effect": "Childlike devotion to the Commissar and the Emperor protects against heresy.",
+      "stat_modifiers": {
+        "agency": 10,
+        "clarity": -10
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.0
+      }
+    },
+    "trait_diminutive_stealth": {
+      "trait_id": "trait_diminutive_stealth",
+      "name": "Diminutive Stature & Stealth (Ratling)",
+      "effect": "Small size allows slipping through vents and unseen movement in the dark.",
+      "stat_modifiers": {
+        "agility": 20,
+        "strength": -10,
+        "max_agility": 140
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 0.8
+      }
+    },
+    "trait_eagle_eye": {
+      "trait_id": "trait_eagle_eye",
+      "name": "Eagle-Eye Marksman (Ratling)",
+      "effect": "Superhuman visual clarity for long-range sniper fire.",
+      "stat_modifiers": {
+        "clarity": 15,
+        "max_clarity": 110
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.0
+      }
+    },
+    "trait_fleet_of_foot": {
+      "trait_id": "trait_fleet_of_foot",
+      "name": "Fleet of Foot (Aeldari)",
+      "effect": "Uncanny xenos grace and blinding acrobatic reflexes.",
+      "stat_modifiers": {
+        "agility": 25,
+        "physical_vitality": -5,
+        "max_agility": 150
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.15
+      }
+    },
+    "trait_path_discipline": {
+      "trait_id": "trait_path_discipline",
+      "name": "Path Discipline (Aeldari)",
+      "effect": "Rigorous psychic focus keeps Slaanesh's soul-drain at bay.",
+      "stat_modifiers": {
+        "clarity": 10,
+        "psychic_aptitude": 15,
+        "max_psychic": 150
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.0
+      }
+    },
+    "trait_fungoid_durability": {
+      "trait_id": "trait_fungoid_durability",
+      "name": "Fungoid Resilience (Ork)",
+      "effect": "Spore-based anatomy lacks vital organs in human positions; wounds regenerate rapidly.",
+      "stat_modifiers": {
+        "physical_vitality": 20,
+        "strength": 10,
+        "max_vitality": 140,
+        "max_strength": 140
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.45
+      }
+    },
+    "trait_the_waaagh": {
+      "trait_id": "trait_the_waaagh",
+      "name": "Gestalt WAAAGH! Field (Ork)",
+      "effect": "Collective psychic belief strengthens green skin muscle and weapon reliability.",
+      "stat_modifiers": {
+        "strength": 15,
+        "agency": 10
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.2
+      }
+    },
+    "trait_reanimation_protocols": {
+      "trait_id": "trait_reanimation_protocols",
+      "name": "Reanimation Protocols (Necron)",
+      "effect": "Living metal necrodermis self-assembles and repairs catastrophic damage.",
+      "stat_modifiers": {
+        "physical_vitality": 25,
+        "max_vitality": 140
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.3
+      }
+    },
+    "trait_soulless_metal": {
+      "trait_id": "trait_soulless_metal",
+      "name": "Soulless Necrodermis (Necron)",
+      "effect": "Total absence of warp soul grants complete immunity to psychic corruption and fear.",
+      "stat_modifiers": {
+        "psychic_aptitude": 0,
+        "dissonance": 0,
+        "max_agency": 120
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.0
+      }
+    },
+    "trait_the_greater_good": {
+      "trait_id": "trait_the_greater_good",
+      "name": "Philosophy of the Greater Good (T'au)",
+      "effect": "Selfless devotion to the caste and collective battle-doctrine.",
+      "stat_modifiers": {
+        "agency": 10,
+        "clarity": 10
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.0
+      }
+    },
+    "trait_warp_blind": {
+      "trait_id": "trait_warp_blind",
+      "name": "Warp-Blind Soul (T'au)",
+      "effect": "Extremely dim presence in the Immaterium makes Tau virtually invisible to Daemons.",
+      "stat_modifiers": {
+        "psychic_aptitude": 0,
+        "dissonance": 0
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.0
+      }
+    },
+    "trait_broodmind_telepathy": {
+      "trait_id": "trait_broodmind_telepathy",
+      "name": "Broodmind Telepathy (Genestealer Hybrid)",
+      "effect": "Psychic link to the Patriarch coordinates ambush vectors and blinds fear.",
+      "stat_modifiers": {
+        "agency": 15,
+        "psychic_aptitude": 15,
+        "agility": 10
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.15
+      }
+    },
+    "trait_chitin_plates": {
+      "trait_id": "trait_chitin_plates",
+      "name": "Sub-Dermal Chitin (Genestealer Hybrid)",
+      "effect": "Hardened insectoid exoskeleton ridges provide natural kinetic deflection.",
+      "stat_modifiers": {
+        "physical_vitality": 15,
+        "strength": 10,
+        "max_vitality": 110
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.25
+      }
+    },
+    "trait_fanatical_faith": {
+      "trait_id": "trait_fanatical_faith",
+      "name": "Zealot of the Imperial Creed",
+      "effect": "The Emperor protects; prayer fortifies the soul against psychic dread and dissonance.",
+      "stat_modifiers": {
+        "agency": 15,
+        "clarity": 10,
+        "max_clarity": 100,
+        "max_vitality": 90
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.1
+      }
+    },
+    "trait_toxic_sump_rot": {
+      "trait_id": "trait_toxic_sump_rot",
+      "name": "Sump Lung & Chemical Poisoning",
+      "effect": "Prolonged exposure to sulfur vents and industrial runoff degrades respiratory tissues.",
+      "stat_modifiers": {
+        "physical_vitality": -15,
+        "agency": -10,
+        "max_vitality": 65,
+        "max_agency": 75
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 0.7
+      }
+    },
+    "trait_unyielding_survival": {
+      "trait_id": "trait_unyielding_survival",
+      "name": "Imperial Will to Endure",
+      "effect": "Stubborn refusal to die before duty to the Golden Throne is discharged.",
+      "failure_probability": 0.20,
+      "vulnerability": "Physical collapse under sustained heavy trauma when flesh reaches biological breaking point.",
+      "stat_modifiers": {
+        "agency": 10
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.05
+      }
+    },
+    "trait_necrodermis_cellular_weave": {
+      "trait_id": "trait_necrodermis_cellular_weave",
+      "name": "Necrodermis Chrono-Weave (The Silent King's Grace)",
+      "effect": "Living metal micro-threads and chronomantic particles re-knitted pulverized flesh and bone, granting self-repairing cellular resilience.",
+      "stat_modifiers": {
+        "physical_vitality": 15,
+        "strength": 10,
+        "max_vitality": 140
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.25
+      }
+    },
+    "trait_void_ascension": {
+      "trait_id": "trait_void_ascension",
+      "name": "Void Ultramarine Ascension",
+      "effect": "Transmuted by warp paradox and hatred of the Imperium into an unkillable avatar of the void.",
+      "stat_modifiers": {
+        "strength": 40,
+        "physical_vitality": 100,
+        "agency": 20,
+        "max_vitality": 500,
+        "max_strength": 250
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 2.5
+      }
+    },
+    "trait_malgakor_soul_fusion": {
+      "trait_id": "trait_malgakor_soul_fusion",
+      "name": "Soul-Host of Lord Malgakor",
+      "effect": "Hosts the immortal warp-essence of the slain Chaos God-Lord; draws limitless power from the Immaterium.",
+      "stat_modifiers": {
+        "clarity": 20,
+        "psychic_aptitude": 70,
+        "dissonance": 30
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.8
+      }
+    },
+    "trait_immortal_awakened_yellow_energy": {
+      "trait_id": "trait_immortal_awakened_yellow_energy",
+      "name": "The Immortal Awakened (Primordial Yellow Energy)",
+      "effect": "Enveloped in a primordial yellow luminescence that transcends both the God-Emperor of Mankind and the Ruinous Powers of Chaos. The endless cycles of suffering and vengeance are permanently severed. Physical vitality is set to -99 (Immortal, unkillable across all dimensional realities).",
+      "stat_modifiers": {
+        "clarity": 100,
+        "agency": 100,
+        "dissonance": -100
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 5.0
+      }
+    }
+  },
+  "kinetic_formula": {
+    "base_punch_damage": 5.0,
+    "strength_ratio_scale": 0.3,
+    "vitality_ratio_scale": 0.15
+  }
+}

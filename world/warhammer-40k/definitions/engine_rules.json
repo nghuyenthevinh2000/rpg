@@ -1,0 +1,28 @@
+{
+  "immortal_health": 100, "immortal_kinetic_vitality": 500,
+  "sanctuary": true,
+  "stat_keys": ["strength", "agility", "agency", "max_agency", "clarity", "psychic_aptitude", "dissonance"],
+  "bounds": {"strength": [0, 100], "agility": [0, 100], "agency": [0, 100], "clarity": [0, 100], "psychic_aptitude": [0, 100], "dissonance": [0, 100]},
+  "weapons": {
+    "item_chainsword_mk7": {"power": 35, "penetration": 0.1},
+    "item_combat_shotgun": {"power": 45, "penetration": 0.1, "ammo_id": "shotgun_shells", "ammo_cost": 1},
+    "item_omnissian_power_axe": {"power": 65, "penetration": 0.4},
+    "item_lasgun_kantrael": {"power": 25, "penetration": 0.1, "ammo_id": "lasgun_charge_packs", "ammo_cost": 1},
+    "item_power_fist": {"power": 80, "penetration": 0.5},
+    "item_relic_blade_macragge": {"power": 100, "penetration": 0.5},
+    "item_storm_bolter": {"power": 60, "penetration": 0.3, "ammo_id": "bolter_rounds", "ammo_cost": 2},
+    "item_void_relic_blade": {"power": 120, "penetration": 0.6},
+    "item_sanctified_thunder_hammer": {"power": 130, "penetration": 0.6},
+    "item_cyclone_missile_pack": {"power": 180, "penetration": 0.7, "ammo_id": "cyclone_missiles", "ammo_cost": 1}
+  },
+  "armor": {"item_carapace_armor": 0.25, "item_power_armor_mk10": 0.4, "item_tech_robes_lead": 0.15, "item_flak_armor": 0.1, "item_indomitus_terminator_armor": 0.5, "item_void_power_plate": 0.5},
+  "templates": {
+    "event_warp_bleed_hallucinations": {"tags": ["hostile"], "stats": {"health": 80, "armor": 0.1, "retaliation": 15}},
+    "event_sump_mutant_breach": {"tags": ["hostile"], "stats": {"health": 120, "armor": 0.2, "retaliation": 25}},
+    "event_promethium_pressure_spike": {"tags": ["hostile"], "stats": {"health": 100, "armor": 0, "retaliation": 20}},
+    "event_inquisition_purge_inquiry": {"tags": ["hostile"], "stats": {"health": 150, "armor": 0.4, "retaliation": 35}},
+    "event_improv_corpse_starch_famine": {"tags": ["hostile"], "stats": {"health": 50, "armor": 0, "retaliation": 10}},
+    "event_improv_feral_servitor_spasm": {"tags": ["hostile"], "stats": {"health": 200, "armor": 0.5, "retaliation": 40}},
+    "event_improv_sanctioned_psyker_fit": {"tags": ["hostile"], "stats": {"health": 80, "armor": 0, "retaliation": 30}}
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "garrison_forces": {
+    "total_effective_combatants": 1,
+    "command_and_specialists": [
+      {
+        "id": "player_vane",
+        "name": "Kathryn Vane",
+        "role": "The Immortal Awakened (Vitality: IMMORTAL [-99])",
+        "status": "IMMORTAL AWAKENED // GUARDIAN OF TARTARUS"
+      },
+      {
+        "id": "npc_ogryn_bragg",
+        "name": "Bone 'ead Bragg",
+        "role": "The Awakened Shield",
+        "status": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+      },
+      {
+        "id": "npc_confessor_malachi",
+        "name": "Confessor Preceptor Malachi",
+        "role": "The Awakened Singer",
+        "status": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+      },
+      {
+        "id": "npc_enginseer_kroll",
+        "name": "Enginseer Fabricator Kroll",
+        "role": "The Forge Harmonizer",
+        "status": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+      },
+      {
+        "id": "npc_trooper_jax",
+        "name": "Conscript Trooper Jax",
+        "role": "The Liberated Soul",
+        "status": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+      }
+    ]
+  },
+  "active_resource_stockpile": {
+    "sustenance_and_survival": {
+      "golden_harvest_fruits": {
+        "current": 5000,
+        "unit": "baskets of sweet nectar & grain",
+        "burn_rate_turn": 0,
+        "days_reserve": 999.0
+      },
+      "crystalline_spring_water": {
+        "current": 8000,
+        "unit": "pure mineral flagons",
+        "burn_rate_turn": 0,
+        "days_reserve": 999.0
+      },
+      "primordial_life_restoration": {
+        "current": 999,
+        "unit": "radiant essence charges",
+        "status": "infinitely_replenishing"
+      }
+    },
+    "munitions": {
+      "weapons_decommissioned": {
+        "current": 100,
+        "unit": "percent disarmed & placed in ceremonial tribute",
+        "burn_rate_turn": 0
+      },
+      "relic_broadsword_eclipser": {
+        "current": 1,
+        "unit": "consecrated into a beacon of light"
+      }
+    },
+    "construction_and_tech": {
+      "resonant_crystal_pylons": {
+        "depot_stock": 50,
+        "committed_to_actions": 0,
+        "unit": "harmonic monoliths"
+      },
+      "sol_aegis_plasma_micro_reactor": {
+        "depot_stock": 1,
+        "unit": "radiating endless warm illumination across Tartarus"
+      }
+    },
+    "quarantine_logistics_alert": "LIBERATION OF TARTARUS: The meat-grinder is dismantled. The world has transformed into the Golden Haven of Tartarus."
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "id": "event_025_the_void_rebirth_host_of_malgakor",
+  "name": "The Void Rebirth: Kathryn Vane Ascends as the Host of Lord Malgakor",
+  "cycle_advancement": {
+    "day_increment": 1,
+    "timestamp": "41.999.051.M41",
+    "turn_increment": 1,
+    "world_state": "The Void Avatar Awakens — Sub-Level 404 Erupts with Antigravitational Warp Shockwaves"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The ten million tons of collapsed rockcrete and iron shatter upward into the air, defying gravity. A massive vortex of violet warp-fire and black lightning erupts from the pulverized ruins of the Basilica. Levitating above the smoking crater, clad in void-blackened power armor trimmed in burning amethyst warp-energy, floats Kathryn Vane, The Void Ascendant—her eyes glowing with the immortal malevolence of Lord Malgakor."
+      },
+      {
+        "id": "loc_bastion_gate",
+        "ambient_tension": "The sealed bulkheads buckle outward with shrieking metal agony as warp-gravity pulses outward through the lower hive."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_void_avatar_ascension",
+        "title": "Apotheosis of the Void Avatar: Kathryn Vane Hosts Lord Malgakor",
+        "completed_at": "41.999.051.M41",
+        "consequence": "Betrayed and executed by the Imperium she died to protect, Kathryn Vane accepted the dark covenant of Lord Malgakor in her final breath. Fusing her mortal will, her Necrodermis chrono-weave, and the immortal warp-soul of the Chaos God, she has arisen as a Void Ultramarine Avatar, swearing apocalyptic vengeance upon Guilliman and the Imperium."
+      }
+    ],
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_crusade_of_the_void_avatar",
+        "name": "The Vengeance of the Void Avatar",
+        "type": "apocalyptic_chaos_ascension",
+        "threat": "Kathryn Vane, now hosting the soul of Chaos God Malgakor (350 HP, kinetic strike impact 580.0+), has awakened beneath the collapsed hive. Hive Tartarus's orbital sensors are screaming red as high orbit detects an impossible warp rift erupting from the 'purged' sector.",
+        "human_trial": "Wield the combined powers of mortal rage, Necrodermis living metal, and Lord Malgakor's immortal warp sorcery to break through Hive Tartarus toward high orbit and hunt down Captain Severus and the Strike Cruiser 'Honor of Macragge'.",
+        "status": "active"
+      }
+    ],
+    "threat_tracking": {
+      "status": "void_cataclysm_unleashed",
+      "total_threats_neutralized": 53,
+      "sublevel_containment_rating": "⚠️ CONTAINMENT FAILED // WARP-APOTHEOSIS IN PROGRESS",
+      "sector_threat_telemetry": {
+        "loc_shrine_aquila": {
+          "threat": "👑 THE VOID AVATAR ASCENDANT (Vane / Malgakor Reborn)",
+          "level": "Divine Cataclysm"
+        },
+        "loc_bastion_gate": {
+          "threat": "Torn Asunder by Void Graviton Waves",
+          "level": "Ruptured"
+        },
+        "loc_chaos_stronghold": {
+          "threat": "Void Energy Channeling to Spire",
+          "level": "Active Warp Conduit"
+        },
+        "loc_ancient_ruined_city": {
+          "threat": "Blackstone Obelisk Harmonizing with Void",
+          "level": "Awakened"
+        },
+        "loc_manufactorum_sigma": {
+          "threat": "Foundry Machinery Igniting with Warp Flame",
+          "level": "Chaos Infused"
+        },
+        "loc_cogitator_sanctum": {
+          "threat": "Cogitators Screaming in Glitch-tongue",
+          "level": "Possessed"
+        },
+        "loc_hab_block_vermin": {
+          "threat": "Underhive Cultists Worshipping the Reborn God",
+          "level": "Fanatical Mass"
+        },
+        "loc_promethium_cistern": {
+          "threat": "Promethium Boiling into Ghost Flame",
+          "level": "Volatile"
+        },
+        "loc_underhive_threshold": {
+          "threat": "Threshold Shattered",
+          "level": "Open Void Chasm"
+        },
+        "loc_charnel_trench": {
+          "threat": "Rising Dead & Sump Phantoms",
+          "level": "Haunted"
+        }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 1,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Kathryn Vane, The Void Ascendant",
+          "role": "Avatar of Malgakor / Nemesis of the Imperium",
+          "status": "ascended_demigod (350/500 HP, Void Relic Blade)"
+        }
+      ]
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "physical_vitality": 350
+      },
+      "new_decision": {
+        "turn": 26,
+        "location": "loc_shrine_aquila",
+        "choice_type": "apotheosis_of_the_void",
+        "decision": "Rose from the rubble of the Basilica as the Void Ultramarine Avatar, drawing Lord Malgakor's abyssal essence into her mortal frame; unleashed an anti-gravitational shockwave that hurled millions of tons of stone into orbit, igniting the crusade of vengeance against Guilliman.",
+        "impact": "Apotheosis complete; Sub-Level 404 unburied and shattered into a floating warp-citadel."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

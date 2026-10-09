@@ -1,0 +1,77 @@
+{
+  "event_id": "event_007_survival_instinct_awakening",
+  "name": "The Revolt of Biological Will",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-09T11:45:00+07:00",
+    "world_state": "The Clash of Will and Inertia"
+  },
+  "narrative": "Kael continues to sit motionless, slipping toward lethal hypothermia. But Marcus, Lyra, and Dr. Harlan bear the unyielding trait to live at all costs. Their survival instinct revolts against suicidal immobility. Harlan drags Marcus to the hearth, Lyra seizes the flint and sparks the dry birch shavings, and together they force the dying sanctuary back to life.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "The smell of sulfur and burning dry cedar shavings violently punctures the freezing stupor; the hearth flickers back to life as human survival will overrules passivity."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": -10,
+        "dissonance": 10
+      },
+      "new_decision": {
+        "turn": 20,
+        "location": "loc_monastery",
+        "choice_type": "lethal_inertia",
+        "decision": "Continued sitting completely motionless in freezing temperatures, entering Stage II hypothermic delirium.",
+        "impact": "Core body temperature dropped to critical levels; saved only by the companions' fierce refusal to let anyone die."
+      }
+    },
+    {
+      "char_file": "marcus.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5,
+        "dissonance": -2,
+        "physical_vitality": 10
+      },
+      "new_decision": {
+        "turn": 20,
+        "decision": "Will to Live triggered: Crawled across the stone floor on bleeding hands, smashed cedar kindling with a mallet, and threw wood onto the hearth.",
+        "impact": "Refused death; broke the hypnotic trance of immobility."
+      }
+    },
+    {
+      "char_file": "lyra.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5,
+        "dissonance": -2,
+        "physical_vitality": 10
+      },
+      "new_decision": {
+        "turn": 20,
+        "decision": "Will to Live triggered: Struck flint against steel with frantic, desperate strikes until a spark caught dry birch bark, blowing the flame into a roar.",
+        "impact": "Rekindled the monastery hearth; defied freezing oblivion."
+      }
+    },
+    {
+      "char_file": "dr_harlan.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5,
+        "dissonance": -2,
+        "physical_vitality": 10
+      },
+      "new_decision": {
+        "turn": 20,
+        "decision": "Will to Live triggered: Forced warm woolen blankets around Kael's shuddering shoulders and rubbed his stiff wrists vigorously to stimulate circulation.",
+        "impact": "Applied emergency trauma medicine to pull Kael back from lethal hypothermia."
+      }
+    }
+  ]
+}

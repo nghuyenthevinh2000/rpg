@@ -1,0 +1,70 @@
+{
+  "id": "event_030_the_revelation_of_the_revenge_cycle",
+  "name": "The Horror of the Ouroboros: Kathryn Vane Realizes the Hollow Cycle of Vengeance",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.056.M41",
+    "turn_increment": 1,
+    "world_state": "The Internal Rebellion: Vane Pierces the Warp Illusion of Constant Revenge"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The swirling violet warp-fire around Kathryn Vane wavers and stills. Looking upon the severed breastplate of Captain Severus and the ten capital warships blocking out the sky, the cold revelation descends: killing Severus brought no peace to Bragg, and destroying this 100,000 HP fleet will only invite a Primarch, a Sector Fleet, or an Exterminatus torpedo. Lord Malgakor's laughter inside her mind turns desperate as her mortal will reasserts itself against the endless cycle of blood."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_revelation_of_the_cycle",
+        "title": "The Awakening of Mortal Conscience: Breaking the Vengeance Cycle",
+        "completed_at": "41.999.056.M41",
+        "consequence": "Kathryn Vane realized the terrifying philosophical trap of her existence: she had traded the mindless slaughter of the Imperium for the eternal blood-debt of Chaos. Rejecting the puppet strings of both Guilliman and Malgakor, her human clarity spiked to 135 as she confronted the entity sharing her soul."
+      }
+    ],
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_the_internal_war_for_the_soul",
+        "name": "The War Within: Vane vs Malgakor",
+        "type": "internal_spiritual_schism",
+        "threat": "Lord Malgakor senses Vane's hesitation and attempts to forcefully seize complete control of the Void Avatar's 528 HP frame to fire upon the fleet, while the 100,000 HP Chapter Armada hovers in low orbit with primed lance batteries.",
+        "human_trial": "Vane must master the god inside her, decide whether to sever the pact, turn Malgakor's warp power against the daemon himself, or find a third path that shatters the cycle forever.",
+        "status": "active"
+      }
+    ],
+    "threat_tracking": {
+      "status": "internal_crisis_and_orbital_stalemate",
+      "total_threats_neutralized": 54,
+      "sublevel_containment_rating": "CRITICAL PAUSE // INTERNAL WARP SCHISM IN PROGRESS",
+      "sector_threat_telemetry": {
+        "loc_shrine_aquila": {
+          "threat": "🧠 INTERNAL SOUL BATTLE: VANE'S WILL VS MALGAKOR'S REVENGE",
+          "level": "Psychic Crucible"
+        },
+        "loc_orbital_fleet_killzone": {
+          "threat": "10 CAPITAL SHIPS (100,000 HP) AWAITING FIRING SOLUTION",
+          "level": "Tense Standstill"
+        }
+      }
+    },
+    "character_updates": [
+      {
+        "char_file": "main_char.json",
+        "stat_deltas": {
+          "clarity": 15,
+          "dissonance": -35
+        },
+        "new_decision": {
+          "turn": 31,
+          "location": "loc_shrine_aquila",
+          "choice_type": "revelation_of_the_hollow_cycle",
+          "decision": "Lowered the tip of Eclipser amidst the smoking ruins; saw through the eternal deception of both Terra and the Immaterium: 'I am just a vessel of revenge.' Reclaimed her agency from Malgakor's whispered hatred, halting the immediate slaughter to confront her own soul.",
+          "impact": "Suppressed Malgakor's psychic dominance; transformed the conflict from external carnage into a fight for genuine mortal liberation."
+        },
+        "current_location": "loc_shrine_aquila"
+      }
+    ]
+  }
+}

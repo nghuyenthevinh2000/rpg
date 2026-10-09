@@ -1,0 +1,13 @@
+{
+  "immortal_health": 100, "immortal_kinetic_vitality": 100,
+  "sanctuary": false,
+  "stat_keys": ["agency", "max_agency", "clarity", "dissonance", "universal_dividend_balance", "hostility", "efficiency"],
+  "bounds": {"agency": [0, 100], "clarity": [0, 100], "dissonance": [0, 100], "hostility": [0, 100], "efficiency": [0, 1]},
+  "cold": {"miracle_trait_id": "trait_brutal_logic", "damage": 15, "failed_damage": 18, "survival_floor": 25, "survival_trait_id": "trait_unyielding_survival"},
+  "templates": {
+    "event_sudden_unregulated_squall": {"location_id": "loc_monastery", "tags": ["weather"], "stats": {"health": 0, "armor": 0, "retaliation": 0}},
+    "event_grid_reclamation_sweep": {"location_id": "loc_monastery", "tags": ["systemic"], "stats": {"health": 0, "armor": 0, "retaliation": 0}},
+    "event_famine_of_salt": {"location_id": "loc_monastery", "tags": ["cold"], "stats": {"health": 0, "armor": 0, "retaliation": 0}},
+    "event_silent_freeze": {"location_id": "loc_monastery", "tags": ["cold"], "stats": {"health": 0, "armor": 0, "retaliation": 0}}
+  }
+}

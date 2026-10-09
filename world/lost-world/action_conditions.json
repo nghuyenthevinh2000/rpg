@@ -1,0 +1,81 @@
+{
+  "description": "Rules of Materialization: Defines thermodynamic, physical, and psychological conditions required for world-changing actions. In post-scarcity, actions that cost nothing mean nothing; true consequence requires friction, sacrifice, and irreversible expenditure.",
+  "actions": [
+    {
+      "id": "action_build_structure",
+      "name": "Erect Physical Sanctuary / Monastery",
+      "type": "construct",
+      "description": "Found a sanctuary free from automated assistance. Requires genuine manual sweat, finite timber, deliberate friction, and unbacked collective sacrifice.",
+      "conditions_required": {
+        "manual_labor_hours": 120,
+        "physical_materials": [
+          { "item": "raw_cedar_timber", "quantity": 40, "source": "felled_and_hewn_by_hand" },
+          { "item": "quarried_granite_slabs", "quantity": 25, "source": "hauled_without_anti_grav_pods" }
+        ],
+        "psychological_cost": {
+          "relinquish_universal_dividend_credits": 50000,
+          "endure_physical_blisters_and_exhaustion": true
+        },
+        "systemic_condition": {
+          "telemetry_severance": true,
+          "automated_drone_rejection": true
+        }
+      },
+      "irreversible_outcome": "Carves a persistent non-automated pocket into the reality grid that cannot be regenerated or erased by automated sweeps."
+    },
+    {
+      "id": "action_deconstruct_apparatus",
+      "name": "Deconstruct Automated Node / Terminal",
+      "type": "deconstruct",
+      "description": "Dismantle an automated municipal terminal using mechanical leverage rather than software commands, forcing human attention back onto physical infrastructure.",
+      "conditions_required": {
+        "physical_materials": [
+          { "item": "hardened_steel_crowbar", "quantity": 1 },
+          { "item": "manual_cutting_torch", "quantity": 1 }
+        ],
+        "psychological_cost": {
+          "agency_required": 40,
+          "confront_mirror_guilt": true
+        },
+        "systemic_condition": {
+          "accept_unregulated_weather_or_ration_interruption": true
+        }
+      },
+      "irreversible_outcome": "Creates a localized friction zone where humans must physically manage what was once invisible background magic."
+    },
+    {
+      "id": "action_consecrate_hearth",
+      "name": "Establish Sovereign Hearth & Kitchen",
+      "type": "sustain",
+      "description": "Maintain sustenance through manual fire and agriculture without nutritional synthesis.",
+      "conditions_required": {
+        "manual_labor_hours": 14,
+        "physical_materials": [
+          { "item": "dry_hardwood_twigs", "quantity": 100 },
+          { "item": "hand_milled_flour", "quantity": 15 },
+          { "item": "spring_water", "quantity": 30 }
+        ],
+        "systemic_condition": {
+          "food_synthesizer_bypass": true
+        }
+      },
+      "irreversible_outcome": "Transforms eating from passive metabolic intake into a shared communal ritual."
+    },
+    {
+      "id": "action_burn_relic",
+      "name": "Sacrificial Incineration of the Relic",
+      "type": "transcend",
+      "description": "Publicly burn a relic of past meritocracy (patents, briefs, credentials) to break the phantom addiction to obsolete hierarchies.",
+      "conditions_required": {
+        "physical_materials": [
+          { "item": "vestige_of_former_prestige", "quantity": 1 }
+        ],
+        "psychological_cost": {
+          "dissonance_threshold": 60,
+          "clarity_required": 80
+        }
+      },
+      "irreversible_outcome": "Permanent severance from phantom labor; converts past grievance into present resolve."
+    }
+  ]
+}

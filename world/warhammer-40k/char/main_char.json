@@ -1,0 +1,332 @@
+{
+  "id": "player_vane",
+  "name": "Kathryn Vane, The Immortal Awakened",
+  "former_title": "Squad Leader, 143rd Armageddon Steel Legion / Slain Martyr of Sub-Level 404 / Void Ascendant",
+  "current_status": "THE IMMORTAL AWAKENED // BEYOND THE CYCLE",
+  "archetype": "The Sovereign Soul",
+  "race": "immortal_awakened",
+  "symbol_alignment": "The Primordial Yellow Luminescence",
+  "stats": {
+    "agency": 200,
+    "max_agency": 200,
+    "clarity": 200,
+    "dissonance": 0,
+    "physical_vitality": -99,
+    "punch_kinetic_impact": 20543.2,
+    "strength": 200,
+    "agility": 150,
+    "psychic_aptitude": 100,
+    "applied_equipment_modifiers": {
+      "strength": 100,
+      "agency": 50,
+      "clarity": 20,
+      "physical_vitality": 100,
+      "agility": 15,
+      "dissonance": -10
+    }
+  },
+  "current_location": "loc_shrine_aquila",
+  "coordinate": {
+    "row": 1,
+    "col": 1
+  },
+  "traits": [
+    {
+      "trait_id": "trait_immortal_awakened_yellow_energy",
+      "name": "The Immortal Awakened (Primordial Yellow Energy)"
+    },
+    {
+      "trait_id": "trait_void_ascension",
+      "name": "Void Ultramarine Ascension"
+    },
+    {
+      "trait_id": "trait_necrodermis_cellular_weave",
+      "name": "Necrodermis Chrono-Weave (The Silent King's Grace)"
+    },
+    {
+      "trait_id": "trait_unyielding_survival",
+      "name": "Imperial Will to Endure"
+    }
+  ],
+  "equipment": {
+    "primary_weapon": "item_storm_bolter",
+    "melee_weapon": "item_void_relic_blade",
+    "armor": "item_void_power_plate",
+    "relic": "item_aquila_rosary"
+  },
+  "inventory": [
+    {
+      "item_id": "item_aquila_rosary",
+      "name": "Bone-Carved Aquila Rosary",
+      "description": "Passed down from a fallen commissar during the Second War for Armageddon.",
+      "symbol": "The Purity Seal"
+    },
+    {
+      "item_id": "item_krak_grenade",
+      "name": "Mark IV Krak Grenade",
+      "description": "High-yield shaped charge capable of blowing open armored blast bulkheads or light vehicles.",
+      "symbol": "The Corpse-Tithe"
+    }
+  ],
+  "decisions": [
+    {
+      "turn": 1,
+      "location": "loc_bastion_gate",
+      "choice_type": "tactical_deployment",
+      "decision": "Assumed garrison command at Bastion Gate Aegis following the quarantine lockdown order.",
+      "impact": "Rallied the surviving garrison and established heavy stubber crossfire lanes."
+    },
+    {
+      "turn": 1,
+      "location": "loc_cogitator_sanctum",
+      "choice_type": "consultation",
+      "decision": "Marched through Manufactorum catwalks to consult Enginseer Fabricator Kroll in the Adeptus Mechanicus Engin-Sanctum.",
+      "impact": "Sought technical schematics and sacred rites to seal the toxic sulfur breach in Hab-Block Vermis-9."
+    },
+    {
+      "turn": 2,
+      "location": "loc_cogitator_sanctum",
+      "choice_type": "command_order",
+      "decision": "Approved Enginseer Kroll's doctrine: sacrificed 2 industrial servitors to seal the boiling sulfur cog-gate, and authorized the full depot release of plasteel, promethium, and sacred unguents to Bulkhead 101.",
+      "impact": "Sulfur catastrophe averted with zero human loss; Bulkhead 101 fortified to 75% completion."
+    },
+    {
+      "turn": 3,
+      "location": "loc_underhive_threshold",
+      "choice_type": "command_execution",
+      "decision": "Personally inspected and oversaw the final locking welds of Bulkhead 101, certifying the frontier secure against mutant breach.",
+      "impact": "Eliminated the lower Underhive threat vector and rallied troops to 82% discipline."
+    },
+    {
+      "turn": 4,
+      "location": "loc_hab_block_vermin",
+      "choice_type": "heroic_assault",
+      "decision": "Personally drew chainsword and led Bone 'ead Bragg, Jax, and the Enforcers in a brutal counter-charge into the drainage plaza, bisecting the alpha sewer-scuttler and collapsing the entry tunnel with frag grenades.",
+      "impact": "Exterminated the incursion before civilians were harmed; conscript morale surged to fanatical devotion."
+    },
+    {
+      "turn": 5,
+      "location": "loc_charnel_trench",
+      "choice_type": "recon_investigation",
+      "decision": "Descended into the toxic Sump Charnel Ditches with Jax and Bragg while petitioning Spire HQ via Kroll's vox link; uncovered the nest of a massive burrowing sump predator and secured salvage.",
+      "impact": "Pinpointed the root cause of the incursion and recovered critical Munitorum stubber ammo and water valves."
+    },
+    {
+      "turn": 6,
+      "location": "loc_charnel_trench",
+      "choice_type": "apex_hunt",
+      "decision": "Broadcasted full autonomy to sector officers over the vox, then descended into the Charnel abyss with Bragg; planted a Mark IV Krak Grenade directly into the belly carapace of the Great Sump Horror, obliterating the beast.",
+      "impact": "Exterminated the root cause of underhive terror and secured Level 404's southern underbelly."
+    },
+    {
+      "turn": 7,
+      "location": "loc_charnel_trench",
+      "choice_type": "life_or_death_crisis",
+      "decision": "Challenged the Emperor for an apex trial: discovered the destroyed beast was merely a larval decoy as the true 20-ton Brood-Matriarch erupted from the slime lake, blasting the trench with caustic bile.",
+      "impact": "Sustained 15 damage from shockwave and shrapnel; locked in life-or-death confrontation with a 450 HP Bio-Titan."
+    },
+    {
+      "turn": 7,
+      "location": "loc_charnel_trench",
+      "choice_type": "life_or_death_crisis",
+      "decision": "Challenged the Emperor for an apex trial: discovered the destroyed beast was merely a larval decoy as the true 20-ton Brood-Matriarch erupted from the slime lake, blasting the trench with caustic bile.",
+      "impact": "Sustained 15 damage from shockwave and shrapnel; locked in life-or-death confrontation with a 450 HP Bio-Titan."
+    },
+    {
+      "turn": 8,
+      "location": "loc_charnel_trench",
+      "choice_type": "supreme_sacrifice_assault",
+      "decision": "Bellowed 'STAND FAST AND DIE FOR THE EMPEROR!' while charging point-blank through caustic bile to plant a Mark IV Krak Grenade directly into the Matriarch's thoracic breach.",
+      "impact": "Detonated krak charge on target, blowing a massive crater into the dorsal carapace; took severe acid splash and kinetic recoil (Vitality 85 -> 70)."
+    },
+    {
+      "turn": 9,
+      "location": "loc_charnel_trench",
+      "choice_type": "legendary_glory_slaying",
+      "decision": "Bellowed 'FOR THE EMPEROR!' with every ounce of lung and fury, leaping directly onto the Matriarch's ruptured neck; emptied 24 solid shotgun slugs into its exposed brain stem and drove the screaming Mk VII Chainsword to the hilt, severing its nervous cord and toppling the 20-ton leviathan.",
+      "impact": "Slew the Bio-Titan in personal melee combat; restored command resolve, administered combat stim (+15 Vitality to 55), and unified garrison under fanatical devotion."
+    },
+    {
+      "turn": 10,
+      "location": "loc_charnel_trench",
+      "choice_type": "resource_reclamation",
+      "decision": "Mobilized Enginseer Kroll's industrial servitors and the 4th Conscripts to systematically butcher the 20-ton bio-titan: harvested 24 adamantine chitin plates, 450 ration blocks of protein-tallow, and synthesized 12 combat med-stims.",
+      "impact": "Replenished critical garrison reserves, fortified logistical security for 3.8 days, and recovered unspent munitions from swallowed underhive victims."
+    },
+    {
+      "turn": 11,
+      "location": "loc_ancient_ruined_city",
+      "choice_type": "strategic_recon_expedition",
+      "decision": "Realizing the sub-level cannot endure prolonged attrition from future underhive waves, led Bone 'ead Bragg, Trooper Jax, and 4 veteran riflemen through the sunken catacombs beneath Saint Katherine's Basilica into the ancient ruined city at (0,0), carrying 4 days of supplies to seek archeotech power generators and lost Imperial weapon vaults.",
+      "impact": "Established forward staging camp in the Sunken Necropolis; located sealed pre-Imperial datavaults and initiated breach assessment."
+    },
+    {
+      "turn": 12,
+      "location": "loc_ancient_ruined_city",
+      "choice_type": "archeotech_reconnaissance",
+      "decision": "Conducted a disciplined stealth reconnaissance of the Sunken Necropolis with Jax and Bragg; identified an intact archeotech Plasma Core in the central reactor rotunda and located a sealed Munitorum ordnance vault.",
+      "impact": "Pinpointed the exact salvage objectives and established observation points without triggering the slumbering defense grid."
+    },
+    {
+      "turn": 13,
+      "location": "loc_ancient_ruined_city",
+      "choice_type": "techno_theological_communion",
+      "decision": "Anointed the Kastelan Automaton's cortex with Sacred Machine Unguent #44 while reciting the Litany of the Omnissiah; successfully bound its machine-spirit to Imperial command. Supervised the unsealing of Armory 00-Null, equipping a Void-Hardened Heavy Carapace suit and securing the Sol-Aegis Plasma Core.",
+      "impact": "Acquired the 300 HP Kastelan Automaton as an unstoppable garrison ally; upgraded personal armor defense and eliminated power scarcity for the sub-level."
+    },
+    {
+      "turn": 14,
+      "location": "loc_shrine_aquila",
+      "choice_type": "command_recuperation",
+      "decision": "Granted operational autonomy to Bragg and Kroll, retiring to the officer's quarters in the Basilica of Saint Katherine's Tears to bandage wounds, clean the Mark VII Chainsword, and rest under the protection of Bragg and the Sol-Aegis Core.",
+      "impact": "Full biological recuperation; physical vitality restored to 105/115 and dissonance cleansed to 0 as command autonomy resolved the sector crisis without casualty."
+    },
+    {
+      "turn": 14,
+      "location": "loc_shrine_aquila",
+      "choice_type": "command_recuperation",
+      "decision": "Granted operational autonomy to Bragg and Kroll, retiring to the officer's quarters in the Basilica of Saint Katherine's Tears to bandage wounds, clean the Mark VII Chainsword, and rest under the protection of Bragg and the Sol-Aegis Core.",
+      "impact": "Full biological recuperation; physical vitality restored to 105/115 and dissonance cleansed to 0 as command autonomy resolved the sector crisis without casualty."
+    },
+    {
+      "turn": 15,
+      "location": "loc_shrine_aquila",
+      "choice_type": "apocalyptic_revelation",
+      "decision": "Awoke from restful slumber in the Basilica to the blaring alarms of the auspex-net: observed the dark warp-eruption at (4,0), identifying the dread citadel of Chaos Lord Malgakor the Despoiled, a literal god-champion of the Ruinous Powers plaguing the sector.",
+      "impact": "Rallied the garrison, ordered the Kastelan Automaton, Bragg, and Jax to ready the newly looted Archeotech Plasma weaponry for an apocalyptic offensive."
+    },
+    {
+      "turn": 16,
+      "location": "loc_shrine_aquila",
+      "choice_type": "apocalyptic_revelation",
+      "decision": "Witnessed the catastrophic reality-tear at (4,0): Lord Malgakor has revealed his true divine stature as an immortal Chaos God-Champion with 12,500 HP, challenging the garrison to an epic war of attrition.",
+      "impact": "Ordered the complete mobilization of the garrison, mounting archeotech plasma guns and heavy bolters to wage protracted siege warfare."
+    },
+    {
+      "turn": 16,
+      "location": "loc_chaos_stronghold",
+      "choice_type": "supreme_charge",
+      "decision": "Roared 'EVERYONE CHARGE! FOR THE EMPEROR!' and personally led the vanguard into the courtyard of the Dread Citadel, directing archeotech plasma fire to vaporize Malgakor's outer wards and taking shrapnel from exploding daemonic stone.",
+      "impact": "Shattered Phase 1 wards; inflicted massive net damage (Vitality 115 -> 110)."
+    },
+    {
+      "turn": 17,
+      "location": "loc_chaos_stronghold",
+      "choice_type": "divine_counter_charge",
+      "decision": "Charged directly through Malgakor's Ruin-Edge Cleave, holding up the Bone-Carved Aquila Rosary to deflect the killing soul-blade; slammed 3 combat med-stims into Bragg, Jax, and Kroll while ordering the plasma battery to fire into Malgakor's chest.",
+      "impact": "Saved the dying strike team from death and sheared 2,407 HP off the Chaos God (Vitality 40 -> 26)."
+    },
+    {
+      "turn": 18,
+      "location": "loc_chaos_stronghold",
+      "choice_type": "supreme_martyrdom",
+      "decision": "Charged directly into Malgakor's flaming soul-blade, driving her screaming Mk VII Chainsword deep into his cracked throat-seal while bellowing 'FOR THE EMPEROR!' before being struck down by the dark god's counter-cleave.",
+      "impact": "Fell in glorious combat (Vitality 5 -> 0, KIA). Slashed the Chaos Lord's vital arteries, enabling the final downfall of the beast."
+    },
+    {
+      "turn": 22,
+      "location": "loc_shrine_aquila",
+      "choice_type": "resurrected_by_silent_king",
+      "decision": "Awakened inside the stasis sarcophagus of Saint Katherine as emerald chronomantic particles re-stitched shattered heart and lung tissue; rose to feet, saluted Confessor Malachi and Captain Severus, and resumed supreme mortal command of Sub-Level 404.",
+      "impact": "Restored to full operational command with Necrodermis Chrono-Weave cellular resilience."
+    },
+    {
+      "turn": 23,
+      "location": "loc_shrine_aquila",
+      "choice_type": "defiant_confrontation_with_savior",
+      "decision": "Saw the Basilica doors slam shut and Captain Severus draw his blade; placed hand on chainsword hilt and demanded an explanation from the transhuman commander.",
+      "impact": "Refused to submit blindly to slaughter without knowing why."
+    },
+    {
+      "turn": 25,
+      "location": "loc_shrine_aquila",
+      "choice_type": "the_cold_truth_of_the_imperium",
+      "decision": "On her dying breath, coughing blood upon the cracked Basilica tiles beside Bragg's cooling corpse, Kathryn Vane looked into the impassive crimson lenses of Captain Severus and understood the terrible, freezing reality: the Imperium of Man is an uncaring engine of meat and ash. They slew a Chaos God for Terra, only to be executed by the sons of Guilliman to bury an inconvenient truth. Loyalty is paid in lead; devotion is repaid in silence.",
+      "impact": "The ultimate mortal epiphany in the grim darkness of the far future."
+    },
+    {
+      "turn": 26,
+      "location": "loc_shrine_aquila",
+      "choice_type": "pact_of_the_void_resurrection",
+      "decision": "Heard the whispering voice of Lord Malgakor from the Immaterium through the crushing rubble of Sub-Level 404 offering resurrection as a Void Ultramarine host for his eternal warp-soul; accepted the dark god's pact, transmuting into a demigod of the void and breaking free of the collapsed tomb to seek vengeance against the Imperium.",
+      "impact": "Ascended to Void Ultramarine Avatar (Host of Malgakor); shattered the collapsed rockcrete of Sub-Level 404; resurrected in dark majesty."
+    },
+    {
+      "turn": 26,
+      "location": "loc_shrine_aquila",
+      "choice_type": "apotheosis_of_the_void",
+      "decision": "Rose from the rubble of the Basilica as the Void Ultramarine Avatar, drawing Lord Malgakor's abyssal essence into her mortal frame; unleashed an anti-gravitational shockwave that hurled millions of tons of stone into orbit, igniting the crusade of vengeance against Guilliman.",
+      "impact": "Apotheosis complete; Sub-Level 404 unburied and shattered into a floating warp-citadel."
+    },
+    {
+      "turn": 27,
+      "location": "loc_shrine_aquila",
+      "choice_type": "defiant_battle_stance",
+      "decision": "Watched Captain Severus descend in heavy assault Terminator plate; raised Eclipser into a two-handed guard, surrounding herself with crackling violet warp-lightning, ready to strike down the angel of Guilliman.",
+      "impact": "Ready for the apocalyptic clash."
+    },
+    {
+      "turn": 28,
+      "location": "loc_shrine_aquila",
+      "choice_type": "cleave_the_betrayer",
+      "decision": "Surged across the floating basalt debris in an anti-gravitational blur, parried the Hammer of Macragge, and swung Eclipser straight through Captain Severus's Indomitus Terminator plate, screaming: 'YOU BETRAYED US, YOU WILL PAY!' The 8,846-damage strike cleaved through iron halo, ceramite, and transhuman flesh, shattering Guilliman's executioner forever.",
+      "impact": "Slew Captain Severus in single combat; broke the orbital landing force of the Ultramarines; claimed the severed helm of Macragge."
+    },
+    {
+      "turn": 28,
+      "location": "loc_shrine_aquila",
+      "choice_type": "cleave_the_betrayer",
+      "decision": "Cleaved Captain Severus with Eclipser, screaming the vow of vengeance for Bragg, Kroll, Jax, and Malachi.",
+      "impact": "Slew the transhuman executioner and turned gaze toward the heavens."
+    },
+    {
+      "turn": 29,
+      "location": "loc_shrine_aquila",
+      "choice_type": "defiance_of_the_armada",
+      "decision": "Looked up past the burning Strike Cruiser 'Honor of Macragge' to witness ten more Ultramarines capital warships transition from warp-space, blotting out the stars; smiled with dark, predatory amusement and readied Eclipser to take the war to the fleet.",
+      "impact": "Unshaken by the arrival of a full Astartes fleet; primed the void singularity for orbital ascension."
+    },
+    {
+      "turn": 30,
+      "location": "loc_shrine_aquila",
+      "choice_type": "targeting_the_100k_fleet",
+      "decision": "Scanned the tactical auspex and map to assess the approaching Chapter armada: ten capital warships with over 100,000 combined HP and massive planet-cleaving firepower; stood firm atop the floating Basilica ruins, channeling the full abyssal power of Malgakor to wage war against the entire fleet.",
+      "impact": "Engaged the 100,000 HP Ultramarines Armada in direct, apocalyptic combat."
+    },
+    {
+      "turn": 31,
+      "location": "loc_shrine_aquila",
+      "choice_type": "revelation_of_the_hollow_cycle",
+      "decision": "Looking down at Severus's corpse and up at the 100,000 HP armada, the horrifying truth broke through the warp-haze: the endless cycle of vengeance is an infinite trap. She was merely an instrument of the Imperium's slaughter, and now she is merely an instrument of Malgakor's hate. She is not free; she has only traded one tyrant for another in a galaxy that feeds on endless bloodshed.",
+      "impact": "Mortal clarity pierces the warp veil; confronts the parasitic nature of Malgakor within her own soul."
+    },
+    {
+      "turn": 32,
+      "location": "loc_shrine_aquila",
+      "choice_type": "supreme_sacrifice_the_cycle_broken",
+      "decision": "Turned the obsidian blade Eclipser inward and plunged it deep into her own chest. In a single act of supreme mortal sovereignty, Kathryn Vane extinguished her own life and dragged the trapped soul of Lord Malgakor into permanent oblivion, dissolving the warp singularity and freeing the sector from the endless cycle of vengeance.",
+      "impact": "The ultimate transcendence: Malgakor permanently annihilated; the cycle of hatred shattered; Kathryn Vane dies as her own master in peace."
+    },
+    {
+      "turn": 32,
+      "location": "loc_shrine_aquila",
+      "choice_type": "supreme_sacrifice_the_cycle_broken",
+      "decision": "Turned Eclipser inward and pierced her own heart, dying on her own terms to obliterate Malgakor forever and break the cycle of endless war.",
+      "impact": "Saved Hive Tartarus; achieved immortal peace as a sovereign mortal soul."
+    },
+    {
+      "turn": 33,
+      "location": "loc_shrine_aquila",
+      "choice_type": "awakening_of_the_immortal_yellow_energy",
+      "decision": "In my final breath, realized something that not even the God-Emperor or the Chaos Gods know: the end of suffering cycles. A strange primordial yellow energy engulfed my dying vessel, shattering mortality and apotheosis alike. Reborn as The Immortal Awakened, with unkillable physical vitality (-99).",
+      "impact": "Attained true immortality beyond all gods, warp laws, and death itself; physical vitality set to -99 (Immortal)."
+    },
+    {
+      "turn": 34,
+      "location": "loc_shrine_aquila",
+      "choice_type": "genesis_of_the_golden_haven",
+      "decision": "Channeling the unconstrained primordial yellow luminescence, permanently rewrote the fundamental nature of Hive Tartarus: dissolved the toxic smog, unbolted the Underhive blast gates, converted the macro-cannon foundries into engines of creation, and dismantled the Imperial meat-grinder to forge the Golden Haven of Tartarus.",
+      "impact": "Hive Tartarus completely transformed into a post-grimdark sanctuary of peace, abundance, and sovereign awakening."
+    }
+  ]
+}

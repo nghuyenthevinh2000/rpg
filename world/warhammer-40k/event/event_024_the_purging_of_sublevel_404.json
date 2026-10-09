@@ -1,0 +1,143 @@
+{
+  "id": "event_024_the_purging_of_sublevel_404",
+  "name": "The Execution of Guilliman's Decree: The Tragic Purge of Sub-Level 404",
+  "cycle_advancement": {
+    "day_increment": 1,
+    "timestamp": "41.999.050.M41",
+    "turn_increment": 1,
+    "world_state": "Sub-Level 404 Purged & Collapsed Forever — The Emperor's Peace Granted"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The Basilica of Saint Katherine's Tears is silent. The smoke of storm bolters and the stench of scorched ceramite linger in the cold air. The bodies of Sergeant Vane, Bone 'ead Bragg, Enginseer Kroll, Trooper Jax, and Confessor Malachi lie in solemn repose before the high altar, their faces calm. Timed melta-charges hum softly across the structural foundations."
+      },
+      {
+        "id": "loc_bastion_gate",
+        "ambient_tension": "Melta and seismic demolition charges detonate in cascading thunder. Millions of tons of rockcrete, adamantium girders, and toxic slag collapse into the vertical chasm, sealing Sub-Level 404 from Hive Tartarus forever."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_sublevel_404_purged_for_imperium",
+        "title": "The Sorrowful Purge of Sub-Level 404 (Guilliman's Sanction Executed)",
+        "completed_at": "41.999.050.M41",
+        "consequence": "Captain Severus and the Ultramarines carried out the secret decree of Primarch Roboute Guilliman. The resurrected heroes and Confessor Malachi were granted the Emperor's Peace in battle, and Sub-Level 404 was permanently buried beneath millions of tons of collapsed hive structure, taking the secret of the Silent King's resurrection protocols to the grave."
+      }
+    ],
+    "active_disasters_and_trials": [],
+    "threat_tracking": {
+      "status": "exterminatus_sealed",
+      "total_threats_neutralized": 53,
+      "sublevel_containment_rating": "100% COLLAPSED // PERMANENT EXTINCTION QUARANTINE",
+      "sector_threat_telemetry": {
+        "loc_shrine_aquila": {
+          "threat": "CLEANSED & SLATED FOR TOTAL COLLAPSE",
+          "level": "Silent Tomb"
+        },
+        "loc_bastion_gate": {
+          "threat": "MELTA DEMOLITION COMPLETE",
+          "level": "Collapsed Rubble"
+        },
+        "loc_chaos_stronghold": {
+          "threat": "OBLITERATED & CRATERED",
+          "level": "Barren Ruin"
+        },
+        "loc_ancient_ruined_city": {
+          "threat": "SEALED BENEATH A MILLION TONS OF SLAG",
+          "level": "Entombed"
+        },
+        "loc_manufactorum_sigma": {
+          "threat": "Power Severed & Machinery Silenced",
+          "level": "Dead Foundry"
+        },
+        "loc_cogitator_sanctum": {
+          "threat": "Data-Cores Slagged by Plasma Fire",
+          "level": "Purged"
+        },
+        "loc_hab_block_vermin": {
+          "threat": "Evacuated & Sealed into Lower Tombs",
+          "level": "Entombed"
+        },
+        "loc_promethium_cistern": {
+          "threat": "Depleted & Slagged",
+          "level": "Inert"
+        },
+        "loc_underhive_threshold": {
+          "threat": "Crushed Beneath Structural Fall",
+          "level": "Buried"
+        },
+        "loc_charnel_trench": {
+          "threat": "Buried in Sump Rock",
+          "level": "Buried"
+        }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 12,
+      "command_and_specialists": [
+        {
+          "id": "npc_captain_severus",
+          "name": "Captain Severus",
+          "role": "Ultramarines Strike Commander (Extracting)",
+          "status": "teleporting_to_strike_cruiser (102/135 HP)"
+        },
+        {
+          "id": "npc_terminator_veterans",
+          "name": "Terminator Sergeant Cassian & Veterans",
+          "role": "First Company Strike Force",
+          "status": "teleporting_to_strike_cruiser (117/150 HP)"
+        },
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Hero of Sub-Level 404",
+          "status": "KIA / SLAIN IN MARTYR'S REPOSE"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Titan Breacher / Loyal Bodyguard",
+          "status": "KIA / SLAIN SHIELDING SARGE"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "Voice of the Emperor Ascendant",
+          "status": "KIA / GRANTED EMPEROR'S PEACE"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Master of Foundry Spirits",
+          "status": "KIA / PURGED BY SANCTION"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Vanguard Marksman",
+          "status": "KIA / PURGED BY SANCTION"
+        }
+      ]
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "captain_severus.json",
+      "stat_deltas": {
+        "dissonance": 10
+      },
+      "new_decision": {
+        "turn": 24,
+        "location": "loc_shrine_aquila",
+        "choice_type": "completion_of_harrowing_sanction",
+        "decision": "Executed the Primarch's harrowing decree; granted the Emperor's Peace to Sergeant Vane, Bone 'ead Bragg, Enginseer Kroll, Trooper Jax, and Confessor Malachi; saluted their corpses as true heroes of the Imperium, primed the thermal-seismic charges, and activated the teleport homer to return to the Strike Cruiser 'Honor of Macragge'.",
+        "impact": "Completed the secret sanction; ensured the preservation of the Imperium's theological integrity; collapsed Sub-Level 404 into eternal silence."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

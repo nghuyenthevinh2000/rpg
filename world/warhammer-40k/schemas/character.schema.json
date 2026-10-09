@@ -1,0 +1,18 @@
+{
+  "type":"object", "additionalProperties":false,
+  "required":["name","location_id","status","health","stats","capabilities","traits","equipment","inventory","baseline","metadata"],
+  "properties": {
+    "name":{"type":"string"}, "location_id":{"type":"string","pattern":"^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"},
+    "status":{"enum":["alive","dead"]}, "health":{"type":"number","minimum":0},
+    "stats":{"$ref":"#/$defs/stats"},
+    "capabilities":{"type":"object","required":["cannot_die"],"additionalProperties":false,"properties":{"cannot_die":{"type":"boolean"}}},
+    "traits":{"$ref":"#/$defs/ids"}, "equipment":{"$ref":"#/$defs/ids"}, "inventory":{"$ref":"#/$defs/ids"},
+    "baseline":{"type":"object","required":["stats","modifiers"],"additionalProperties":false,"properties":{"stats":{"$ref":"#/$defs/stats"},"modifiers":{"$ref":"#/$defs/modifiers"}}},
+    "metadata":{"type":"object"}
+  },
+  "$defs": {
+    "ids":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"}},
+    "modifiers":{"type":"object","additionalProperties":false,"properties":{"physical_vitality":{"type":"number"},"strength":{"type":"number"},"agility":{"type":"number"},"agency":{"type":"number"},"clarity":{"type":"number"},"psychic_aptitude":{"type":"number"},"dissonance":{"type":"number"}}},
+    "stats":{"type":"object","additionalProperties":false,"properties":{"strength":{"type":"number"},"agility":{"type":"number"},"agency":{"type":"number"},"max_agency":{"type":"number"},"clarity":{"type":"number"},"psychic_aptitude":{"type":"number"},"dissonance":{"type":"number"}}}
+  }
+}

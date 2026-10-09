@@ -1,0 +1,106 @@
+{
+  "id": "event_031_the_breaking_of_the_cycle",
+  "name": "The Breaking of the Cycle: Kathryn Vane's Supreme Transcendent Sacrifice",
+  "cycle_advancement": {
+    "day_increment": 1,
+    "timestamp": "41.999.057.M41",
+    "turn_increment": 1,
+    "world_state": "The Cycle Broken — Kathryn Vane Sacrifices Herself to Annihilate Malgakor Forever"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The screaming violet warp-vortex implodes in a silent flash of blinding white light. Eclipser pierces Kathryn Vane's heart, severing the dark covenant. Lord Malgakor's shrieking soul is consumed by the blade's own void-fire, permanently extinguished from the Immaterium. The floating stone pillars settle gently back to earth. The Basilica of Saint Katherine's Tears falls into peaceful, eternal silence."
+      },
+      {
+        "id": "loc_orbital_fleet_killzone",
+        "ambient_tension": "On the bridge of the 'Pride of Macragge', the auspex consoles go dark. The Class-Omega warp singularity has dissolved. First Captain Agemman lowers his hand from the bombardment controls, ordering the fleet to stand down as Tartarus falls still."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_the_cycle_broken_supreme_sacrifice",
+        "title": "The Supreme Sacrifice: The Breaking of the Vengeance Cycle",
+        "completed_at": "41.999.057.M41",
+        "consequence": "In the ultimate triumph of mortal will over both Imperial fanaticism and Chaos depravity, Kathryn Vane refused to be a vessel of slaughter. Plunging Eclipser into her own chest, she extinguished her own life to permanently drag the soul of Chaos God Lord Malgakor into eternal oblivion, breaking the endless wheel of revenge and saving Hive Tartarus from exterminatus."
+      }
+    ],
+    "active_disasters_and_trials": [],
+    "active_combat_encounters": [],
+    "threat_tracking": {
+      "status": "the_endless_cycle_broken",
+      "total_threats_neutralized": 55,
+      "sublevel_containment_rating": "TRANSCENDENT PEACE // THE CYCLE BROKEN FOREVER",
+      "sector_threat_telemetry": {
+        "loc_shrine_aquila": {
+          "threat": "🕊️ THE SILENT BASILICA (Vane & Garrison At Rest)",
+          "level": "Hallowed Ground"
+        },
+        "loc_orbital_fleet_killzone": {
+          "threat": "Fleet Ceasefire Ordered // Ships Disengaging",
+          "level": "Peaceful Withdrawal"
+        },
+        "loc_chaos_stronghold": {
+          "threat": "Malgakor's Soul Annihilated",
+          "level": "Purified Ash"
+        },
+        "loc_ancient_ruined_city": {
+          "threat": "Necropolis Quiet & Sealed",
+          "level": "Silent Slumber"
+        }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 0,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Kathryn Vane",
+          "role": "The Sovereign Soul (The One Who Broke the Cycle)",
+          "status": "KIA / TRANSCENDENT PEACE"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "The Faithful Shield",
+          "status": "KIA / AT PEACE BESIDE SARGE"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "The Martyr Priest",
+          "status": "KIA / AT PEACE IN BASILICA"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "The Forge-Father",
+          "status": "KIA / SYSTEM QUIET"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "The Reclaimed Soul",
+          "status": "KIA / RESTING IN PEACE"
+        }
+      ]
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {},
+      "new_decision": {
+        "turn": 32,
+        "location": "loc_shrine_aquila",
+        "choice_type": "supreme_sacrifice_the_cycle_broken",
+        "decision": "Turned Eclipser inward and pierced her own heart, dying on her own terms to obliterate Malgakor forever and break the cycle of endless war.",
+        "impact": "Saved Hive Tartarus; achieved immortal peace as a sovereign mortal soul."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

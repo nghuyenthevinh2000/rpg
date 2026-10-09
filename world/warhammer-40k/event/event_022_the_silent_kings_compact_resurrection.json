@@ -1,0 +1,218 @@
+{
+  "id": "event_022_the_silent_kings_compact_resurrection",
+  "name": "The Silent King's Compact: The Miraculous Reanimation of the Four Martyrs",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.048.M41",
+    "turn_increment": 1,
+    "world_state": "The Four Martyrs Resurrected — The Silent King's Necrodermis Grace Manifest"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_ancient_ruined_city",
+        "ambient_tension": "The subterranean Noctilith obelisk at (0,0) pulses with cool, mathematical emerald phosphorescence. The Triarch Envoy of Szarekh accepted the crystallized warp-core of Lord Malgakor and siphoned 30 units of Confessor Malachi's mortal lifeforce, dispensing a Tachyon Resurrection Phylactery before folding back into phase-space."
+      },
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The golden Basilica of Saint Katherine's Tears echoes with gasping breaths and awe! Emerald chronomantic particles erupted from the four stasis sarcophagi, re-weaving pulverized flesh, bone, and neural pathways. Sergeant Kathryn Vane, Bone 'ead Bragg, Enginseer Kroll, and Trooper Jax have arisen from death, living and breathing under the solemn watch of Captain Severus."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_heroes_reanimated_by_silent_king",
+        "title": "The Resurrected Martyrs: Compact of the Silent King",
+        "completed_at": "41.999.048.M41",
+        "consequence": "Confessor Malachi offered the shattered warp-remnants of Lord Malgakor and sacrificed 30 Vitality of his own flesh to satisfy the Triarch communion at (0,0). With the Tachyon Resurrection Matrix, Sergeant Kathryn Vane, Bone 'ead Bragg, Conscript Trooper Jax, and Enginseer Fabricator Kroll were pulled back across the veil of death into living bodies woven with self-repairing Necrodermis micro-threads."
+      }
+    ],
+    "active_disasters_and_trials": [],
+    "threat_tracking": {
+      "status": "miraculous_restoration",
+      "total_threats_neutralized": 52,
+      "sublevel_containment_rating": "100% SECURED // GARRISON FULLY RESTORED & AUGMENTED",
+      "sector_threat_telemetry": {
+        "loc_ancient_ruined_city": {
+          "threat": "DORMANT TRIARCH SANCTUM (Compact Concluded)",
+          "level": "Quiet / Ancient Pact Sealed"
+        },
+        "loc_chaos_stronghold": {
+          "threat": "CLEANSED & CONSECRATED (Ultramarines Forward LZ)",
+          "level": "Secure / Transhuman Bastion"
+        },
+        "loc_shrine_aquila": {
+          "threat": "Sanctified Miracle Ground (Command Staff Returned to Life)",
+          "level": "Impenetrable Bastion"
+        },
+        "loc_manufactorum_sigma": {
+          "threat": "Tithe Production at 120% Efficiency",
+          "level": "Secure"
+        },
+        "loc_cogitator_sanctum": {
+          "threat": "Machine Protected & Linked",
+          "level": "Secure"
+        },
+        "loc_hab_block_vermin": {
+          "threat": "Citizens In Religious Rapture (Miracle Confirmed)",
+          "level": "Safe & Restored"
+        },
+        "loc_bastion_gate": {
+          "threat": "Astartes Sentry Guarding Perimeter",
+          "level": "Heavy Defense"
+        },
+        "loc_promethium_cistern": {
+          "threat": "Pressure Stabilized",
+          "level": "Secured & Sealed"
+        },
+        "loc_underhive_threshold": {
+          "threat": "Bulkhead Sealed 500%",
+          "level": "Fortified"
+        },
+        "loc_charnel_trench": {
+          "threat": "Cleared Sector",
+          "level": "Secured & Purged"
+        }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 49,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Garrison Commander (Resurrected Hero)",
+          "status": "operational_revived (65/140 HP, Necrodermis Weave)"
+        },
+        {
+          "id": "npc_captain_severus",
+          "name": "Captain Severus",
+          "role": "Ultramarines 2nd Company Strike Commander",
+          "status": "operational_allied_guardian (123/135 HP)"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "High Preceptor & Savior of the Martyrs",
+          "status": "weakened_but_triumphant (50/80 HP, Ash-White Hair)"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Resurrected Titan Breacher",
+          "status": "operational_revived (95/175 HP, Chronomantic Might)"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Resurrected Master of Foundry Spirits",
+          "status": "operational_revived (70/120 HP, Necrodermis Bionics)"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Resurrected Vanguard Marksman",
+          "status": "operational_revived (45/65 HP, Living Weave)"
+        },
+        {
+          "id": "npc_kastelan_iron_bastion",
+          "name": "Kastelan Automaton 'Iron Bastion'",
+          "role": "Cybernetica Escort Hero (148/300 HP)",
+          "status": "saluting_commanders"
+        }
+      ]
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "confessor_malachi.json",
+      "stat_deltas": {
+        "physical_vitality": -30,
+        "dissonance": -15
+      },
+      "new_decision": {
+        "turn": 22,
+        "location": "loc_ancient_ruined_city",
+        "choice_type": "diplomatic_tithe_of_silent_king",
+        "decision": "Interfaced with the Noctilith obelisk at (0,0); offered the crystallized warp-core of Lord Malgakor to the Triarch Envoy of Szarekh, the Silent King, and willingly endured the agonizing siphon of 30 Vitality to secure the Tachyon Resurrection Matrix, returning to the Basilica to raise the four fallen heroes.",
+        "impact": "Successfully resurrected Sergeant Kathryn Vane, Bone 'ead Bragg, Enginseer Kroll, and Trooper Jax; established a sealed covenant of survival under the watchful eye of Captain Severus."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "physical_vitality": 65,
+        "dissonance": -40
+      },
+      "new_decision": {
+        "turn": 22,
+        "location": "loc_shrine_aquila",
+        "choice_type": "resurrected_by_silent_king",
+        "decision": "Awakened inside the stasis sarcophagus of Saint Katherine as emerald chronomantic particles re-stitched shattered heart and lung tissue; rose to feet, saluted Confessor Malachi and Captain Severus, and resumed supreme mortal command of Sub-Level 404.",
+        "impact": "Restored to full operational command with Necrodermis Chrono-Weave cellular resilience."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "physical_vitality": 95,
+        "dissonance": -40
+      },
+      "new_decision": {
+        "turn": 22,
+        "location": "loc_shrine_aquila",
+        "choice_type": "resurrected_by_silent_king",
+        "decision": "Sat bolt upright in his massive stone sarcophagus roaring 'Bragg is back!', embracing Sergeant Vane and bowing before little priest Malachi.",
+        "impact": "Restored to life with colossal strength and chronomantic resilience."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "enginseer_kroll.json",
+      "stat_deltas": {
+        "physical_vitality": 70,
+        "dissonance": -35
+      },
+      "new_decision": {
+        "turn": 22,
+        "location": "loc_shrine_aquila",
+        "choice_type": "resurrected_by_silent_king",
+        "decision": "Rebooted augmetic cortex to discover forbidden living-metal necrodermis seamlessly repairing synthetic conduits; offered a hushed binary prayer to the Omnissiah.",
+        "impact": "Restored to life with upgraded Mechanicus-Xenos hybrid augmetic stability."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "physical_vitality": 45,
+        "dissonance": -45
+      },
+      "new_decision": {
+        "turn": 22,
+        "location": "loc_shrine_aquila",
+        "choice_type": "resurrected_by_silent_king",
+        "decision": "Clutched chest and gasped for air as mortal wounds sealed cleanly; stood and chambered a power pack into his lasgun with renewed determination.",
+        "impact": "Restored to operational duty beside his sergeant."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "captain_severus.json",
+      "stat_deltas": {
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 22,
+        "location": "loc_shrine_aquila",
+        "choice_type": "witnessed_resurrection_and_sealed_pact",
+        "decision": "Witnessed the green chronomantic revival of the four martyrs; inspected their souls and humanity with Astartes Auspex, confirming their minds and loyalty remain pure; sheathed his blade and sealed the incident under Chapter Secret Protocol Guilliman-Theta.",
+        "impact": "Solidified unshakeable alliance between the Ultramarines and the reborn garrison of Sub-Level 404."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

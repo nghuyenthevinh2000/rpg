@@ -1,0 +1,73 @@
+{
+  "event_id": "event_012_sustained_struggle_resolution",
+  "name": "The Breaking of the Hold & Defensive Wall",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-09T15:10:00+07:00",
+    "world_state": "Exhaustion of Kinetic Frenzy"
+  },
+  "narrative": "Kael violently thrashes, breaking one arm free from the hold and striking Marcus across the collarbone. Marcus's 'Will to Live' trait rolls against its 25% failure threshold (Roll: 0.62 >= 0.25): the survival instinct holds. Marcus absorbs the kinetic blow, but his physical vitality takes the blunt trauma, dropping to 18. Rather than escalating into mutual slaughter, Lyra and Dr. Harlan envelop Kael from behind, wrapping a heavy wet linen canvas around his torso, finally terminating the struggle through total mechanical immobilization.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "Marcus leans heavily against the granite hearth, holding his bruised collarbone; Kael lies bound in heavy linen canvas, completely physically depleted."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": -10,
+        "dissonance": -10,
+        "physical_vitality": -10
+      },
+      "new_decision": {
+        "turn": 25,
+        "location": "loc_monastery",
+        "choice_type": "exhausted_struggle",
+        "decision": "Broke free from the initial grapple and landed a blow on Marcus's collarbone before being wrapped in heavy linen canvas and immobilized.",
+        "impact": "Expended all remaining manic energy; forced into complete physical sedation without causing lethal harm."
+      }
+    },
+    {
+      "char_file": "marcus.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5,
+        "physical_vitality": -7
+      },
+      "new_decision": {
+        "turn": 25,
+        "decision": "Will to Live resisted attack failure (Roll: 0.62 >= 0.25): Absorbed blunt impact to the clavicle, refused to counter with lethal force, and held the perimeter.",
+        "impact": "Endured kinetic trauma; physical vitality dropped to 18."
+      }
+    },
+    {
+      "char_file": "lyra.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 25,
+        "decision": "Threw the thick canvas sailcloth over Kael's shoulders, pinning his arms to his ribs with swift mechanical leverage.",
+        "impact": "Decisive physical intervention ending the assault."
+      }
+    },
+    {
+      "char_file": "dr_harlan.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 25,
+        "decision": "Secured the canvas binding with hemp rope and examined Marcus's bruised clavicle for fracture.",
+        "impact": "Maintained patient safety and triage order."
+      }
+    }
+  ]
+}

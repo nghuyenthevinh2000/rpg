@@ -1,0 +1,303 @@
+{
+  "system": "Warhammer 40,000 Species & Racial Attributes Matrix",
+  "doctrine": "Biological and transhuman variance across the galaxy: base stats establish racial baselines, while individual traits, augmentations, and mutations modify them.",
+  "stat_definitions": {
+    "strength": "Raw kinetic power, melee damage output, encumbrance capability.",
+    "agility": "Reflexes, evasive quickness, dexterity, firing coordination.",
+    "physical_vitality": "Biological resilience, health pool, resistance to shock and toxins.",
+    "agency": "Willpower, mental discipline, command presence, resistance to psychic terror.",
+    "clarity": "Cognitive intellect, tactical acumen, logic, perception.",
+    "psychic_aptitude": "Resonance with the Immaterium (Warp sensitivity and psyker manifestation). Blanks and machines have 0.",
+    "dissonance": "Warp taint, corruption, psychic dissonance, or psychological degradation."
+  },
+  "races": {
+    "human": {
+      "id": "human",
+      "name": "Imperial Human (Homo Sapiens)",
+      "faction_alignment": "Imperium of Man",
+      "lore": "The baseline species of the Imperium—adaptable, prolific, and enduring through sheer devotion.",
+      "base_stats": {
+        "strength": 35,
+        "agility": 40,
+        "physical_vitality": 50,
+        "agency": 50,
+        "clarity": 50,
+        "psychic_aptitude": 10,
+        "dissonance": 0
+      },
+      "stat_caps": {
+        "max_strength": 100,
+        "max_agility": 100,
+        "max_vitality": 100,
+        "max_agency": 100,
+        "max_clarity": 100,
+        "max_psychic": 100
+      },
+      "inherent_traits": ["trait_adaptable_spirit"]
+    },
+    "astartes": {
+      "id": "astartes",
+      "name": "Adeptus Astartes (Space Marine)",
+      "faction_alignment": "Imperium of Man",
+      "lore": "Genetically perfected transhuman supersoldiers engineered with 19 implanted gene-seed organs.",
+      "base_stats": {
+        "strength": 75,
+        "agility": 55,
+        "physical_vitality": 85,
+        "agency": 90,
+        "clarity": 70,
+        "psychic_aptitude": 5,
+        "dissonance": 0
+      },
+      "stat_caps": {
+        "max_strength": 150,
+        "max_agility": 120,
+        "max_vitality": 150,
+        "max_agency": 130,
+        "max_clarity": 110,
+        "max_psychic": 80
+      },
+      "inherent_traits": ["trait_transhuman_physiology", "trait_and_they_shall_know_no_fear"]
+    },
+    "mechanicus_cyborg": {
+      "id": "mechanicus_cyborg",
+      "name": "Adeptus Mechanicus (Augmented Transhuman)",
+      "faction_alignment": "Cult Mechanicus / Imperium",
+      "lore": "Priests and warriors who replace weak biological flesh with sacred bionics and cogitators.",
+      "base_stats": {
+        "strength": 50,
+        "agility": 30,
+        "physical_vitality": 70,
+        "agency": 70,
+        "clarity": 85,
+        "psychic_aptitude": 0,
+        "dissonance": 0
+      },
+      "stat_caps": {
+        "max_strength": 120,
+        "max_agility": 80,
+        "max_vitality": 120,
+        "max_agency": 110,
+        "max_clarity": 130,
+        "max_psychic": 20
+      },
+      "inherent_traits": ["trait_bionic_endurance", "trait_cold_logic"]
+    },
+    "abhuman_ogryn": {
+      "id": "abhuman_ogryn",
+      "name": "Abhuman Ogryn (Homo Sapiens Gigantus)",
+      "faction_alignment": "Astra Militarum / Imperium",
+      "lore": "Colossal abhumans with incredible physical muscle mass, loyalty, and childlike intellect.",
+      "base_stats": {
+        "strength": 80,
+        "agility": 25,
+        "physical_vitality": 90,
+        "agency": 40,
+        "clarity": 20,
+        "psychic_aptitude": 0,
+        "dissonance": 0
+      },
+      "stat_caps": {
+        "max_strength": 160,
+        "max_agility": 70,
+        "max_vitality": 160,
+        "max_agency": 80,
+        "max_clarity": 50,
+        "max_psychic": 10
+      },
+      "inherent_traits": ["trait_colossal_frame", "trait_simple_loyalty"]
+    },
+    "abhuman_ratling": {
+      "id": "abhuman_ratling",
+      "name": "Abhuman Ratling (Homo Sapiens Minutus)",
+      "faction_alignment": "Astra Militarum / Imperium",
+      "lore": "Diminutive snipers and scouts gifted with unnatural dexterity, stealth, and acute eyesight.",
+      "base_stats": {
+        "strength": 20,
+        "agility": 75,
+        "physical_vitality": 35,
+        "agency": 45,
+        "clarity": 65,
+        "psychic_aptitude": 5,
+        "dissonance": 0
+      },
+      "stat_caps": {
+        "max_strength": 60,
+        "max_agility": 140,
+        "max_vitality": 70,
+        "max_agency": 90,
+        "max_clarity": 110,
+        "max_psychic": 40
+      },
+      "inherent_traits": ["trait_diminutive_stealth", "trait_eagle_eye"]
+    },
+    "aeldari": {
+      "id": "aeldari",
+      "name": "Aeldari (Asuryani / Craftworld)",
+      "faction_alignment": "Xenos / Asuryani",
+      "lore": "Ancient and graceful xenos gifted with supernatural reflexes and intense psychic resonance.",
+      "base_stats": {
+        "strength": 30,
+        "agility": 80,
+        "physical_vitality": 45,
+        "agency": 70,
+        "clarity": 75,
+        "psychic_aptitude": 60,
+        "dissonance": 10
+      },
+      "stat_caps": {
+        "max_strength": 80,
+        "max_agility": 150,
+        "max_vitality": 85,
+        "max_agency": 120,
+        "max_clarity": 130,
+        "max_psychic": 150
+      },
+      "inherent_traits": ["trait_fleet_of_foot", "trait_path_discipline"]
+    },
+    "ork": {
+      "id": "ork",
+      "name": "Ork (Orkoid Fungus)",
+      "faction_alignment": "Xenos / Orks",
+      "lore": "Savage, fungal warmongers who thrive on bloodshed and channel gestalt WAAAGH energy.",
+      "base_stats": {
+        "strength": 65,
+        "agility": 35,
+        "physical_vitality": 75,
+        "agency": 60,
+        "clarity": 25,
+        "psychic_aptitude": 20,
+        "dissonance": 0
+      },
+      "stat_caps": {
+        "max_strength": 140,
+        "max_agility": 90,
+        "max_vitality": 140,
+        "max_agency": 100,
+        "max_clarity": 60,
+        "max_psychic": 80
+      },
+      "inherent_traits": ["trait_fungoid_durability", "trait_the_waaagh"]
+    },
+    "necron": {
+      "id": "necron",
+      "name": "Necron (Living Metal Automaton)",
+      "faction_alignment": "Xenos / Necron Dynasties",
+      "lore": "Cold, immortal beings made of self-repairing necrodermis metal with no warp soul.",
+      "base_stats": {
+        "strength": 60,
+        "agility": 30,
+        "physical_vitality": 80,
+        "agency": 75,
+        "clarity": 70,
+        "psychic_aptitude": 0,
+        "dissonance": 0
+      },
+      "stat_caps": {
+        "max_strength": 130,
+        "max_agility": 80,
+        "max_vitality": 140,
+        "max_agency": 120,
+        "max_clarity": 120,
+        "max_psychic": 0
+      },
+      "inherent_traits": ["trait_reanimation_protocols", "trait_soulless_metal"]
+    },
+    "tau": {
+      "id": "tau",
+      "name": "T'au (Fire Caste)",
+      "faction_alignment": "Xenos / T'au Empire",
+      "lore": "Pragmatic, tech-dependent xenos dedicated to the Greater Good with negligible warp presence.",
+      "base_stats": {
+        "strength": 30,
+        "agility": 50,
+        "physical_vitality": 45,
+        "agency": 60,
+        "clarity": 70,
+        "psychic_aptitude": 0,
+        "dissonance": 0
+      },
+      "stat_caps": {
+        "max_strength": 75,
+        "max_agility": 110,
+        "max_vitality": 80,
+        "max_agency": 100,
+        "max_clarity": 120,
+        "max_psychic": 0
+      },
+      "inherent_traits": ["trait_the_greater_good", "trait_warp_blind"]
+    },
+    "genestealer_hybrid": {
+      "id": "genestealer_hybrid",
+      "name": "Genestealer Hybrid (Brood Infiltrator)",
+      "faction_alignment": "Tyranid Genestealer Cult",
+      "lore": "Subversive alien hybrids combining human guile with predatory Tyranid reflexes and telepathy.",
+      "base_stats": {
+        "strength": 50,
+        "agility": 60,
+        "physical_vitality": 60,
+        "agency": 65,
+        "clarity": 45,
+        "psychic_aptitude": 30,
+        "dissonance": 25
+      },
+      "stat_caps": {
+        "max_strength": 110,
+        "max_agility": 120,
+        "max_vitality": 110,
+        "max_agency": 100,
+        "max_clarity": 90,
+        "max_psychic": 90
+      },
+      "inherent_traits": ["trait_broodmind_telepathy", "trait_chitin_plates"]
+    },
+    "void_ultramarine_avatar": {
+      "id": "void_ultramarine_avatar",
+      "name": "Void Ultramarine Avatar (Host of Malgakor)",
+      "faction_alignment": "Chaos / The Void Immaterium",
+      "lore": "A blasphemous fusion of mortal steel, Necrodermis living metal, and the eternal warp-essence of Chaos God Malgakor, clad in midnight-void corrupted Astartes heraldry.",
+      "base_stats": {
+        "strength": 120,
+        "agility": 80,
+        "physical_vitality": 250,
+        "agency": 120,
+        "clarity": 110,
+        "psychic_aptitude": 85,
+        "dissonance": 50
+      },
+      "stat_caps": {
+        "max_strength": 250,
+        "max_agility": 200,
+        "max_vitality": 500,
+        "max_agency": 150,
+        "max_clarity": 150,
+        "max_psychic": 150
+      },
+      "inherent_traits": ["trait_void_ascension", "trait_malgakor_soul_fusion"]
+    },
+    "immortal_awakened": {
+      "id": "immortal_awakened",
+      "name": "The Immortal Awakened (Beyond the Cycles)",
+      "faction_alignment": "Transcendent / Sovereign",
+      "lore": "An entity bathed in the primordial yellow luminescence beyond the knowledge of both the God-Emperor and the Ruinous Powers. Free from all karmic cycles and servitude, possessing an unkillable vitality (-99).",
+      "base_stats": {
+        "strength": 200,
+        "agility": 150,
+        "physical_vitality": -99,
+        "agency": 200,
+        "clarity": 200,
+        "psychic_aptitude": 100,
+        "dissonance": 0
+      },
+      "stat_caps": {
+        "max_strength": 500,
+        "max_agility": 500,
+        "max_vitality": 9999,
+        "max_agency": 500,
+        "max_clarity": 500,
+        "max_psychic": 500
+      },
+      "inherent_traits": ["trait_immortal_awakened_yellow_energy"]
+    }
+  }
+}
