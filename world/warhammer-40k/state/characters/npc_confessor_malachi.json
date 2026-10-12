@@ -1,0 +1,156 @@
+{
+  "data": {
+    "baseline": {
+      "modifiers": {
+        "agency": 40,
+        "agility": -5,
+        "clarity": 15,
+        "dissonance": -15,
+        "physical_vitality": 20
+      },
+      "stats": {
+        "agency": 100,
+        "agility": 30,
+        "clarity": 100,
+        "dissonance": 75,
+        "psychic_aptitude": 15,
+        "strength": 35
+      }
+    },
+    "capabilities": {
+      "cannot_die": false
+    },
+    "equipment": [
+      "item_carapace_armor",
+      "item_purity_seal_sanctus"
+    ],
+    "health": 0,
+    "inventory": [
+      "item_consecrated_censer"
+    ],
+    "location_id": "loc_shrine_aquila",
+    "metadata": {
+      "legacy": {
+        "archetype": "The Fanatical Confessor",
+        "coordinate": {
+          "col": 1,
+          "row": 1
+        },
+        "current_location": "loc_shrine_aquila",
+        "current_status": "KIA / EXECUTED BY ASTARTES SANCTION",
+        "decisions": [
+          {
+            "choice_type": "sermon",
+            "decision": "Delivered the Sermon of the Blood Tithe to 400 shivering manufactorum workers before the blast doors closed.",
+            "impact": "Fortified civilian agency and suppressed emerging panic about the lower sump breach.",
+            "location": "loc_shrine_aquila",
+            "turn": 1
+          },
+          {
+            "choice_type": "holy_broadcast",
+            "decision": "Exercised autonomous authority: engaged the Basilica's macro-vox soundbanks to chant the Litany of Sanity at maximum volume, scouring the psychic static from the vox-net.",
+            "impact": "Banished the warp-bleed hallucinations across the entire level without a single casualty.",
+            "location": "loc_shrine_aquila",
+            "turn": 6
+          },
+          {
+            "choice_type": "supreme_command_astropathic_cry",
+            "decision": "Assumed supreme command of Sub-Level 404 following Sergeant Vane's martyrdom; mounted the high altar of the Basilica of Saint Katherine's Tears, linked the Sol-Aegis Plasma Reactor to the high-gain astropathic array, and bellowed a sector-wide distress transmission directly to High Command and Primarch Roboute Guilliman: 'WE HAVE ENGAGED A CHAOS GOD. VANE HAS FALLEN. SEND THE ADEPTUS ASTARTES!'",
+            "impact": "Pierced planetary quarantine shielding with an unignorable divine-grade distress signal; rallied surviving conscripts and enforcers with holy fire.",
+            "location": "loc_shrine_aquila",
+            "turn": 19
+          },
+          {
+            "choice_type": "triumphant_benediction",
+            "decision": "Witnessed the descent of the Angels of Death and the total banishment of Lord Malgakor; proclaimed the miraculous victory across Sub-Level 404, ordered the bells of Saint Katherine rung in eternal joy, and officially consecrated the four martyrs into the Imperial Martyrology.",
+            "impact": "Sub-Level 404 restored to absolute Imperial faith; civilian morale and tithe commitment reach historic zenith.",
+            "location": "loc_shrine_aquila",
+            "turn": 20
+          },
+          {
+            "choice_type": "proclamation_of_xenos_bargain",
+            "decision": "Approached Captain Severus in the Basilica and solemnly announced the ultimate gamble: to reach out across the void to Szarekh, the Silent King of the Necrons, using the Sunken Necropolis's ancient Blackstone array to petition for resurrection protocols to bring back Vane, Bragg, Jax, and Kroll, pledging his own life as collateral.",
+            "impact": "Stunned the Ultramarines; established high-stakes truce under Guilliman's pragmatic precedent; opened active trial 'The Triarch Communion'.",
+            "location": "loc_shrine_aquila",
+            "turn": 21
+          },
+          {
+            "choice_type": "diplomatic_tithe_of_silent_king",
+            "decision": "Interfaced with the Noctilith obelisk at (0,0); offered the crystallized warp-core of Lord Malgakor to the Triarch Envoy of Szarekh, the Silent King, and willingly endured the agonizing siphon of 30 Vitality to secure the Tachyon Resurrection Matrix, returning to the Basilica to raise the four fallen heroes.",
+            "impact": "Successfully resurrected Sergeant Kathryn Vane, Bone 'ead Bragg, Enginseer Kroll, and Trooper Jax; established a sealed covenant of survival under the watchful eye of Captain Severus.",
+            "location": "loc_ancient_ruined_city",
+            "turn": 22
+          },
+          {
+            "choice_type": "pleading_for_mortals",
+            "decision": "Fell to knees before Captain Severus, holding aloft his heavy iron censer and pleading for the lives of Vane and her soldiers, offering his own head as the sole heretic.",
+            "impact": "Attempted to shoulder the full guilt of the xenos pact.",
+            "location": "loc_shrine_aquila",
+            "turn": 23
+          }
+        ],
+        "equipment": {
+          "armor": "item_carapace_armor",
+          "relic": "item_purity_seal_sanctus"
+        },
+        "id": "npc_confessor_malachi",
+        "inventory": [
+          {
+            "description": "Swung by thick chains to disperse blessed incense that burns the eyes and lungs of heretics.",
+            "item_id": "item_consecrated_censer",
+            "name": "Heavy Iron Promethium Censer",
+            "symbol": "The Purity Seal"
+          }
+        ],
+        "name": "Confessor Preceptor Malachi",
+        "race": "human",
+        "stats": {
+          "agency": 100,
+          "agility": 30,
+          "applied_equipment_modifiers": {
+            "agency": 15,
+            "agility": -5,
+            "clarity": 5,
+            "dissonance": -15,
+            "physical_vitality": 20
+          },
+          "clarity": 100,
+          "dissonance": 75,
+          "physical_vitality": 0,
+          "psychic_aptitude": 15,
+          "punch_kinetic_impact": 17.9,
+          "strength": 35
+        },
+        "symbol_alignment": "The Aquila & The Purity Seal",
+        "title": "Voice of the Emperor Ascendant / High Preceptor of Sub-Level 404",
+        "traits": [
+          {
+            "name": "Zealot of the Imperial Creed",
+            "trait_id": "trait_fanatical_faith"
+          },
+          {
+            "name": "Imperial Will to Endure",
+            "trait_id": "trait_unyielding_survival"
+          }
+        ]
+      }
+    },
+    "name": "Confessor Preceptor Malachi",
+    "stats": {
+      "agency": 100,
+      "agility": 30,
+      "clarity": 100,
+      "dissonance": 75,
+      "psychic_aptitude": 15,
+      "strength": 35
+    },
+    "status": "dead",
+    "traits": [
+      "trait_fanatical_faith",
+      "trait_unyielding_survival"
+    ]
+  },
+  "id": "npc_confessor_malachi",
+  "revision": 0,
+  "schema_version": 1
+}

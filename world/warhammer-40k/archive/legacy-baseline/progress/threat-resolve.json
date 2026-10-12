@@ -1,0 +1,97 @@
+{
+  "engagement_title": "The Wrath of the Betrayed: The Void Ascendant Cleaves Captain Severus",
+  "tactical_stance": "all_out_charge",
+  "involved_threats": [
+    {
+      "threat_id": "captain_severus_duel",
+      "name": "Captain Severus, Executioner of Guilliman",
+      "current_hp": 102,
+      "max_hp": 330,
+      "round_retaliation_damage": 80,
+      "damage_reduction_pct": 0.4,
+      "armor_stripped": false
+    }
+  ],
+  "involved_participants": [
+    {
+      "char_file": "main_char.json",
+      "name": "Kathryn Vane, The Void Ascendant",
+      "role": "Avatar of the Void / Host of Malgakor",
+      "current_stats": {
+        "physical_vitality": 640,
+        "strength": 170,
+        "agility": 95,
+        "clarity": 120,
+        "dissonance": 60,
+        "punch_kinetic_impact": 5228.5
+      },
+      "equipment": [
+        "item_void_power_plate",
+        "item_void_relic_blade",
+        "item_storm_bolter"
+      ]
+    }
+  ],
+  "involved_resources": {
+    "munitions_expended": {},
+    "conscripts_engaged": 0,
+    "med_stims_available": 0
+  },
+  "calculated_outcome": {
+    "timestamp": "41.999.M41",
+    "threat_resolution": {
+      "threat_id": "captain_severus_duel",
+      "starting_hp": 102,
+      "damage_taken": 8846.6,
+      "remaining_hp": 0,
+      "status": "slain",
+      "damage_breakdown": {
+        "gross_damage": 14744.4,
+        "effective_damage_reduction": "40%",
+        "total_net_damage_inflicted": 8846.6,
+        "ordnance_breakdown": {
+          "Kathryn Vane, The Void Ascendant_relic_blade": {
+            "net_damage": 8846.6,
+            "effect": "Disruption blade decapitated necrotic sinew and sundered warp heart"
+          }
+        },
+        "participant_strikes": [
+          {
+            "name": "Kathryn Vane, The Void Ascendant",
+            "melee_strike_damage": 8846.6
+          }
+        ]
+      }
+    },
+    "retaliation_and_casualties": {
+      "hostile_raw_pool": 80,
+      "stance_multiplier": 1.4,
+      "conscript_casualties": 0,
+      "participant_injuries": [
+        {
+          "name": "Kathryn Vane, The Void Ascendant",
+          "raw_incoming": 112.0,
+          "armor_mitigation": 0,
+          "damage_sustained": 112,
+          "starting_vitality": 640,
+          "final_vitality": 528,
+          "vitality_delta": -112,
+          "starting_dissonance": 60,
+          "final_dissonance": 68,
+          "med_stim_administered": false,
+          "combat_status": "Operational Combatant"
+        }
+      ]
+    },
+    "resources_consumed": {},
+    "game_master_hooks": {
+      "combat_outcome": "VICTORY_THREAT_EXTERMINATED",
+      "threat_hp_remaining": 0,
+      "threat_destroyed": true,
+      "conscripts_killed": 0,
+      "recommended_story_beat": "The titan Captain Severus, Executioner of Guilliman collapses into the sump mud with its neural cluster disintegrated. Garrison troops chant the Emperor's praises as field medicae tend to the wounded.",
+      "suggested_gm_event_type": "triumphant_reclamation",
+      "processed_by_gm": true
+    }
+  }
+}

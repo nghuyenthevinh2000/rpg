@@ -1,0 +1,18 @@
+{
+  "data": {
+    "metadata": {
+      "automatic_mechanics": false,
+      "category": "munitions",
+      "legacy": {
+        "current": 1,
+        "unit": "consecrated into a beacon of light"
+      }
+    },
+    "name": "relic_broadsword_eclipser",
+    "quantity": 1,
+    "unit": "consecrated into a beacon of light"
+  },
+  "id": "relic_broadsword_eclipser",
+  "revision": 0,
+  "schema_version": 1
+}

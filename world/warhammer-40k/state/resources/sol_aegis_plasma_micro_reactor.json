@@ -1,0 +1,18 @@
+{
+  "data": {
+    "metadata": {
+      "automatic_mechanics": false,
+      "category": "construction_and_tech",
+      "legacy": {
+        "depot_stock": 1,
+        "unit": "radiating endless warm illumination across Tartarus"
+      }
+    },
+    "name": "sol_aegis_plasma_micro_reactor",
+    "quantity": 1,
+    "unit": "radiating endless warm illumination across Tartarus"
+  },
+  "id": "sol_aegis_plasma_micro_reactor",
+  "revision": 0,
+  "schema_version": 1
+}

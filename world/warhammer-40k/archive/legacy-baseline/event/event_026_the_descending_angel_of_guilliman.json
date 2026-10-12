@@ -1,0 +1,100 @@
+{
+  "id": "event_026_the_descending_angel_of_guilliman",
+  "name": "The Descending Angel of Guilliman: Captain Severus Returns with Heavy Armaments",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.052.M41",
+    "turn_increment": 1,
+    "world_state": "Duel of Gods: The Void Ascendant vs The Angel of Guilliman"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The sky above the floating ruins of the Basilica splits open. A heavy assault gunship from the 'Honor of Macragge' breaks through the orbital smog, dropping Captain Severus straight back into the abyss. Clad in Indomitus Tactical Dreadnought Armor upgraded with shoulder-mounted Cyclone Missile Pods and wielding the crackling Hammer of Macragge, the Captain lands amidst the floating debris to face Kathryn Vane, The Void Ascendant."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_severus_heavy_drop",
+        "title": "Captain Severus Re-Engages as Guilliman's Executioner",
+        "completed_at": "41.999.052.M41",
+        "consequence": "Detecting the impossible apotheosis of Kathryn Vane as the host of Lord Malgakor, Captain Severus equipped the Chapter's sacred master-crafted relic weapons—the Hammer of Macragge and Cyclone Missiles—and dropped directly into the anti-gravitational vortex to finish the sanction personally."
+      }
+    ],
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_duel_of_the_void_ascendant",
+        "name": "The Clash of Betrayal and Indomitus Duty",
+        "type": "titan_avatar_duel",
+        "threat": "Captain Severus (102 HP, Strike Impact: 1,279.1 dmg, equipped with Cyclone Missiles and Sanctified Thunder Hammer) stands at the precipice of the floating Basilica crater, aiming his weapons at Kathryn Vane (640 HP, Strike Impact: 5,228.5 dmg).",
+        "human_trial": "Vane the Void Ascendant must decide how to confront her former savior: unleash the full apocalyptic fury of Malgakor to crush the Ultramarine, or break his will with the dark truth of the Primarch's betrayal.",
+        "status": "active"
+      }
+    ],
+    "threat_tracking": {
+      "status": "apocalyptic_duel_primed",
+      "total_threats_neutralized": 53,
+      "sublevel_containment_rating": "0% CONTAINED // DUEL OF DEMIGODS IN PROGRESS",
+      "sector_threat_telemetry": {
+        "loc_shrine_aquila": {
+          "threat": "⚔️ CLASH OF THE AVATARS: VANE (640 HP) VS SEVERUS (102 HP)",
+          "level": "Epic Climax"
+        },
+        "loc_bastion_gate": {
+          "threat": "Floating Debris Field",
+          "level": "Unstable"
+        },
+        "loc_chaos_stronghold": {
+          "threat": "Channeling Void Currents",
+          "level": "Warp Siphon"
+        }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 2,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Kathryn Vane, The Void Ascendant",
+          "role": "Avatar of the Void / Host of Lord Malgakor",
+          "status": "ready_for_battle (640/640 HP, Strike Impact: 5,228.5 DMG)"
+        },
+        {
+          "id": "npc_captain_severus",
+          "name": "Captain Severus",
+          "role": "Guilliman's Executioner",
+          "status": "heavy_assault_loadout (102/330 HP, Strike Impact: 1,279.1 DMG)"
+        }
+      ]
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "captain_severus.json",
+      "stat_deltas": {},
+      "new_decision": {
+        "turn": 27,
+        "location": "loc_shrine_aquila",
+        "choice_type": "re_engagement_with_relic_armaments",
+        "decision": "Witnessed the catastrophic void-resurrection of Kathryn Vane from the bridge of the Strike Cruiser; refused to bombard the hive from orbit and instead descended in personal drop-insertion armed with the Hammer of Macragge and Cyclone Missiles to meet the Void Avatar in single combat.",
+        "impact": "Initiated the final duel of Sub-Level 404."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {},
+      "new_decision": {
+        "turn": 27,
+        "location": "loc_shrine_aquila",
+        "choice_type": "defiant_battle_stance",
+        "decision": "Watched Captain Severus descend in heavy assault Terminator plate; raised Eclipser into a two-handed guard, surrounding herself with crackling violet warp-lightning, ready to strike down the angel of Guilliman.",
+        "impact": "Ready for the apocalyptic clash."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

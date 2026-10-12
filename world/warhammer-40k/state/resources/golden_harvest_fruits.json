@@ -1,0 +1,20 @@
+{
+  "data": {
+    "metadata": {
+      "automatic_mechanics": false,
+      "category": "sustenance_and_survival",
+      "legacy": {
+        "burn_rate_turn": 0,
+        "current": 5000,
+        "days_reserve": 999.0,
+        "unit": "baskets of sweet nectar & grain"
+      }
+    },
+    "name": "golden_harvest_fruits",
+    "quantity": 5000,
+    "unit": "baskets of sweet nectar & grain"
+  },
+  "id": "golden_harvest_fruits",
+  "revision": 0,
+  "schema_version": 1
+}

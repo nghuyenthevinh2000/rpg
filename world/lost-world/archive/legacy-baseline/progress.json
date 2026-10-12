@@ -1,0 +1,125 @@
+{
+  "current_cycle": {
+    "day": 4,
+    "timestamp": "2026-10-09T07:30:00+07:00",
+    "turn_count": 33,
+    "world_state": "The Warmth of Fellowship"
+  },
+  "active_actions": [
+    {
+      "action_id": "action_build_structure",
+      "name": "Erect Physical Sanctuary / Monastery",
+      "initiated_by": "player_kael",
+      "location": "loc_monastery",
+      "coordinate": {
+        "row": 3,
+        "col": 3
+      },
+      "status": "completed",
+      "started_at": "2026-10-08T22:55:00+07:00",
+      "projected_completion_at": "2026-10-09T05:30:00+07:00",
+      "progress_percentage": 100,
+      "time_fulfillment": {
+        "hours_committed": 120,
+        "hours_required": 120
+      },
+      "resource_fulfillment": {
+        "materials": [
+          {
+            "item": "raw_cedar_timber",
+            "current": 40,
+            "required": 40,
+            "unit": "logs"
+          },
+          {
+            "item": "quarried_granite_slabs",
+            "current": 25,
+            "required": 25,
+            "unit": "slabs"
+          }
+        ],
+        "psychological_cost_paid": {
+          "dividend_credits_forfeited": 50000,
+          "physical_exhaustion_endured": true
+        },
+        "systemic_conditions_met": {
+          "telemetry_severed": true,
+          "drones_rejected": true
+        }
+      },
+      "assigned_participants": [
+        "npc_marcus_the_drifter",
+        "npc_lyra_orator",
+        "seeker_surgeon",
+        "seeker_designer"
+      ]
+    }
+  ],
+  "active_disasters_and_trials": [
+    {
+      "trial_id": "event_sudden_unregulated_squall",
+      "name": "The Unregulated Atmospheric Squall",
+      "type": "weather_anomaly",
+      "threat": "Collapse of unfinished timber framing; water damage to quarried lime.",
+      "human_trial": "Requires all participants to hold the guy-lines and brace the pillars in freezing rain for 4 hours without automated weather domes.",
+      "status": "active"
+    }
+  ],
+  "character_registry_path": "char/",
+  "completed_milestones": [
+    {
+      "milestone_id": "ms_truth_standard_enacted",
+      "title": "Codification of Materialization Laws",
+      "completed_at": "2026-10-08T22:52:00+07:00",
+      "consequence": "All actions now demand thermodynamic, physical, and psychological costs before materializing."
+    },
+    {
+      "milestone_id": "ms_autonomous_drone_severance",
+      "title": "Telemetry & Drone Severance at (3,3)",
+      "completed_at": "2026-10-08T22:56:00+07:00",
+      "consequence": "Autonomous repair units banned from quadrant (3,3); first localized manual friction zone established."
+    },
+    {
+      "milestone_id": "ms_hearth_consecrated",
+      "title": "First Communal Meal",
+      "completed_at": "2026-10-09T07:30:00+07:00",
+      "consequence": "Manual sustenance proven viable; 12 citizens partake in food prepared entirely by hand."
+    },
+    {
+      "milestone_id": "ms_hearth_consecrated",
+      "title": "First Communal Meal",
+      "completed_at": "2026-10-09T07:30:00+07:00",
+      "consequence": "Manual sustenance proven viable; 12 citizens partake in food prepared entirely by hand."
+    },
+    {
+      "milestone_id": "ms_healer_reclaimed",
+      "title": "Restoration of the Tactile Healer",
+      "completed_at": "2026-10-09T08:15:00+07:00",
+      "consequence": "Dr. Harlan takes up residence at the Monastery; herbal diagnostic station established."
+    },
+    {
+      "milestone_id": "ms_ice_harvest_accomplished",
+      "title": "Manual Ice & Water Harvest",
+      "completed_at": "2026-10-09T13:30:00+07:00",
+      "consequence": "The Silent Freeze at the Runoff overcome through physical communal labor; thirty gallons of potable water secured."
+    },
+    {
+      "milestone_id": "ms_fever_and_struggle_overcome",
+      "title": "Purging of the Void & Communal Forgiveness",
+      "completed_at": "2026-10-10T06:30:00+07:00",
+      "consequence": "The psychotic delirium of the Void is purged through natural biological sleep and unconditional communal fellowship. The Salt & Spark crisis is contained by Marcus's continuous hearth watch."
+    },
+    {
+      "milestone_id": "ms_fever_and_struggle_overcome",
+      "title": "Purging of the Void & Communal Forgiveness",
+      "completed_at": "2026-10-10T06:30:00+07:00",
+      "consequence": "The psychotic delirium of the Void is purged through natural biological sleep and unconditional communal fellowship. The Salt & Spark crisis is contained by Marcus's continuous hearth watch."
+    },
+    {
+      "milestone_id": "ms_hearth_consecrated",
+      "title": "First Communal Meal",
+      "completed_at": "2026-10-09T07:30:00+07:00",
+      "consequence": "Manual sustenance proven viable; 12 citizens partake in food prepared entirely by hand."
+    }
+  ]
+}

@@ -1,5 +1,8 @@
-"""Lost World: connected movement and explicitly tagged, location-scoped cold."""
 from engine.contracts import RuleError, RuleResult
+from .calendar import calendar_effects, validate_calendar
+from .projects import PROJECT_ACTIONS, resolve_project, validate_projects
+from .resources import periodic_resources, resolve_production, validate_resources
+from .trials import resolve_trial
 
 
 def _set(collection, identity, path, value):
@@ -14,8 +17,17 @@ def _shape(action, required):
 
 
 def resolve(ctx, event):
+    violations = validate_resources(ctx) + validate_projects(ctx) + validate_calendar(ctx)
+    if violations:
+        raise RuleError('resource_config', 'Invalid configuration', violations)
     action = event['action']
     kind = action['type']
+    if kind in PROJECT_ACTIONS:
+        return resolve_project(ctx, event)
+    if kind == 'produce':
+        return resolve_production(ctx, event)
+    if kind == 'resolve_trial':
+        return resolve_trial(ctx, event)
     locations = {loc['id']: loc for loc in ctx.definitions.get('locations')['locations']}
     if kind == 'introduce_threat':
         _shape(action, ('type', 'template_id', 'location_id'))
@@ -54,10 +66,11 @@ def _damage(character, damage):
 
 
 def after_turn(ctx, event, outcome):
+    resources = periodic_resources(ctx)
     rules = ctx.definitions.get('rules')['cold']
     gm_trait = next(t for t in ctx.definitions.get('gm')['traits'] if t['trait_id'] == rules['miracle_trait_id'])
     traits = ctx.definitions.get('traits')['traits']
-    effects, outcomes = [], []
+    effects, outcomes = resources.effects, []
     # Multiple cold hazards at a location expose each living character only once.
     affected = {t['data'].get('location_id') for t in ctx.state.list('threats')
                 if t['data']['active'] and 'cold' in t['data']['tags'] and t['data']['activation_turn'] <= ctx.turn}
@@ -86,7 +99,8 @@ def after_turn(ctx, event, outcome):
                 row['after'] = max(0, data['health'] - damage)
                 effects.extend(_damage(character, damage))
         outcomes.append(row)
-    return RuleResult(effects, {'cold': outcomes})
+    effects.extend(calendar_effects(ctx))
+    return RuleResult(effects, {**resources.outcomes, 'cold': outcomes})
 
 
 def derive(ctx, entity_ref):
@@ -97,8 +111,8 @@ def derive(ctx, entity_ref):
     data = entity['data']; config = ctx.definitions.get('rules')
     traits = ctx.definitions.get('traits')
     totals, multiplier = {}, 1.0
-    for identity in data['traits']:
-        trait = traits['traits'][identity]
+    for tid in data['traits']:
+        trait = traits['traits'][tid]
         for stat, value in trait.get('stat_modifiers', {}).items():
             if not stat.startswith('max_'):
                 totals[stat] = totals.get(stat, 0) + value
@@ -113,11 +127,21 @@ def derive(ctx, entity_ref):
     formula = traits['kinetic_formula']
     vitality = config['immortal_kinetic_vitality'] if data['capabilities']['cannot_die'] else (data['health'] or 0)
     kinetic = (formula['base_punch_damage'] + vitality * formula['vitality_ratio_scale']) * multiplier
-    return {'stats': effective, 'health': data['health'], 'punch_kinetic_impact': round(kinetic, 2)}
+    audit = {
+        'static': {k: v for k, v in data.get('stats', {}).items()},
+        'baseline_modifiers': {k: v for k, v in data.get('baseline', {}).get('modifiers', {}).items()},
+        'current_modifiers': totals,
+        'effective_values': effective,
+        'health': data['health'],
+        'bounds_exceptions': {stat: {'value': val, 'bounds': config['bounds'][stat]}
+                              for stat, val in effective.items()
+                              if stat in config.get('bounds', {}) and not (config['bounds'][stat][0] <= val <= config['bounds'][stat][1])}
+    }
+    return {'stats': effective, 'health': data['health'], 'punch_kinetic_impact': round(kinetic, 2), 'audit': audit}
 
 
 def validate(ctx):
-    violations = []
+    violations = validate_resources(ctx) + validate_projects(ctx) + validate_calendar(ctx)
     registry = ctx.definitions.get('traits')['traits']
     legacy = ctx.state.get('baseline', 'legacy')
     inventory = legacy['data']['metadata']['inventory_registry'] if legacy else {}

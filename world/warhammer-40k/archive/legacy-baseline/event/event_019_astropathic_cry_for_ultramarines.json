@@ -1,0 +1,116 @@
+{
+  "id": "event_019_astropathic_cry_for_ultramarines",
+  "name": "The High Preceptor's Petition: Astropathic Cry to Primarch Guilliman",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.045.M41",
+    "turn_increment": 1,
+    "world_state": "Astropathic Macro-Vox Distress Beam Transmitted — Awaiting Space Marine Drop"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The 60-foot golden Imperial Aquila radiates blinding sapphire power as Confessor Malachi channels the Sol-Aegis Plasma Reactor directly into the high spire astropathic choir. A planetary-scale distress beacon pierces Hive Tartarus's orbital quarantine: 'CHAOS GOD LORD ENGAGED. SEND THE ADEPTUS ASTARTES. IN THE NAME OF GUILLIMAN, HEAR US!'"
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_astropathic_plea_transmitted",
+        "title": "Astropathic Distress Hymn Dispatched to Primarch Roboute Guilliman",
+        "completed_at": "41.999.045.M41",
+        "consequence": "Confessor Preceptor Malachi assumed supreme command of Sub-Level 404, wired the Sol-Aegis Plasma Reactor into the Basilica astropathic relays, and successfully transmitted a high-priority distress hymn across the sector to Lord Commander Roboute Guilliman and the Adeptus Astartes."
+      }
+    ],
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_awaiting_astartes_relief",
+        "name": "The Vigil of the Martyr's Crown",
+        "type": "orbital_drop_countdown",
+        "threat": "Lord Malgakor (5,068 HP) is staggering up the chasm toward the Basilica, while the Ultramarines Strike Cruiser 'Honor of Macragge' breaks orbit to deploy drop-pods.",
+        "human_trial": "Hold the Basilica gates with the Kastelan Automaton 'Iron Bastion' and surviving heavy weapons teams until the Adeptus Astartes drop-pods slam into the abyss.",
+        "status": "active"
+      }
+    ],
+    "threat_tracking": {
+      "status": "active_monitoring",
+      "total_threats_neutralized": 51,
+      "sublevel_containment_rating": "80% Contained (ASTROPATHIC BEACON ACTIVE — PRIMARCH NOTIFIED)",
+      "sector_threat_telemetry": {
+        "loc_chaos_stronghold": {
+          "threat": "⚠️ CHAOS GOD MALGAKOR ADVANCING (5,068 / 12,500 HP)",
+          "level": "Wounded Titan Advance"
+        },
+        "loc_shrine_aquila": { "threat": "Sanctified Macro-Beacon Online (Astartes Telemetry Locked)", "level": "Impenetrable Bastion" },
+        "loc_manufactorum_sigma": { "threat": "Tithe Production at 115% Efficiency", "level": "Secure" },
+        "loc_cogitator_sanctum": { "threat": "Machine Protected & Power Linked", "level": "Secure" },
+        "loc_hab_block_vermin": { "threat": "Enforcers on High Alert", "level": "Guarded" },
+        "loc_bastion_gate": { "threat": "Kill-Box Primed for Lord Malgakor", "level": "Heavy Defense" },
+        "loc_promethium_cistern": { "threat": "Pressure Stabilized", "level": "Secured & Sealed" },
+        "loc_underhive_threshold": { "threat": "Bulkhead Sealed 500%", "level": "Fortified" },
+        "loc_charnel_trench": { "threat": "Cleared Sector", "level": "Secured & Purged" }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 35,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Garrison Commander",
+          "status": "KIA / MARTYRED IN GLORY"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "Acting Garrison Commander & Voice of the Emperor",
+          "status": "broadcasting_astropathic_distress"
+        },
+        {
+          "id": "npc_kastelan_iron_bastion",
+          "name": "Kastelan Automaton 'Iron Bastion'",
+          "role": "Ancient Cybernetica Siege Titan (160/300 HP)",
+          "status": "holding_basilica_approach"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Titan Breacher / Bodyguard",
+          "status": "KIA / SLAIN DEFENDING SARGE"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Master of Foundry Spirits",
+          "status": "KIA / MARTYRED FOR OMNISSIAH"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Plasma Vanguard Marksman",
+          "status": "KIA / HEROIC MARTYRDOM"
+        }
+      ]
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "confessor_malachi.json",
+      "stat_deltas": {
+        "clarity": 15,
+        "dissonance": -20,
+        "agency": 10
+      },
+      "new_decision": {
+        "turn": 19,
+        "location": "loc_shrine_aquila",
+        "choice_type": "supreme_command_astropathic_cry",
+        "decision": "Assumed supreme command of Sub-Level 404 following Sergeant Vane's martyrdom; mounted the high altar of the Basilica of Saint Katherine's Tears, linked the Sol-Aegis Plasma Reactor to the high-gain astropathic array, and bellowed a sector-wide distress transmission directly to High Command and Primarch Roboute Guilliman: 'WE HAVE ENGAGED A CHAOS GOD. VANE HAS FALLEN. SEND THE ADEPTUS ASTARTES!'",
+        "impact": "Pierced planetary quarantine shielding with an unignorable divine-grade distress signal; rallied surviving conscripts and enforcers with holy fire."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "data": {
+    "completed": true,
+    "location_id": "loc_monastery",
+    "metadata": {
+      "executable": false,
+      "legacy": {
+        "action_id": "action_build_structure",
+        "assigned_participants": [
+          "npc_marcus_the_drifter",
+          "npc_lyra_orator",
+          "seeker_surgeon",
+          "seeker_designer"
+        ],
+        "coordinate": {
+          "col": 3,
+          "row": 3
+        },
+        "initiated_by": "player_kael",
+        "location": "loc_monastery",
+        "name": "Erect Physical Sanctuary / Monastery",
+        "progress_percentage": 100,
+        "projected_completion_at": "2026-10-09T05:30:00+07:00",
+        "resource_fulfillment": {
+          "materials": [
+            {
+              "current": 40,
+              "item": "raw_cedar_timber",
+              "required": 40,
+              "unit": "logs"
+            },
+            {
+              "current": 25,
+              "item": "quarried_granite_slabs",
+              "required": 25,
+              "unit": "slabs"
+            }
+          ],
+          "psychological_cost_paid": {
+            "dividend_credits_forfeited": 50000,
+            "physical_exhaustion_endured": true
+          },
+          "systemic_conditions_met": {
+            "drones_rejected": true,
+            "telemetry_severed": true
+          }
+        },
+        "started_at": "2026-10-08T22:55:00+07:00",
+        "status": "completed",
+        "time_fulfillment": {
+          "hours_committed": 120,
+          "hours_required": 120
+        }
+      }
+    },
+    "name": "Erect Physical Sanctuary / Monastery",
+    "type": "action_build_structure"
+  },
+  "id": "action_build_structure",
+  "revision": 0,
+  "schema_version": 1
+}

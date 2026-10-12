@@ -1,7 +1,31 @@
 {
-  "system": "Warhammer 40k: Hive Tartarus Entropy & Inquisitorial Providence Engine",
-  "doctrine": "In the grim darkness of the far future, entropy is not mere disorder—it is the malicious will of Chaos, the hunger of the xenos, and the unforgiving machinery of the Imperium.",
+  "system": "Warhammer 40k: Transcendent Sanctuary Opportunities and Trials Engine",
+  "doctrine": "Within the primordial yellow luminescence of Hive Tartarus, trials take the form of enlightenment, restoration, and cosmic harmony.",
   "disaster_pool": [
+    {
+      "id": "event_crystal_garden_repair",
+      "name": "Restoration of the Crystalline Spire Garden",
+      "type": "sanctuary_opportunity",
+      "trigger_probability": 0.35,
+      "threat": "A cluster of delicate resonating amber flora in the Hab Vermis gardens requires harmonic alignment and nourishment.",
+      "human_trial": "Careful realignment of irrigation channels and meditation to restore crystalline balance."
+    },
+    {
+      "id": "event_wayfarers_reconciliation",
+      "name": "Assembly of Wayfarers' Reconciliation",
+      "type": "social_reconciliation",
+      "trigger_probability": 0.35,
+      "threat": "Arriving pilgrims and underhive reclaimers seek mutual understanding and council at the Bastion Gate.",
+      "human_trial": "Convene peaceful council, share supplies, and foster communal harmony."
+    },
+    {
+      "id": "event_radiant_healing_practice",
+      "name": "Practice of Radiant Attunement",
+      "type": "spiritual_healing",
+      "trigger_probability": 0.30,
+      "threat": "Weary acolytes at the Basilica of the Sovereign Soul require guiding presence and spiritual renewal.",
+      "human_trial": "Channel primordial solace and wisdom to anchor minds in enduring serenity."
+    },
     {
       "id": "event_warp_bleed_hallucinations",
       "name": "Warp-Bleed Psychic Static",

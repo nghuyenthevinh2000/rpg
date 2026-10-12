@@ -1,0 +1,106 @@
+{
+  "id": "npc_captain_severus",
+  "name": "Captain Severus",
+  "title": "Strike Captain of the Ultramarines 2nd Company",
+  "archetype": "The Transhuman Primarch's Chosen",
+  "current_status": "KIA / SLAIN BY THE VOID ASCENDANT",
+  "race": "astartes",
+  "symbol_alignment": "The Ultima & The Aquila",
+  "stats": {
+    "strength": 205,
+    "agility": 55,
+    "physical_vitality": 0,
+    "agency": 130,
+    "clarity": 110,
+    "psychic_aptitude": 5,
+    "dissonance": 65,
+    "applied_equipment_modifiers": {
+      "physical_vitality": 50,
+      "strength": 130,
+      "agility": -10,
+      "agency": 50,
+      "clarity": 15
+    },
+    "punch_kinetic_impact": 1039.9
+  },
+  "current_location": "loc_shrine_aquila",
+  "coordinate": {
+    "row": 1,
+    "col": 1
+  },
+  "traits": [
+    {
+      "trait_id": "trait_transhuman_physiology",
+      "name": "Transhuman Physiology (Astartes)"
+    },
+    {
+      "trait_id": "trait_and_they_shall_know_no_fear",
+      "name": "And They Shall Know No Fear"
+    }
+  ],
+  "equipment": {
+    "armor": "item_indomitus_terminator_armor",
+    "primary_weapon": "item_storm_bolter",
+    "secondary_weapon": "item_cyclone_missile_pack",
+    "melee_weapon": "item_sanctified_thunder_hammer"
+  },
+  "inventory": [
+    {
+      "item_id": "item_iron_halo",
+      "name": "Sanctified Iron Halo",
+      "description": "Conversion forcefield generator worn atop the armor.",
+      "symbol": "The Ultima"
+    }
+  ],
+  "decisions": [
+    {
+      "turn": 20,
+      "location": "loc_chaos_stronghold",
+      "choice_type": "orbital_drop_assault",
+      "decision": "Spearheaded the orbital drop-pod insertion straight into the belly of the Dread Citadel at (4,0) aboard drop-pod 'Wrath of Calth'; disembarked alongside Terminator battle-brothers and engaged Lord Malgakor the Despoiled in the name of Primarch Roboute Guilliman.",
+      "impact": "Delivered the decapitation assault upon the wounded Chaos God, shattering the daemon's remaining foul vitality."
+    },
+    {
+      "turn": 20,
+      "location": "loc_chaos_stronghold",
+      "choice_type": "decapitation_of_chaos_god",
+      "decision": "Executed drop-pod assault 'Wrath of Guilliman' into the dread citadel, parried Malgakor's daemonic blade, and drove the Gladius of Macragge through the beast's black heart, banishing the Chaos God forever.",
+      "impact": "Decapitation strike successful; Lord Malgakor banished and Sub-Level 404 secured for the Imperium."
+    },
+    {
+      "turn": 21,
+      "location": "loc_shrine_aquila",
+      "choice_type": "conditional_indulgence_and_warning",
+      "decision": "Listened to Confessor Malachi's plea; cited the Primarch's secret diplomatic precedents with the Silent King during the Pariah Nexus, and granted conditional permission for Malachi to probe the Blackstone transponder, warning that any betrayal or soulless monstrosity will be answered with immediate exterminatus.",
+      "impact": "Kept the strike force on high alert; detached the Kastelan Automaton to escort Malachi to the Sunken Necropolis."
+    },
+    {
+      "turn": 22,
+      "location": "loc_shrine_aquila",
+      "choice_type": "witnessed_resurrection_and_sealed_pact",
+      "decision": "Witnessed the green chronomantic revival of the four martyrs; inspected their souls and humanity with Astartes Auspex, confirming their minds and loyalty remain pure; sheathed his blade and sealed the incident under Chapter Secret Protocol Guilliman-Theta.",
+      "impact": "Solidified unshakeable alliance between the Ultramarines and the reborn garrison of Sub-Level 404."
+    },
+    {
+      "turn": 23,
+      "location": "loc_shrine_aquila",
+      "choice_type": "execution_of_primarchs_sanction",
+      "decision": "Received the encrypted Indomitus-Nil-Record cipher from Primarch Roboute Guilliman ordering the total purge of Sub-Level 404; solemnly drew the Gladius of Macragge, ordered the Basilica blast doors sealed, and commanded the Terminators to prepare firing solutions on the resurrected heroes to preserve the Imperium from theological ruin.",
+      "impact": "Initiated active trial 'The Harrowing of Sub-Level 404'; placed the entire level under execution quarantine."
+    },
+    {
+      "turn": 24,
+      "location": "loc_shrine_aquila",
+      "choice_type": "completion_of_harrowing_sanction",
+      "decision": "Executed the Primarch's harrowing decree; granted the Emperor's Peace to Sergeant Vane, Bone 'ead Bragg, Enginseer Kroll, Trooper Jax, and Confessor Malachi; saluted their corpses as true heroes of the Imperium, primed the thermal-seismic charges, and activated the teleport homer to return to the Strike Cruiser 'Honor of Macragge'.",
+      "impact": "Completed the secret sanction; ensured the preservation of the Imperium's theological integrity; collapsed Sub-Level 404 into eternal silence."
+    },
+    {
+      "turn": 27,
+      "location": "loc_shrine_aquila",
+      "choice_type": "re_engagement_with_relic_armaments",
+      "decision": "Witnessed the catastrophic void-resurrection of Kathryn Vane from the bridge of the Strike Cruiser; refused to bombard the hive from orbit and instead descended in personal drop-insertion armed with the Hammer of Macragge and Cyclone Missiles to meet the Void Avatar in single combat.",
+      "impact": "Initiated the final duel of Sub-Level 404."
+    }
+  ]
+}

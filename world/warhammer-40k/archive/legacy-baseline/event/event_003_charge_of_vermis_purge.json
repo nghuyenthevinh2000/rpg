@@ -1,0 +1,141 @@
+{
+  "id": "event_003_charge_of_vermis_purge",
+  "name": "The Purge of Hab-Block Vermis: The Sergeant's Charge",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.029.M41",
+    "turn_increment": 1,
+    "world_state": "Sump Incursion Crushed & Hab Secured"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_hab_block_vermin",
+        "ambient_tension": "The central drainage plaza is slick with black xenos-mutant ichor and shattered chitin shells. Conscripts stand tall behind barricades of dead scuttlers, shouting war-cries of victory. The collapsed sewer shaft is sealed with ferrocrete rubble."
+      }
+    ]
+  },
+  "progress_updates": {
+    "clear_active_disasters": true,
+    "new_milestone": {
+      "milestone_id": "ms_sump_beasts_purged",
+      "title": "Sump Beast Incursion Repelled in Close Combat",
+      "completed_at": "41.999.029.M41",
+      "consequence": "Sergeant Vane personally led the counter-charge, slaying the alpha-beast; civilian workforce secured and garrison morale elevated to Fanatical heights."
+    },
+    "active_actions": [],
+    "garrison_forces": {
+      "total_effective_combatants": 61,
+      "command_and_specialists": [
+        { "id": "player_vane", "name": "Sergeant Kathryn Vane", "role": "Garrison Commander", "status": "active" },
+        { "id": "npc_ogryn_bragg", "name": "Bone 'ead Bragg", "role": "Breacher / Heavy Shock Asset", "status": "active" },
+        { "id": "npc_enginseer_kroll", "name": "Enginseer Fabricator Kroll", "role": "Master of Foundry Spirits", "status": "active" },
+        { "id": "npc_confessor_malachi", "name": "Confessor Preceptor Malachi", "role": "High Preceptor & Morale Officer", "status": "active" },
+        { "id": "npc_trooper_jax", "name": "Conscript Trooper Jax", "role": "Frontline Scout / Sump Guide", "status": "active" }
+      ],
+      "sub_units": [
+        {
+          "unit_name": "4th Conscript Platoon (Astra Militarum)",
+          "count": 38,
+          "armament": "Kantrael Lasguns, combat knives, scarred flak vests",
+          "morale": "Fanatical (92%)",
+          "station": "Hab-Block Vermis-9 & Bastion Gate Aegis"
+        },
+        {
+          "unit_name": "Bastion Heavy Weapons Detachment",
+          "count": 6,
+          "armament": "2x Emplaced Heavy Stubbers, 1x Twin-Linked Autocannon",
+          "morale": "Unyielding (90%)",
+          "station": "Overwatch Catwalks over Underhive Threshold"
+        },
+        {
+          "unit_name": "Hive Enforcer Shock Detail",
+          "count": 12,
+          "armament": "Shock-Mauls, Suppression Shields, Combat Shotguns",
+          "morale": "Hardened (88%)",
+          "station": "Hab-Block Vermis-9 lower drainage cordon"
+        },
+        {
+          "unit_name": "Industrial Defense Servitors (Lobotomized)",
+          "count": 16,
+          "armament": "Hydraulic Claws, Rivet Guns",
+          "morale": "Absolute (Machine-bonded 100%)",
+          "station": "Manufactorum 88-Sigma staging lines"
+        }
+      ]
+    },
+    "active_resource_stockpile": {
+      "status": "active_tracking",
+      "munitions": {
+        "lasgun_charge_packs": { "current": 220, "unit": "standard packs", "burn_rate_turn": 5 },
+        "heavy_stubber_belts": { "current": 45, "unit": "drum belts (200 rds)", "burn_rate_turn": 0 },
+        "autocannon_magazines": { "current": 18, "unit": "box magazines", "burn_rate_turn": 0 },
+        "shotgun_solid_slugs": { "current": 100, "unit": "rounds", "burn_rate_turn": 2 },
+        "frag_grenades": { "current": 26, "unit": "canisters", "burn_rate_turn": 0 },
+        "krak_grenades": { "current": 14, "unit": "charges", "burn_rate_turn": 0 }
+      },
+      "construction_and_tech": {
+        "plasteel_barricade_plates": { "depot_stock": 2, "committed_to_actions": 0, "unit": "heavy sheets" },
+        "promethium_welding_canisters": { "depot_stock": 10, "committed_to_actions": 0, "unit": "pressurized flasks" },
+        "sacred_machine_unguent": { "depot_stock": 13, "unit": "vials (Cult Mechanicus)" },
+        "hydraulic_spare_piston_assemblies": { "depot_stock": 8, "unit": "assemblies" }
+      },
+      "sustenance_and_survival": {
+        "corpse_starch_ration_bars": { "current": 1200, "unit": "ration blocks", "burn_rate_turn": 85, "days_reserve": 3.3 },
+        "recycled_greywater_canisters": { "current": 580, "unit": "canteens", "burn_rate_turn": 40, "days_reserve": 3.6 },
+        "grade_3_respirator_filters": { "current": 24, "unit": "sealed canisters", "status": "preserved" },
+        "combat_med_stims": { "current": 33, "unit": "injector ampoules" }
+      },
+      "quarantine_logistics_alert": "Hab-Block Vermis secure. Sustenance supplies burn at regular pace; scavenge or manufactorum tithe trade recommended."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5,
+        "dissonance": -5
+      },
+      "new_decision": {
+        "turn": 4,
+        "location": "loc_hab_block_vermin",
+        "choice_type": "heroic_assault",
+        "decision": "Personally drew chainsword and led Bone 'ead Bragg, Jax, and the Enforcers in a brutal counter-charge into the drainage plaza, bisecting the alpha sewer-scuttler and collapsing the entry tunnel with frag grenades.",
+        "impact": "Exterminated the incursion before civilians were harmed; conscript morale surged to fanatical devotion."
+      },
+      "current_location": "loc_hab_block_vermin"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "physical_vitality": 5,
+        "agency": 5
+      },
+      "new_decision": {
+        "turn": 4,
+        "location": "loc_hab_block_vermin",
+        "choice_type": "melee_carnage",
+        "decision": "Charged shoulder-to-shoulder with the Sarge, pulping four multi-legged chitin monsters against the iron bulkheads with his power fist.",
+        "impact": "Shielded the Sergeant from flanking attacks and terrified the surviving beasts into retreat."
+      },
+      "current_location": "loc_hab_block_vermin"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "agency": 10,
+        "clarity": 5,
+        "dissonance": -5
+      },
+      "new_decision": {
+        "turn": 4,
+        "location": "loc_hab_block_vermin",
+        "choice_type": "combat_valor",
+        "decision": "Fought side-by-side with Sergeant Vane, hurling two frag canisters into the lower drainage throat to seal the breach forever.",
+        "impact": "Conscript transformed from reluctant survivor into battle-hardened squad veteran."
+      },
+      "current_location": "loc_hab_block_vermin"
+    }
+  ]
+}

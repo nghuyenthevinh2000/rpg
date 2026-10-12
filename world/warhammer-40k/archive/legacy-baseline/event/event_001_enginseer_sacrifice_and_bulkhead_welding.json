@@ -1,0 +1,193 @@
+{
+  "id": "event_001_enginseer_sacrifice_and_bulkhead_welding",
+  "name": "The Tithe of Iron & Flesh: Sealing the Sump-Breach",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.027.M41",
+    "turn_increment": 1,
+    "world_state": "The Sulfur Repressed & Bulkhead Reinforced"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_hab_block_vermin",
+        "ambient_tension": "The burning hiss of sulfuric steam has ceased. Corridors are hazy with lingering white exhaust, but the air recyclers are slowly clearing. Serfs emerge from iron cubicles with ragged cheers for the Emperor."
+      },
+      {
+        "id": "loc_underhive_threshold",
+        "ambient_tension": "Deafening roar of promethium welding torches. Massive interlocking plasteel sheets glow white-hot as they are fused to Bulkhead 101."
+      }
+    ]
+  },
+  "progress_updates": {
+    "clear_active_disasters": true,
+    "new_milestone": {
+      "milestone_id": "ms_hab_vermis_sulfur_sealed",
+      "title": "Hab-Block Vermis-9 Sulfur Bypass Sealed",
+      "completed_at": "41.999.027.M41",
+      "consequence": "Catastrophic civilian mortality averted; workforce preserved for manufactorum shift rotation without expending scarce respirator canisters."
+    },
+    "active_actions": [
+      {
+        "action_id": "action_reinforce_bulkhead_101",
+        "name": "Weld Plasteel Bracing to Sump Bulkhead 101",
+        "initiated_by": "player_vane",
+        "location": "loc_underhive_threshold",
+        "coordinate": {
+          "row": 3,
+          "col": 2
+        },
+        "status": "in_progress",
+        "started_at": "41.999.026.M41",
+        "projected_completion_at": "41.999.027.M41",
+        "progress_percentage": 75,
+        "time_fulfillment": {
+          "hours_committed": 120,
+          "hours_required": 160
+        },
+        "resource_fulfillment": {
+          "materials": [
+            {
+              "item": "plasteel_barricade_plates",
+              "current": 30,
+              "required": 30,
+              "unit": "sheets"
+            },
+            {
+              "item": "promethium_welding_canisters",
+              "current": 12,
+              "required": 12,
+              "unit": "flasks"
+            }
+          ],
+          "psychological_cost_paid": {
+            "ration_penalty_applied": true,
+            "exhaustion_sustained": true
+          },
+          "systemic_conditions_met": {
+            "perimeter_tripwires_laid": true,
+            "heavy_stubber_overwatch_set": true,
+            "machine_unguent_applied": true
+          }
+        },
+        "assigned_participants": [
+          "npc_trooper_jax",
+          "npc_enginseer_kroll",
+          "npc_ogryn_bragg"
+        ]
+      }
+    ],
+    "garrison_forces": {
+      "total_effective_combatants": 61,
+      "command_and_specialists": [
+        { "id": "player_vane", "name": "Sergeant Kathryn Vane", "role": "Garrison Commander", "status": "active" },
+        { "id": "npc_ogryn_bragg", "name": "Bone 'ead Bragg", "role": "Breacher / Heavy Shock Asset", "status": "active" },
+        { "id": "npc_enginseer_kroll", "name": "Enginseer Fabricator Kroll", "role": "Master of Foundry Spirits", "status": "active" },
+        { "id": "npc_confessor_malachi", "name": "Confessor Preceptor Malachi", "role": "High Preceptor & Morale Officer", "status": "active" },
+        { "id": "npc_trooper_jax", "name": "Conscript Trooper Jax", "role": "Frontline Scout / Sump Guide", "status": "active" }
+      ],
+      "sub_units": [
+        {
+          "unit_name": "4th Conscript Platoon (Astra Militarum)",
+          "count": 38,
+          "armament": "Kantrael Lasguns, degraded flak vests",
+          "morale": "Steadying (70%)",
+          "station": "Bastion Gate Aegis catwalks & fire steps"
+        },
+        {
+          "unit_name": "Bastion Heavy Weapons Detachment",
+          "count": 6,
+          "armament": "2x Emplaced Heavy Stubbers, 1x Twin-Linked Autocannon",
+          "morale": "Disciplined (80%)",
+          "station": "Overwatch Catwalks over Underhive Threshold"
+        },
+        {
+          "unit_name": "Hive Enforcer Shock Detail",
+          "count": 12,
+          "armament": "Shock-Mauls, Suppression Shields, Combat Shotguns",
+          "morale": "Vigilant (78%)",
+          "station": "Hab-Block Vermis-9 perimeter control"
+        },
+        {
+          "unit_name": "Industrial Defense Servitors (Lobotomized)",
+          "count": 16,
+          "armament": "Hydraulic Claws, Rivet Guns (2 units sacrificed to seal sulfur bypass)",
+          "morale": "Absolute (Machine-bonded 100%)",
+          "station": "Manufactorum 88-Sigma staging lines"
+        }
+      ]
+    },
+    "active_resource_stockpile": {
+      "status": "active_tracking",
+      "munitions": {
+        "lasgun_charge_packs": { "current": 235, "unit": "standard packs", "burn_rate_turn": 5 },
+        "heavy_stubber_belts": { "current": 45, "unit": "drum belts (200 rds)", "burn_rate_turn": 0 },
+        "autocannon_magazines": { "current": 18, "unit": "box magazines", "burn_rate_turn": 0 },
+        "shotgun_solid_slugs": { "current": 118, "unit": "rounds", "burn_rate_turn": 2 },
+        "frag_grenades": { "current": 28, "unit": "canisters", "burn_rate_turn": 0 },
+        "krak_grenades": { "current": 14, "unit": "charges", "burn_rate_turn": 0 }
+      },
+      "construction_and_tech": {
+        "plasteel_barricade_plates": { "depot_stock": 2, "committed_to_actions": 30, "unit": "heavy sheets" },
+        "promethium_welding_canisters": { "depot_stock": 10, "committed_to_actions": 12, "unit": "pressurized flasks" },
+        "sacred_machine_unguent": { "depot_stock": 13, "unit": "vials (Cult Mechanicus)" },
+        "hydraulic_spare_piston_assemblies": { "depot_stock": 8, "unit": "assemblies" }
+      },
+      "sustenance_and_survival": {
+        "corpse_starch_ration_bars": { "current": 1335, "unit": "ration blocks", "burn_rate_turn": 85, "days_reserve": 3.6 },
+        "recycled_greywater_canisters": { "current": 640, "unit": "canteens", "burn_rate_turn": 40, "days_reserve": 3.9 },
+        "grade_3_respirator_filters": { "current": 24, "unit": "sealed canisters", "status": "preserved" },
+        "combat_med_stims": { "current": 35, "unit": "injector ampoules" }
+      },
+      "quarantine_logistics_alert": "Depot plasteel reserves depleted to critical levels (2 sheets remaining). All 24 respirator canisters preserved intact by machine sacrifice."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5,
+        "dissonance": -2
+      },
+      "new_decision": {
+        "turn": 2,
+        "location": "loc_cogitator_sanctum",
+        "choice_type": "command_order",
+        "decision": "Approved Enginseer Kroll's doctrine: sacrificed 2 industrial servitors to seal the boiling sulfur cog-gate, and authorized the full depot release of plasteel, promethium, and sacred unguents to Bulkhead 101.",
+        "impact": "Sulfur catastrophe averted with zero human loss; Bulkhead 101 fortified to 75% completion."
+      },
+      "current_location": "loc_cogitator_sanctum"
+    },
+    {
+      "char_file": "enginseer_kroll.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 2,
+        "location": "loc_cogitator_sanctum",
+        "choice_type": "machine_rite",
+        "decision": "Transmitted thermal-weld sacrifice subroutines to Servitors 09 & 14 to crush the sulfur bypass valve shut, then blessed the plasma cutters at Bulkhead 101 with sacred unguent #44.",
+        "impact": "Eliminated the toxic leak with optimal resource economy and doubled bulkhead welding rate."
+      }
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "physical_vitality": 5,
+        "clarity": 5,
+        "dissonance": -5
+      },
+      "new_decision": {
+        "turn": 2,
+        "location": "loc_underhive_threshold",
+        "choice_type": "fortification_labor",
+        "decision": "Hauled newly delivered plasteel slabs into position alongside Bragg as the welding torches ignited.",
+        "impact": "Morale rallied seeing command deliver promised supplies to the frontline."
+      },
+      "current_location": "loc_underhive_threshold"
+    }
+  ]
+}

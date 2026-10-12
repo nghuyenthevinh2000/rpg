@@ -1,0 +1,48 @@
+{
+  "event_id": "event_013_total_biological_exhaustion",
+  "name": "The Terminal Muscle Failure & Sedation",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-09T15:35:00+07:00",
+    "world_state": "The Threshold of Total Exhaustion"
+  },
+  "narrative": "Lying bound in the heavy canvas on the floor, Kael strains with his final 9 vitality to lunge or hit Marcus again. But biology enforces absolute physical bankruptcy: the lactic acid buildup, acute rewarming tremor, and the canvas bindings prevent any kinetic leverage. Kael thrashes once, his shoulder dislocating slightly against the floor, and his body collapses into complete biological unconsciousness. Dr. Harlan injects an herbal tincture into his palate to ease muscle convulsions.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "The struggle is permanently silenced; Kael lies unconscious in the canvas wrap, completely devoid of energy; Harlan tends to Marcus's hypothermic shock."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": -10,
+        "dissonance": -2,
+        "physical_vitality": -4
+      },
+      "new_decision": {
+        "turn": 26,
+        "location": "loc_monastery",
+        "choice_type": "terminal_biological_exhaustion",
+        "decision": "Attempted to break canvas bindings with final reserves of kinetic force to hit Marcus; suffered complete neuro-muscular collapse and passed out.",
+        "impact": "Exhausted all kinetic capacity; reduced to 5 vitality in a deep comatose sleep."
+      }
+    },
+    {
+      "char_file": "dr_harlan.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 26,
+        "decision": "Administered oral valerian concentrate to stabilize Kael's convulsions and placed heated river stones beside Marcus's torso to treat hypothermic collapse.",
+        "impact": "Single-handedly managing two critical triage patients."
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "event_id": "event_006_deepening_hypothermia",
+  "name": "The Thermodynamic Toll of Immobility",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-09T11:15:00+07:00",
+    "world_state": "The Frost Creeps Inward"
+  },
+  "narrative": "Kael stubbornly maintains total immobility as the hearth fire completely dies down to gray ash. The brutal laws of thermodynamics take their toll. Frost forms on the eyelashes of the companions, violent shivering begins, and fingers lose fine motor control. Nature does not yield to obstinate non-action.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "The hearth fire has died out; bitter sub-zero mountain draft whistles through the floorboards. Rime covers the tea bowls."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": -5,
+        "dissonance": 5
+      },
+      "new_decision": {
+        "turn": 19,
+        "location": "loc_monastery",
+        "choice_type": "stubborn_immobility",
+        "decision": "Refused to move or tend the fire despite dying embers and sub-zero chill, testing the absolute biological limits of sitting still.",
+        "impact": "Suffered physical punishment of thermodynamic reality; core body temperature dropped precipitously."
+      }
+    },
+    {
+      "char_file": "marcus.json",
+      "stat_deltas": {
+        "agency": -5,
+        "dissonance": 5
+      },
+      "new_decision": {
+        "turn": 19,
+        "decision": "Teeth chattering violently; huddled into his coat as his fingers turned white and numb.",
+        "impact": "Hypothermia Stage II progression."
+      }
+    },
+    {
+      "char_file": "dr_harlan.json",
+      "stat_deltas": {
+        "agency": -5,
+        "dissonance": 5
+      },
+      "new_decision": {
+        "turn": 19,
+        "decision": "Clinically noted his own declining cognitive clarity as peripheral vasoconstriction set in.",
+        "impact": "Understood that biological organisms cannot survive philosophical paralysis without calories."
+      }
+    }
+  ]
+}

@@ -1,6 +1,44 @@
 {
   "immortal_health": 100, "immortal_kinetic_vitality": 500,
   "sanctuary": true,
+  "calendar": {
+    "anchor_turn": 37,
+    "anchor_day": 9,
+    "anchor_timestamp": "41.999.059.M41",
+    "turns_per_day": 4,
+    "display_style": "watches"
+  },
+  "resource_policies": {},
+  "resource_recipes": {},
+  "project_templates": {
+    "action_resonant_pylon_repair": {
+      "name": "Resonant Pylon Repair",
+      "hours_required": 12,
+      "materials": {
+        "resonant_crystal_pylons": 2
+      },
+      "credit_cost": 0,
+      "credit_stat": null,
+      "fatigue_cost": 0,
+      "conditions": [],
+      "site_ids": [
+        "loc_shrine_aquila"
+      ],
+      "structural_requirements": {
+        "transcendent_sanctuary": true
+      },
+      "resource_rewards": {}
+    }
+  },
+  "project_sites": {
+    "loc_shrine_aquila": {
+      "manual_work": false,
+      "template_ids": [
+        "action_resonant_pylon_repair"
+      ]
+    }
+  },
+  "project_preparation_recipes": {},
   "stat_keys": ["strength", "agility", "agency", "max_agency", "clarity", "psychic_aptitude", "dissonance"],
   "bounds": {"strength": [0, 100], "agility": [0, 100], "agency": [0, 100], "clarity": [0, 100], "psychic_aptitude": [0, 100], "dissonance": [0, 100]},
   "weapons": {
@@ -16,7 +54,36 @@
     "item_cyclone_missile_pack": {"power": 180, "penetration": 0.7, "ammo_id": "cyclone_missiles", "ammo_cost": 1}
   },
   "armor": {"item_carapace_armor": 0.25, "item_power_armor_mk10": 0.4, "item_tech_robes_lead": 0.15, "item_flak_armor": 0.1, "item_indomitus_terminator_armor": 0.5, "item_void_power_plate": 0.5},
+  "trial_recipes": {
+    "recipe_crystal_garden_repair": {
+      "template_id": "event_crystal_garden_repair",
+      "location_id": "loc_hab_block_vermin",
+      "resource_costs": {"crystalline_spring_water": 5},
+      "resource_rewards": {"golden_harvest_fruits": 10},
+      "trait_rewards": ["trait_adaptable_spirit"],
+      "structural_requirements": {"transcendent_sanctuary": true}
+    },
+    "recipe_wayfarers_reconciliation": {
+      "template_id": "event_wayfarers_reconciliation",
+      "location_id": "loc_bastion_gate",
+      "resource_costs": {"golden_harvest_fruits": 5},
+      "resource_rewards": {"crystalline_spring_water": 10},
+      "trait_rewards": ["trait_iron_discipline"],
+      "structural_requirements": {"transcendent_sanctuary": true}
+    },
+    "recipe_radiant_healing_practice": {
+      "template_id": "event_radiant_healing_practice",
+      "location_id": "loc_shrine_aquila",
+      "resource_costs": {},
+      "resource_rewards": {"crystalline_spring_water": 5},
+      "trait_rewards": ["trait_path_discipline"],
+      "structural_requirements": {"transcendent_sanctuary": true}
+    }
+  },
   "templates": {
+    "event_crystal_garden_repair": {"location_id": "loc_hab_block_vermin", "tags": ["opportunity"], "stats": {"health": 0, "armor": 0, "retaliation": 0}},
+    "event_wayfarers_reconciliation": {"location_id": "loc_bastion_gate", "tags": ["social"], "stats": {"health": 0, "armor": 0, "retaliation": 0}},
+    "event_radiant_healing_practice": {"location_id": "loc_shrine_aquila", "tags": ["opportunity"], "stats": {"health": 0, "armor": 0, "retaliation": 0}},
     "event_warp_bleed_hallucinations": {"tags": ["hostile"], "stats": {"health": 80, "armor": 0.1, "retaliation": 15}},
     "event_sump_mutant_breach": {"tags": ["hostile"], "stats": {"health": 120, "armor": 0.2, "retaliation": 25}},
     "event_promethium_pressure_spike": {"tags": ["hostile"], "stats": {"health": 100, "armor": 0, "retaliation": 20}},

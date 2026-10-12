@@ -1,0 +1,19 @@
+{
+  "data": {
+    "metadata": {
+      "automatic_mechanics": false,
+      "category": "munitions",
+      "legacy": {
+        "burn_rate_turn": 0,
+        "current": 100,
+        "unit": "percent disarmed & placed in ceremonial tribute"
+      }
+    },
+    "name": "weapons_decommissioned",
+    "quantity": 100,
+    "unit": "percent disarmed & placed in ceremonial tribute"
+  },
+  "id": "weapons_decommissioned",
+  "revision": 0,
+  "schema_version": 1
+}

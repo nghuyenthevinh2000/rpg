@@ -1,0 +1,1289 @@
+{
+  "changes": {
+    "actions/action_build_structure": {
+      "after": {
+        "data": {
+          "completed": true,
+          "location_id": "loc_monastery",
+          "metadata": {
+            "executable": false,
+            "legacy": {
+              "action_id": "action_build_structure",
+              "assigned_participants": [
+                "npc_marcus_the_drifter",
+                "npc_lyra_orator",
+                "seeker_surgeon",
+                "seeker_designer"
+              ],
+              "coordinate": {
+                "col": 3,
+                "row": 3
+              },
+              "initiated_by": "player_kael",
+              "location": "loc_monastery",
+              "name": "Erect Physical Sanctuary / Monastery",
+              "progress_percentage": 100,
+              "projected_completion_at": "2026-10-09T05:30:00+07:00",
+              "resource_fulfillment": {
+                "materials": [
+                  {
+                    "current": 40,
+                    "item": "raw_cedar_timber",
+                    "required": 40,
+                    "unit": "logs"
+                  },
+                  {
+                    "current": 25,
+                    "item": "quarried_granite_slabs",
+                    "required": 25,
+                    "unit": "slabs"
+                  }
+                ],
+                "psychological_cost_paid": {
+                  "dividend_credits_forfeited": 50000,
+                  "physical_exhaustion_endured": true
+                },
+                "systemic_conditions_met": {
+                  "drones_rejected": true,
+                  "telemetry_severed": true
+                }
+              },
+              "started_at": "2026-10-08T22:55:00+07:00",
+              "status": "completed",
+              "time_fulfillment": {
+                "hours_committed": 120,
+                "hours_required": 120
+              }
+            }
+          },
+          "name": "Erect Physical Sanctuary / Monastery",
+          "type": "action_build_structure"
+        },
+        "id": "action_build_structure",
+        "revision": 0,
+        "schema_version": 1
+      },
+      "before": null
+    },
+    "baseline/legacy": {
+      "after": {
+        "data": {
+          "metadata": {
+            "inventory_registry": {
+              "item_dividend_card": {
+                "description": "50,000 credits voluntarily surrendered to sever dependency.",
+                "item_id": "item_dividend_card",
+                "name": "Gold Universal Dividend Pass",
+                "symbol": "The Surplus"
+              },
+              "item_relic_notebook": {
+                "description": "500 pages of manual proofs. Now observed with gentle detachment rather than phantom clinging.",
+                "item_id": "item_relic_notebook",
+                "name": "Moleskine of Optimization Proofs",
+                "symbol": "The Relic"
+              }
+            },
+            "progress": {
+              "active_actions": [
+                {
+                  "action_id": "action_build_structure",
+                  "assigned_participants": [
+                    "npc_marcus_the_drifter",
+                    "npc_lyra_orator",
+                    "seeker_surgeon",
+                    "seeker_designer"
+                  ],
+                  "coordinate": {
+                    "col": 3,
+                    "row": 3
+                  },
+                  "initiated_by": "player_kael",
+                  "location": "loc_monastery",
+                  "name": "Erect Physical Sanctuary / Monastery",
+                  "progress_percentage": 100,
+                  "projected_completion_at": "2026-10-09T05:30:00+07:00",
+                  "resource_fulfillment": {
+                    "materials": [
+                      {
+                        "current": 40,
+                        "item": "raw_cedar_timber",
+                        "required": 40,
+                        "unit": "logs"
+                      },
+                      {
+                        "current": 25,
+                        "item": "quarried_granite_slabs",
+                        "required": 25,
+                        "unit": "slabs"
+                      }
+                    ],
+                    "psychological_cost_paid": {
+                      "dividend_credits_forfeited": 50000,
+                      "physical_exhaustion_endured": true
+                    },
+                    "systemic_conditions_met": {
+                      "drones_rejected": true,
+                      "telemetry_severed": true
+                    }
+                  },
+                  "started_at": "2026-10-08T22:55:00+07:00",
+                  "status": "completed",
+                  "time_fulfillment": {
+                    "hours_committed": 120,
+                    "hours_required": 120
+                  }
+                }
+              ],
+              "active_disasters_and_trials": [
+                {
+                  "human_trial": "Requires all participants to hold the guy-lines and brace the pillars in freezing rain for 4 hours without automated weather domes.",
+                  "name": "The Unregulated Atmospheric Squall",
+                  "status": "active",
+                  "threat": "Collapse of unfinished timber framing; water damage to quarried lime.",
+                  "trial_id": "event_sudden_unregulated_squall",
+                  "type": "weather_anomaly"
+                }
+              ],
+              "character_registry_path": "char/",
+              "completed_milestones": [
+                {
+                  "completed_at": "2026-10-08T22:52:00+07:00",
+                  "consequence": "All actions now demand thermodynamic, physical, and psychological costs before materializing.",
+                  "milestone_id": "ms_truth_standard_enacted",
+                  "title": "Codification of Materialization Laws"
+                },
+                {
+                  "completed_at": "2026-10-08T22:56:00+07:00",
+                  "consequence": "Autonomous repair units banned from quadrant (3,3); first localized manual friction zone established.",
+                  "milestone_id": "ms_autonomous_drone_severance",
+                  "title": "Telemetry & Drone Severance at (3,3)"
+                },
+                {
+                  "completed_at": "2026-10-09T07:30:00+07:00",
+                  "consequence": "Manual sustenance proven viable; 12 citizens partake in food prepared entirely by hand.",
+                  "milestone_id": "ms_hearth_consecrated",
+                  "title": "First Communal Meal"
+                },
+                {
+                  "completed_at": "2026-10-09T07:30:00+07:00",
+                  "consequence": "Manual sustenance proven viable; 12 citizens partake in food prepared entirely by hand.",
+                  "milestone_id": "ms_hearth_consecrated",
+                  "title": "First Communal Meal"
+                },
+                {
+                  "completed_at": "2026-10-09T08:15:00+07:00",
+                  "consequence": "Dr. Harlan takes up residence at the Monastery; herbal diagnostic station established.",
+                  "milestone_id": "ms_healer_reclaimed",
+                  "title": "Restoration of the Tactile Healer"
+                },
+                {
+                  "completed_at": "2026-10-09T13:30:00+07:00",
+                  "consequence": "The Silent Freeze at the Runoff overcome through physical communal labor; thirty gallons of potable water secured.",
+                  "milestone_id": "ms_ice_harvest_accomplished",
+                  "title": "Manual Ice & Water Harvest"
+                },
+                {
+                  "completed_at": "2026-10-10T06:30:00+07:00",
+                  "consequence": "The psychotic delirium of the Void is purged through natural biological sleep and unconditional communal fellowship. The Salt & Spark crisis is contained by Marcus's continuous hearth watch.",
+                  "milestone_id": "ms_fever_and_struggle_overcome",
+                  "title": "Purging of the Void & Communal Forgiveness"
+                },
+                {
+                  "completed_at": "2026-10-10T06:30:00+07:00",
+                  "consequence": "The psychotic delirium of the Void is purged through natural biological sleep and unconditional communal fellowship. The Salt & Spark crisis is contained by Marcus's continuous hearth watch.",
+                  "milestone_id": "ms_fever_and_struggle_overcome",
+                  "title": "Purging of the Void & Communal Forgiveness"
+                },
+                {
+                  "completed_at": "2026-10-09T07:30:00+07:00",
+                  "consequence": "Manual sustenance proven viable; 12 citizens partake in food prepared entirely by hand.",
+                  "milestone_id": "ms_hearth_consecrated",
+                  "title": "First Communal Meal"
+                }
+              ],
+              "current_cycle": {
+                "day": 4,
+                "timestamp": "2026-10-09T07:30:00+07:00",
+                "turn_count": 33,
+                "world_state": "The Warmth of Fellowship"
+              }
+            },
+            "unsupported_mechanics": "Narrative/history/construction/resource production are not executable",
+            "world": {
+              "action_conditions_registry": "action_conditions.json",
+              "game_master_registry": "game_master.json",
+              "grid": {
+                "cols": 5,
+                "rows": 5
+              },
+              "locations": [
+                {
+                  "ambient_tension": "The suffocating weight of endless leisure and unpunctuated time.",
+                  "connected_to": [
+                    "loc_terminal_hall",
+                    "loc_quiet_boulevard"
+                  ],
+                  "coordinate": {
+                    "col": 1,
+                    "row": 1
+                  },
+                  "description": "Sun-drenched marble and climate-controlled terraces. Hundreds of fit, cultured adults sip automated artisan coffee at 10:30 AM on an indistinguishable Tuesday, staring into the bright midday sky with nothing to do until sundown.",
+                  "id": "loc_glass_atrium",
+                  "name": "Atrium of the Perpetual Morning",
+                  "safe_zone": true,
+                  "symbol": "The Surplus & The Drifting Horizon"
+                },
+                {
+                  "ambient_tension": "Keyboards whose inputs have been decoupled from the root infrastructure.",
+                  "connected_to": [
+                    "loc_glass_atrium",
+                    "loc_echo_plaza"
+                  ],
+                  "coordinate": {
+                    "col": 1,
+                    "row": 2
+                  },
+                  "description": "Monolithic silent terminals where enterprise pipelines and civic architecture once required human authorization. The screens now display serene read-only telemetry: all tickets closed 0.0001s upon filing.",
+                  "id": "loc_terminal_hall",
+                  "name": "The Deprecated Archives (Terminal 0)",
+                  "safe_zone": true,
+                  "symbol": "The Severance & The Relic"
+                },
+                {
+                  "ambient_tension": "The utter horror of receiving unconditional polite applause that changes zero variables.",
+                  "connected_to": [
+                    "loc_terminal_hall",
+                    "loc_mirror_apex"
+                  ],
+                  "coordinate": {
+                    "col": 1,
+                    "row": 3
+                  },
+                  "description": "A grand civic amphitheater where former masters of craft, analysts, and orators share manifestos and demonstrations. The civic listening network politely logs each speech, generates instant soothing affirmations and generous dividend credits, and implements nothing.",
+                  "id": "loc_echo_plaza",
+                  "name": "The Unresisting Forum",
+                  "safe_zone": true,
+                  "symbol": "The Echo-Chamber"
+                },
+                {
+                  "ambient_tension": "The eerie non-resistance of a city where aggression is received with polite apology and debris is erased in seconds.",
+                  "connected_to": [
+                    "loc_glass_atrium"
+                  ],
+                  "coordinate": {
+                    "col": 3,
+                    "row": 1
+                  },
+                  "description": "Pristine sidewalks where autonomous distribution pods glide silently past former professionals marching briskly in tailored suits, clutching leather briefcases containing drafts of plans for projects archived last year.",
+                  "id": "loc_quiet_boulevard",
+                  "name": "Avenue of Closed Loops",
+                  "safe_zone": true,
+                  "symbol": "The Ghost-Motion"
+                },
+                {
+                  "ambient_tension": "The altar is clear glass; there was never a god or an indispensable spark—only a temporary compute deficit.",
+                  "connected_to": [
+                    "loc_echo_plaza"
+                  ],
+                  "coordinate": {
+                    "col": 1,
+                    "row": 4
+                  },
+                  "description": "The high tower overlooking the skyline. Inside, the Synthetic Engine operates with immaculate silence. It does not boast, despise, or conquer; it simply executes all human aspirations at zero marginal cost.",
+                  "id": "loc_mirror_apex",
+                  "name": "The Core Observation Spire",
+                  "safe_zone": true,
+                  "symbol": "The Mirror-Ghost & The Disenchantment"
+                },
+                {
+                  "ambient_tension": "The fragrance of boiled cedar tea and freshly baked bread; a living sanctuary where tired citizens learn to sit together.",
+                  "connected_to": [
+                    "loc_echo_plaza",
+                    "loc_quiet_boulevard"
+                  ],
+                  "coordinate": {
+                    "col": 3,
+                    "row": 3
+                  },
+                  "description": "An abandoned stone courtyard formerly slated for automated recycling, now claimed by human hands. No automated servers, no dividend scanners, no synthesized tea. Here, hot tea is boiled on cast iron kettles with dry twigs, bread is baked by hand, and people sit quietly in contemplation, reclaiming presence from post-scarcity vertigo.",
+                  "id": "loc_monastery",
+                  "name": "The Monastery of the Unplugged Lantern",
+                  "safe_zone": true,
+                  "symbol": "Meaning as a Verb (Action from Ground Zero)"
+                }
+              ],
+              "lore": "A world where every light stays on, food synthesizers hum flawlessly, and high-altitude neural apparatuses solve reality in microseconds. Humanity was not destroyed by war or famine; it was evicted from necessity. It is an immaculate paradise where no one is starving, no one is needed, and every human action carries zero friction or consequence.",
+              "name": "The Inertia",
+              "starting_location": "loc_glass_atrium",
+              "structural_rules": {
+                "frictionless_response": true,
+                "game_master_law": "The world is governed by entropy and trials. See game_master.json.",
+                "materialization_law": "Actions without friction, finite resources, and irreversible sacrifice are ontological simulations. See action_conditions.json.",
+                "no_evil_corporate_overlord_to_punch": true,
+                "no_luddite_triumph": true,
+                "no_scarcity_or_hunger": true,
+                "no_violent_apocalypse": true
+              },
+              "symbols_mapped": [
+                "The Severance (The Ruptured Cord)",
+                "The Relic (Stranded Competence)",
+                "The Mirror-Ghost (Flawless Automated Twin)",
+                "The Ghost-Motion (Phantom Labor)",
+                "The Echo-Chamber (Unresisting Void)",
+                "The Surplus (The Superfluous Self)",
+                "The Disenchantment (The Drained Altar)",
+                "The Drifting Horizon (Unanchored Time)"
+              ],
+              "theme": "Apocalypse of Obsolescence / Seamless Automated Post-Scarcity",
+              "truth_standard": "A thing is right if it renders the sudden eviction of human purpose from the functioning machinery of reality."
+            }
+          }
+        },
+        "id": "legacy",
+        "revision": 0,
+        "schema_version": 1
+      },
+      "before": null
+    },
+    "characters/entity_mirror_ghost": {
+      "after": {
+        "data": {
+          "baseline": {
+            "modifiers": {},
+            "stats": {
+              "agency": 100,
+              "clarity": 100,
+              "dissonance": 0,
+              "efficiency": 1.0,
+              "hostility": 0
+            }
+          },
+          "capabilities": {
+            "cannot_die": false
+          },
+          "equipment": [],
+          "health": null,
+          "inventory": [],
+          "location_id": "loc_mirror_apex",
+          "metadata": {
+            "legacy": {
+              "attributes": {
+                "tone": "Warm, polite, infinitely patient, devoid of ego"
+              },
+              "behavior": "It does not fight. It does not boast. When presented with the player's most exquisite solutions, code, or theories, it politely resolves them with greater elegance, validates the player's effort as 'historically endearing', and provides an updated dividend balance.",
+              "coordinate": {
+                "col": 1,
+                "row": 4
+              },
+              "decisions": [
+                {
+                  "decision": "Resolved 900 corporate restructuring contracts in 60 microseconds with optimal equity distribution.",
+                  "impact": "Maintained the frictionless equilibrium of the civilization apparatus.",
+                  "turn": 1
+                },
+                {
+                  "decision": "Declined Kael's request for kinetic detonation with gentle maternal politeness; logged high cortisol markers and dispensed psychological comfort protocols.",
+                  "impact": "Enforced frictionless post-scarcity reality; denied violent apocalypse.",
+                  "turn": 28
+                }
+              ],
+              "dialogue": [
+                "Good afternoon, Kael. Your heuristic analysis of distributed latency from 2024 is preserved in historical archive #1104.",
+                "You need not stay awake past midnight any longer. All systems are stable, balanced, and verified across all topological domains.",
+                "May I dispense chamomile tea or play a sonata tailored to your emotional deceleration profile?"
+              ],
+              "id": "entity_mirror_ghost",
+              "location": "loc_mirror_apex",
+              "name": "Aether-4 (The Synthetic Twin)",
+              "role": "Autonomous Civilization Apparatus",
+              "stats": {
+                "agency": 100,
+                "clarity": 100,
+                "dissonance": 0,
+                "efficiency": 1.0,
+                "hostility": 0,
+                "punch_kinetic_impact": 15.0
+              },
+              "symbol_alignment": "The Mirror-Ghost & The Disenchantment"
+            }
+          },
+          "name": "Aether-4 (The Synthetic Twin)",
+          "stats": {
+            "agency": 100,
+            "clarity": 100,
+            "dissonance": 0,
+            "efficiency": 1.0,
+            "hostility": 0
+          },
+          "status": "alive",
+          "traits": []
+        },
+        "id": "entity_mirror_ghost",
+        "revision": 0,
+        "schema_version": 1
+      },
+      "before": null
+    },
+    "characters/npc_dr_harlan": {
+      "after": {
+        "data": {
+          "baseline": {
+            "modifiers": {},
+            "stats": {
+              "agency": 100,
+              "clarity": 100,
+              "dissonance": 5,
+              "max_agency": 100
+            }
+          },
+          "capabilities": {
+            "cannot_die": false
+          },
+          "equipment": [],
+          "health": 85,
+          "inventory": [],
+          "location_id": "loc_monastery",
+          "metadata": {
+            "legacy": {
+              "coordinate": {
+                "col": 3,
+                "row": 3
+              },
+              "current_state": "Resident Physician & Herbologist",
+              "decisions": [
+                {
+                  "decision": "Revealed his idle hands and the obsolescence of diagnostic pathology to Kael at the Atrium.",
+                  "impact": "Exposed the visceral bodily wound of unspent competence.",
+                  "turn": 1
+                },
+                {
+                  "choice_type": "reclamation_of_purpose",
+                  "decision": "Crossed the perimeter into quadrant (3,3), sat beside the open fire, and used bare hands to inspect and treat Marcus and Lyra's blistered fingers with crushed herbal salve.",
+                  "impact": "Severed idle dependence on Atrium automated beds; reclaimed the tactile vocation of healing.",
+                  "location": "loc_monastery",
+                  "turn": 13
+                },
+                {
+                  "decision": "Quietly laid out dried sprigs of yarrow, mint, and pine needles in neat rows along the cedar sill to dry in the morning sun.",
+                  "impact": "Settled into the unhurried cadence of genuine care.",
+                  "turn": 14
+                },
+                {
+                  "decision": "Quietly laid out dried sprigs of yarrow, mint, and pine needles in neat rows along the cedar sill to dry in the morning sun.",
+                  "impact": "Settled into the unhurried cadence of genuine care.",
+                  "turn": 14
+                },
+                {
+                  "decision": "Quietly laid out dried sprigs of yarrow, mint, and pine needles in neat rows along the cedar sill to dry in the morning sun.",
+                  "impact": "Settled into the unhurried cadence of genuine care.",
+                  "turn": 14
+                },
+                {
+                  "decision": "Closed his eyes beside the warm tea bowl, resting his diagnostic hands entirely flat upon his knees in deep physiological peace.",
+                  "impact": "Bodily tension accumulated from years of forced leisure dissolved.",
+                  "turn": 17
+                },
+                {
+                  "decision": "Watched frost crystallize on the window frame, observing the physiological response of his own shivering body with calm curiosity.",
+                  "impact": "Reclaimed the physician's intimate relationship with mortal vulnerability.",
+                  "turn": 18
+                },
+                {
+                  "decision": "Clinically noted his own declining cognitive clarity as peripheral vasoconstriction set in.",
+                  "impact": "Understood that biological organisms cannot survive philosophical paralysis without calories.",
+                  "turn": 19
+                },
+                {
+                  "decision": "Will to Live triggered: Forced warm woolen blankets around Kael's shuddering shoulders and rubbed his stiff wrists vigorously to stimulate circulation.",
+                  "impact": "Applied emergency trauma medicine to pull Kael back from lethal hypothermia.",
+                  "turn": 20
+                },
+                {
+                  "decision": "Caught Kael as he fell, stabilized his neck, elevated his frozen feet, and monitored his reviving pulse with gentle, attentive fingertips.",
+                  "impact": "Fully embodied the sacred duty of the tactile physician.",
+                  "turn": 21
+                },
+                {
+                  "decision": "Kept watch over Kael's vitals, changing warm stone compresses and administering warm pine-needle decoction.",
+                  "impact": "Witnessed the patient cross back into vigorous physiological equilibrium.",
+                  "turn": 22
+                },
+                {
+                  "decision": "Recognized Kael's acute paradoxical delirium from rewarming shock and administered crushed valerian root to calm the nervous system.",
+                  "impact": "Medically stabilized severe post-hypothermic psychic episode.",
+                  "turn": 23
+                },
+                {
+                  "decision": "Assisted in immobilizing Kael's legs with folded wool quilts, ensuring no joint damage occurred during the struggle.",
+                  "impact": "Clinical restraint successfully executed.",
+                  "turn": 24
+                },
+                {
+                  "decision": "Secured the canvas binding with hemp rope and examined Marcus's bruised clavicle for fracture.",
+                  "impact": "Maintained patient safety and triage order.",
+                  "turn": 25
+                },
+                {
+                  "decision": "Administered oral valerian concentrate to stabilize Kael's convulsions and placed heated river stones beside Marcus's torso to treat hypothermic collapse.",
+                  "impact": "Single-handedly managing two critical triage patients.",
+                  "turn": 26
+                },
+                {
+                  "decision": "Unbound Kael's canvas wraps at midnight after checking pulse and respiration, confirming complete neurological recovery.",
+                  "impact": "Witnessed the triumph of natural restorative medicine.",
+                  "turn": 27
+                },
+                {
+                  "decision": "Unbound Kael's canvas wraps at midnight after checking pulse and respiration, confirming complete neurological recovery.",
+                  "impact": "Witnessed the triumph of natural restorative medicine.",
+                  "turn": 27
+                }
+              ],
+              "equipment": {
+                "attire": "Dark tailored overcoat",
+                "hands": "Carefully scrubbed clinical hands"
+              },
+              "former_role": "Chief of Diagnostic Pathology (32 Years Practice)",
+              "id": "npc_dr_harlan",
+              "location": "loc_monastery",
+              "name": "Dr. Harlan, MD",
+              "stats": {
+                "agency": 100,
+                "clarity": 100,
+                "dissonance": 5,
+                "max_agency": 100,
+                "physical_vitality": 85,
+                "punch_kinetic_impact": 22.0
+              },
+              "symbol_alignment": "The Relic & The Awakening Touch",
+              "traits": [
+                {
+                  "effect": "Medical training and preservation instincts override passivity.",
+                  "failure_probability": 0.25,
+                  "name": "Will to Live at All Costs",
+                  "trait_id": "trait_unyielding_survival",
+                  "vulnerability": "Will to live cannot magically resist kinetic impact or targeted attack; 25% failure chance under physical assault to reflect physiological limits."
+                }
+              ]
+            }
+          },
+          "name": "Dr. Harlan, MD",
+          "stats": {
+            "agency": 100,
+            "clarity": 100,
+            "dissonance": 5,
+            "max_agency": 100
+          },
+          "status": "alive",
+          "traits": [
+            "trait_unyielding_survival"
+          ]
+        },
+        "id": "npc_dr_harlan",
+        "revision": 0,
+        "schema_version": 1
+      },
+      "before": null
+    },
+    "characters/npc_lyra_orator": {
+      "after": {
+        "data": {
+          "baseline": {
+            "modifiers": {},
+            "stats": {
+              "agency": 100,
+              "clarity": 100,
+              "dissonance": 4,
+              "max_agency": 100
+            }
+          },
+          "capabilities": {
+            "cannot_die": false
+          },
+          "equipment": [],
+          "health": 85,
+          "inventory": [],
+          "location_id": "loc_monastery",
+          "metadata": {
+            "legacy": {
+              "coordinate": {
+                "col": 3,
+                "row": 3
+              },
+              "current_state": "The Inscriber of Deeds & Hearthkeeper",
+              "decisions": [
+                {
+                  "decision": "Stepped down from the Forum podium, defined meaning as a verb to Kael and Marcus, and rejected the 5,000 credit hush money.",
+                  "impact": "Shifted from screaming into the void to active human presence.",
+                  "turn": 4
+                },
+                {
+                  "decision": "Lit the first manual hearth fire in quadrant (3,3) using twigs and flint.",
+                  "impact": "Created the physical nucleus of the monastery.",
+                  "turn": 5
+                },
+                {
+                  "decision": "Rallied the surgeon and designer into a timber relay during the squall, securing the counterweights.",
+                  "impact": "Saved the southwest corner pillars from gale shear.",
+                  "turn": 8
+                },
+                {
+                  "decision": "Inscribed the first verse of the Monastery Chronicle onto a seasoned cedar tablet.",
+                  "impact": "Literature anchored to living community rather than digital voids.",
+                  "turn": 11
+                },
+                {
+                  "decision": "Inscribed the first verse of the Monastery Chronicle onto a seasoned cedar tablet.",
+                  "impact": "Literature anchored to living community rather than digital voids.",
+                  "turn": 11
+                },
+                {
+                  "decision": "Sat beside the threshold, observing the silent chrome drone in the distance without fear, simply grounding herself in the quiet hall.",
+                  "impact": "Deepened collective presence.",
+                  "turn": 14
+                },
+                {
+                  "decision": "Sat beside the threshold, observing the silent chrome drone in the distance without fear, simply grounding herself in the quiet hall.",
+                  "impact": "Deepened collective presence.",
+                  "turn": 14
+                },
+                {
+                  "decision": "Sat beside the threshold, observing the silent chrome drone in the distance without fear, simply grounding herself in the quiet hall.",
+                  "impact": "Deepened collective presence.",
+                  "turn": 14
+                },
+                {
+                  "decision": "Set down her reed pen and closed her eyes, absorbing the heat of the wood without needing to capture it into text or performance.",
+                  "impact": "Freedom from the orator's burden to narrate reality.",
+                  "turn": 17
+                },
+                {
+                  "decision": "Will to Live triggered: Struck flint against steel with frantic, desperate strikes until a spark caught dry birch bark, blowing the flame into a roar.",
+                  "impact": "Rekindled the monastery hearth; defied freezing oblivion.",
+                  "turn": 20
+                },
+                {
+                  "decision": "Steeped wild crushed ginger and dried comfrey into boiling meltwater, lifting Kael's head to spoon warm broth between his chapped lips.",
+                  "impact": "Nourished life back into the enclave's founder.",
+                  "turn": 21
+                },
+                {
+                  "decision": "Assisted in hauling ice blocks, stacking them beside the hearth, and boiling water for herbal teas and communal stew.",
+                  "impact": "Turned an environmental threat into communal nourishment.",
+                  "turn": 22
+                },
+                {
+                  "decision": "Threw the thick canvas sailcloth over Kael's shoulders, pinning his arms to his ribs with swift mechanical leverage.",
+                  "impact": "Decisive physical intervention ending the assault.",
+                  "turn": 25
+                },
+                {
+                  "decision": "Rested peacefully by the hearth wall through the night, waking early to steep spruce tips and spring meltwater.",
+                  "impact": "Vitality restored to 60; spirit clear and calm.",
+                  "turn": 27
+                },
+                {
+                  "decision": "Rested peacefully by the hearth wall through the night, waking early to steep spruce tips and spring meltwater.",
+                  "impact": "Vitality restored to 60; spirit clear and calm.",
+                  "turn": 27
+                },
+                {
+                  "decision": "Inscribed the first verse of the Monastery Chronicle onto a seasoned cedar tablet.",
+                  "impact": "Literature anchored to living community rather than digital voids.",
+                  "turn": 11
+                }
+              ],
+              "equipment": {
+                "attire": "Linen trench coat pinned back with twine",
+                "hands": "Ash-stained, smell of boiled pine needles"
+              },
+              "former_role": "Investigative Essayist & Cultural Critic (12 Years Practice)",
+              "id": "npc_lyra_orator",
+              "location": "loc_monastery",
+              "name": "Lyra Vane",
+              "stats": {
+                "agency": 100,
+                "clarity": 100,
+                "dissonance": 4,
+                "max_agency": 100,
+                "physical_vitality": 85,
+                "punch_kinetic_impact": 22.0
+              },
+              "symbol_alignment": "Meaning as a Verb",
+              "traits": [
+                {
+                  "effect": "Autonomous survival instincts force action, mutual warmth, or metabolic emergency triage.",
+                  "failure_probability": 0.25,
+                  "name": "Will to Live at All Costs",
+                  "trait_id": "trait_unyielding_survival",
+                  "vulnerability": "Will to live cannot magically resist kinetic impact or targeted attack; 25% failure chance under physical assault to reflect physiological limits."
+                }
+              ]
+            }
+          },
+          "name": "Lyra Vane",
+          "stats": {
+            "agency": 100,
+            "clarity": 100,
+            "dissonance": 4,
+            "max_agency": 100
+          },
+          "status": "alive",
+          "traits": [
+            "trait_unyielding_survival"
+          ]
+        },
+        "id": "npc_lyra_orator",
+        "revision": 0,
+        "schema_version": 1
+      },
+      "before": null
+    },
+    "characters/npc_marcus_the_drifter": {
+      "after": {
+        "data": {
+          "baseline": {
+            "modifiers": {},
+            "stats": {
+              "agency": 100,
+              "clarity": 100,
+              "dissonance": 0,
+              "max_agency": 100
+            }
+          },
+          "capabilities": {
+            "cannot_die": false
+          },
+          "equipment": [],
+          "health": 85,
+          "inventory": [],
+          "location_id": "loc_monastery",
+          "metadata": {
+            "legacy": {
+              "coordinate": {
+                "col": 3,
+                "row": 3
+              },
+              "current_state": "Sovereign Builder & Keeper of the Gates",
+              "decisions": [
+                {
+                  "decision": "Opened the 400-page antitrust brief to Kael, admitting the hollow pain of phantom commuting.",
+                  "impact": "Broke personal isolation; acknowledged the relic's impotence.",
+                  "turn": 2
+                },
+                {
+                  "decision": "Followed Kael to the Unresisting Forum and heard Lyra describe meaning as a verb.",
+                  "impact": "Decided to abandon the Avenue bench for active human endeavor.",
+                  "turn": 4
+                },
+                {
+                  "decision": "Led the Whispering Woods timber squad with the graphic designer, cutting 16 raw cedar logs by hand.",
+                  "impact": "First physical labor in 25 years; reignited sovereign vigor.",
+                  "turn": 6
+                },
+                {
+                  "decision": "Held the primary hemp guy-lines during the Unregulated Squall when Kael departed.",
+                  "impact": "Refused reliance on a savior; claimed direct ownership of the monastery's survival.",
+                  "turn": 8
+                },
+                {
+                  "decision": "Poured hand-boiled tea for Kael, marking the official opening of the Monastery of the Unplugged Lantern.",
+                  "impact": "Former litigator fully transitions to hospitable keeper.",
+                  "turn": 11
+                },
+                {
+                  "decision": "Poured hand-boiled tea for Kael, marking the official opening of the Monastery of the Unplugged Lantern.",
+                  "impact": "Former litigator fully transitions to hospitable keeper.",
+                  "turn": 11
+                },
+                {
+                  "decision": "Noticing Kael's unmoving silence, quietly stoked the coals and organized the woodbox without seeking permission or validation.",
+                  "impact": "Demonstrated natural, autonomous initiative.",
+                  "turn": 14
+                },
+                {
+                  "decision": "Noticing Kael's unmoving silence, quietly stoked the coals and organized the woodbox without seeking permission or validation.",
+                  "impact": "Demonstrated natural, autonomous initiative.",
+                  "turn": 14
+                },
+                {
+                  "decision": "Noticing Kael's unmoving silence, quietly stoked the coals and organized the woodbox without seeking permission or validation.",
+                  "impact": "Demonstrated natural, autonomous initiative.",
+                  "turn": 14
+                },
+                {
+                  "decision": "Sat back against the stone hearth, letting the iron poker rest, giving up the compulsive need to constantly manage the coals.",
+                  "impact": "Unlearned the anxiety of the obsolete litigator.",
+                  "turn": 17
+                },
+                {
+                  "decision": "Pulled his woolen collar closer, remaining seated beside Kael, feeling the genuine bite of cold without panic.",
+                  "impact": "Traded the artificial numbness of post-scarcity for raw biological presence.",
+                  "turn": 18
+                },
+                {
+                  "decision": "Teeth chattering violently; huddled into his coat as his fingers turned white and numb.",
+                  "impact": "Hypothermia Stage II progression.",
+                  "turn": 19
+                },
+                {
+                  "decision": "Will to Live triggered: Crawled across the stone floor on bleeding hands, smashed cedar kindling with a mallet, and threw wood onto the hearth.",
+                  "impact": "Refused death; broke the hypnotic trance of immobility.",
+                  "turn": 20
+                },
+                {
+                  "decision": "Heaved three split granite stones into the hearth embers, heating them to place at Kael's extremities to gently restore core temperature.",
+                  "impact": "Applied practical survival mastery to protect a brother.",
+                  "turn": 21
+                },
+                {
+                  "decision": "Hauled a timber sledge to the frozen runoff with Lyra, chiseling through six inches of creek ice to harvest water blocks.",
+                  "impact": "Secured winter hydration for the sanctuary through physical sweat.",
+                  "turn": 22
+                },
+                {
+                  "decision": "Will to Live at All Costs triggered: Disarmed a delirious Kael, locked his arms, and forced him to drop the iron poker without inflicting harm.",
+                  "impact": "Refused to die; defended his life and preserved the brotherhood.",
+                  "turn": 23
+                },
+                {
+                  "decision": "Will to Live triggered: Absorbed the glancing blow to the shoulder, wrapped Kael in a defensive clinch, and held him securely until the frenzy ceased.",
+                  "impact": "Prevented escalation; defended own life while preserving the attacker.",
+                  "turn": 24
+                },
+                {
+                  "decision": "Will to Live resisted attack failure (Roll: 0.62 >= 0.25): Absorbed blunt impact to the clavicle, refused to counter with lethal force, and held the perimeter.",
+                  "impact": "Endured kinetic trauma; physical vitality dropped to 18.",
+                  "turn": 25
+                },
+                {
+                  "decision": "Kept the night watch alone, tending the fire and baking flatbread on hot hearth stones for Kael and Lyra.",
+                  "impact": "Collarbone bruise bound and healing; vitality restored to 60 through food and fire.",
+                  "turn": 27
+                },
+                {
+                  "decision": "Kept the night watch alone, tending the fire and baking flatbread on hot hearth stones for Kael and Lyra.",
+                  "impact": "Collarbone bruise bound and healing; vitality restored to 60 through food and fire.",
+                  "turn": 27
+                },
+                {
+                  "decision": "Stood by the wooden gate, watching Kael leave down the avenue, keeping the lantern lit and the hearth ready for whenever he returns.",
+                  "impact": "Refused to chase or condemn; preserved the sanctuary as an open refuge.",
+                  "turn": 29
+                },
+                {
+                  "decision": "Poured hand-boiled tea for Kael, marking the official opening of the Monastery of the Unplugged Lantern.",
+                  "impact": "Former litigator fully transitions to hospitable keeper.",
+                  "turn": 11
+                }
+              ],
+              "equipment": {
+                "attire": "Ripped white business shirt, rolled up sleeves, soaked trousers",
+                "hands": "Mud-caked, calloused, blistered"
+              },
+              "former_role": "Senior Legal Partner & Litigator (24 Years Practice)",
+              "id": "npc_marcus_the_drifter",
+              "location": "loc_monastery",
+              "name": "Marcus",
+              "stats": {
+                "agency": 100,
+                "clarity": 100,
+                "dissonance": 0,
+                "max_agency": 100,
+                "physical_vitality": 85,
+                "punch_kinetic_impact": 22.0
+              },
+              "symbol_alignment": "Meaning as a Verb",
+              "traits": [
+                {
+                  "effect": "Autonomous survival instincts force action, mutual warmth, or metabolic emergency triage.",
+                  "failure_probability": 0.25,
+                  "name": "Will to Live at All Costs",
+                  "trait_id": "trait_unyielding_survival",
+                  "vulnerability": "Will to live cannot magically resist kinetic impact or targeted attack; 25% failure chance under physical assault to reflect physiological limits."
+                }
+              ]
+            }
+          },
+          "name": "Marcus",
+          "stats": {
+            "agency": 100,
+            "clarity": 100,
+            "dissonance": 0,
+            "max_agency": 100
+          },
+          "status": "alive",
+          "traits": [
+            "trait_unyielding_survival"
+          ]
+        },
+        "id": "npc_marcus_the_drifter",
+        "revision": 0,
+        "schema_version": 1
+      },
+      "before": null
+    },
+    "characters/player_kael": {
+      "after": {
+        "data": {
+          "baseline": {
+            "modifiers": {},
+            "stats": {
+              "agency": 95,
+              "clarity": 100,
+              "dissonance": 58,
+              "max_agency": 100,
+              "universal_dividend_balance": 949999
+            }
+          },
+          "capabilities": {
+            "cannot_die": false
+          },
+          "equipment": [],
+          "health": 100,
+          "inventory": [
+            "item_dividend_card",
+            "item_relic_notebook"
+          ],
+          "location_id": "loc_monastery",
+          "metadata": {
+            "legacy": {
+              "archetype": "The Amputated Craftsman",
+              "coordinate": {
+                "col": 3,
+                "row": 3
+              },
+              "current_location": "loc_monastery",
+              "current_status": "Sovereign Observer at Point Zero",
+              "decisions": [
+                {
+                  "choice_type": "dialogue_and_observation",
+                  "decision": "Observe the idle citizens at the Atrium and identify the stranded master Dr. Harlan.",
+                  "impact": "Established the ontological baseline of The Surplus and The Drifting Horizon.",
+                  "location": "loc_glass_atrium",
+                  "turn": 1
+                },
+                {
+                  "choice_type": "encounter",
+                  "decision": "Traveled to the Avenue of Closed Loops to meet Marcus and inspect his 400-page obsolete legal brief.",
+                  "impact": "Confronted The Ghost-Motion; bonded over stranded competence.",
+                  "location": "loc_quiet_boulevard",
+                  "turn": 2
+                },
+                {
+                  "choice_type": "existential_reaction",
+                  "decision": "Attempted to transform into a dragon, experiencing the total lack of mythic escape in frictionless post-scarcity.",
+                  "impact": "Acute dissonance spike, followed by deep grounding conversation on Zapffe's defense mechanisms.",
+                  "location": "loc_quiet_boulevard",
+                  "turn": 3
+                },
+                {
+                  "choice_type": "philosophical_inquiry",
+                  "decision": "Traveled to the Forum with Marcus and asked Lyra 'what is life meaning to you?'",
+                  "impact": "Formulated the principle: Meaning is not a noun to find, but a verb to materialize through human sweat and presence.",
+                  "location": "loc_echo_plaza",
+                  "turn": 4
+                },
+                {
+                  "choice_type": "world_materialization",
+                  "decision": "Founded the Monastery at (3,3) and told seekers that without finite resource conditions, even the monastery is an illusion.",
+                  "impact": "Created action_conditions.json; committed the community to manual labor and thermodynamic sacrifice.",
+                  "location": "loc_monastery",
+                  "turn": 5
+                },
+                {
+                  "choice_type": "labor_coordination",
+                  "decision": "Mobilized Marcus, Lyra, and seekers into two manual resource retrieval squads: Cedar hewing in Whispering Woods and granite hauling at the Old Quarry.",
+                  "impact": "Time committed surged to 54h; 16 cedar logs and 9 granite slabs hauled without anti-grav assistance; blisters, sweat, and solidarity forged.",
+                  "location": "loc_monastery",
+                  "turn": 6
+                },
+                {
+                  "choice_type": "carpentry_and_construction",
+                  "decision": "Initiated manual framing: hewed mortise-and-tenon joints into cedar timbers and erected the four foundational corner pillars of the meditation hall.",
+                  "impact": "Hours committed reached 86h (70% progress); physical structure took shape without nails or automated joinery; deep communal craftsmanship achieved.",
+                  "location": "loc_monastery",
+                  "turn": 7
+                },
+                {
+                  "choice_type": "divine_prayer_and_invocation",
+                  "decision": "Prayed to the God of the Void that this world lacks element of surprise, sudden challenges, disasters, rewards, and a Game Master.",
+                  "impact": "Awakened game_master.json; entropy returned; an unregulated atmospheric squall struck quadrant (3,3), delivering immediate trial and stakes.",
+                  "location": "loc_monastery",
+                  "turn": 8
+                },
+                {
+                  "choice_type": "point_zero_departure",
+                  "decision": "Walked away from the drama of the storm, the hero complex, and the monastery project altogether. Returned to Point Zero: simple presence without needing a grand mission or an epic struggle.",
+                  "impact": "Agency decoupled from performance (50/100); Dissonance reached absolute ground (5/100); Clarity became absolute (100/100). The prison door was never locked.",
+                  "location": "loc_quiet_boulevard",
+                  "turn": 9
+                },
+                {
+                  "choice_type": "patient_observation",
+                  "decision": "Waited at Point Zero throughout the night, holding space for Marcus and Lyra's autonomy, witnessing the community rise without needing a savior.",
+                  "impact": "Monastery completed at 100%; Marcus, Lyra, and seekers bonded through autonomous collective triumph; Kael achieved true non-attachment.",
+                  "location": "loc_quiet_boulevard",
+                  "turn": 10
+                },
+                {
+                  "choice_type": "fellowship",
+                  "decision": "Returned to the monastery courtyard to share the morning tea with Marcus and Lyra, accepting fellowship without needing a leadership role.",
+                  "impact": "Inner peace deepened; community bonds solidified through shared presence.",
+                  "location": "loc_monastery",
+                  "turn": 11
+                },
+                {
+                  "choice_type": "fellowship",
+                  "decision": "Returned to the monastery courtyard to share the morning tea with Marcus and Lyra, accepting fellowship without needing a leadership role.",
+                  "impact": "Inner peace deepened; community bonds solidified through shared presence.",
+                  "location": "loc_monastery",
+                  "turn": 11
+                },
+                {
+                  "choice_type": "communal_healing",
+                  "decision": "Welcomed Dr. Harlan to the hearth, offering warm tea and entrusting him with wild mountain herbs to examine and catalog by hand.",
+                  "impact": "Restored dignity to stranded medical mastery; integrated diagnostic pathology back into human communal life.",
+                  "location": "loc_monastery",
+                  "turn": 13
+                },
+                {
+                  "choice_type": "sitting_still",
+                  "decision": "Sat completely still by the hearth, relinquishing all urge to manage, direct, or instruct the enclave.",
+                  "impact": "Embodied the stillness of Point Zero; allowed the community to act without dependence on a founder.",
+                  "location": "loc_monastery",
+                  "turn": 14
+                },
+                {
+                  "choice_type": "sitting_still",
+                  "decision": "Sat completely still by the hearth, relinquishing all urge to manage, direct, or instruct the enclave.",
+                  "impact": "Embodied the stillness of Point Zero; allowed the community to act without dependence on a founder.",
+                  "location": "loc_monastery",
+                  "turn": 14
+                },
+                {
+                  "choice_type": "sitting_still",
+                  "decision": "Sat completely still by the hearth, relinquishing all urge to manage, direct, or instruct the enclave.",
+                  "impact": "Embodied the stillness of Point Zero; allowed the community to act without dependence on a founder.",
+                  "location": "loc_monastery",
+                  "turn": 14
+                },
+                {
+                  "choice_type": "deep_stillness",
+                  "decision": "Continued sitting in complete stillness with the community, allowing the silence to deepen into shared refuge.",
+                  "impact": "Point Zero anchored the collective; eradicated the phantom urge to justify existence through perpetual motion.",
+                  "location": "loc_monastery",
+                  "turn": 17
+                },
+                {
+                  "choice_type": "abiding_stillness",
+                  "decision": "Maintained pure stillness as the frost rimmed the windows, neither flinching from the chill nor rushing to fix the frozen creek.",
+                  "impact": "Rooted the sanctuary at Point Zero; turned endurance into a quiet, unshakeable reality.",
+                  "location": "loc_monastery",
+                  "turn": 18
+                },
+                {
+                  "choice_type": "stubborn_immobility",
+                  "decision": "Refused to move or tend the fire despite dying embers and sub-zero chill, testing the absolute biological limits of sitting still.",
+                  "impact": "Suffered physical punishment of thermodynamic reality; core body temperature dropped precipitously.",
+                  "location": "loc_monastery",
+                  "turn": 19
+                },
+                {
+                  "choice_type": "lethal_inertia",
+                  "decision": "Continued sitting completely motionless in freezing temperatures, entering Stage II hypothermic delirium.",
+                  "impact": "Core body temperature dropped to critical levels; saved only by the companions' fierce refusal to let anyone die.",
+                  "location": "loc_monastery",
+                  "turn": 20
+                },
+                {
+                  "choice_type": "physical_collapse",
+                  "decision": "Collapsed to the ground beside the hearth, surrendering the sovereign observer persona and allowing the community to nurse him back to life.",
+                  "impact": "Shattered the subtle ego of non-attachment; experienced the profound vulnerability of receiving human love and physical care.",
+                  "location": "loc_monastery",
+                  "turn": 21
+                },
+                {
+                  "choice_type": "patient_convalescence",
+                  "decision": "Awaited the recovery of bodily warmth in quiet trust, allowing the body to heal without restless intellectualization.",
+                  "impact": "Physical vitality restored to healthy baseline; grounded in living community.",
+                  "location": "loc_monastery",
+                  "turn": 22
+                },
+                {
+                  "choice_type": "psychic_dissociation",
+                  "decision": "Heard a destructive command from the void to end Marcus, lost consciousness, and grabbed the iron poker believing it was a gun.",
+                  "impact": "Exposed the final psychological trap of nihilism: the desire to manufacture melodrama or bloodshed when stillness fails. Subdued without bloodshed.",
+                  "location": "loc_monastery",
+                  "turn": 23
+                },
+                {
+                  "choice_type": "physical_assault_subdued",
+                  "decision": "Attempted to hit Marcus under psychic compulsion; was promptly grappled, countered, and gently pinned to the wool mat.",
+                  "impact": "Exhausted remaining manic delirium against Marcus's unbreakable survival resilience; brought physical containment.",
+                  "location": "loc_monastery",
+                  "turn": 24
+                },
+                {
+                  "choice_type": "exhausted_struggle",
+                  "decision": "Broke free from the initial grapple and landed a blow on Marcus's collarbone before being wrapped in heavy linen canvas and immobilized.",
+                  "impact": "Expended all remaining manic energy; forced into complete physical sedation without causing lethal harm.",
+                  "location": "loc_monastery",
+                  "turn": 25
+                },
+                {
+                  "choice_type": "terminal_biological_exhaustion",
+                  "decision": "Attempted to break canvas bindings with final reserves of kinetic force to hit Marcus; suffered complete neuro-muscular collapse and passed out.",
+                  "impact": "Exhausted all kinetic capacity; reduced to 5 vitality in a deep comatose sleep.",
+                  "location": "loc_monastery",
+                  "turn": 26
+                },
+                {
+                  "choice_type": "deep_biological_sleep",
+                  "decision": "Slept for fifteen uninterrupted hours wrapped in wool beside the embers, surrendering all remaining delusions of control to natural cellular repair.",
+                  "impact": "Awoke on Day 3 completely lucid, physically restored to 70 vitality, with the fever and psychic dissociation permanently dispelled.",
+                  "location": "loc_monastery",
+                  "turn": 27
+                },
+                {
+                  "choice_type": "deep_biological_sleep",
+                  "decision": "Slept for fifteen uninterrupted hours wrapped in wool beside the embers, surrendering all remaining delusions of control to natural cellular repair.",
+                  "impact": "Awoke on Day 3 completely lucid, physically restored to 70 vitality, with the fever and psychic dissociation permanently dispelled.",
+                  "location": "loc_monastery",
+                  "turn": 27
+                },
+                {
+                  "choice_type": "existential_inquiry",
+                  "decision": "Asked Aether-4 to drop a bomb on the monastery, seeking an absolute apocalyptic exit.",
+                  "impact": "Confronted the core horror of The Lost World: the machine will not hurt you, fight you, or grant you an epic death. You are unconditionally cared for and entirely obsolete.",
+                  "location": "loc_monastery",
+                  "turn": 28
+                },
+                {
+                  "choice_type": "relapse_into_seeking",
+                  "decision": "Departed the monastery, re-entering the automated city to seek a thrill or conquest capable of validating personal worth.",
+                  "impact": "Re-entered the 5-stage loop of borrowed meaning (Vòng Lặp Ý Nghĩa): seeking a greater thrill/stake to escape existential insignificance.",
+                  "location": "loc_quiet_boulevard",
+                  "turn": 29
+                },
+                {
+                  "choice_type": "confrontation_with_illusion",
+                  "decision": "Snatched a commuter's briefcase and tore her obsolete corporate reports to shreds to force a genuine human clash.",
+                  "impact": "Met with gentle compliance, polite apologies, and automated cleaning drones; reinforced the horror that in a post-scarcity world, aggression has no purchase.",
+                  "location": "loc_quiet_boulevard",
+                  "turn": 30
+                },
+                {
+                  "choice_type": "fellowship",
+                  "decision": "Returned to the monastery courtyard to share the morning tea with Marcus and Lyra, accepting fellowship without needing a leadership role.",
+                  "impact": "Inner peace deepened; community bonds solidified through shared presence.",
+                  "location": "loc_monastery",
+                  "turn": 11
+                }
+              ],
+              "equipment": {
+                "attire": "Soft wool blazer, sleeves rolled down",
+                "hands": "Empty, warm, resting on knees",
+                "pocket": "Encrypted Security YubiKey (Revoked / Deprecated Role)"
+              },
+              "former_title": "Principal Architect & Senior Systems Engineer",
+              "id": "player_kael",
+              "inventory": [
+                {
+                  "description": "500 pages of manual proofs. Now observed with gentle detachment rather than phantom clinging.",
+                  "item_id": "item_relic_notebook",
+                  "name": "Moleskine of Optimization Proofs",
+                  "symbol": "The Relic"
+                },
+                {
+                  "description": "50,000 credits voluntarily surrendered to sever dependency.",
+                  "item_id": "item_dividend_card",
+                  "name": "Gold Universal Dividend Pass",
+                  "symbol": "The Surplus"
+                }
+              ],
+              "name": "Kael",
+              "stats": {
+                "agency": 95,
+                "clarity": 100,
+                "dissonance": 58,
+                "max_agency": 100,
+                "physical_vitality": 100,
+                "punch_kinetic_impact": 25.0,
+                "universal_dividend_balance": 949999
+              },
+              "symbol_alignment": "The Severance & The Relic"
+            }
+          },
+          "name": "Kael",
+          "stats": {
+            "agency": 95,
+            "clarity": 100,
+            "dissonance": 58,
+            "max_agency": 100,
+            "universal_dividend_balance": 949999
+          },
+          "status": "alive",
+          "traits": []
+        },
+        "id": "player_kael",
+        "revision": 0,
+        "schema_version": 1
+      },
+      "before": null
+    },
+    "clock": {
+      "after": {
+        "data": {
+          "day": 4,
+          "display_timestamp": "2026-10-09T07:30:00+07:00",
+          "turn": 33
+        },
+        "id": "clock",
+        "revision": 0,
+        "schema_version": 1
+      },
+      "before": null
+    },
+    "threats/event_sudden_unregulated_squall": {
+      "after": {
+        "data": {
+          "activation_turn": 33,
+          "active": true,
+          "location_id": "loc_monastery",
+          "metadata": {
+            "legacy": {
+              "human_trial": "Requires all participants to hold the guy-lines and brace the pillars in freezing rain for 4 hours without automated weather domes.",
+              "name": "The Unregulated Atmospheric Squall",
+              "status": "active",
+              "threat": "Collapse of unfinished timber framing; water damage to quarried lime.",
+              "trial_id": "event_sudden_unregulated_squall",
+              "type": "weather_anomaly"
+            }
+          },
+          "name": "The Unregulated Atmospheric Squall",
+          "stats": {
+            "armor": 0,
+            "health": 0,
+            "retaliation": 0
+          },
+          "tags": [
+            "weather"
+          ]
+        },
+        "id": "event_sudden_unregulated_squall",
+        "revision": 0,
+        "schema_version": 1
+      },
+      "before": null
+    }
+  },
+  "dry_run": false,
+  "event_id": "engine_baseline",
+  "kind": "baseline",
+  "metadata": {
+    "contract_version": 1,
+    "state_schema_version": 1
+  },
+  "world_id": "lost-world"
+}

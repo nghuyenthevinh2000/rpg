@@ -1,0 +1,191 @@
+{
+  "id": "npc_ogryn_bragg",
+  "name": "Bone 'ead Bragg",
+  "title": "Bionic-Augmented Ogryn Breacher / Sarge's Bodyguard",
+  "current_status": "KIA / SLAIN SHIELDING SARGE",
+  "archetype": "The Loyal Abhuman Titan",
+  "race": "abhuman_ogryn",
+  "symbol_alignment": "The Aquila & The Corpse-Tithe",
+  "stats": {
+    "strength": 120,
+    "agility": 5,
+    "physical_vitality": 0,
+    "agency": 65,
+    "clarity": 30,
+    "psychic_aptitude": 0,
+    "dissonance": 35,
+    "applied_equipment_modifiers": {
+      "strength": 40,
+      "agility": -20,
+      "physical_vitality": 20,
+      "agency": 5
+    },
+    "punch_kinetic_impact": 161.4
+  },
+  "current_location": "loc_shrine_aquila",
+  "coordinate": {
+    "row": 1,
+    "col": 1
+  },
+  "traits": [
+    {
+      "trait_id": "trait_colossal_frame",
+      "name": "Colossal Muscle Frame (Ogryn)"
+    },
+    {
+      "trait_id": "trait_simple_loyalty",
+      "name": "Simple Loyalty (Ogryn)"
+    },
+    {
+      "trait_id": "trait_necrodermis_cellular_weave",
+      "name": "Necrodermis Chrono-Weave (The Silent King's Grace)"
+    }
+  ],
+  "equipment": {
+    "melee_weapon": "item_power_fist",
+    "armor": "item_carapace_armor"
+  },
+  "inventory": [
+    {
+      "item_id": "item_shiny_aquila",
+      "name": "Polished Brass Aquila Badge",
+      "description": "Given to Bragg by the Sergeant for bravery. Bragg polishes it every night with spit and sleeve.",
+      "symbol": "The Aquila"
+    }
+  ],
+  "decisions": [
+    {
+      "turn": 1,
+      "location": "loc_underhive_threshold",
+      "choice_type": "guard_duty",
+      "decision": "Stood guard at Bulkhead 101, leaning his massive weight against the shaking blast door to keep mutants out.",
+      "impact": "Prevented door deformation from subterranean ramming attacks."
+    },
+    {
+      "turn": 3,
+      "location": "loc_underhive_threshold",
+      "choice_type": "labor_triumph",
+      "decision": "Drove the final 200-pound lock-pins through the plasteel braces with his power fist under the Sarge's orders.",
+      "impact": "Solidified the physical lock; Bragg proudly stamped his Aquila badge into the cooling slag."
+    },
+    {
+      "turn": 4,
+      "location": "loc_hab_block_vermin",
+      "choice_type": "melee_carnage",
+      "decision": "Charged shoulder-to-shoulder with the Sarge, pulping four multi-legged chitin monsters against the iron bulkheads with his power fist.",
+      "impact": "Shielded the Sergeant from flanking attacks and terrified the surviving beasts into retreat."
+    },
+    {
+      "turn": 5,
+      "location": "loc_charnel_trench",
+      "choice_type": "bodyguard_vigilance",
+      "decision": "Waded waist-deep in toxic run-off to haul the iron salvage locker back to safety, growling at the dark vents.",
+      "impact": "Secured the salvage point and shielded the squad from subterranean ambushes."
+    },
+    {
+      "turn": 6,
+      "location": "loc_charnel_trench",
+      "choice_type": "titan_grapple",
+      "decision": "Grappled the Great Sump Horror's scythe-jaw with his power fist, holding the thrashing monster in place while the Sarge inserted the krak grenade.",
+      "impact": "Suffered acid burns on his armor but ensured the fatal strike was delivered true."
+    },
+    {
+      "turn": 7,
+      "location": "loc_charnel_trench",
+      "choice_type": "intercept_strike",
+      "decision": "Threw his colossal body in front of Sergeant Vane to take the brunt of Gorgon-Prime's acid vomit; carapace armor melted and flesh blistered.",
+      "impact": "Sustained heavy 25 damage (Vitality 120 -> 95), barely remaining on his feet."
+    },
+    {
+      "turn": 7,
+      "location": "loc_charnel_trench",
+      "choice_type": "intercept_strike",
+      "decision": "Threw his colossal body in front of Sergeant Vane to take the brunt of Gorgon-Prime's acid vomit; carapace armor melted and flesh blistered.",
+      "impact": "Sustained heavy 25 damage (Vitality 120 -> 95), barely remaining on his feet."
+    },
+    {
+      "turn": 8,
+      "location": "loc_charnel_trench",
+      "choice_type": "suicidal_power_fist_grapple",
+      "decision": "Roared 'FOR DA SARGE!' and charged the titan, locking his humming Power Fist into the primary scythe-arm joint and violently ripping off an entire 8-foot talon plate before being hurled against ferrocrete.",
+      "impact": "Critically fractured the beast's armor; Bragg suffered massive trauma, broken ribs, and acid burns (Vitality 70 -> 40), clinging to life."
+    },
+    {
+      "turn": 9,
+      "location": "loc_charnel_trench",
+      "choice_type": "heroic_survival",
+      "decision": "Witnessed the Sarge plunge the roaring chainsword into the monster's brain; dragged himself up with blood in his teeth, roaring with primal Ogryn triumph as the med-stims flooded his veins.",
+      "impact": "Injected with 2 emergency combat med-stims; stabilized from mortal threshold (Vitality 10 -> 40), surviving as a living legend of the Astra Militarum."
+    },
+    {
+      "turn": 10,
+      "location": "loc_charnel_trench",
+      "choice_type": "trophy_harvest",
+      "decision": "Helped the servitors haul massive 500-pound chitin slabs with his power fist, grinning proudly as he was awarded a roasted ten-pound marrow bone by the cooks.",
+      "impact": "Vitality recovered to 60 as heavy protein and field medicae rest heal torn muscle tissues."
+    },
+    {
+      "turn": 11,
+      "location": "loc_ancient_ruined_city",
+      "choice_type": "vanguard_guard",
+      "decision": "Marched at the point of the expedition carrying the heavy field supply crate and a spare krak charge, eyes scanning the towering dark ruins for ancient traps.",
+      "impact": "Shielded the expedition party as they entered the cyclopean necropolis gates; vitality restored to 70."
+    },
+    {
+      "turn": 12,
+      "location": "loc_ancient_ruined_city",
+      "choice_type": "stealth_discipline",
+      "decision": "Held his breath and moved like an iron shadow behind the Sarge, successfully bypassing a dormant Kastelan combat servitor without disturbing its auditory tripwires.",
+      "impact": "Demonstrated unnatural Ogryn discipline, keeping the strike team completely undetected."
+    },
+    {
+      "turn": 13,
+      "location": "loc_ancient_ruined_city",
+      "choice_type": "heavy_core_transport",
+      "decision": "Laughed with booming Ogryn joy as the 10-foot metal machine became their friend; hefted the 800-pound Sol-Aegis Plasma Reactor onto his shoulder like a sack of grain, ready to carry it back to the Sarge's base.",
+      "impact": "Safely transported the archeotech core across the ancient causeway; vitality surged to 85."
+    },
+    {
+      "turn": 14,
+      "location": "loc_shrine_aquila",
+      "choice_type": "loyal_bodyguard_watch",
+      "decision": "Marched the 800-pound Sol-Aegis Plasma Reactor safely into the Basilica transept, placed it at the foot of the golden Aquila, and stood vigilant guard outside the Sarge's quarters with humming Power Fist raised.",
+      "impact": "Guaranteed total physical security for the Sergeant while she slept, proud of his service to the Emperor."
+    },
+    {
+      "turn": 14,
+      "location": "loc_shrine_aquila",
+      "choice_type": "loyal_bodyguard_watch",
+      "decision": "Marched the 800-pound Sol-Aegis Plasma Reactor safely into the Basilica transept, placed it at the foot of the golden Aquila, and stood vigilant guard outside the Sarge's quarters with humming Power Fist raised.",
+      "impact": "Guaranteed total physical security for the Sergeant while she slept, proud of his service to the Emperor."
+    },
+    {
+      "turn": 16,
+      "location": "loc_chaos_stronghold",
+      "choice_type": "god_striker",
+      "decision": "Bellowed 'FOR DA SARGE AN' DA GOLDEN BOSS!' and charged the bone gates, slamming his overcharged Power Fist into the primary warp-pylon, dealing 246 kinetic disruption damage and toppling the entrance archway.",
+      "impact": "Cleared the breach lane for the assault team (Vitality 75 -> 70)."
+    },
+    {
+      "turn": 17,
+      "location": "loc_chaos_stronghold",
+      "choice_type": "stim_rebound_grapple",
+      "decision": "Felt the cold burn of the combat stim revitalize his heart; surged off the ground with a war-cry, locking his Power Fist around Malgakor's shin-guard and tearing off an entire ceramite greave.",
+      "impact": "Stabilized from death threshold (Vitality 5 -> 30), crippling Malgakor's mobility."
+    },
+    {
+      "turn": 18,
+      "location": "loc_chaos_stronghold",
+      "choice_type": "heroic_shield_martyrdom",
+      "decision": "Roared 'NO HURT DA SARGE!' and tackled Malgakor's waist, detonating his Power Fist point-blank inside the Chaos Lord's torso before being cleaved by the descending blade.",
+      "impact": "Fell in glorious combat (Vitality 5 -> 0, KIA), fracturing Malgakor's spine."
+    },
+    {
+      "turn": 22,
+      "location": "loc_shrine_aquila",
+      "choice_type": "resurrected_by_silent_king",
+      "decision": "Sat bolt upright in his massive stone sarcophagus roaring 'Bragg is back!', embracing Sergeant Vane and bowing before little priest Malachi.",
+      "impact": "Restored to life with colossal strength and chronomantic resilience."
+    }
+  ]
+}

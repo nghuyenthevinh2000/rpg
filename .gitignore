@@ -2,6 +2,10 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.venv/
+.engine.lock
+.migration.lock
+.migration-stage/
 .env
 .env.*
 !.env.example

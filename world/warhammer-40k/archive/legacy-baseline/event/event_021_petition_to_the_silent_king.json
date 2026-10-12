@@ -1,0 +1,168 @@
+{
+  "id": "event_021_petition_to_the_silent_king",
+  "name": "The Heretical Petition: Confessor Malachi Petitions the Silent King",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.047.M41",
+    "turn_increment": 1,
+    "world_state": "The Silent King's Gambits: Malachi Proclaims Necron Resurrection Quest"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_ancient_ruined_city",
+        "ambient_tension": "Beneath the cyclopean pre-Imperial towers at (0,0), a hidden subterranean vault of green-veined Noctilith (Blackstone) has begun to hum. Emerald scarab glyphs glow in mathematical synchronicity, emitting a quantum-tachyon signal into the cold dark of intergalactic space: an open channel to the Triarch and Szarekh, the Silent King."
+      },
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The Basilica stands under intense, electrified silence. Captain Severus and his Terminator Honor Guard keep their storm bolters magnetized to their cuirasses, watchful eyes locked onto Confessor Malachi. Holy incense mixes with the ozone stench of xenos chronomancy."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_pact_proclaimed_to_severus",
+        "title": "Confessor Malachi Proclaims the Silent King Bargain to Captain Severus",
+        "completed_at": "41.999.047.M41",
+        "consequence": "Confessor Malachi broke absolute ecclesiarchal dogma, announcing to Captain Severus of the Ultramarines his intent to petition Szarekh, the Silent King, for Necron reanimation and soul-tethering technology to resurrect Sergeant Vane, Bragg, Jax, and Kroll, knowingly risking his own mortal life and soul."
+      }
+    ],
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_resonance_of_the_silent_king",
+        "name": "The Triarch Communion & The Biotransference Gamble",
+        "type": "heretical_xenos_diplomacy",
+        "threat": "The Blackstone Transponder at (0,0) requires bio-neural resonance. Opening the channel to the Silent King will violently siphon mortal vitality and sanity, and an emissary of the Necron Dynasties (Chronomancer or Triarch Praetorian) may extract a terrifying price.",
+        "human_trial": "Confessor Malachi must descend to the Sunken Necropolis, interface his mortal mind with the Blackstone glyphs, and endure the lethal neural feedback to state his petition to the Silent King.",
+        "status": "active"
+      }
+    ],
+    "threat_tracking": {
+      "status": "monitored_xenos_resonance",
+      "total_threats_neutralized": 52,
+      "sublevel_containment_rating": "95% Stable // XENOS TACHYON ANOMALY DETECTED AT (0,0)",
+      "sector_threat_telemetry": {
+        "loc_ancient_ruined_city": {
+          "threat": "⚠️ BLACKSTONE TACHYON BEACON AWAKENING (Silent King Frequency)",
+          "level": "Uncharted Xenos Archeotech"
+        },
+        "loc_chaos_stronghold": {
+          "threat": "CLEANSED & CONSECRATED (Ultramarines Forward LZ)",
+          "level": "Secure / Transhuman Bastion"
+        },
+        "loc_shrine_aquila": {
+          "threat": "Tense Diplomatic Standoff (Astartes Watching Ecclesiarchy)",
+          "level": "Guarded Sanctuary"
+        },
+        "loc_manufactorum_sigma": {
+          "threat": "Tithe Production at 115% Efficiency",
+          "level": "Secure"
+        },
+        "loc_cogitator_sanctum": {
+          "threat": "Machine Protected & Linked",
+          "level": "Secure"
+        },
+        "loc_hab_block_vermin": {
+          "threat": "Citizens Whispering of Miracle Resurrections",
+          "level": "Safe & Restored"
+        },
+        "loc_bastion_gate": {
+          "threat": "Astartes Sentry Guarding Perimeter",
+          "level": "Heavy Defense"
+        },
+        "loc_promethium_cistern": {
+          "threat": "Pressure Stabilized",
+          "level": "Secured & Sealed"
+        },
+        "loc_underhive_threshold": {
+          "threat": "Bulkhead Sealed 500%",
+          "level": "Fortified"
+        },
+        "loc_charnel_trench": {
+          "threat": "Cleared Sector",
+          "level": "Secured & Purged"
+        }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 45,
+      "command_and_specialists": [
+        {
+          "id": "npc_captain_severus",
+          "name": "Captain Severus",
+          "role": "Ultramarines 2nd Company Strike Commander",
+          "status": "monitoring_confessor_with_drawn_blade (123/135 HP)"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "High Preceptor & Pilgrim of the Forbidden Accord",
+          "status": "preparing_blackstone_communion (80/80 HP)"
+        },
+        {
+          "id": "npc_kastelan_iron_bastion",
+          "name": "Kastelan Automaton 'Iron Bastion'",
+          "role": "Escort Titan to Ancient Necropolis (148/300 HP)",
+          "status": "assigned_to_escort_malachi"
+        },
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Slain Hero Awaiting Reanimation",
+          "status": "KIA / PRESERVED IN STASIS RECEPTACLE"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Slain Hero Awaiting Reanimation",
+          "status": "KIA / PRESERVED IN STASIS RECEPTACLE"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Slain Hero Awaiting Reanimation",
+          "status": "KIA / PRESERVED IN STASIS RECEPTACLE"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Slain Hero Awaiting Reanimation",
+          "status": "KIA / PRESERVED IN STASIS RECEPTACLE"
+        }
+      ]
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "confessor_malachi.json",
+      "stat_deltas": {
+        "clarity": 5,
+        "agency": 5,
+        "dissonance": 20
+      },
+      "new_decision": {
+        "turn": 21,
+        "location": "loc_shrine_aquila",
+        "choice_type": "proclamation_of_xenos_bargain",
+        "decision": "Approached Captain Severus in the Basilica and solemnly announced the ultimate gamble: to reach out across the void to Szarekh, the Silent King of the Necrons, using the Sunken Necropolis's ancient Blackstone array to petition for resurrection protocols to bring back Vane, Bragg, Jax, and Kroll, pledging his own life as collateral.",
+        "impact": "Stunned the Ultramarines; established high-stakes truce under Guilliman's pragmatic precedent; opened active trial 'The Triarch Communion'."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "captain_severus.json",
+      "stat_deltas": {
+        "agency": 5
+      },
+      "new_decision": {
+        "turn": 21,
+        "location": "loc_shrine_aquila",
+        "choice_type": "conditional_indulgence_and_warning",
+        "decision": "Listened to Confessor Malachi's plea; cited the Primarch's secret diplomatic precedents with the Silent King during the Pariah Nexus, and granted conditional permission for Malachi to probe the Blackstone transponder, warning that any betrayal or soulless monstrosity will be answered with immediate exterminatus.",
+        "impact": "Kept the strike force on high alert; detached the Kastelan Automaton to escort Malachi to the Sunken Necropolis."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

@@ -279,7 +279,22 @@ def inspect_world(world_dir):
     world = Path(world_dir).resolve()
     if load_json(world / 'world.json').get('contract_version') == 1:
         from engine.runner import read_snapshot
-        return {'world_id': load_json(world / 'world.json')['world_id'], 'canonical': True, 'clock': read_snapshot(world)['clock'], 'legacy_inspection': load_json(world / 'archive/migration-report.json') if (world / 'archive/migration-report.json').exists() else None}
+        snapshot = read_snapshot(world)
+        contract = WorldContract(world)
+        ctx = RuleContext(StateView(snapshot), contract.definition_view, None, snapshot['clock']['data']['turn'])
+        derivation_audit = {}
+        for character in snapshot.get('characters', {}).values():
+            char_id = character['id']
+            derived = contract.derive(ctx, 'characters/' + char_id)
+            if 'audit' in derived:
+                derivation_audit[char_id] = derived['audit']
+        return {
+            'world_id': load_json(world / 'world.json')['world_id'],
+            'canonical': True,
+            'clock': snapshot['clock'],
+            'derivation_audit': derivation_audit,
+            'legacy_inspection': load_json(world / 'archive/migration-report.json') if (world / 'archive/migration-report.json').exists() else None
+        }
     return _normalized(world)[1]
 
 

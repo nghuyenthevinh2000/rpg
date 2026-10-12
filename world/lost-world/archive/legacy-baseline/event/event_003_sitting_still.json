@@ -1,0 +1,74 @@
+{
+  "event_id": "event_003_sitting_still",
+  "name": "The Unmoving Anchor at Point Zero",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-09T09:00:00+07:00",
+    "world_state": "Quiet Presence at Point Zero"
+  },
+  "narrative": "Kael sits completely still by the cedar post. No instructions given, no heroics performed. The simple, unmoving presence of an anchor allows the nascent monastery community to find its own organic rhythm.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "A stillness so deep that the whisper of tea steam and the steady rhythmic breathing of working hands become the heartbeat of the hall."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": 0,
+        "clarity": 0,
+        "dissonance": 0,
+        "physical_vitality": 1
+      },
+      "new_decision": {
+        "turn": 14,
+        "location": "loc_monastery",
+        "choice_type": "sitting_still",
+        "decision": "Sat completely still by the hearth, relinquishing all urge to manage, direct, or instruct the enclave.",
+        "impact": "Embodied the stillness of Point Zero; allowed the community to act without dependence on a founder."
+      }
+    },
+    {
+      "char_file": "marcus.json",
+      "stat_deltas": {
+        "agency": 2,
+        "clarity": 1,
+        "dissonance": -1
+      },
+      "new_decision": {
+        "turn": 14,
+        "decision": "Noticing Kael's unmoving silence, quietly stoked the coals and organized the woodbox without seeking permission or validation.",
+        "impact": "Demonstrated natural, autonomous initiative."
+      }
+    },
+    {
+      "char_file": "lyra.json",
+      "stat_deltas": {
+        "agency": 2,
+        "clarity": 1
+      },
+      "new_decision": {
+        "turn": 14,
+        "decision": "Sat beside the threshold, observing the silent chrome drone in the distance without fear, simply grounding herself in the quiet hall.",
+        "impact": "Deepened collective presence."
+      }
+    },
+    {
+      "char_file": "dr_harlan.json",
+      "stat_deltas": {
+        "agency": 2,
+        "dissonance": -2
+      },
+      "new_decision": {
+        "turn": 14,
+        "decision": "Quietly laid out dried sprigs of yarrow, mint, and pine needles in neat rows along the cedar sill to dry in the morning sun.",
+        "impact": "Settled into the unhurried cadence of genuine care."
+      }
+    }
+  ]
+}

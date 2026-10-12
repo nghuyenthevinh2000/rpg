@@ -6,12 +6,19 @@ Commands below run from `projects/rpg/`.
 
 ## Setup and verification
 
-Python 3.10+ on a POSIX platform (`fcntl` world locks), plus JSON Schema:
+Python 3.10+ on a POSIX platform (`fcntl` world locks), with `uv` for package management:
 
 ```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python -m unittest discover -s tests -v
+uv venv
+uv pip install --python .venv/bin/python -r requirements.txt
+source .venv/bin/activate
+python -m unittest discover -s tests -v
+```
+
+Without a persistent environment, run checks directly with:
+
+```sh
+uv run --no-project --with-requirements requirements.txt python -m unittest discover -s tests -v
 ```
 
 Development tests copy saves into temporary directories. They prefer each
@@ -21,9 +28,9 @@ advance a live world and do not activate the gameplay sub-agent mandate.
 
 ## Inspect and migrate
 
-Migration is available for **both** current worlds. The coordinator will cut
-over both actual saves after implementation verification; implementation tests
-do not perform that live cutover. Migration is not a turn.
+Both current worlds use canonical split state. Original saves are preserved in
+each world's `archive/legacy-baseline/`; implementation tests never advance the
+live worlds. Migration of another legacy copy is not a turn:
 
 ```sh
 python inspect_world.py --world lost-world
@@ -167,13 +174,33 @@ live save.
   `min(old_health, max(25, old_health - 15))`, so it cannot heal or revive.
 - Warhammer attacks require a living co-located active threat, recognized equipped
   configured weapon, and sufficient exact ammunition resource when required.
-  Armor/penetration/power are explicit config, not inferred from names. Resource
+  Armor/penetration/power are explicit config, not inferred from names. Gross attack damage
+  is `weapon['power'] + punch_kinetic_impact` (where punch impact already contains trait and
+  equipment kinetic multipliers once, without multiplying weapon power a second time). Resource
   consumption and damage commit together. Each attack retaliates **once, even on
   a killing blow**; periodic processing never retaliates. Current structural
   sanctuary rejects combat and hostile GM introductions. Combat tests disable
   sanctuary only in separately authored temporary copies.
+- Equipment actions (`equip`, `unequip`) require possession, living actors, and recognized
+  slots, ensuring items cannot be fabricated or duplicated across slots without explicit unequip.
+  Character derivation exposes a read-only `audit` entry detailing static values, baseline
+  modifiers, current modifiers, effective values, health, and any bounds baseline exceptions.
+- Treatment actions (`heal`, `restore_life`): `heal` requires living co-located biological targets,
+  valid recipe references, and sufficient stock, clamping to configured ceiling without lowering higher health
+  or charging for full-health no-ops. `restore_life` requires an explicit authored restoration policy, living
+  immortal actor, co-located dead target, and consumes configured stock restoring status alive with health 100
+  while preserving existing capabilities. Lost World strictly rejects treatment and restoration.
+- Trial actions (`trial`) resolve noncombat challenges, social trials, and sanctuary opportunities against
+  configured difficulty checks, actor skills, and success/failure outcome stakes without violating sanctuary.
+- Deterministic calendar progression: Lost World advances 24 turns/day with ISO offset-aware timestamps from
+  anchor turn 33 / day 4 / `2026-10-09T07:30:00+07:00`; Warhammer advances 4 turns/day across 4 imperial watches
+  from anchor turn 37 / day 9 / `41.999.059.M41`. The runner advances turn count atomically; dry runs and failures
+  never advance clock state.
+- Projects and resource mechanics: `contribute_project` advances project labor toward configured goals with labor
+  caps; periodic `after_turn` processes resource production, consumption, and shortage penalties; completed
+  projects can unlock rewards and map presentation reflects labor progress.
 
-## GM proposals and initial scope
+## GM proposals and sanctuary handling
 
 ```sh
 python game_master.py --world lost-world --seed 7 --improvise
@@ -183,15 +210,15 @@ python game_master.py --world warhammer-40k --seed 7
 GM reads the selected world's `disaster_pool`/`improvisation_templates`, uses seeded
 selection, and exclusively creates a unique proposal. It never applies it. Lost
 World has no improvisation pool: its configured disaster-pool fallback is disclosed
-in the proposal. Warhammer's hostile pool is stale versus sanctuary: proposals
-are marked inspection-only and rules refuse application. `change_world.py
---improvise`/`--force-gm` without an event also only generates a proposal; mixing
-an event with these flags rejects rather than running a hidden mutation pipeline.
+in the proposal. Under sanctuary, hostile and cold templates are filtered out;
+Warhammer draws from authored peaceful opportunity and social templates
+(pre-sanctuary combat templates remain archived in `definitions/gm-pre-sanctuary.json`).
+`change_world.py --improvise`/`--force-gm` without an event also only generates a proposal;
+mixing an event with these flags rejects rather than running a hidden mutation pipeline.
 
-Construction fulfillment, automated resource consumption/production, troop
-casualties, resurrection, narrative patching, GM relocation, and arbitrary
-historical action mechanics are **not executable** in this initial scope. Imported
-actions/resources/groups remain independently inspectable, with unsupported
-details/history preserved under designated metadata and the exact archive.
+Arbitrary historical freeform action mechanics remain strictly constrained to typed,
+validated schemas and recipes. Imported baseline records remain independently inspectable,
+with unmigrated details and original state preserved under designated metadata and the exact archive.
 Trusted ordinary Python rule functions are not a sandbox; filesystem write
 boundaries are a workflow convention unless harness permissions enforce them.
+

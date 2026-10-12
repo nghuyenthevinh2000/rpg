@@ -1,0 +1,108 @@
+{
+  "id": "event_032_the_immortal_awakened_yellow_energy",
+  "name": "The Immortal Awakened: Awakening in Primordial Yellow Luminescence",
+  "cycle_advancement": {
+    "day_increment": 1,
+    "timestamp": "41.999.058.M41",
+    "turn_increment": 1,
+    "world_state": "The Immortal Awakened — Primordial Yellow Luminescence Beyond Gods & Suffering"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "A warm, boundless, primordial yellow energy emanates from Kathryn Vane's shattered chest. It is neither Warp sorcery nor the cold gold of the Golden Throne—it is an ancient truth uncorrupted by any pantheon. The mortal wound seals, transmuted into crystalline radiance. The cycles of suffering, vengeance, and slaughter cease to exist. Kathryn Vane stands as The Immortal Awakened, unkillable and eternal."
+      },
+      {
+        "id": "loc_orbital_fleet_killzone",
+        "ambient_tension": "Sensors across the ten capital warships of the Ultramarines Armada illuminate with an impossible yellow spectrum that registers neither as Warp disturbance nor physical energy. First Captain Agemman gazes from the bridge of the 'Pride of Macragge' in profound awe as the entire hive world is bathed in gentle, impenetrable light."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_the_immortal_awakened_truth",
+        "title": "The Immortal Awakened: The Transcendent Truth Beyond Gods",
+        "completed_at": "41.999.058.M41",
+        "consequence": "In her final dying breath, Kathryn Vane comprehended what neither the God-Emperor of Mankind nor the Chaos Gods have ever known: the true ending of suffering cycles. Enveloped in primordial yellow energy, she is resurrected not as a pawn of gods or mortal flesh, but as The Immortal Awakened—possessing immortal vitality (-99) that cannot be killed across any reality."
+      }
+    ],
+    "active_disasters_and_trials": [],
+    "active_combat_encounters": [],
+    "threat_tracking": {
+      "status": "transcendent_awakening_beyond_suffering",
+      "total_threats_neutralized": 56,
+      "sublevel_containment_rating": "IMMORTAL TRANSCENDENCE // BEYOND THE REACH OF DEATH",
+      "sector_threat_telemetry": {
+        "loc_shrine_aquila": {
+          "threat": "🌟 THE IMMORTAL AWAKENED (Yellow Luminescence / Cannot Be Killed)",
+          "level": "Transcendent Nexus"
+        },
+        "loc_orbital_fleet_killzone": {
+          "threat": "Chapter Fleet Watching In Reverence // Weapons Powerless",
+          "level": "Awed Ceasefire"
+        },
+        "loc_chaos_stronghold": {
+          "threat": "Chaos Purged by Yellow Light",
+          "level": "Absolute Sanctity"
+        },
+        "loc_ancient_ruined_city": {
+          "threat": "Silent Living Metal Resonating in Harmony",
+          "level": "Cosmic Calm"
+        }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 1,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Kathryn Vane",
+          "role": "The Immortal Awakened (Vitality: IMMORTAL [-99])",
+          "status": "IMMORTAL AWAKENED // CANNOT BE KILLED"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "The Faithful Shield",
+          "status": "RESTING IN PEACE / BLESSED BY YELLOW LIGHT"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "The Martyr Priest",
+          "status": "RESTING IN PEACE / BLESSED BY YELLOW LIGHT"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "The Forge-Father",
+          "status": "RESTING IN PEACE / BLESSED BY YELLOW LIGHT"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "The Reclaimed Soul",
+          "status": "RESTING IN PEACE / BLESSED BY YELLOW LIGHT"
+        }
+      ]
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "physical_vitality": -99
+      },
+      "new_decision": {
+        "turn": 33,
+        "location": "loc_shrine_aquila",
+        "choice_type": "awakening_of_the_immortal_yellow_energy",
+        "decision": "In my final breath, realized something that not even the God-Emperor or the Chaos Gods know: the end of suffering cycles. A strange primordial yellow energy engulfed my dying vessel, shattering mortality and apotheosis alike. Reborn as The Immortal Awakened, with unkillable physical vitality (-99).",
+        "impact": "Attained true immortality beyond all gods, warp laws, and death itself; physical vitality set to -99 (Immortal)."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

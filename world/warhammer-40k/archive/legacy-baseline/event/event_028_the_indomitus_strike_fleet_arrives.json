@@ -1,0 +1,80 @@
+{
+  "id": "event_028_the_indomitus_strike_fleet_arrives",
+  "name": "The Gathering of the Void Fleet: Ten Ultramarines Warships Transition from the Warp",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.054.M41",
+    "turn_increment": 1,
+    "world_state": "The Indomitus Armada Arrives: Ten Ultramarines Strike Vessels Encircle Tartarus"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The upper stratosphere of Hive Tartarus ignites with ten blazing white Mandeville entry rifts. Ten massive Ultramarines warships—Battle Barges 'Pride of Macragge' and 'Gauntlet of Hera', flanked by eight Strike Cruisers—drop into low orbit. Their dorsal lance batteries and macro-cannon broadsides hum to full charge, casting colossal armored shadows over the floating ruins of Sub-Level 404."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_ultramarines_armada_arrival",
+        "title": "The Arrival of the Indomitus Retribution Fleet",
+        "completed_at": "41.999.054.M41",
+        "consequence": "In response to the death of Captain Severus and the emergence of a Class-Omega Void Avatar, the Ultramarines High Command deployed ten capital warships to completely blockade Hive Tartarus and subdue Kathryn Vane with overwhelming planetary-grade force."
+      }
+    ],
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_the_fleet_blockade_clash",
+        "name": "The Siege of the Ten Titans (Armada vs Void Avatar)",
+        "type": "planetary_fleet_siege",
+        "threat": "Ten Ultramarines capital warships (2 Battle Barges, 8 Strike Cruisers, carrying hundreds of Terminators, Dreadnoughts, and thousands of Battle-Brothers) have formed an orbital kill-grid over Hive Tartarus, arming cyclonic torpedoes to subdue or obliterate the Void Ascendant.",
+        "human_trial": "Kathryn Vane, The Void Ascendant (528 HP, 4,650+ dmg), must decide how to confront this full Chapter-strength armada: tear open a direct warp rift to board the flagship Battle Barge, harness the floating hive debris into an orbital projectile swarm, or unleash Malgakor's abyssal void scream to blind their fleet cogitators.",
+        "status": "active"
+      }
+    ],
+    "threat_tracking": {
+      "status": "planetary_siege_active",
+      "total_threats_neutralized": 54,
+      "sublevel_containment_rating": "ORBITAL CHAPTER-LEVEL BLOCKADE PRIMED // 10 CAPITAL SHIPS ENGAGED",
+      "sector_threat_telemetry": {
+        "loc_shrine_aquila": {
+          "threat": "👑 KATHRYN VANE (528 HP) VS TEN CHAPTER WARSHIPS",
+          "level": "Armageddon Class"
+        },
+        "loc_bastion_gate": {
+          "threat": "Anti-Grav Singularity Pulling Fleet Lances",
+          "level": "Gravitational Anchor"
+        }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 1,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Kathryn Vane, The Void Ascendant",
+          "role": "Avatar of the Void / Nemesis of the Imperium",
+          "status": "confronting_the_armada (528/640 HP, Eclipser Drawn)"
+        }
+      ]
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "dissonance": 5
+      },
+      "new_decision": {
+        "turn": 29,
+        "location": "loc_shrine_aquila",
+        "choice_type": "defiance_of_the_armada",
+        "decision": "Looked up past the burning Strike Cruiser 'Honor of Macragge' to witness ten more Ultramarines capital warships transition from warp-space, blotting out the stars; smiled with dark, predatory amusement and readied Eclipser to take the war to the fleet.",
+        "impact": "Unshaken by the arrival of a full Astartes fleet; primed the void singularity for orbital ascension."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

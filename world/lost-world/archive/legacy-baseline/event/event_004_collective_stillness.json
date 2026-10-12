@@ -1,0 +1,76 @@
+{
+  "event_id": "event_004_collective_stillness",
+  "name": "The Great Collective Stillness",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-09T09:45:00+07:00",
+    "world_state": "The Communion of the Unhurried"
+  },
+  "narrative": "No one speaks, no one plans, and no one reaches for a tool. Marcus rests his elbows on his knees, Lyra closes her eyes against the sunlit cedar post, and Dr. Harlan lets his hands lie motionless in his lap. For the first time in the history of the automated age, four humans share an unoptimized hour together without restlessness or phantom motion.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "The silence has ceased to be an absence of activity; it has become a dense, palpable shelter. Even the distant drone outside seems to power down into stand-by observation."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": 0,
+        "clarity": 0,
+        "dissonance": 0,
+        "physical_vitality": 2
+      },
+      "new_decision": {
+        "turn": 17,
+        "location": "loc_monastery",
+        "choice_type": "deep_stillness",
+        "decision": "Continued sitting in complete stillness with the community, allowing the silence to deepen into shared refuge.",
+        "impact": "Point Zero anchored the collective; eradicated the phantom urge to justify existence through perpetual motion."
+      }
+    },
+    {
+      "char_file": "marcus.json",
+      "stat_deltas": {
+        "agency": 2,
+        "clarity": 2,
+        "dissonance": -5
+      },
+      "new_decision": {
+        "turn": 17,
+        "decision": "Sat back against the stone hearth, letting the iron poker rest, giving up the compulsive need to constantly manage the coals.",
+        "impact": "Unlearned the anxiety of the obsolete litigator."
+      }
+    },
+    {
+      "char_file": "lyra.json",
+      "stat_deltas": {
+        "agency": 2,
+        "clarity": 2,
+        "dissonance": -2
+      },
+      "new_decision": {
+        "turn": 17,
+        "decision": "Set down her reed pen and closed her eyes, absorbing the heat of the wood without needing to capture it into text or performance.",
+        "impact": "Freedom from the orator's burden to narrate reality."
+      }
+    },
+    {
+      "char_file": "dr_harlan.json",
+      "stat_deltas": {
+        "agency": 2,
+        "clarity": 2,
+        "dissonance": -5
+      },
+      "new_decision": {
+        "turn": 17,
+        "decision": "Closed his eyes beside the warm tea bowl, resting his diagnostic hands entirely flat upon his knees in deep physiological peace.",
+        "impact": "Bodily tension accumulated from years of forced leisure dissolved."
+      }
+    }
+  ]
+}

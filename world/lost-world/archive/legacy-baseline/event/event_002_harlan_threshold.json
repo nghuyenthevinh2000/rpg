@@ -1,0 +1,57 @@
+{
+  "event_id": "event_002_harlan_threshold",
+  "cycle_advance": {
+    "day": 2,
+    "turn": 13,
+    "timestamp": "2026-10-09T08:15:00+07:00",
+    "world_state": "The Healing Touch at the Hearth"
+  },
+  "narrative": "Kael steps to the threshold, welcomes Dr. Harlan into the warmth of the cedar hall, and places wild medicinal roots and cloth in his surgical hands. Harlan's decades of diagnostic intuition are reclaimed through tactile touch rather than synthetic scans.",
+  "characters": [
+    {
+      "char_file": "char/main_char.json",
+      "stat_changes": {
+        "agency": 5,
+        "clarity": 0,
+        "dissonance": -1,
+        "physical_vitality": 2
+      },
+      "new_decision": {
+        "turn": 13,
+        "location": "loc_monastery",
+        "choice_type": "communal_healing",
+        "decision": "Welcomed Dr. Harlan to the hearth, offering warm tea and entrusting him with wild mountain herbs to examine and catalog by hand.",
+        "impact": "Restored dignity to stranded medical mastery; integrated diagnostic pathology back into human communal life."
+      }
+    },
+    {
+      "char_file": "char/dr_harlan.json",
+      "stat_changes": {
+        "agency": 35,
+        "clarity": 7,
+        "dissonance": -40,
+        "physical_vitality": 2
+      },
+      "set_fields": {
+        "location": "loc_monastery",
+        "coordinate": { "row": 3, "col": 3 },
+        "current_state": "Resident Physician & Herbologist"
+      },
+      "new_decision": {
+        "turn": 13,
+        "location": "loc_monastery",
+        "choice_type": "reclamation_of_purpose",
+        "decision": "Crossed the perimeter into quadrant (3,3), sat beside the open fire, and used bare hands to inspect and treat Marcus and Lyra's blistered fingers with crushed herbal salve.",
+        "impact": "Severed idle dependence on Atrium automated beds; reclaimed the tactile vocation of healing."
+      }
+    }
+  ],
+  "progress_updates": {
+    "completed_milestone": {
+      "milestone_id": "ms_healer_reclaimed",
+      "title": "Restoration of the Tactile Healer",
+      "completed_at": "2026-10-09T08:15:00+07:00",
+      "consequence": "Dr. Harlan takes up residence at the Monastery; herbal diagnostic station established."
+    }
+  }
+}

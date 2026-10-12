@@ -1,0 +1,302 @@
+{
+  "system": "Warhammer 40,000 Wargear, Armor, and Augmetic Systems Registry",
+  "doctrine": "In the 41st Millennium, tools of war are sanctified relics of ancient technology. Equipment directly enhances the biological and synthetic capabilities of the bearer.",
+  "items": {
+    "item_chainsword_mk7": {
+      "id": "item_chainsword_mk7",
+      "name": "Mark VII Teeth-Worn Chainsword",
+      "slot": "melee_weapon",
+      "category": "melee_weapon",
+      "description": "A roaring motorized blade lined with monomolecular adamantine teeth, capable of chewing through flesh and bone.",
+      "stat_modifiers": {
+        "strength": 10
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.35
+      }
+    },
+    "item_combat_shotgun": {
+      "id": "item_combat_shotgun",
+      "name": "Godwyn-De’az Combat Shotgun",
+      "slot": "primary_weapon",
+      "category": "ranged_weapon",
+      "description": "Heavy-bore urban enforcer shotgun chambered for solid penetrator slugs.",
+      "stat_modifiers": {
+        "strength": 5,
+        "agility": 5
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.15
+      }
+    },
+    "item_omnissian_power_axe": {
+      "id": "item_omnissian_power_axe",
+      "name": "Omnissian Power Axe & Plasma Cutter",
+      "slot": "primary_weapon",
+      "category": "power_weapon",
+      "description": "Sacred halberd wrapped in an energy disruption field, bearing the cog tooth skull of the Mechanicus.",
+      "stat_modifiers": {
+        "strength": 25,
+        "clarity": 10
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.6
+      }
+    },
+    "item_lasgun_kantrael": {
+      "id": "item_lasgun_kantrael",
+      "name": "Kantrael Pattern M36 Lasgun",
+      "slot": "primary_weapon",
+      "category": "ranged_weapon",
+      "description": "The reliable, mass-produced backbone rifle of the Astra Militarum. Emits high-energy coherent light pulses.",
+      "stat_modifiers": {
+        "agility": 5,
+        "clarity": 5
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.1
+      }
+    },
+    "item_power_fist": {
+      "id": "item_power_fist",
+      "name": "Astartes Mark IV Power Fist",
+      "slot": "melee_weapon",
+      "category": "power_weapon",
+      "description": "Oversized armored gauntlet surrounded by matter-disrupting energy crackle. Crushes vehicles into scrap metal.",
+      "stat_modifiers": {
+        "strength": 40,
+        "agility": -15
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 2.1
+      }
+    },
+    "item_carapace_armor": {
+      "id": "item_carapace_armor",
+      "name": "Enforcer Hardened Carapace Armor",
+      "slot": "armor",
+      "category": "protective_gear",
+      "description": "Interlocking molded plasteel and ceramite plates over ballistic mesh weave.",
+      "stat_modifiers": {
+        "physical_vitality": 20,
+        "agility": -5,
+        "agency": 5
+      },
+      "stat_caps": {
+        "max_vitality": 15
+      }
+    },
+    "item_power_armor_mk10": {
+      "id": "item_power_armor_mk10",
+      "name": "Astartes Mark X Tacticus Power Armor",
+      "slot": "armor",
+      "category": "power_armor",
+      "description": "Sealed ceramite power suit with neural interface bundle and synthetic muscle-fiber bundles.",
+      "stat_modifiers": {
+        "physical_vitality": 35,
+        "strength": 25,
+        "agency": 10
+      },
+      "stat_caps": {
+        "max_vitality": 35,
+        "max_strength": 25
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.25
+      }
+    },
+    "item_tech_robes_lead": {
+      "id": "item_tech_robes_lead",
+      "name": "Lead-Lined Crimson Tech-Robes",
+      "slot": "armor",
+      "category": "protective_gear",
+      "description": "Heavy sacred Martian robes insulated against radiation, acid vapors, and electric discharges.",
+      "stat_modifiers": {
+        "physical_vitality": 10,
+        "clarity": 10
+      },
+      "stat_caps": {
+        "max_clarity": 10
+      }
+    },
+    "item_flak_armor": {
+      "id": "item_flak_armor",
+      "name": "Imperial Guard Flak Vest & Helmet",
+      "slot": "armor",
+      "category": "protective_gear",
+      "description": "Layered ablative thermoplas and carbon-fiber plates designed to dissipate shrapnel.",
+      "stat_modifiers": {
+        "physical_vitality": 10
+      }
+    },
+    "item_bionic_locomotion": {
+      "id": "item_bionic_locomotion",
+      "name": "Hydraulic Bionic Leg Augmetic",
+      "slot": "cybernetics",
+      "category": "bionics",
+      "description": "Industrial hydraulic piston legs replacing damaged organic limbs, granting rapid sprint burst.",
+      "stat_modifiers": {
+        "agility": 15,
+        "physical_vitality": 5
+      }
+    },
+    "item_cortex_implant": {
+      "id": "item_cortex_implant",
+      "name": "Logic Cortex Cogitator Implant",
+      "slot": "cybernetics",
+      "category": "bionics",
+      "description": "Sub-cranial logic unit connected directly to the central nervous system.",
+      "stat_modifiers": {
+        "clarity": 20,
+        "agency": -5
+      },
+      "stat_caps": {
+        "max_clarity": 20
+      }
+    },
+    "item_aquila_rosary": {
+      "id": "item_aquila_rosary",
+      "name": "Bone-Carved Imperial Aquila Rosary",
+      "slot": "relic",
+      "category": "holy_relic",
+      "description": "Consecrated with the ashes of martyrs; anchors the soul against despair and warp temptation.",
+      "stat_modifiers": {
+        "agency": 15,
+        "dissonance": -10
+      }
+    },
+    "item_purity_seal_sanctus": {
+      "id": "item_purity_seal_sanctus",
+      "name": "Purity Seal of Saint Katherine",
+      "slot": "relic",
+      "category": "holy_relic",
+      "description": "Parchment inscribed with sacred battle-oaths affixed with red stamping wax.",
+      "stat_modifiers": {
+        "agency": 10,
+        "clarity": 5,
+        "dissonance": -15
+      }
+    },
+    "item_null_collar": {
+      "id": "item_null_collar",
+      "name": "Blackstone Null Dampening Collar",
+      "slot": "wargear",
+      "category": "pariah_tech",
+      "description": "Ancient xenos-derived blackstone array that completely suppresses psychic energy.",
+      "stat_modifiers": {
+        "psychic_aptitude": -100,
+        "dissonance": -25
+      }
+    },
+    "item_relic_blade_macragge": {
+      "id": "item_relic_blade_macragge",
+      "name": "Gladius of Macragge (Master-Crafted Relic Blade)",
+      "slot": "melee_weapon",
+      "category": "power_weapon",
+      "description": "An ancient power sword forged in the armouries of Ultramar, imbued with an energetic disruption field that cleaves through starship bulkheads.",
+      "stat_modifiers": {
+        "strength": 35,
+        "clarity": 15
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 2.2
+      }
+    },
+    "item_indomitus_terminator_armor": {
+      "id": "item_indomitus_terminator_armor",
+      "name": "Indomitus Pattern Tactical Dreadnought Armor",
+      "slot": "armor",
+      "category": "power_armor",
+      "description": "Walking tank plate of bonded ceramite-plasteel reinforced with an integrated Crux Terminatus displacement forcefield.",
+      "stat_modifiers": {
+        "physical_vitality": 50,
+        "strength": 35,
+        "agility": -10,
+        "agency": 20
+      },
+      "stat_caps": {
+        "max_vitality": 180,
+        "max_strength": 160
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.5
+      }
+    },
+    "item_storm_bolter": {
+      "id": "item_storm_bolter",
+      "name": "Astartes Twin-Linked Storm Bolter",
+      "slot": "primary_weapon",
+      "category": "ranged_weapon",
+      "description": "Twin-barrel mass-reactive bolt weapon firing .75 caliber explosive penetrators at extreme cyclic rates.",
+      "stat_modifiers": {
+        "strength": 10,
+        "agency": 10
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.3
+      }
+    },
+    "item_void_relic_blade": {
+      "id": "item_void_relic_blade",
+      "name": "Eclipser: Sunder-Soul Relic Blade",
+      "slot": "melee_weapon",
+      "category": "power_weapon",
+      "description": "A dark obsidian disruption blade fused with the warp-fire of Lord Malgakor; tears both physical ceramite and ethereal souls.",
+      "stat_modifiers": {
+        "strength": 50,
+        "clarity": 20
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 2.8
+      }
+    },
+    "item_void_power_plate": {
+      "id": "item_void_power_plate",
+      "name": "Corrupted Aegis of the Void Marine",
+      "slot": "armor",
+      "category": "power_armor",
+      "description": "Midnight-blue and void-blackened power plate infused with warp-essence and Necrodermis chronomancy.",
+      "stat_modifiers": {
+        "physical_vitality": 100,
+        "strength": 40,
+        "agency": 25,
+        "agility": 15
+      },
+      "stat_caps": {
+        "max_vitality": 500,
+        "max_strength": 250
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.6
+      }
+    },
+    "item_sanctified_thunder_hammer": {
+      "id": "item_sanctified_thunder_hammer",
+      "name": "Hammer of Macragge (Sanctified Master-Crafted Thunder Hammer)",
+      "slot": "melee_weapon",
+      "category": "power_weapon",
+      "description": "A devastating Astartes warhammer inscribed with the Litany of Hatred; releases omni-directional kinetic shockwaves upon impact.",
+      "stat_modifiers": {
+        "strength": 60,
+        "agency": 20
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 3.0
+      }
+    },
+    "item_cyclone_missile_pack": {
+      "id": "item_cyclone_missile_pack",
+      "name": "Shoulder-Mounted Cyclone Missile Launcher",
+      "slot": "secondary_weapon",
+      "category": "ordnance",
+      "description": "Twin-pod automated anti-titan missile launcher mounted over Terminator pauldrons.",
+      "stat_modifiers": {
+        "strength": 25,
+        "clarity": 15
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.8
+      }
+    }
+  }
+}

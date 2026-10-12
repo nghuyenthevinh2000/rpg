@@ -1,0 +1,41 @@
+{
+  "description": "Trait modifier and stat limit definitions for 'The Inertia' RPG characters.",
+  "stat_caps": {
+    "max_vitality_default": 100,
+    "max_agency_default": 100,
+    "max_clarity_default": 100,
+    "min_stat_floor": 0
+  },
+  "traits": {
+    "trait_unyielding_survival": {
+      "trait_id": "trait_unyielding_survival",
+      "name": "Will to Live at All Costs",
+      "effect": "Medical training and preservation instincts override passivity.",
+      "failure_probability": 0.25,
+      "vulnerability": "Will to live cannot magically resist kinetic impact or targeted attack; 25% failure chance under physical assault to reflect physiological limits."
+    },
+    "trait_hypothermic_exhaustion": {
+      "name": "Hypothermic Exhaustion",
+      "stat_modifiers": {
+        "max_vitality": 60,
+        "max_agency": 50
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 0.5
+      }
+    },
+    "trait_amputated_craftsman": {
+      "name": "The Amputated Craftsman",
+      "stat_modifiers": {
+        "max_agency": 80
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.0
+      }
+    }
+  },
+  "kinetic_formula": {
+    "base_punch_damage": 5,
+    "vitality_ratio_scale": 0.2
+  }
+}

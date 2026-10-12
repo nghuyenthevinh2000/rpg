@@ -4,8 +4,8 @@
   "collections": {
     "characters": {"schema": "schemas/character.schema.json"},
     "threats": {"schema": "schemas/threat.schema.json"},
-    "resources": {"schema": "engine:resource"},
-    "actions": {"schema": "engine:action"},
+    "resources": {"schema": "schemas/resource.schema.json"},
+    "actions": {"schema": "schemas/action.schema.json"},
     "groups": {"schema": "engine:group"},
     "baseline": {"schema": "schemas/metadata.schema.json"}
   },

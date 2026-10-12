@@ -1,0 +1,151 @@
+{
+  "data": {
+    "baseline": {
+      "modifiers": {},
+      "stats": {
+        "agency": 100,
+        "clarity": 100,
+        "dissonance": 4,
+        "max_agency": 100
+      }
+    },
+    "capabilities": {
+      "cannot_die": false
+    },
+    "equipment": [],
+    "health": 85,
+    "inventory": [],
+    "location_id": "loc_monastery",
+    "metadata": {
+      "legacy": {
+        "coordinate": {
+          "col": 3,
+          "row": 3
+        },
+        "current_state": "The Inscriber of Deeds & Hearthkeeper",
+        "decisions": [
+          {
+            "decision": "Stepped down from the Forum podium, defined meaning as a verb to Kael and Marcus, and rejected the 5,000 credit hush money.",
+            "impact": "Shifted from screaming into the void to active human presence.",
+            "turn": 4
+          },
+          {
+            "decision": "Lit the first manual hearth fire in quadrant (3,3) using twigs and flint.",
+            "impact": "Created the physical nucleus of the monastery.",
+            "turn": 5
+          },
+          {
+            "decision": "Rallied the surgeon and designer into a timber relay during the squall, securing the counterweights.",
+            "impact": "Saved the southwest corner pillars from gale shear.",
+            "turn": 8
+          },
+          {
+            "decision": "Inscribed the first verse of the Monastery Chronicle onto a seasoned cedar tablet.",
+            "impact": "Literature anchored to living community rather than digital voids.",
+            "turn": 11
+          },
+          {
+            "decision": "Inscribed the first verse of the Monastery Chronicle onto a seasoned cedar tablet.",
+            "impact": "Literature anchored to living community rather than digital voids.",
+            "turn": 11
+          },
+          {
+            "decision": "Sat beside the threshold, observing the silent chrome drone in the distance without fear, simply grounding herself in the quiet hall.",
+            "impact": "Deepened collective presence.",
+            "turn": 14
+          },
+          {
+            "decision": "Sat beside the threshold, observing the silent chrome drone in the distance without fear, simply grounding herself in the quiet hall.",
+            "impact": "Deepened collective presence.",
+            "turn": 14
+          },
+          {
+            "decision": "Sat beside the threshold, observing the silent chrome drone in the distance without fear, simply grounding herself in the quiet hall.",
+            "impact": "Deepened collective presence.",
+            "turn": 14
+          },
+          {
+            "decision": "Set down her reed pen and closed her eyes, absorbing the heat of the wood without needing to capture it into text or performance.",
+            "impact": "Freedom from the orator's burden to narrate reality.",
+            "turn": 17
+          },
+          {
+            "decision": "Will to Live triggered: Struck flint against steel with frantic, desperate strikes until a spark caught dry birch bark, blowing the flame into a roar.",
+            "impact": "Rekindled the monastery hearth; defied freezing oblivion.",
+            "turn": 20
+          },
+          {
+            "decision": "Steeped wild crushed ginger and dried comfrey into boiling meltwater, lifting Kael's head to spoon warm broth between his chapped lips.",
+            "impact": "Nourished life back into the enclave's founder.",
+            "turn": 21
+          },
+          {
+            "decision": "Assisted in hauling ice blocks, stacking them beside the hearth, and boiling water for herbal teas and communal stew.",
+            "impact": "Turned an environmental threat into communal nourishment.",
+            "turn": 22
+          },
+          {
+            "decision": "Threw the thick canvas sailcloth over Kael's shoulders, pinning his arms to his ribs with swift mechanical leverage.",
+            "impact": "Decisive physical intervention ending the assault.",
+            "turn": 25
+          },
+          {
+            "decision": "Rested peacefully by the hearth wall through the night, waking early to steep spruce tips and spring meltwater.",
+            "impact": "Vitality restored to 60; spirit clear and calm.",
+            "turn": 27
+          },
+          {
+            "decision": "Rested peacefully by the hearth wall through the night, waking early to steep spruce tips and spring meltwater.",
+            "impact": "Vitality restored to 60; spirit clear and calm.",
+            "turn": 27
+          },
+          {
+            "decision": "Inscribed the first verse of the Monastery Chronicle onto a seasoned cedar tablet.",
+            "impact": "Literature anchored to living community rather than digital voids.",
+            "turn": 11
+          }
+        ],
+        "equipment": {
+          "attire": "Linen trench coat pinned back with twine",
+          "hands": "Ash-stained, smell of boiled pine needles"
+        },
+        "former_role": "Investigative Essayist & Cultural Critic (12 Years Practice)",
+        "id": "npc_lyra_orator",
+        "location": "loc_monastery",
+        "name": "Lyra Vane",
+        "stats": {
+          "agency": 100,
+          "clarity": 100,
+          "dissonance": 4,
+          "max_agency": 100,
+          "physical_vitality": 85,
+          "punch_kinetic_impact": 22.0
+        },
+        "symbol_alignment": "Meaning as a Verb",
+        "traits": [
+          {
+            "effect": "Autonomous survival instincts force action, mutual warmth, or metabolic emergency triage.",
+            "failure_probability": 0.25,
+            "name": "Will to Live at All Costs",
+            "trait_id": "trait_unyielding_survival",
+            "vulnerability": "Will to live cannot magically resist kinetic impact or targeted attack; 25% failure chance under physical assault to reflect physiological limits."
+          }
+        ]
+      }
+    },
+    "name": "Lyra Vane",
+    "stats": {
+      "agency": 100,
+      "clarity": 100,
+      "dissonance": 4,
+      "max_agency": 100
+    },
+    "status": "alive",
+    "traits": [
+      "trait_unyielding_survival"
+    ]
+  },
+  "id": "npc_lyra_orator",
+  "revision": 0,
+  "schema_version": 1
+}

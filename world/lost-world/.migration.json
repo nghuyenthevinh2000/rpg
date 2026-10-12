@@ -1,0 +1,33 @@
+{
+  "phase": "complete",
+  "source_sha256": {
+    "action_conditions.json": "36d1b9d058be48712d9690e13b12aad678c24d4d670a6afa20ddbc415b9e85f4",
+    "char/aether_4.json": "2b2c0316d45142acfe6fae15e85bc31a107b8848b4db52beb72a9c3e44f2b3bd",
+    "char/dr_harlan.json": "91eef506bf8a1794b1bd4a84e821acb96dc8e81a1eb2523d274dcbb09a711cec",
+    "char/lyra.json": "15005f7cd87c9cf603cd0349248b0805ab7f17dfdf0f0c5ee2c9dc6ccc2088ad",
+    "char/main_char.json": "2025a2c7b475e1f523ed509df2f02e2ca5aa3f87a679684ad0038af49e00af2b",
+    "char/marcus.json": "ea32a26357a688ce9141032998cf54cf7f7645aaca3ae2546c4c410bc89741f8",
+    "conditions/traits.json": "ebc6441b782d4a32a867b33b0fbc10dc0b60cc4c47cbf154a6c741767877603f",
+    "event/event_001_morning_at_monastery.json": "053c077c86914aae000c1bfd2a4c702adf208c72e8de1e297a8e3c7b6b21f39f",
+    "event/event_002_harlan_threshold.json": "0da1f012965129e994a82a28f2fda5eaf56cb495846d586d102eef56e2abaad5",
+    "event/event_003_sitting_still.json": "4aaf84610f02583078e281c26a66527bfe68a2461698e996ce1d839295b7579b",
+    "event/event_004_collective_stillness.json": "c5a5177d11e8ee6ab9a10b149fac187ee0d334799e7de2c7e204c25ad57a0707",
+    "event/event_005_grounding_the_freeze.json": "ccdc949f7e5669736b6848af1d8f2afcf8271b83ead9b3c1661835f3414b1092",
+    "event/event_006_deepening_hypothermia.json": "8a1a1815799167149f789466e5af18a43033411952ad2ab3a6c6cf8a442bbed3",
+    "event/event_007_survival_instinct_awakening.json": "17eff2dd0b8deb8f46f50f47a3396dcbc9ffa4f0a1306bcc3567db5acf3bce22",
+    "event/event_008_kael_collapse.json": "e5de046952db638e8740a71ffc4446e14542cc9c989f2b5957638bfe6009056f",
+    "event/event_009_healing_and_communal_action.json": "be750cae2a87b67bd3a07110965aafb314fa23d719e632cd911d7461200d497f",
+    "event/event_010_phantom_gun_sublimation.json": "0d67ef4557955ee75782b3e0f910ef9cbacc4f2721d95c875bfdd9f381ec216e",
+    "event/event_011_physical_strike_resolution.json": "d83fa41eb5d60a532b5d726d532857b4bb27451ae879a287e2d48416557ed92c",
+    "event/event_012_sustained_struggle_resolution.json": "cc99e36a8f8f343ae2ad7ef9de6220353dcab3adafb93c952de4bd5ed7d1d73b",
+    "event/event_013_total_biological_exhaustion.json": "9b73418e7f2192613bbda63f0e82f05d3613b107484771e7afdb656fbbcbaba1",
+    "event/event_014_the_long_healing_sleep.json": "e9ca1c01f0c43068d2e081bbe67123e3ca00eeab4ac78d4be533fbcbd99c9cc8",
+    "event/event_015_request_for_destruction.json": "7f222786f1950e6d43b740fff769927a76558e0bf22a9f1b6de8b8781f069560",
+    "event/event_016_seeking_the_outside_thrill.json": "a91922f8e3d502403e18baf953ca73c4dfe68a7c090bcbaf67d649888bb29df8",
+    "event/event_017_confronting_the_phantom_commuter.json": "d61c979bd49b38808474bd6bcdf5c6f9a0220223f41718071d23f1efd6742274",
+    "game_master.json": "8401f161850db299bb8a277873273a99a59458a0d7cb0d51bcbb0275618a5f17",
+    "progress.json": "67e76c97fcb017e2747713716d3c4e79ba4c23ce3f438652201b5f0c0cb6fc68",
+    "world.json": "6959f0926b509f3ead0b71369ab1d71e64d915ef0205d7700a5747bc5a6e4de4"
+  },
+  "baseline_sha256": "77ef0d8e7ee0179ed5ee5bf140966ce4272bd90da2b986e27a5cc669462ea71c"
+}

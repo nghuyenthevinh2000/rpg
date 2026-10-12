@@ -1,0 +1,188 @@
+{
+  "id": "event_023_the_primarchs_harrowing_sanction",
+  "name": "The Primarch's Harrowing Sanction: The Purge of Sub-Level 404 Initiated",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.049.M41",
+    "turn_increment": 1,
+    "world_state": "The Primarch's Secret Order: Captain Severus Initiates the Purge of Sub-Level 404"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The blast doors of the Basilica slam shut with concussive finality. Astartes master-ciphers lock the gates. Captain Severus ignites the Gladius of Macragge, its blue disruption field crackling with deadly intent, as First Company Terminators spin up their storm bolters and target Kathryn Vane, Bone 'ead Bragg, and Confessor Malachi. Orbital scramblers from the 'Honor of Macragge' sever all outward transmissions."
+      },
+      {
+        "id": "loc_bastion_gate",
+        "ambient_tension": "Astartes sentries seal the transit lifts and elevator conduits with seismic melta charges. No one is permitted to enter or leave Sub-Level 404 alive."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_primarch_purge_order_received",
+        "title": "Primarch Guilliman's Secret Execution Decree Received",
+        "completed_at": "41.999.049.M41",
+        "consequence": "Captain Severus decrypted a personal, sealed cipher from Primarch Roboute Guilliman commanding the total extermination of Sub-Level 404 to ensure humanity never learns that the Silent King holds the power of mortal resurrection."
+      }
+    ],
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_the_purge_of_404",
+        "name": "The Harrowing of Sub-Level 404 (The Primarch's Decree)",
+        "type": "fratricidal_purge_crisis",
+        "threat": "Captain Severus and the Ultramarines 1st Company Terminators have initiated total purge protocols against the resurrected heroes and garrison to protect the Imperium from spiritual schism.",
+        "human_trial": "The tragic dilemma of duty: Captain Severus must execute the Primarch's sorrowful order, while Kathryn Vane, Bragg, Kroll, Jax, and Malachi must react to the betrayal of their transhuman saviors.",
+        "status": "active"
+      }
+    ],
+    "threat_tracking": {
+      "status": "imperial_purge_in_progress",
+      "total_threats_neutralized": 52,
+      "sublevel_containment_rating": "ABSOLUTE EXECUTION QUARANTINE // ORBITAL INTERDICTION ACTIVE",
+      "sector_threat_telemetry": {
+        "loc_shrine_aquila": {
+          "threat": "⚔️ BROTHERS DIVIDED (Terminators Aimed at Reborn Vanguard)",
+          "level": "Lethal Confrontation / High Tension"
+        },
+        "loc_bastion_gate": {
+          "threat": "Astartes Melta Charges Primed",
+          "level": "Sealed & Mined"
+        },
+        "loc_chaos_stronghold": {
+          "threat": "Drop LZ Secured (Auxiliary Armory)",
+          "level": "Secure"
+        },
+        "loc_ancient_ruined_city": {
+          "threat": "DORMANT TRIARCH SANCTUM",
+          "level": "Quiet"
+        },
+        "loc_manufactorum_sigma": {
+          "threat": "Astartes Tech-Lockouts Applied",
+          "level": "Isolated"
+        },
+        "loc_cogitator_sanctum": {
+          "threat": "Logic Arrays Slated for Data-Purge",
+          "level": "Targeted"
+        },
+        "loc_hab_block_vermin": {
+          "threat": "Citizens Unaware of Approaching Purge",
+          "level": "Doomed Population"
+        },
+        "loc_promethium_cistern": {
+          "threat": "Sealed",
+          "level": "Secure"
+        },
+        "loc_underhive_threshold": {
+          "threat": "Bulkheads Locked 500%",
+          "level": "Fortified"
+        },
+        "loc_charnel_trench": {
+          "threat": "Cleared Sector",
+          "level": "Secured"
+        }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 49,
+      "command_and_specialists": [
+        {
+          "id": "npc_captain_severus",
+          "name": "Captain Severus",
+          "role": "Ultramarines Strike Commander (Purge Executor)",
+          "status": "executing_primarchs_sanction (123/135 HP, Blade Drawn)"
+        },
+        {
+          "id": "npc_terminator_veterans",
+          "name": "Terminator Sergeant Cassian & Veterans",
+          "role": "Execution Detail",
+          "status": "storm_bolters_targeted_on_heroes (138/150 HP)"
+        },
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Reborn Garrison Commander",
+          "status": "confronting_astartes_in_disbelief (115/115 HP)"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "Sacrificial Priest",
+          "status": "kneeling_before_severus_pleading (50/105 HP)"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Living Shield for Sarge",
+          "status": "power_fist_raised_in_sorrow (155/155 HP)"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Mechanicus Master",
+          "status": "locking_axe_in_guard (120/120 HP)"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Reborn Marksman",
+          "status": "shaking_hands_aiming_lasgun (65/65 HP)"
+        },
+        {
+          "id": "npc_kastelan_iron_bastion",
+          "name": "Kastelan Automaton 'Iron Bastion'",
+          "role": "Ancient Cybernetica Siege Titan",
+          "status": "machine_spirit_hesitating (148/300 HP)"
+        }
+      ]
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "captain_severus.json",
+      "stat_deltas": {
+        "agency": 10,
+        "clarity": 5,
+        "dissonance": 15
+      },
+      "new_decision": {
+        "turn": 23,
+        "location": "loc_shrine_aquila",
+        "choice_type": "execution_of_primarchs_sanction",
+        "decision": "Received the encrypted Indomitus-Nil-Record cipher from Primarch Roboute Guilliman ordering the total purge of Sub-Level 404; solemnly drew the Gladius of Macragge, ordered the Basilica blast doors sealed, and commanded the Terminators to prepare firing solutions on the resurrected heroes to preserve the Imperium from theological ruin.",
+        "impact": "Initiated active trial 'The Harrowing of Sub-Level 404'; placed the entire level under execution quarantine."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "dissonance": 20
+      },
+      "new_decision": {
+        "turn": 23,
+        "location": "loc_shrine_aquila",
+        "choice_type": "defiant_confrontation_with_savior",
+        "decision": "Saw the Basilica doors slam shut and Captain Severus draw his blade; placed hand on chainsword hilt and demanded an explanation from the transhuman commander.",
+        "impact": "Refused to submit blindly to slaughter without knowing why."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "confessor_malachi.json",
+      "stat_deltas": {
+        "dissonance": 15
+      },
+      "new_decision": {
+        "turn": 23,
+        "location": "loc_shrine_aquila",
+        "choice_type": "pleading_for_mortals",
+        "decision": "Fell to knees before Captain Severus, holding aloft his heavy iron censer and pleading for the lives of Vane and her soldiers, offering his own head as the sole heretic.",
+        "impact": "Attempted to shoulder the full guilt of the xenos pact."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

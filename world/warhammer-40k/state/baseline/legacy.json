@@ -1,0 +1,532 @@
+{
+  "data": {
+    "metadata": {
+      "inventory_registry": {
+        "item_aquila_rosary": {
+          "description": "Passed down from a fallen commissar during the Second War for Armageddon.",
+          "item_id": "item_aquila_rosary",
+          "name": "Bone-Carved Aquila Rosary",
+          "symbol": "The Purity Seal"
+        },
+        "item_consecrated_censer": {
+          "description": "Swung by thick chains to disperse blessed incense that burns the eyes and lungs of heretics.",
+          "item_id": "item_consecrated_censer",
+          "name": "Heavy Iron Promethium Censer",
+          "symbol": "The Purity Seal"
+        },
+        "item_iron_halo": {
+          "description": "Conversion forcefield generator worn atop the armor.",
+          "item_id": "item_iron_halo",
+          "name": "Sanctified Iron Halo",
+          "symbol": "The Ultima"
+        },
+        "item_krak_grenade": {
+          "description": "High-yield shaped charge capable of blowing open armored blast bulkheads or light vehicles.",
+          "item_id": "item_krak_grenade",
+          "name": "Mark IV Krak Grenade",
+          "symbol": "The Corpse-Tithe"
+        },
+        "item_ration_pack": {
+          "description": "Tastes like pressed sawdust and salt; keeps starvation at bay for one more shift.",
+          "item_id": "item_ration_pack",
+          "name": "Half-Eaten Corpse-Starch Ration",
+          "symbol": "The Corpse-Tithe"
+        },
+        "item_shiny_aquila": {
+          "description": "Given to Bragg by the Sergeant for bravery. Bragg polishes it every night with spit and sleeve.",
+          "item_id": "item_shiny_aquila",
+          "name": "Polished Brass Aquila Badge",
+          "symbol": "The Aquila"
+        }
+      },
+      "progress": {
+        "active_actions": [],
+        "active_combat_encounters": [],
+        "active_disasters_and_trials": [],
+        "active_resource_stockpile": {
+          "construction_and_tech": {
+            "resonant_crystal_pylons": {
+              "committed_to_actions": 0,
+              "depot_stock": 50,
+              "unit": "harmonic monoliths"
+            },
+            "sol_aegis_plasma_micro_reactor": {
+              "depot_stock": 1,
+              "unit": "radiating endless warm illumination across Tartarus"
+            }
+          },
+          "munitions": {
+            "relic_broadsword_eclipser": {
+              "current": 1,
+              "unit": "consecrated into a beacon of light"
+            },
+            "weapons_decommissioned": {
+              "burn_rate_turn": 0,
+              "current": 100,
+              "unit": "percent disarmed & placed in ceremonial tribute"
+            }
+          },
+          "quarantine_logistics_alert": "LIBERATION OF TARTARUS: The meat-grinder is dismantled. The world has transformed into the Golden Haven of Tartarus.",
+          "sustenance_and_survival": {
+            "crystalline_spring_water": {
+              "burn_rate_turn": 0,
+              "current": 8000,
+              "days_reserve": 999.0,
+              "unit": "pure mineral flagons"
+            },
+            "golden_harvest_fruits": {
+              "burn_rate_turn": 0,
+              "current": 5000,
+              "days_reserve": 999.0,
+              "unit": "baskets of sweet nectar & grain"
+            },
+            "primordial_life_restoration": {
+              "current": 999,
+              "status": "infinitely_replenishing",
+              "unit": "radiant essence charges"
+            }
+          }
+        },
+        "character_registry_path": "char/",
+        "completed_milestones": [
+          {
+            "completed_at": "41.995.025.M41",
+            "consequence": "Munitorum orbital hauler loaded 400 macro-shells; level spared immediate summary execution by the Commissariat.",
+            "milestone_id": "ms_tithe_batch_dispatched",
+            "title": "First Macro-Shell Tithe Batch Dispatched"
+          },
+          {
+            "completed_at": "41.999.027.M41",
+            "consequence": "Catastrophic civilian mortality averted; workforce preserved for manufactorum shift rotation without expending scarce respirator canisters.",
+            "milestone_id": "ms_hab_vermis_sulfur_sealed",
+            "title": "Hab-Block Vermis-9 Sulfur Bypass Sealed"
+          },
+          {
+            "completed_at": "41.999.028.M41",
+            "consequence": "Threshold blast defense increased by 500%; Underhive mutant breakthrough prevented for the next 7 operational cycles.",
+            "milestone_id": "ms_bulkhead_101_fortified",
+            "title": "Bulkhead 101 Sump Barrier Completed"
+          },
+          {
+            "completed_at": "41.999.029.M41",
+            "consequence": "Sergeant Vane personally led the counter-charge, slaying the alpha-beast; civilian workforce secured and garrison morale elevated to Fanatical heights.",
+            "milestone_id": "ms_sump_beasts_purged",
+            "title": "Sump Beast Incursion Repelled in Close Combat"
+          },
+          {
+            "completed_at": "41.999.030.M41",
+            "consequence": "Sergeant Vane and Jax uncovered the lair of a subterranean Sump Carnifex-Beast driving vermin upward; salvaged 3 water purification valves and an intact heavy stubber ammo cache.",
+            "milestone_id": "ms_charnel_incursion_source_discovered",
+            "title": "Charnel Trench Reconnaissance & Salvage"
+          },
+          {
+            "completed_at": "41.999.031.M41",
+            "consequence": "Sergeant Vane granted command autonomy: Confessor Malachi silenced the warp static via the Basilica macro-vox, while Vane and Bragg detonated a Krak Grenade inside the Great Sump Beast, securing the lower sectors.",
+            "milestone_id": "ms_great_sump_horror_slain",
+            "title": "The Apex Sump Horror Exterminated & Warp Static Banished"
+          },
+          {
+            "completed_at": "41.999.039.M41",
+            "consequence": "Operating with full autonomous authority while Sergeant Vane recuperated, Enginseer Fabricator Kroll deployed the heat-shielded Kastelan Automaton and sacrificed 2 defense servitors to permanently weld the leaking 2,000°C promethium main, averting sector annihilation.",
+            "milestone_id": "ms_promethium_siphon_quenched",
+            "title": "Catastrophic Promethium Siphon Rupture Quenched"
+          },
+          {
+            "completed_at": "41.999.042.M41",
+            "consequence": "Sergeant Kathryn Vane led the entire garrison in an all-out charge for the Emperor: unleashed 12 archeotech plasma salvos, heavy bolters, and Bragg's Power Fist, inflicting a staggering 2,795 net damage to the 12,500 HP Chaos God-Lord.",
+            "milestone_id": "ms_chaos_god_outer_wards_breached",
+            "title": "Outer Daemonic Wards of Lord Malgakor Breached in Epic Charge"
+          },
+          {
+            "completed_at": "41.999.043.M41",
+            "consequence": "Sergeant Kathryn Vane led the second desperate charge: invoked the Emperor's Rosary to withstand Malgakor's 115-damage Ruin-Edge Cleave, deployed 3 emergency med-stims to save Bragg, Jax, and Kroll, and unleashed 2,407 net plasma damage, driving the God-Lord down to 7,298 / 12,500 HP.",
+            "milestone_id": "ms_chaos_god_throne_fractured",
+            "title": "Malgakor's Divine Cleave Repelled & Daemon-Throne Fractured"
+          },
+          {
+            "completed_at": "41.999.044.M41",
+            "consequence": "Sergeant Kathryn Vane led an unyielding suicidal charge into the heart of the Dread Citadel: despite taking lethal strikes and falling with Bragg, Jax, and Kroll, their sacrificial plasma volleys tore 2,230 damage from Lord Malgakor (reducing him to 5,068 HP), breaking his daemonic invulnerability.",
+            "milestone_id": "ms_vanguard_heroic_martyrdom",
+            "title": "The Glorious Martyrdom of Sergeant Kathryn Vane and the Strike Team"
+          },
+          {
+            "completed_at": "41.999.045.M41",
+            "consequence": "Confessor Preceptor Malachi assumed supreme command of Sub-Level 404, wired the Sol-Aegis Plasma Reactor into the Basilica astropathic relays, and successfully transmitted a high-priority distress hymn across the sector to Lord Commander Roboute Guilliman and the Adeptus Astartes.",
+            "milestone_id": "ms_astropathic_plea_transmitted",
+            "title": "Astropathic Distress Hymn Dispatched to Primarch Roboute Guilliman"
+          },
+          {
+            "completed_at": "41.999.046.M41",
+            "consequence": "Captain Severus and the Ultramarines 2nd Company struck with transhuman wrath. In coordinated assault with the Kastelan Automaton 'Iron Bastion' and the Basilica's overcharged macro-cannons, they dealt 6,240.8 net damage, obliterating the Chaos God-Champion's physical form and banishing his foul essence from Hive Tartarus.",
+            "milestone_id": "ms_chaos_god_malgakor_exterminated",
+            "title": "The Slaying of Lord Malgakor the Despoiled (Wrath of Guilliman)"
+          },
+          {
+            "completed_at": "41.999.046.M41",
+            "consequence": "Sergeant Kathryn Vane, Bone 'ead Bragg, Conscript Trooper Jax, and Enginseer Fabricator Kroll are officially entered into the Roll of Imperial Martyrs by Confessor Malachi and Captain Severus.",
+            "milestone_id": "ms_martyrs_of_404_canonized",
+            "title": "Canonization of the Four Martyrs of Sub-Level 404"
+          },
+          {
+            "completed_at": "41.999.047.M41",
+            "consequence": "Confessor Malachi broke absolute ecclesiarchal dogma, announcing to Captain Severus of the Ultramarines his intent to petition Szarekh, the Silent King, for Necron reanimation and soul-tethering technology to resurrect Sergeant Vane, Bragg, Jax, and Kroll, knowingly risking his own mortal life and soul.",
+            "milestone_id": "ms_pact_proclaimed_to_severus",
+            "title": "Confessor Malachi Proclaims the Silent King Bargain to Captain Severus"
+          },
+          {
+            "completed_at": "41.999.048.M41",
+            "consequence": "Confessor Malachi offered the shattered warp-remnants of Lord Malgakor and sacrificed 30 Vitality of his own flesh to satisfy the Triarch communion at (0,0). With the Tachyon Resurrection Matrix, Sergeant Kathryn Vane, Bone 'ead Bragg, Conscript Trooper Jax, and Enginseer Fabricator Kroll were pulled back across the veil of death into living bodies woven with self-repairing Necrodermis micro-threads.",
+            "milestone_id": "ms_heroes_reanimated_by_silent_king",
+            "title": "The Resurrected Martyrs: Compact of the Silent King"
+          },
+          {
+            "completed_at": "41.999.049.M41",
+            "consequence": "Captain Severus decrypted a personal, sealed cipher from Primarch Roboute Guilliman commanding the total extermination of Sub-Level 404 to ensure humanity never learns that the Silent King holds the power of mortal resurrection.",
+            "milestone_id": "ms_primarch_purge_order_received",
+            "title": "Primarch Guilliman's Secret Execution Decree Received"
+          },
+          {
+            "completed_at": "41.999.050.M41",
+            "consequence": "Captain Severus and the Ultramarines carried out the secret decree of Primarch Roboute Guilliman. The resurrected heroes and Confessor Malachi were granted the Emperor's Peace in battle, and Sub-Level 404 was permanently buried beneath millions of tons of collapsed hive structure, taking the secret of the Silent King's resurrection protocols to the grave.",
+            "milestone_id": "ms_sublevel_404_purged_for_imperium",
+            "title": "The Sorrowful Purge of Sub-Level 404 (Guilliman's Sanction Executed)"
+          },
+          {
+            "completed_at": "41.999.051.M41",
+            "consequence": "Betrayed and executed by the Imperium she died to protect, Kathryn Vane accepted the dark covenant of Lord Malgakor in her final breath. Fusing her mortal will, her Necrodermis chrono-weave, and the immortal warp-soul of the Chaos God, she has arisen as a Void Ultramarine Avatar, swearing apocalyptic vengeance upon Guilliman and the Imperium.",
+            "milestone_id": "ms_void_avatar_ascension",
+            "title": "Apotheosis of the Void Avatar: Kathryn Vane Hosts Lord Malgakor"
+          },
+          {
+            "completed_at": "41.999.052.M41",
+            "consequence": "Detecting the impossible apotheosis of Kathryn Vane as the host of Lord Malgakor, Captain Severus equipped the Chapter's sacred master-crafted relic weapons—the Hammer of Macragge and Cyclone Missiles—and dropped directly into the anti-gravitational vortex to finish the sanction personally.",
+            "milestone_id": "ms_severus_heavy_drop",
+            "title": "Captain Severus Re-Engages as Guilliman's Executioner"
+          },
+          {
+            "completed_at": "41.999.053.M41",
+            "consequence": "Kathryn Vane, The Void Ascendant, surged across the floating debris of Sub-Level 404 and executed Captain Severus with Eclipser, shouting 'You betrayed us, you will pay!' The strike shattered the Ultramarines execution force and avenged the fallen garrison of 404.",
+            "milestone_id": "ms_captain_severus_slain",
+            "title": "The Slaying of Captain Severus (Avenger of the Betrayed)"
+          },
+          {
+            "completed_at": "41.999.054.M41",
+            "consequence": "In response to the death of Captain Severus and the emergence of a Class-Omega Void Avatar, the Ultramarines High Command deployed ten capital warships to completely blockade Hive Tartarus and subdue Kathryn Vane with overwhelming planetary-grade force.",
+            "milestone_id": "ms_ultramarines_armada_arrival",
+            "title": "The Arrival of the Indomitus Retribution Fleet"
+          },
+          {
+            "completed_at": "41.999.055.M41",
+            "consequence": "Kathryn Vane, The Void Ascendant, scanned the heavens and identified the combined might of the Ultramarines Indomitus Retribution Fleet: a staggering 100,000 HP armada commanded by First Captain Agemman, armed with cyclonic planet-killer torpedoes.",
+            "milestone_id": "ms_chapter_fleet_engaged",
+            "title": "The Full Chapter Fleet Encounter Formally Engaged"
+          },
+          {
+            "completed_at": "41.999.056.M41",
+            "consequence": "Kathryn Vane realized the terrifying philosophical trap of her existence: she had traded the mindless slaughter of the Imperium for the eternal blood-debt of Chaos. Rejecting the puppet strings of both Guilliman and Malgakor, her human clarity spiked to 135 as she confronted the entity sharing her soul.",
+            "milestone_id": "ms_revelation_of_the_cycle",
+            "title": "The Awakening of Mortal Conscience: Breaking the Vengeance Cycle"
+          },
+          {
+            "completed_at": "41.999.057.M41",
+            "consequence": "In the ultimate triumph of mortal will over both Imperial fanaticism and Chaos depravity, Kathryn Vane refused to be a vessel of slaughter. Plunging Eclipser into her own chest, she extinguished her own life to permanently drag the soul of Chaos God Lord Malgakor into eternal oblivion, breaking the endless wheel of revenge and saving Hive Tartarus from exterminatus.",
+            "milestone_id": "ms_the_cycle_broken_supreme_sacrifice",
+            "title": "The Supreme Sacrifice: The Breaking of the Vengeance Cycle"
+          },
+          {
+            "completed_at": "41.999.058.M41",
+            "consequence": "In her final dying breath, Kathryn Vane comprehended what neither the God-Emperor of Mankind nor the Chaos Gods have ever known: the true ending of suffering cycles. Enveloped in primordial yellow energy, she is resurrected not as a pawn of gods or mortal flesh, but as The Immortal Awakened—possessing immortal vitality (-99) that cannot be killed across any reality.",
+            "milestone_id": "ms_the_immortal_awakened_truth",
+            "title": "The Immortal Awakened: The Transcendent Truth Beyond Gods"
+          }
+        ],
+        "current_cycle": {
+          "day": 9,
+          "timestamp": "41.999.059.M41",
+          "turn_count": 37,
+          "world_state": "The Golden Haven of Tartarus — Transformed Post-Grimdark Sanctuary of Sovereign Peace"
+        },
+        "garrison_forces": {
+          "command_and_specialists": [
+            {
+              "id": "player_vane",
+              "name": "Kathryn Vane",
+              "role": "The Immortal Awakened (Vitality: IMMORTAL [-99])",
+              "status": "IMMORTAL AWAKENED // GUARDIAN OF TARTARUS"
+            },
+            {
+              "id": "npc_ogryn_bragg",
+              "name": "Bone 'ead Bragg",
+              "role": "The Awakened Shield",
+              "status": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+            },
+            {
+              "id": "npc_confessor_malachi",
+              "name": "Confessor Preceptor Malachi",
+              "role": "The Awakened Singer",
+              "status": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+            },
+            {
+              "id": "npc_enginseer_kroll",
+              "name": "Enginseer Fabricator Kroll",
+              "role": "The Forge Harmonizer",
+              "status": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+            },
+            {
+              "id": "npc_trooper_jax",
+              "name": "Conscript Trooper Jax",
+              "role": "The Liberated Soul",
+              "status": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+            }
+          ],
+          "total_effective_combatants": 1
+        },
+        "threat_tracking": {
+          "sector_threat_telemetry": {
+            "loc_ancient_ruined_city": {
+              "level": "Cosmic Calm",
+              "threat": "🌿 THE CRYSTALLINE NECROPOLIS (Awakened Benevolence)"
+            },
+            "loc_chaos_stronghold": {
+              "level": "Eternal Purity",
+              "threat": "✨ THE SANCTUM OF ABSOLUTE LIGHT (Crystalline Light)"
+            },
+            "loc_hab_block_vermin": {
+              "level": "Peaceful Haven",
+              "threat": "🌸 THE VERDANT HAB-GARDENS (Flourishing Life)"
+            },
+            "loc_manufactorum_sigma": {
+              "level": "Abundance",
+              "threat": "⚙️ THE FORGE OF RESONANT CREATION (Sustainable Life)"
+            },
+            "loc_orbital_fleet_killzone": {
+              "level": "Absolute Ceasefire",
+              "threat": "🕊️ THE HAVEN OF AWED STARS (Armada in Peaceful Contemplation)"
+            },
+            "loc_shrine_aquila": {
+              "level": "Universal Sanctuary",
+              "threat": "🌟 THE BASILICA OF THE SOVEREIGN SOUL (Kathryn Vane Transcendent)"
+            }
+          },
+          "status": "transcendent_sanctuary_achieved",
+          "sublevel_containment_rating": "SOVEREIGN TRANSCENDENCE // THE GOLDEN HAVEN",
+          "total_threats_neutralized": 56
+        }
+      },
+      "unsupported_mechanics": "Narrative/history/construction/resource production are not executable",
+      "world": {
+        "action_conditions_registry": "action_conditions.json",
+        "game_master_registry": "game_master.json",
+        "grid": {
+          "cols": 5,
+          "rows": 5
+        },
+        "locations": [
+          {
+            "ambient_tension": "Silent living metal resonates in tranquil cosmic harmony. The ancient noctilith obelisks broadcast a soothing melody that stills agitated minds.",
+            "connected_to": [
+              "loc_shrine_aquila"
+            ],
+            "coordinate": {
+              "col": 0,
+              "row": 0
+            },
+            "description": "Once a buried, melancholic ruin of pre-Imperial tech and silent Necrons, the cyclopean towers are now covered in flourishing golden flora and glowing amber crystals. Pre-Imperial datavaults hum with benevolence, sharing forgotten secrets of harmony with all seekers.",
+            "id": "loc_ancient_ruined_city",
+            "name": "The Crystalline Necropolis of Awakening",
+            "safe_zone": true,
+            "symbol": "The Golden Lotus & The Awakened Sovereignty"
+          },
+          {
+            "ambient_tension": "A warm, boundless primordial yellow energy emanates from Kathryn Vane. It is neither Warp sorcery nor the cold gold of Terra—it is the living end of suffering cycles. Kathryn Vane stands as The Immortal Awakened.",
+            "connected_to": [
+              "loc_ancient_ruined_city",
+              "loc_manufactorum_sigma",
+              "loc_hab_block_vermin"
+            ],
+            "coordinate": {
+              "col": 1,
+              "row": 1
+            },
+            "description": "The former cathedral of skulls and bloody imperial sacrifice has been reborn into a grand sanctuary of luminous white marble and amber glass. In the center, Kathryn Vane’s presence radiates the boundless primordial yellow luminescence. The fallen—Bragg, Kroll, Jax, and Malachi—rest peacefully in states of reverent awakening.",
+            "id": "loc_shrine_aquila",
+            "name": "The Basilica of the Sovereign Soul",
+            "safe_zone": true,
+            "symbol": "The Primordial Sunburst & The Unbroken Vessel"
+          },
+          {
+            "ambient_tension": "Rhythmic, harmonious chimes replace deafening piston thunder. Serfs and workers smile as warm food and fresh water flow freely from automated dispensary conduits.",
+            "connected_to": [
+              "loc_shrine_aquila",
+              "loc_cogitator_sanctum",
+              "loc_bastion_gate"
+            ],
+            "coordinate": {
+              "col": 2,
+              "row": 1
+            },
+            "description": "The grinding hydraulic presses that once forged macro-cannon shells for the bloody Navy tithe have been re-engineered by peaceful machine spirits. The forge now creates self-sustaining solar filters, agricultural water-condensers, and light-weaving textiles for the liberated populace.",
+            "id": "loc_manufactorum_sigma",
+            "name": "The Forge of Resonant Creation",
+            "safe_zone": true,
+            "symbol": "The Cleansed Forge"
+          },
+          {
+            "ambient_tension": "The gentle hum of benevolent logic engines; binary hymns celebrating enlightenment, freedom of will, and scientific restoration.",
+            "connected_to": [
+              "loc_manufactorum_sigma",
+              "loc_promethium_cistern"
+            ],
+            "coordinate": {
+              "col": 3,
+              "row": 1
+            },
+            "description": "Tech-priests and cybernetic scholars have cast off the dogma of blind repetition. Purged of fear, cogitators process peaceful philosophies and cosmic science, calculating pathways to heal the scarred biosphere of Tartarus.",
+            "id": "loc_cogitator_sanctum",
+            "name": "Sanctum of the Enlightened Omniscience",
+            "safe_zone": true,
+            "symbol": "The Machine Spirit Transcended"
+          },
+          {
+            "ambient_tension": "Laughter and the song of birds imported from arboretum preserves echo along the vine-draped catwalks.",
+            "connected_to": [
+              "loc_shrine_aquila",
+              "loc_bastion_gate"
+            ],
+            "coordinate": {
+              "col": 1,
+              "row": 2
+            },
+            "description": "The rusted iron warrens and dripping greywater sewers have bloomed into sprawling terraced vertical gardens. Filtered sunlight filters down from atmospheric skylights. Families gather in open, clean courtyards, free from Enforcer whips and starvation.",
+            "id": "loc_hab_block_vermin",
+            "name": "The Verdant Hab-Gardens of Vermis",
+            "safe_zone": true,
+            "symbol": "The Unbroken Vessel"
+          },
+          {
+            "ambient_tension": "Weapons rest unloaded upon ceremonial racks covered in woven yellow ribbons. Mutual trust replaces paranoia.",
+            "connected_to": [
+              "loc_manufactorum_sigma",
+              "loc_hab_block_vermin",
+              "loc_promethium_cistern",
+              "loc_underhive_threshold"
+            ],
+            "coordinate": {
+              "col": 2,
+              "row": 2
+            },
+            "description": "Once a fortified bunker bristling with autocannons and barbed wire, the gateway now stands wide open. Former Astra Militarum conscripts and underhive inhabitants embrace as equals, sharing bread and honey-wine in place of munitions.",
+            "id": "loc_bastion_gate",
+            "name": "The Gateway of Reconciliation",
+            "safe_zone": true,
+            "symbol": "The Peaceful Horizon"
+          },
+          {
+            "ambient_tension": "Gentle, scented steam drifts across warm tiles. The risk of cataclysmic detonation is permanently extinguished.",
+            "connected_to": [
+              "loc_cogitator_sanctum",
+              "loc_bastion_gate",
+              "loc_charnel_trench"
+            ],
+            "coordinate": {
+              "col": 3,
+              "row": 2
+            },
+            "description": "The explosive promethium pipelines have been converted to channel pure geothermal clean energy and purified spring water throughout Hive Tartarus. Warm mineral pools invite weary travelers to bathe and recuperate.",
+            "id": "loc_promethium_cistern",
+            "name": "The Radiant Geothermal Conduits",
+            "safe_zone": true,
+            "symbol": "The Cleansed Forge"
+          },
+          {
+            "ambient_tension": "Calm trade and cultural exchange between former outcasts and hive-dwellers beneath the amber archway.",
+            "connected_to": [
+              "loc_bastion_gate",
+              "loc_charnel_trench"
+            ],
+            "coordinate": {
+              "col": 2,
+              "row": 3
+            },
+            "description": "The colossal adamantine blast door that once walled off the dark Underhive is folded back into the rock. The creatures of the depths have been soothed by the yellow luminescence; mutants and abhumans enter freely as accepted citizens of the new sanctuary.",
+            "id": "loc_underhive_threshold",
+            "name": "The Threshold of Harmony (Former Bulkhead 101)",
+            "safe_zone": true,
+            "symbol": "The Peaceful Horizon"
+          },
+          {
+            "ambient_tension": "The fragrance of blooming lotus flowers and fertile loam. The memory of butchery has turned into reverence for life.",
+            "connected_to": [
+              "loc_promethium_cistern",
+              "loc_underhive_threshold"
+            ],
+            "coordinate": {
+              "col": 3,
+              "row": 3
+            },
+            "description": "The horrific chemical sludge runoff and corpse-rendering vats have been completely cleansed. In their place grows a lush forest of bio-luminescent trees and clean freshwater canals, feeding fruit and grain to all levels of the spire.",
+            "id": "loc_charnel_trench",
+            "name": "The Grove of Rebirth (Former Charnel Trench)",
+            "safe_zone": true,
+            "symbol": "The Golden Lotus"
+          },
+          {
+            "ambient_tension": "The warp tear is sealed with adamantine radiance. Peace reigns supreme where darkness once reigned.",
+            "connected_to": [
+              "loc_hab_block_vermin",
+              "loc_underhive_threshold"
+            ],
+            "coordinate": {
+              "col": 0,
+              "row": 4
+            },
+            "description": "The blasphemous obsidian ziggurat of Lord Malgakor has been purified down to its bedrock. A towering monument of yellow translucent crystal rises into the sky, repelling any daemon or warp rift that dares approach the planet.",
+            "id": "loc_chaos_stronghold",
+            "name": "The Sanctum of Absolute Light (Former Dread Citadel)",
+            "safe_zone": true,
+            "symbol": "The Primordial Sunburst"
+          },
+          {
+            "ambient_tension": "Sensors across the ten capital warships illuminate with gentle yellow radiance. First Captain Agemman has ordered all weapons offlined in solemn tribute.",
+            "connected_to": [
+              "loc_shrine_aquila"
+            ],
+            "coordinate": {
+              "col": 4,
+              "row": 0
+            },
+            "description": "High orbit above Tartarus, where the Ultramarines Armada once aimed exterminatus cannons, is now an assembly of silent, reverent warships. Transhuman Astartes stand upon their observation bridges with weapons powered down, contemplating a future without endless slaughter.",
+            "id": "loc_orbital_fleet_killzone",
+            "name": "The Haven of Awed Stars (Former Armada Kill-Grid)",
+            "safe_zone": true,
+            "symbol": "The Peaceful Horizon & The Primordial Sunburst"
+          }
+        ],
+        "lore": "The endless cycle of slaughter has been severed by Kathryn Vane, The Immortal Awakened. Through the primordial yellow luminescence that transcends both the God-Emperor of Mankind and the Ruinous Powers of Chaos, Hive Tartarus has been unchained. The suffocating smog, the brutal corpse-tithes, and the meat-grinder factories have dissolved into luminous, tranquil crystal and flowing crystalline rivers. Here, mortals and transhumans alike lay down their arms to awaken as free beings.",
+        "name": "The Golden Haven of Tartarus (The Transformed World)",
+        "structural_rules": {
+          "cycles_of_suffering_broken": true,
+          "flesh_is_weak": false,
+          "game_master_law": "Entropy yields to harmony and cosmic providence; trials take the form of enlightenment and rebuilding. See game_master.json.",
+          "grimdark_irreversibility": false,
+          "heresy_fatal": false,
+          "immortal_awakening_law": "Life within Tartarus is bathed in primordial yellow energy; death, corruption, and despair cannot take root. See action_conditions.json.",
+          "tithe_uncompromising": false,
+          "transcendent_sanctuary": true
+        },
+        "symbols_mapped": [
+          "The Primordial Sunburst (Awakened Sovereignty)",
+          "The Unbroken Vessel (Life Free from the Meat-Grinder)",
+          "The Golden Lotus (Purity Transcending the Warp)",
+          "The Cleansed Forge (Labor as Creation, Not Sacrifice)",
+          "The Peaceful Horizon (An End to Endless War)"
+        ],
+        "theme": "Post-Grimdark Transcendent Sanctuary / Awakening of the Sovereign Flesh",
+        "truth_standard": "A thing is right if it fosters sovereign life, cosmic peace, and liberation from all cycles of vengeance and suffering. Flesh is sacred; devotion belongs to oneself and one's kin; fear is dispelled by primordial light."
+      }
+    }
+  },
+  "id": "legacy",
+  "revision": 0,
+  "schema_version": 1
+}

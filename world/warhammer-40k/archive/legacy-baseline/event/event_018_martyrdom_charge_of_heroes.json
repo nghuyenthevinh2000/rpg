@@ -1,0 +1,253 @@
+{
+  "id": "event_018_martyrdom_charge_of_heroes",
+  "name": "The Martyrdom of the Vanguard: The Fall of Heroes and the Blinding Light",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.044.M41",
+    "turn_increment": 1,
+    "world_state": "The Tragic Apotheosis: Command Staff Slain in Glorious Martyrdom"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_chaos_stronghold",
+        "ambient_tension": "The blood of martyrs soaks the Dread Citadel. Sergeant Vane, Bone 'ead Bragg, Trooper Jax, and Enginseer Kroll have fallen in battle. Their bodies lie around the cracked throne, but their final plasma detonation tore Malgakor down to 5,068 HP as the Kastelan Automaton stands alone, fists raised in silent, immortal vengeance."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_vanguard_heroic_martyrdom",
+        "title": "The Glorious Martyrdom of Sergeant Kathryn Vane and the Strike Team",
+        "completed_at": "41.999.044.M41",
+        "consequence": "Sergeant Kathryn Vane led an unyielding suicidal charge into the heart of the Dread Citadel: despite taking lethal strikes and falling with Bragg, Jax, and Kroll, their sacrificial plasma volleys tore 2,230 damage from Lord Malgakor (reducing him to 5,068 HP), breaking his daemonic invulnerability."
+      }
+    ],
+    "active_combat_encounters": [
+      {
+        "encounter_id": "boss_chaos_lord_malgakor",
+        "boss_name": "Lord Malgakor the Despoiled, God-Champion of the Warp",
+        "location": "loc_chaos_stronghold",
+        "coordinate": {
+          "row": 4,
+          "col": 0
+        },
+        "status": "active",
+        "threat_rating": "DIVINE APEX (LITERAL CHAOS GOD / 5,068 HP REMAINING)",
+        "current_hp": 5068,
+        "max_hp": 12500,
+        "current_phase": "Phase 4: Sunder-Cored God vs The Iron Bastion Automaton (5,068 / 12,500 HP)",
+        "phase_progress_percentage": 59,
+        "armor_status": "Severely Broken & Scorched (Damage Reduction dropped to 50%)",
+        "round_retaliation_damage": 90,
+        "tactical_requirements": "Malgakor's throne is shattered and his breastplate is melted open! The Kastelan Automaton 'Iron Bastion' (160 HP) and Confessor Malachi's Basilica macro-cannon battery must land the finishing salvo.",
+        "failure_consequences": "Total slaughter of remaining base defenders."
+      }
+    ],
+    "threat_tracking": {
+      "status": "active_monitoring",
+      "total_threats_neutralized": 51,
+      "sublevel_containment_rating": "75% Contained (MALGAKOR REDUCED TO 5,068 HP — HEROES MARTYRED)",
+      "sector_threat_telemetry": {
+        "loc_chaos_stronghold": {
+          "threat": "⚠️ CHAOS GOD MALGAKOR SUNDERED (5,068 / 12,500 HP — VANE KIA)",
+          "level": "Epic Divine Clash"
+        },
+        "loc_ancient_ruined_city": { "threat": "SECURED (Archeotech Looted)", "level": "Claimed & Pacified" },
+        "loc_shrine_aquila": { "threat": "Sanctified (Confessor Malachi Holding Sol-Aegis Mass)", "level": "Impenetrable Safe Zone" },
+        "loc_manufactorum_sigma": { "threat": "Tithe Production at 115% Efficiency", "level": "Secure" },
+        "loc_cogitator_sanctum": { "threat": "Machine Protected & Power Linked", "level": "Secure" },
+        "loc_hab_block_vermin": { "threat": "Defended by Enforcers", "level": "Secured" },
+        "loc_bastion_gate": { "threat": "Staging Redoubt", "level": "Fortified" },
+        "loc_promethium_cistern": { "threat": "Pressure Normalized", "level": "Secured & Sealed" },
+        "loc_underhive_threshold": { "threat": "Forward Chokepoint Active", "level": "Fortified" },
+        "loc_charnel_trench": { "threat": "Cleared Sector", "level": "Secured & Purged" }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 35,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Garrison Commander",
+          "status": "KIA / MARTYRED IN GLORY"
+        },
+        {
+          "id": "npc_kastelan_iron_bastion",
+          "name": "Kastelan Automaton 'Iron Bastion'",
+          "role": "Ancient Cybernetica Siege Titan (160/300 HP)",
+          "status": "lone_avenger_of_vane"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Titan Breacher / Bodyguard",
+          "status": "KIA / SLAIN DEFENDING SARGE"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Master of Foundry Spirits",
+          "status": "KIA / MARTYRED FOR OMNISSIAH"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "High Preceptor & Acting Commander",
+          "status": "consecrating_martyrs"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Plasma Vanguard Marksman",
+          "status": "KIA / HEROIC MARTYRDOM"
+        }
+      ],
+      "sub_units": [
+        {
+          "unit_name": "Expedition Vanguard Detail (Astra Militarum)",
+          "count": 2,
+          "armament": "Kantrael Lasguns, Mark IV Plasma Guns, Void Carapace",
+          "morale": "Fanatical Vengeance (100%)",
+          "station": "Citadel inner sanctum"
+        },
+        {
+          "unit_name": "4th Conscript Platoon (Base Garrison)",
+          "count": 5,
+          "armament": "Kantrael Lasguns, combat knives, scarred flak vests",
+          "morale": "Fanatical Vengeance (100%)",
+          "station": "Holding courtyard choke-point (2 more fallen in the clash)"
+        },
+        {
+          "unit_name": "Bastion Heavy Weapons Detachment",
+          "count": 6,
+          "armament": "2x Emplaced Heavy Stubbers, 1x Twin-Linked Autocannon",
+          "morale": "Disciplined (95%)",
+          "station": "Overwatch catwalks"
+        },
+        {
+          "unit_name": "Hive Enforcer Shock Detail",
+          "count": 12,
+          "armament": "Shock-Mauls, Suppression Shields, Combat Shotguns",
+          "morale": "Hardened (90%)",
+          "station": "Underhive threshold secondary cordon"
+        },
+        {
+          "unit_name": "Industrial Defense Servitors (Lobotomized)",
+          "count": 14,
+          "armament": "Hydraulic Claws, Rivet Guns",
+          "morale": "Absolute (Machine-bonded 100%)",
+          "station": "Hauling ammunition crates"
+        }
+      ]
+    },
+    "active_resource_stockpile": {
+      "munitions": {
+        "lasgun_charge_packs": {
+          "current": 5,
+          "unit": "standard packs (-35 expended in final charge)",
+          "burn_rate_turn": 5
+        },
+        "heavy_stubber_belts": {
+          "current": 5,
+          "unit": "drum belts (-15 expended)",
+          "burn_rate_turn": 0
+        },
+        "autocannon_magazines": {
+          "current": 0,
+          "unit": "box magazines"
+        },
+        "shotgun_solid_slugs": {
+          "current": 0,
+          "unit": "rounds"
+        },
+        "frag_grenades": {
+          "current": 13,
+          "unit": "canisters"
+        },
+        "krak_grenades": {
+          "current": 0,
+          "unit": "charges (-5 charges detonated directly into Malgakor's armor)"
+        },
+        "mark_iv_plasma_guns": {
+          "current": 3,
+          "unit": "archeotech weapons (Smoking on the throne steps)"
+        }
+      },
+      "construction_and_tech": {
+        "promethium_welding_canisters": {
+          "depot_stock": 0,
+          "committed_to_actions": 0,
+          "unit": "pressurized flasks (-4 canisters ignited in suicide pyre)"
+        }
+      },
+      "sustenance_and_survival": {
+        "combat_med_stims": {
+          "current": 23,
+          "unit": "injector ampoules (-4 exhausted)"
+        }
+      },
+      "quarantine_logistics_alert": "MARTYRDOM AT (4,0): Sergeant Kathryn Vane and strike team fell in battle. Lord Malgakor crippled to 5,068 HP. Kastelan Automaton holds the line."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "physical_vitality": -5
+      },
+      "new_decision": {
+        "turn": 18,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "supreme_martyrdom",
+        "decision": "Charged directly into Malgakor's flaming soul-blade, driving her screaming Mk VII Chainsword deep into his cracked throat-seal while bellowing 'FOR THE EMPEROR!' before being struck down by the dark god's counter-cleave.",
+        "impact": "Fell in glorious combat (Vitality 5 -> 0, KIA). Slashed the Chaos Lord's vital arteries, enabling the final downfall of the beast."
+      },
+      "current_location": "loc_chaos_stronghold"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "physical_vitality": -5
+      },
+      "new_decision": {
+        "turn": 18,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "heroic_shield_martyrdom",
+        "decision": "Roared 'NO HURT DA SARGE!' and tackled Malgakor's waist, detonating his Power Fist point-blank inside the Chaos Lord's torso before being cleaved by the descending blade.",
+        "impact": "Fell in glorious combat (Vitality 5 -> 0, KIA), fracturing Malgakor's spine."
+      },
+      "current_location": "loc_chaos_stronghold"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "physical_vitality": -5
+      },
+      "new_decision": {
+        "turn": 18,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "overcharged_plasma_suicide",
+        "decision": "Overcharged his Mark IV Plasma Gun to maximum reactor overload, shoving the glowing barrel into Malgakor's faceplate and pulling the trigger in a blinding sun-fire blast.",
+        "impact": "Fell in glorious combat (Vitality 5 -> 0, KIA), vaporizing Malgakor's helmet and blinding the Chaos God."
+      },
+      "current_location": "loc_chaos_stronghold"
+    },
+    {
+      "char_file": "enginseer_kroll.json",
+      "stat_deltas": {
+        "physical_vitality": -5
+      },
+      "new_decision": {
+        "turn": 18,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "final_canticle_of_the_omnissiah",
+        "decision": "Buried his Omnissian Power Axe into the Citadel's core logic conduit, discharging sacred binary lightning through Malgakor's cybernetics before collapsing into the scrap slag.",
+        "impact": "Fell in glorious combat (Vitality 5 -> 0, KIA), transferring primary command override of the Kastelan Automaton to the garrison."
+      },
+      "current_location": "loc_chaos_stronghold"
+    }
+  ]
+}

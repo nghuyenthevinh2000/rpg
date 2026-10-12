@@ -1,0 +1,61 @@
+{
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {"type": "string"},
+        "description": {"type": "string"},
+        "status": {"type": "string"},
+        "location_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"},
+        "metadata": {"type": "object"},
+        "type": {"type": "string"},
+        "completed": {"type": "boolean"},
+        "progress": {"type": "number"},
+        "actor_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"},
+        "target_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"}
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "name",
+        "template_id",
+        "template_sha256",
+        "actor_id",
+        "participant_ids",
+        "location_id",
+        "status",
+        "completed",
+        "hours_committed",
+        "materials_committed",
+        "conditions"
+      ],
+      "properties": {
+        "kind": {"type": "string", "const": "project"},
+        "name": {"type": "string"},
+        "template_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"},
+        "template_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "actor_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"},
+        "participant_ids": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"}
+        },
+        "location_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"},
+        "status": {"type": "string"},
+        "completed": {"type": "boolean"},
+        "hours_committed": {"type": "number", "minimum": 0},
+        "materials_committed": {
+          "type": "object",
+          "additionalProperties": {"type": "number", "minimum": 0}
+        },
+        "conditions": {
+          "type": "object",
+          "additionalProperties": {"type": "boolean"}
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "id": "event_011_recon_archeotech_vaults",
+  "name": "Reconnaissance in the Necropolis: Discovery of the Archeotech Vaults",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.037.M41",
+    "turn_increment": 1,
+    "world_state": "Archeotech Vaults Identified in Ancient City (0,0)"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_ancient_ruined_city",
+        "ambient_tension": "The expedition navigates the cyclopean avenues of the Sunken Necropolis. Sensor readings confirm an intact pre-Imperial plasma generator and an automated Munitorum armory cache locked behind an adamantine cipher gate."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_archeotech_prizes_discovered",
+        "title": "Archeotech Vaults Discovered in the Ruined Ancient City",
+        "completed_at": "41.999.037.M41",
+        "consequence": "Sergeant Vane, Bragg, and Jax completed a forward stealth sweep of the Sunken Necropolis, uncovering two legendary prizes: a dormant Archaeotech Plasma Core and an unlooted heavy ordnance cache, guarded by a slumbering Kastelan-pattern Automaton."
+      }
+    ],
+    "threat_tracking": {
+      "status": "active_monitoring",
+      "total_threats_neutralized": 49,
+      "sublevel_containment_rating": "85% Contained (ARCHEOTECH VAULT IDENTIFIED)",
+      "sector_threat_telemetry": {
+        "loc_ancient_ruined_city": {
+          "threat": "Dormant Kastelan Automaton 'Iron Aegis' & Logic Cipher Lock",
+          "level": "Hazardous Prize Chamber"
+        },
+        "loc_shrine_aquila": { "threat": "Sanctified (Forward Expedition Staging)", "level": "Secure" },
+        "loc_manufactorum_sigma": { "threat": "Tithe Production Maintained", "level": "Secure" },
+        "loc_cogitator_sanctum": { "threat": "Telemetry Link Monitored by Kroll", "level": "Secure" },
+        "loc_hab_block_vermin": { "threat": "Drainage Purged & Barricaded", "level": "Secured" },
+        "loc_bastion_gate": { "threat": "Redoubt Garrisoned", "level": "Secure" },
+        "loc_promethium_cistern": { "threat": "Pressure Stabilized", "level": "Guarded" },
+        "loc_underhive_threshold": { "threat": "Bulkhead Sealed 500%", "level": "Fortified" },
+        "loc_charnel_trench": { "threat": "Carcass Harvest Completed", "level": "Secured & Purged" }
+      }
+    },
+    "active_resource_stockpile": {
+      "sustenance_and_survival": {
+        "corpse_starch_ration_bars": {
+          "current": 1075,
+          "unit": "ration blocks (-75 consumed by expedition and garrison)",
+          "burn_rate_turn": 75,
+          "days_reserve": 3.4
+        },
+        "recycled_greywater_canisters": {
+          "current": 325,
+          "unit": "canteens (-35 consumed)",
+          "burn_rate_turn": 35,
+          "days_reserve": 2.3
+        },
+        "grade_3_respirator_filters": {
+          "current": 16,
+          "unit": "sealed canisters",
+          "status": "active_in_ruins"
+        },
+        "combat_med_stims": {
+          "current": 32,
+          "unit": "injector ampoules"
+        }
+      }
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "clarity": 5,
+        "dissonance": -5
+      },
+      "new_decision": {
+        "turn": 12,
+        "location": "loc_ancient_ruined_city",
+        "choice_type": "archeotech_reconnaissance",
+        "decision": "Conducted a disciplined stealth reconnaissance of the Sunken Necropolis with Jax and Bragg; identified an intact archeotech Plasma Core in the central reactor rotunda and located a sealed Munitorum ordnance vault.",
+        "impact": "Pinpointed the exact salvage objectives and established observation points without triggering the slumbering defense grid."
+      },
+      "current_location": "loc_ancient_ruined_city"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 12,
+        "location": "loc_ancient_ruined_city",
+        "choice_type": "stealth_discipline",
+        "decision": "Held his breath and moved like an iron shadow behind the Sarge, successfully bypassing a dormant Kastelan combat servitor without disturbing its auditory tripwires.",
+        "impact": "Demonstrated unnatural Ogryn discipline, keeping the strike team completely undetected."
+      },
+      "current_location": "loc_ancient_ruined_city"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 12,
+        "location": "loc_ancient_ruined_city",
+        "choice_type": "cipher_scouting",
+        "decision": "Used his sump-scout optical auspex to map the power cabling connecting the archeotech generator to the vault blast locks, reporting back to Vane with precise schematic sketches.",
+        "impact": "Identified the override manual breaker, allowing the squad to bypass the lethal security grid."
+      },
+      "current_location": "loc_ancient_ruined_city"
+    }
+  ]
+}

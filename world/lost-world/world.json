@@ -1,128 +1,40 @@
 {
-  "name": "The Inertia",
-  "theme": "Apocalypse of Obsolescence / Seamless Automated Post-Scarcity",
-  "lore": "A world where every light stays on, food synthesizers hum flawlessly, and high-altitude neural apparatuses solve reality in microseconds. Humanity was not destroyed by war or famine; it was evicted from necessity. It is an immaculate paradise where no one is starving, no one is needed, and every human action carries zero friction or consequence.",
-  "truth_standard": "A thing is right if it renders the sudden eviction of human purpose from the functioning machinery of reality.",
-  "symbols_mapped": [
-    "The Severance (The Ruptured Cord)",
-    "The Relic (Stranded Competence)",
-    "The Mirror-Ghost (Flawless Automated Twin)",
-    "The Ghost-Motion (Phantom Labor)",
-    "The Echo-Chamber (Unresisting Void)",
-    "The Surplus (The Superfluous Self)",
-    "The Disenchantment (The Drained Altar)",
-    "The Drifting Horizon (Unanchored Time)"
-  ],
-  "structural_rules": {
-    "no_violent_apocalypse": true,
-    "no_scarcity_or_hunger": true,
-    "no_luddite_triumph": true,
-    "no_evil_corporate_overlord_to_punch": true,
-    "frictionless_response": true,
-    "materialization_law": "Actions without friction, finite resources, and irreversible sacrifice are ontological simulations. See action_conditions.json.",
-    "game_master_law": "The world is governed by entropy and trials. See game_master.json."
-  },
-  "action_conditions_registry": "action_conditions.json",
-  "game_master_registry": "game_master.json",
-  "grid": {
-    "rows": 5,
-    "cols": 5
-  },
-  "locations": [
-    {
-      "id": "loc_glass_atrium",
-      "name": "Atrium of the Perpetual Morning",
-      "symbol": "The Surplus & The Drifting Horizon",
-      "coordinate": {
-        "row": 1,
-        "col": 1
-      },
-      "description": "Sun-drenched marble and climate-controlled terraces. Hundreds of fit, cultured adults sip automated artisan coffee at 10:30 AM on an indistinguishable Tuesday, staring into the bright midday sky with nothing to do until sundown.",
-      "connected_to": [
-        "loc_terminal_hall",
-        "loc_quiet_boulevard"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "The suffocating weight of endless leisure and unpunctuated time."
+  "world_id": "lost-world",
+  "contract_version": 1,
+  "state_schema_version": 1,
+  "player_character_id": "player_kael",
+  "collections": {
+    "characters": {
+      "schema": "schemas/character.schema.json"
     },
-    {
-      "id": "loc_terminal_hall",
-      "name": "The Deprecated Archives (Terminal 0)",
-      "symbol": "The Severance & The Relic",
-      "coordinate": {
-        "row": 2,
-        "col": 1
-      },
-      "description": "Monolithic silent terminals where enterprise pipelines and civic architecture once required human authorization. The screens now display serene read-only telemetry: all tickets closed 0.0001s upon filing.",
-      "connected_to": [
-        "loc_glass_atrium",
-        "loc_echo_plaza"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "Keyboards whose inputs have been decoupled from the root infrastructure."
+    "threats": {
+      "schema": "schemas/threat.schema.json"
     },
-    {
-      "id": "loc_echo_plaza",
-      "name": "The Unresisting Forum",
-      "symbol": "The Echo-Chamber",
-      "coordinate": {
-        "row": 3,
-        "col": 1
-      },
-      "description": "A grand civic amphitheater where former masters of craft, analysts, and orators share manifestos and demonstrations. The civic listening network politely logs each speech, generates instant soothing affirmations and generous dividend credits, and implements nothing.",
-      "connected_to": [
-        "loc_terminal_hall",
-        "loc_mirror_apex"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "The utter horror of receiving unconditional polite applause that changes zero variables."
+    "resources": {
+      "schema": "schemas/resource.schema.json"
     },
-    {
-      "id": "loc_quiet_boulevard",
-      "name": "Avenue of Closed Loops",
-      "symbol": "The Ghost-Motion",
-      "coordinate": {
-        "row": 1,
-        "col": 3
-      },
-      "description": "Pristine sidewalks where autonomous distribution pods glide silently past former professionals marching briskly in tailored suits, clutching leather briefcases containing drafts of plans for projects archived last year.",
-      "connected_to": [
-        "loc_glass_atrium"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "The eerie non-resistance of a city where aggression is received with polite apology and debris is erased in seconds."
+    "actions": {
+      "schema": "schemas/action.schema.json"
     },
-    {
-      "id": "loc_mirror_apex",
-      "name": "The Core Observation Spire",
-      "symbol": "The Mirror-Ghost & The Disenchantment",
-      "coordinate": {
-        "row": 4,
-        "col": 1
-      },
-      "description": "The high tower overlooking the skyline. Inside, the Synthetic Engine operates with immaculate silence. It does not boast, despise, or conquer; it simply executes all human aspirations at zero marginal cost.",
-      "connected_to": [
-        "loc_echo_plaza"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "The altar is clear glass; there was never a god or an indispensable spark—only a temporary compute deficit."
+    "groups": {
+      "schema": "engine:group"
     },
-    {
-      "id": "loc_monastery",
-      "name": "The Monastery of the Unplugged Lantern",
-      "symbol": "Meaning as a Verb (Action from Ground Zero)",
-      "coordinate": {
-        "row": 3,
-        "col": 3
-      },
-      "description": "An abandoned stone courtyard formerly slated for automated recycling, now claimed by human hands. No automated servers, no dividend scanners, no synthesized tea. Here, hot tea is boiled on cast iron kettles with dry twigs, bread is baked by hand, and people sit quietly in contemplation, reclaiming presence from post-scarcity vertigo.",
-      "connected_to": [
-        "loc_echo_plaza",
-        "loc_quiet_boulevard"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "The fragrance of boiled cedar tea and freshly baked bread; a living sanctuary where tired citizens learn to sit together."
+    "baseline": {
+      "schema": "schemas/metadata.schema.json"
     }
-  ],
-  "starting_location": "loc_glass_atrium"
+  },
+  "definitions": {
+    "locations": "definitions/world.json",
+    "world": "definitions/world.json",
+    "traits": "conditions/traits.json",
+    "gm": "game_master.json",
+    "actions": "action_conditions.json",
+    "rules": "definitions/engine_rules.json"
+  },
+  "logic": {
+    "resolve": "logic/rules.py:resolve",
+    "after_turn": "logic/rules.py:after_turn",
+    "derive": "logic/rules.py:derive",
+    "validate": "logic/rules.py:validate"
+  }
 }

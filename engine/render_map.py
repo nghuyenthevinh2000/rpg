@@ -56,7 +56,10 @@ def render_map(world_dir, snapshot=None):
         for entity in entities:
             data = entity['data']
             projection = contract.derive(ctx, collection+'/'+entity['id']) if collection == 'characters' else {k:v for k,v in data.items() if k != 'metadata'}
-            parts.append('<li><strong>'+text(data.get('name',entity['id']))+'</strong><pre>'+text(json.dumps(projection,ensure_ascii=False,sort_keys=True))+'</pre></li>')
+            extra = ''
+            if collection == 'actions' and data.get('kind') == 'project':
+                extra = f"<p>Progress: {text(data.get('hours_committed', 0))} / {text(contract.definitions['rules'].get('project_templates', {}).get(data.get('template_id'), {}).get('hours_required', '?'))} hours · Status: {text(data.get('status', 'active')).title()}</p>"
+            parts.append('<li><strong>'+text(data.get('name',entity['id']))+'</strong>'+extra+'<pre>'+text(json.dumps(projection,ensure_ascii=False,sort_keys=True))+'</pre></li>')
         parts.append('</ul>')
     parts.append('</body></html>'); html = ''.join(parts)
     # One engine lock protects compare + replacement, preventing an older render

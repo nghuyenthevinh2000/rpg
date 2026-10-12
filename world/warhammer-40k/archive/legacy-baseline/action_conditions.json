@@ -1,0 +1,87 @@
+{
+  "description": "The Grimdark Laws of Materialization for Hive Tartarus. In the 41st Millennium, no fortification holds, no weapon fires, and no soul survives without irreversible expenditure.",
+  "materialization_laws": {
+    "blood_tithe_principle": "Human flesh is the most expendable yet essential resource in the Imperium. Manual labor without machinery demands biological casualties.",
+    "machine_cant_principle": "Ancient machinery will not function without the rituals of maintenance, sacred unguents, and Tech-Priest appeasement.",
+    "sanctified_choke_point": "Defensive positions held against the warp or xenos require consecrated holy relics or purity seals, else despair and psychic taint will rout the defenders.",
+    "law_of_retaliation": "No apex threat in the 41st Millennium falls passively. Every combat round triggers hostile counter-attacks, inflicting direct kinetic/acid damage against combatants and dealing attrition casualties.",
+    "law_of_armor_penetration": "Apex xenos and mutant carapaces possess heavy damage reduction (65%-80%) against standard lasguns and shotgun buckshot. Breaching requires dedicated armor-cracking assets (Krak charges, Power Fists, Autocannons, or Promethium immersion).",
+    "law_of_mortal_peril": "Characters whose Physical Vitality drops below 25 suffer critical injury debuffs. Reaching 0 Vitality results in traumatic limb severance or permanent death."
+  },
+  "action_templates": {
+    "action_boss_carapace_breach": {
+      "name": "Heavy Ordnance Strike on Apex Carapace",
+      "required_resources": {
+        "munitions": [
+          { "item": "krak_grenades", "required": 1, "unit": "shaped charge" }
+        ],
+        "heavy_support": "Power Fist grapple or heavy overwatch distraction mandatory"
+      },
+      "risks": {
+        "enemy_retaliation_damage": "35-50 Acid/Kinetic damage to primary combatant",
+        "armor_corrosion_risk": "Carapace armor degraded"
+      },
+      "consequence_on_completion": "Carapace cracked; exposes vital nerve clusters and strips 40% damage reduction."
+    },
+    "action_boss_sustained_pinning": {
+      "name": "Concentrated Autocannon & Heavy Stubber Suppression",
+      "required_resources": {
+        "munitions": [
+          { "item": "heavy_stubber_belts", "required": 2, "unit": "drum belts (400 rds)" },
+          { "item": "autocannon_magazines", "required": 1, "unit": "box magazine" }
+        ],
+        "personnel": 6
+      },
+      "risks": {
+        "barrel_burnout_chance": 0.20,
+        "conscript_casualty_risk": "1-3 troopers struck by ranged acid return"
+      },
+      "consequence_on_completion": "Suppresses apex mobility by 75%; interrupts lethal charge attacks."
+    },
+    "action_reinforce_bulkhead": {
+      "name": "Weld Plasteel Bracing to Sump Bulkhead",
+      "required_resources": {
+        "materials": [
+          { "item": "plasteel_barricade_plates", "required": 30, "unit": "sheets" },
+          { "item": "promethium_welding_canisters", "required": 12, "unit": "flasks" }
+        ],
+        "labor_cost": {
+          "total_man_hours": 160,
+          "supervisors": 1,
+          "fatigue_vitality_drain": 15
+        },
+        "psychological_cost": {
+          "morale_ration_sacrifice": 200,
+          "dissonance_risk": "Fear of mutant breach during dark hours"
+        }
+      },
+      "consequence_on_completion": "Bulkhead blast threshold increased by 500%; prevents sudden underhive mutant breakthrough for 7 cycles."
+    },
+    "action_consecrate_munitions": {
+      "name": "Ritual Consecration of Heavy Shells",
+      "required_resources": {
+        "materials": [
+          { "item": "sacred_machine_unguent", "required": 10, "unit": "vials" },
+          { "item": "purity_seal_parchment", "required": 50, "unit": "scrolls" }
+        ],
+        "labor_cost": {
+          "total_man_hours": 80,
+          "assigned_clergy": "Ecclesiarchy Preceptor & Lexmechanic"
+        }
+      },
+      "consequence_on_completion": "Heavy macro-shells gain sanctified warhead blessing; eliminates misfire rate during bombardment."
+    },
+    "action_scavenge_lower_sump": {
+      "name": "Expedition to Sump Charnel Ditch",
+      "required_resources": {
+        "personnel": 4,
+        "hazard_protection": "Respirators and rebreathers mandatory"
+      },
+      "risks": {
+        "toxic_exposure_chance": 0.40,
+        "mutant_ambush_chance": 0.30
+      },
+      "rewards": "Salvaged cybernetic augmetics, unspent heavy stubber ammo, filtered water valves."
+    }
+  }
+}

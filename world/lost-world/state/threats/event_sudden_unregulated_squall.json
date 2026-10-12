@@ -1,0 +1,29 @@
+{
+  "data": {
+    "activation_turn": 33,
+    "active": true,
+    "location_id": "loc_monastery",
+    "metadata": {
+      "legacy": {
+        "human_trial": "Requires all participants to hold the guy-lines and brace the pillars in freezing rain for 4 hours without automated weather domes.",
+        "name": "The Unregulated Atmospheric Squall",
+        "status": "active",
+        "threat": "Collapse of unfinished timber framing; water damage to quarried lime.",
+        "trial_id": "event_sudden_unregulated_squall",
+        "type": "weather_anomaly"
+      }
+    },
+    "name": "The Unregulated Atmospheric Squall",
+    "stats": {
+      "armor": 0,
+      "health": 0,
+      "retaliation": 0
+    },
+    "tags": [
+      "weather"
+    ]
+  },
+  "id": "event_sudden_unregulated_squall",
+  "revision": 0,
+  "schema_version": 1
+}

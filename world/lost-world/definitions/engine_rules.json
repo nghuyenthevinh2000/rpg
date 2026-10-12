@@ -1,9 +1,78 @@
 {
   "immortal_health": 100, "immortal_kinetic_vitality": 100,
   "sanctuary": false,
+  "calendar": {
+    "anchor_turn": 33,
+    "anchor_day": 4,
+    "anchor_timestamp": "2026-10-09T07:30:00+07:00",
+    "turns_per_day": 24,
+    "display_style": "iso_hours"
+  },
+  "resource_policies": {},
+  "resource_recipes": {},
+  "project_templates": {
+    "action_build_structure": {
+      "name": "Erect Physical Sanctuary / Monastery",
+      "hours_required": 120,
+      "materials": {
+        "raw_cedar_timber": 40,
+        "quarried_granite_slabs": 25
+      },
+      "credit_cost": 50000,
+      "credit_stat": "universal_dividend_balance",
+      "fatigue_cost": 0,
+      "conditions": [
+        "telemetry_severed",
+        "drones_rejected"
+      ],
+      "site_ids": [
+        "loc_monastery"
+      ],
+      "structural_requirements": {},
+      "resource_rewards": {}
+    }
+  },
+  "project_sites": {
+    "loc_monastery": {
+      "manual_work": true,
+      "template_ids": [
+        "action_build_structure"
+      ]
+    }
+  },
+  "project_preparation_recipes": {
+    "sever_telemetry": {
+      "site_ids": [
+        "loc_monastery"
+      ],
+      "resource_costs": {},
+      "conditions": {
+        "telemetry_severed": true
+      }
+    },
+    "reject_drones": {
+      "site_ids": [
+        "loc_monastery"
+      ],
+      "resource_costs": {},
+      "conditions": {
+        "drones_rejected": true
+      }
+    }
+  },
   "stat_keys": ["agency", "max_agency", "clarity", "dissonance", "universal_dividend_balance", "hostility", "efficiency"],
   "bounds": {"agency": [0, 100], "clarity": [0, 100], "dissonance": [0, 100], "hostility": [0, 100], "efficiency": [0, 1]},
   "cold": {"miracle_trait_id": "trait_brutal_logic", "damage": 15, "failed_damage": 18, "survival_floor": 25, "survival_trait_id": "trait_unyielding_survival"},
+  "trial_recipes": {
+    "recipe_sudden_unregulated_squall": {
+      "template_id": "event_sudden_unregulated_squall",
+      "location_id": "loc_monastery",
+      "resource_costs": {},
+      "resource_rewards": {},
+      "trait_rewards": [],
+      "structural_requirements": {}
+    }
+  },
   "templates": {
     "event_sudden_unregulated_squall": {"location_id": "loc_monastery", "tags": ["weather"], "stats": {"health": 0, "armor": 0, "retaliation": 0}},
     "event_grid_reclamation_sweep": {"location_id": "loc_monastery", "tags": ["systemic"], "stats": {"health": 0, "armor": 0, "retaliation": 0}},

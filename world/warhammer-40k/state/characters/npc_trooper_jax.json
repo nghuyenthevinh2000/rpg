@@ -1,0 +1,243 @@
+{
+  "data": {
+    "baseline": {
+      "modifiers": {
+        "agency": -5,
+        "agility": 5,
+        "clarity": 10,
+        "physical_vitality": 10,
+        "strength": 10
+      },
+      "stats": {
+        "agency": 60,
+        "agility": 50,
+        "clarity": 80,
+        "dissonance": 45,
+        "psychic_aptitude": 5,
+        "strength": 35
+      }
+    },
+    "capabilities": {
+      "cannot_die": false
+    },
+    "equipment": [
+      "item_flak_armor",
+      "item_lasgun_kantrael"
+    ],
+    "health": 0,
+    "inventory": [
+      "item_ration_pack"
+    ],
+    "location_id": "loc_shrine_aquila",
+    "metadata": {
+      "legacy": {
+        "archetype": "The Reluctant Conscript",
+        "coordinate": {
+          "col": 1,
+          "row": 1
+        },
+        "current_location": "loc_shrine_aquila",
+        "current_status": "KIA / PURGED BY ASTARTES SANCTION",
+        "decisions": [
+          {
+            "choice_type": "survival",
+            "decision": "Patrolled the lower ventilation intake of Hab-Block Vermis-9 and reported leaking sulfur pipes.",
+            "impact": "Alerted the garrison to toxic gas buildup before morning shift began.",
+            "location": "loc_hab_block_vermin",
+            "turn": 1
+          },
+          {
+            "choice_type": "fortification_labor",
+            "decision": "Hauled newly delivered plasteel slabs into position alongside Bragg as the welding torches ignited.",
+            "impact": "Morale rallied seeing command deliver promised supplies to the frontline.",
+            "location": "loc_underhive_threshold",
+            "turn": 2
+          },
+          {
+            "choice_type": "combat_readiness",
+            "decision": "Locked down the secondary sandbag redoubt and zeroed the heavy stubber crossfire arc across the sealed gate.",
+            "impact": "Established total perimeter overwatch.",
+            "location": "loc_underhive_threshold",
+            "turn": 3
+          },
+          {
+            "choice_type": "combat_valor",
+            "decision": "Fought side-by-side with Sergeant Vane, hurling two frag canisters into the lower drainage throat to seal the breach forever.",
+            "impact": "Conscript transformed from reluctant survivor into battle-hardened squad veteran.",
+            "location": "loc_hab_block_vermin",
+            "turn": 4
+          },
+          {
+            "choice_type": "sump_scouting",
+            "decision": "Guided the Sergeant through the sludge shoals and sniffed out an abandoned Munitorum locker containing 4 heavy stubber belts and 3 brass valves.",
+            "impact": "Boosted garrison heavy ammo reserves and located the predator's toxic slime trail.",
+            "location": "loc_charnel_trench",
+            "turn": 5
+          },
+          {
+            "choice_type": "pinned_suppression",
+            "decision": "Blasted backward into the catwalk railings by the beast's tail-lash, screaming as two conscripts beside him were dissolved into slurry.",
+            "impact": "Pinned under iron girders, lasgun power cell sparking in the mud.",
+            "location": "loc_charnel_trench",
+            "turn": 7
+          },
+          {
+            "choice_type": "pinned_suppression",
+            "decision": "Blasted backward into the catwalk railings by the beast's tail-lash, screaming as two conscripts beside him were dissolved into slurry.",
+            "impact": "Pinned under iron girders, lasgun power cell sparking in the mud.",
+            "location": "loc_charnel_trench",
+            "turn": 7
+          },
+          {
+            "choice_type": "last_ditch_overwatch",
+            "decision": "Crawled out from beneath the collapsed iron girders with blood running down his face, dragging a severed battery pack to fire continuous las-bursts into the beast's sensory cluster.",
+            "impact": "Temporarily blinded the beast's forward ocular lobes, allowing Vane to close the distance; Jax took shrapnel from wild flailing (Vitality 40 -> 30).",
+            "location": "loc_charnel_trench",
+            "turn": 8
+          },
+          {
+            "choice_type": "conscript_redemption",
+            "decision": "Joined the final bayonet surge chanting the Emperor's name through tears and blood; jammed an emergency stim-injector into his neck and pinned the fallen Matriarch's eye with his lasgun barrel.",
+            "impact": "Stabilized by emergency stim-injector (Vitality 5 -> 30); transformed from terrified sump-scum into an unshakable veteran survivor.",
+            "location": "loc_charnel_trench",
+            "turn": 9
+          },
+          {
+            "choice_type": "salvage_scouting",
+            "decision": "Pried open the gullet of the beast with gaff-hooks, discovering the intact equipment lockers and web gear of a swallowed Munitorum forward patrol.",
+            "impact": "Recovered 30 lasgun battery packs, 4 heavy stubber belts, and 2 autocannon boxes for the armory.",
+            "location": "loc_charnel_trench",
+            "turn": 10
+          },
+          {
+            "choice_type": "forward_scouting",
+            "decision": "Rallied 4 veteran conscripts, fitted with grade-3 respirators, and moved ahead to mark safe footing across the crumbling ancient plasteel bridges.",
+            "impact": "Discovered an unlooted pre-Heresy maintenance conduit leading into the central cogitator spire; vitality recovered to 55.",
+            "location": "loc_ancient_ruined_city",
+            "turn": 11
+          },
+          {
+            "choice_type": "cipher_scouting",
+            "decision": "Used his sump-scout optical auspex to map the power cabling connecting the archeotech generator to the vault blast locks, reporting back to Vane with precise schematic sketches.",
+            "impact": "Identified the override manual breaker, allowing the squad to bypass the lethal security grid.",
+            "location": "loc_ancient_ruined_city",
+            "turn": 12
+          },
+          {
+            "choice_type": "archeotech_mastery",
+            "decision": "Assisted the Sarge with the datasmith override wafer, then broke the seal on Armory 00-Null; claimed a gleaming Mark IV Plasma Gun, beaming with pride as a consecrated vanguard gunner.",
+            "impact": "Armed with archeotech plasma weaponry; transformed into an elite heavy marksman with zero fear of future mutant swarms.",
+            "location": "loc_ancient_ruined_city",
+            "turn": 13
+          },
+          {
+            "choice_type": "vanguard_gate_watch",
+            "decision": "Took up overwatch position at the Basilica entrance with his newly acquired Mark IV Plasma Gun, coordinating with the vanguard to ensure no stragglers breached the holy perimeter.",
+            "impact": "Maintained an iron perimeter around the resting command staff.",
+            "location": "loc_shrine_aquila",
+            "turn": 14
+          },
+          {
+            "choice_type": "vanguard_gate_watch",
+            "decision": "Took up overwatch position at the Basilica entrance with his newly acquired Mark IV Plasma Gun, coordinating with the vanguard to ensure no stragglers breached the holy perimeter.",
+            "impact": "Maintained an iron perimeter around the resting command staff.",
+            "location": "loc_shrine_aquila",
+            "turn": 14
+          },
+          {
+            "choice_type": "plasma_salvo",
+            "decision": "Emptied overcharged sun-fire salvos from his Mark IV Plasma Gun into Malgakor's daemonic energy conduits, vaporizing heretical runes before being blown backward by the warp-backlash.",
+            "impact": "Inflicted nearly 1,500 damage to the outer shield; took caustic warp burns (Vitality 65 -> 54).",
+            "location": "loc_chaos_stronghold",
+            "turn": 16
+          },
+          {
+            "choice_type": "plasma_retaliation_killshot",
+            "decision": "Gasping as the stim hit his bloodstream, braced his Mark IV Plasma Gun against the Kastelan's foot and delivered a maximum-power bolt into Malgakor's breastplate, blowing a smoking crater into the daemonic armor.",
+            "impact": "Stabilized from death threshold (Vitality 5 -> 30); delivered over 1,400 plasma damage.",
+            "location": "loc_chaos_stronghold",
+            "turn": 17
+          },
+          {
+            "choice_type": "overcharged_plasma_suicide",
+            "decision": "Overcharged his Mark IV Plasma Gun to maximum reactor overload, shoving the glowing barrel into Malgakor's faceplate and pulling the trigger in a blinding sun-fire blast.",
+            "impact": "Fell in glorious combat (Vitality 5 -> 0, KIA), vaporizing Malgakor's helmet and blinding the Chaos God.",
+            "location": "loc_chaos_stronghold",
+            "turn": 18
+          },
+          {
+            "choice_type": "resurrected_by_silent_king",
+            "decision": "Clutched chest and gasped for air as mortal wounds sealed cleanly; stood and chambered a power pack into his lasgun with renewed determination.",
+            "impact": "Restored to operational duty beside his sergeant.",
+            "location": "loc_shrine_aquila",
+            "turn": 22
+          }
+        ],
+        "equipment": {
+          "armor": "item_flak_armor",
+          "primary_weapon": "item_lasgun_kantrael"
+        },
+        "former_title": "Underhive Ganger (Sump Vipers Clan)",
+        "id": "npc_trooper_jax",
+        "inventory": [
+          {
+            "description": "Tastes like pressed sawdust and salt; keeps starvation at bay for one more shift.",
+            "item_id": "item_ration_pack",
+            "name": "Half-Eaten Corpse-Starch Ration",
+            "symbol": "The Corpse-Tithe"
+          }
+        ],
+        "name": "Conscript Trooper Jax",
+        "race": "human",
+        "stats": {
+          "agency": 60,
+          "agility": 50,
+          "applied_equipment_modifiers": {
+            "agility": 5,
+            "clarity": 5,
+            "physical_vitality": 10
+          },
+          "clarity": 80,
+          "dissonance": 45,
+          "physical_vitality": 0,
+          "psychic_aptitude": 5,
+          "punch_kinetic_impact": 14.9,
+          "strength": 35
+        },
+        "symbol_alignment": "The Sump Void",
+        "traits": [
+          {
+            "name": "Sump Lung & Chemical Poisoning",
+            "trait_id": "trait_toxic_sump_rot"
+          },
+          {
+            "name": "Adaptable Spirit (Human)",
+            "trait_id": "trait_adaptable_spirit"
+          },
+          {
+            "name": "Necrodermis Chrono-Weave (The Silent King's Grace)",
+            "trait_id": "trait_necrodermis_cellular_weave"
+          }
+        ]
+      }
+    },
+    "name": "Conscript Trooper Jax",
+    "stats": {
+      "agency": 60,
+      "agility": 50,
+      "clarity": 80,
+      "dissonance": 45,
+      "psychic_aptitude": 5,
+      "strength": 35
+    },
+    "status": "dead",
+    "traits": [
+      "trait_adaptable_spirit",
+      "trait_necrodermis_cellular_weave",
+      "trait_toxic_sump_rot"
+    ]
+  },
+  "id": "npc_trooper_jax",
+  "revision": 0,
+  "schema_version": 1
+}

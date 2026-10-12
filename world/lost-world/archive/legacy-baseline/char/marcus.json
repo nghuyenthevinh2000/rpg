@@ -1,0 +1,145 @@
+{
+  "id": "npc_marcus_the_drifter",
+  "name": "Marcus",
+  "former_role": "Senior Legal Partner & Litigator (24 Years Practice)",
+  "current_state": "Sovereign Builder & Keeper of the Gates",
+  "symbol_alignment": "Meaning as a Verb",
+  "location": "loc_monastery",
+  "coordinate": {
+    "row": 3,
+    "col": 3
+  },
+  "traits": [
+    {
+      "trait_id": "trait_unyielding_survival",
+      "name": "Will to Live at All Costs",
+      "effect": "Autonomous survival instincts force action, mutual warmth, or metabolic emergency triage.",
+      "failure_probability": 0.25,
+      "vulnerability": "Will to live cannot magically resist kinetic impact or targeted attack; 25% failure chance under physical assault to reflect physiological limits."
+    }
+  ],
+  "stats": {
+    "agency": 100,
+    "max_agency": 100,
+    "clarity": 100,
+    "dissonance": 0,
+    "physical_vitality": 85,
+    "punch_kinetic_impact": 22.0
+  },
+  "equipment": {
+    "hands": "Mud-caked, calloused, blistered",
+    "attire": "Ripped white business shirt, rolled up sleeves, soaked trousers"
+  },
+  "decisions": [
+    {
+      "turn": 2,
+      "decision": "Opened the 400-page antitrust brief to Kael, admitting the hollow pain of phantom commuting.",
+      "impact": "Broke personal isolation; acknowledged the relic's impotence."
+    },
+    {
+      "turn": 4,
+      "decision": "Followed Kael to the Unresisting Forum and heard Lyra describe meaning as a verb.",
+      "impact": "Decided to abandon the Avenue bench for active human endeavor."
+    },
+    {
+      "turn": 6,
+      "decision": "Led the Whispering Woods timber squad with the graphic designer, cutting 16 raw cedar logs by hand.",
+      "impact": "First physical labor in 25 years; reignited sovereign vigor."
+    },
+    {
+      "turn": 8,
+      "decision": "Held the primary hemp guy-lines during the Unregulated Squall when Kael departed.",
+      "impact": "Refused reliance on a savior; claimed direct ownership of the monastery's survival."
+    },
+    {
+      "turn": 11,
+      "decision": "Poured hand-boiled tea for Kael, marking the official opening of the Monastery of the Unplugged Lantern.",
+      "impact": "Former litigator fully transitions to hospitable keeper."
+    },
+    {
+      "turn": 11,
+      "decision": "Poured hand-boiled tea for Kael, marking the official opening of the Monastery of the Unplugged Lantern.",
+      "impact": "Former litigator fully transitions to hospitable keeper."
+    },
+    {
+      "turn": 14,
+      "decision": "Noticing Kael's unmoving silence, quietly stoked the coals and organized the woodbox without seeking permission or validation.",
+      "impact": "Demonstrated natural, autonomous initiative."
+    },
+    {
+      "turn": 14,
+      "decision": "Noticing Kael's unmoving silence, quietly stoked the coals and organized the woodbox without seeking permission or validation.",
+      "impact": "Demonstrated natural, autonomous initiative."
+    },
+    {
+      "turn": 14,
+      "decision": "Noticing Kael's unmoving silence, quietly stoked the coals and organized the woodbox without seeking permission or validation.",
+      "impact": "Demonstrated natural, autonomous initiative."
+    },
+    {
+      "turn": 17,
+      "decision": "Sat back against the stone hearth, letting the iron poker rest, giving up the compulsive need to constantly manage the coals.",
+      "impact": "Unlearned the anxiety of the obsolete litigator."
+    },
+    {
+      "turn": 18,
+      "decision": "Pulled his woolen collar closer, remaining seated beside Kael, feeling the genuine bite of cold without panic.",
+      "impact": "Traded the artificial numbness of post-scarcity for raw biological presence."
+    },
+    {
+      "turn": 19,
+      "decision": "Teeth chattering violently; huddled into his coat as his fingers turned white and numb.",
+      "impact": "Hypothermia Stage II progression."
+    },
+    {
+      "turn": 20,
+      "decision": "Will to Live triggered: Crawled across the stone floor on bleeding hands, smashed cedar kindling with a mallet, and threw wood onto the hearth.",
+      "impact": "Refused death; broke the hypnotic trance of immobility."
+    },
+    {
+      "turn": 21,
+      "decision": "Heaved three split granite stones into the hearth embers, heating them to place at Kael's extremities to gently restore core temperature.",
+      "impact": "Applied practical survival mastery to protect a brother."
+    },
+    {
+      "turn": 22,
+      "decision": "Hauled a timber sledge to the frozen runoff with Lyra, chiseling through six inches of creek ice to harvest water blocks.",
+      "impact": "Secured winter hydration for the sanctuary through physical sweat."
+    },
+    {
+      "turn": 23,
+      "decision": "Will to Live at All Costs triggered: Disarmed a delirious Kael, locked his arms, and forced him to drop the iron poker without inflicting harm.",
+      "impact": "Refused to die; defended his life and preserved the brotherhood."
+    },
+    {
+      "turn": 24,
+      "decision": "Will to Live triggered: Absorbed the glancing blow to the shoulder, wrapped Kael in a defensive clinch, and held him securely until the frenzy ceased.",
+      "impact": "Prevented escalation; defended own life while preserving the attacker."
+    },
+    {
+      "turn": 25,
+      "decision": "Will to Live resisted attack failure (Roll: 0.62 >= 0.25): Absorbed blunt impact to the clavicle, refused to counter with lethal force, and held the perimeter.",
+      "impact": "Endured kinetic trauma; physical vitality dropped to 18."
+    },
+    {
+      "turn": 27,
+      "decision": "Kept the night watch alone, tending the fire and baking flatbread on hot hearth stones for Kael and Lyra.",
+      "impact": "Collarbone bruise bound and healing; vitality restored to 60 through food and fire."
+    },
+    {
+      "turn": 27,
+      "decision": "Kept the night watch alone, tending the fire and baking flatbread on hot hearth stones for Kael and Lyra.",
+      "impact": "Collarbone bruise bound and healing; vitality restored to 60 through food and fire."
+    },
+    {
+      "turn": 29,
+      "decision": "Stood by the wooden gate, watching Kael leave down the avenue, keeping the lantern lit and the hearth ready for whenever he returns.",
+      "impact": "Refused to chase or condemn; preserved the sanctuary as an open refuge."
+    },
+    {
+      "turn": 11,
+      "decision": "Poured hand-boiled tea for Kael, marking the official opening of the Monastery of the Unplugged Lantern.",
+      "impact": "Former litigator fully transitions to hospitable keeper."
+    }
+  ]
+}

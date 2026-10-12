@@ -1,0 +1,94 @@
+{
+  "id": "event_014_awakening_of_chaos_lord_stronghold",
+  "name": "The Dread Citadel Manifests: Malgakor the Despoiled Awakes at (4,0)",
+  "cycle_advancement": {
+    "day_increment": 1,
+    "timestamp": "41.999.040.M41",
+    "turn_increment": 1,
+    "world_state": "Chaos God-Lord Citadel Active at (4,0) — Reality Bleed Ongoing"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_chaos_stronghold",
+        "ambient_tension": "The subterranean abyss at (4,0) has erupted in blinding violet warp-fire. A mile-high brass ziggurat pulsates with weeping eye-sigils. Lord Malgakor the Despoiled (Chaos Lord / Demigod) sits upon a throne of screaming skulls, projecting an unholy plague aura across the southern underhive."
+      },
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "Sergeant Kathryn Vane stands awake and fully restored upon the high balcony of Saint Katherine's Basilica. Through the smog, the ominous violet warp-flare of the Chaos Citadel at (4,0) paints the toxic clouds."
+      }
+    ]
+  },
+  "progress_updates": {
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_persistent_chaos_lord_plague",
+        "name": "The Blighted Eye of Lord Malgakor",
+        "type": "demigod_chaos_siege",
+        "threat": "A god-like Chaos Lord—Malgakor the Despoiled (650 HP, 80% Unholy Warp-Shielding, 50 Retaliation)—has planted his dread citadel at (4,0). The fortress constantly emanates necrotic contagion and warp-dissonance, corrupting the air and threatening the entire sub-level.",
+        "human_trial": "Confront a literal Chaos God-Champion in his throne-citadel. Break his daemonic warp-shields with concentrated archeotech plasma and holy relics, or endure eternal biological and spiritual decay.",
+        "status": "active"
+      }
+    ],
+    "active_combat_encounters": [
+      {
+        "encounter_id": "boss_chaos_lord_malgakor",
+        "boss_name": "Lord Malgakor the Despoiled, Scourge of Tartarus",
+        "location": "loc_chaos_stronghold",
+        "coordinate": {
+          "row": 4,
+          "col": 0
+        },
+        "status": "active",
+        "threat_rating": "Divine / Demigod Apex (Chaos Lord of the Warp)",
+        "current_hp": 650,
+        "max_hp": 650,
+        "current_phase": "Phase 1: Warp-Iron Bastion & Daemonic Aegis",
+        "phase_progress_percentage": 0,
+        "armor_status": "Unholy Daemonic Aegis & Terminator Plate (80% Damage Reduction against all non-Plasma/Power attacks)",
+        "round_retaliation_damage": 50,
+        "tactical_requirements": "Requires Mark IV Archeotech Plasma weaponry, Bone 'ead Bragg's Power Fist, and the Kastelan Automaton's heavy phosphor bombardment to breach the daemonic warp-shield before the Chaos Lord can be wounded.",
+        "failure_consequences": "Total spiritual corruption and slaughter of Sub-Level 404, transforming the hive canyon into a daemon world."
+      }
+    ],
+    "threat_tracking": {
+      "status": "active_monitoring",
+      "total_threats_neutralized": 51,
+      "sublevel_containment_rating": "70% Contained (PERSISTENT CHAOS GOD-LORD CITADEL ACTIVE AT 4,0)",
+      "sector_threat_telemetry": {
+        "loc_chaos_stronghold": {
+          "threat": "⚠️ CHAOS LORD MALGAKOR ENGAGED (650 HP DEMIGOD THREAT)",
+          "level": "Catastrophic Daemonic Incursion"
+        },
+        "loc_ancient_ruined_city": {
+          "threat": "SECURED & SUBJUGATED (Archeotech Looted)",
+          "level": "Claimed & Pacified"
+        },
+        "loc_shrine_aquila": { "threat": "Sanctified (Vane Awoken, Sol-Aegis Online)", "level": "Impenetrable Safe Zone" },
+        "loc_manufactorum_sigma": { "threat": "Tithe Production at 115% Efficiency", "level": "Secure" },
+        "loc_cogitator_sanctum": { "threat": "Machine Protected & Power Linked", "level": "Secure" },
+        "loc_hab_block_vermin": { "threat": "Necrotic Warp Static Whispering at Border", "level": "Tainted" },
+        "loc_bastion_gate": { "threat": "Redoubt Fortified & In Alert", "level": "High Vigilance" },
+        "loc_promethium_cistern": { "threat": "Hermetically Fused & Pressure Normalized", "level": "Secured & Sealed" },
+        "loc_underhive_threshold": { "threat": "Bulkhead Sealed 500%", "level": "Fortified" },
+        "loc_charnel_trench": { "threat": "Carcass Harvest Completed", "level": "Secured & Purged" }
+      }
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 15,
+        "location": "loc_shrine_aquila",
+        "choice_type": "apocalyptic_revelation",
+        "decision": "Awoke from restful slumber in the Basilica to the blaring alarms of the auspex-net: observed the dark warp-eruption at (4,0), identifying the dread citadel of Chaos Lord Malgakor the Despoiled, a literal god-champion of the Ruinous Powers plaguing the sector.",
+        "impact": "Rallied the garrison, ordered the Kastelan Automaton, Bragg, and Jax to ready the newly looted Archeotech Plasma weaponry for an apocalyptic offensive."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

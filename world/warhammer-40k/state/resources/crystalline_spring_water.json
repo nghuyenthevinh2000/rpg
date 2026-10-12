@@ -1,0 +1,20 @@
+{
+  "data": {
+    "metadata": {
+      "automatic_mechanics": false,
+      "category": "sustenance_and_survival",
+      "legacy": {
+        "burn_rate_turn": 0,
+        "current": 8000,
+        "days_reserve": 999.0,
+        "unit": "pure mineral flagons"
+      }
+    },
+    "name": "crystalline_spring_water",
+    "quantity": 8000,
+    "unit": "pure mineral flagons"
+  },
+  "id": "crystalline_spring_water",
+  "revision": 0,
+  "schema_version": 1
+}

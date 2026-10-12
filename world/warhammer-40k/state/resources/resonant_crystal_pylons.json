@@ -1,0 +1,19 @@
+{
+  "data": {
+    "metadata": {
+      "automatic_mechanics": false,
+      "category": "construction_and_tech",
+      "legacy": {
+        "committed_to_actions": 0,
+        "depot_stock": 50,
+        "unit": "harmonic monoliths"
+      }
+    },
+    "name": "resonant_crystal_pylons",
+    "quantity": 50,
+    "unit": "harmonic monoliths"
+  },
+  "id": "resonant_crystal_pylons",
+  "revision": 0,
+  "schema_version": 1
+}

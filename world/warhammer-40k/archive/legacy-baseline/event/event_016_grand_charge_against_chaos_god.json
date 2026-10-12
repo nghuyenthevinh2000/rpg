@@ -1,0 +1,265 @@
+{
+  "id": "event_016_grand_charge_against_chaos_god",
+  "name": "The Charge of the Bastion Sanctus: Breaching the Outer Daemonic Wards",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.042.M41",
+    "turn_increment": 1,
+    "world_state": "The Great Siege of (4,0): Outer Wards Breached (9,704 / 12,500 HP)"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_chaos_stronghold",
+        "ambient_tension": "The bone-and-brass ziggurat trembles under apocalyptic bombardment. Emerald plasma craters pit Lord Malgakor's daemonic throne. Malgakor bellows in unholy wrath as 2,795 damage tears his outer wards to ribbons, his flaming daemon sword cleaving the trenchline."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_chaos_god_outer_wards_breached",
+        "title": "Outer Daemonic Wards of Lord Malgakor Breached in Epic Charge",
+        "completed_at": "41.999.042.M41",
+        "consequence": "Sergeant Kathryn Vane led the entire garrison in an all-out charge for the Emperor: unleashed 12 archeotech plasma salvos, heavy bolters, and Bragg's Power Fist, inflicting a staggering 2,795 net damage to the 12,500 HP Chaos God-Lord."
+      }
+    ],
+    "active_combat_encounters": [
+      {
+        "encounter_id": "boss_chaos_lord_malgakor",
+        "boss_name": "Lord Malgakor the Despoiled, God-Champion of the Warp",
+        "location": "loc_chaos_stronghold",
+        "coordinate": {
+          "row": 4,
+          "col": 0
+        },
+        "status": "active",
+        "threat_rating": "DIVINE APEX (LITERAL CHAOS GOD / 12,500 HP)",
+        "current_hp": 9705,
+        "max_hp": 12500,
+        "current_phase": "Phase 2: Shattered Wards & The Blighted Daemon Blade (9,705 / 12,500 HP)",
+        "phase_progress_percentage": 22,
+        "armor_status": "Outer Wards Shattered (Warp Shielding degraded from 85% to 75%)",
+        "round_retaliation_damage": 80,
+        "tactical_requirements": "Phase 1 wards destroyed! Malgakor is descending the ziggurat with his daemonic greatsword. Melee anchoring by Bragg and the Kastelan Automaton mandatory while plasma marksmen target his helmet visor.",
+        "failure_consequences": "Total spiritual annihilation of Sub-Level 404 if the god-charge collapses."
+      }
+    ],
+    "threat_tracking": {
+      "status": "active_monitoring",
+      "total_threats_neutralized": 51,
+      "sublevel_containment_rating": "65% Contained (OUTER WARDS BREACHED: 2,795 DMG DEALT)",
+      "sector_threat_telemetry": {
+        "loc_chaos_stronghold": {
+          "threat": "⚠️ CHAOS GOD MALGAKOR WOUNDED (9,705 / 12,500 HP)",
+          "level": "Active Divine Melee"
+        },
+        "loc_ancient_ruined_city": { "threat": "SECURED (Archeotech Looted)", "level": "Claimed & Pacified" },
+        "loc_shrine_aquila": { "threat": "Sanctified (Vane at Front, Sol-Aegis Online)", "level": "Impenetrable Safe Zone" },
+        "loc_manufactorum_sigma": { "threat": "Tithe Production at 115% Efficiency", "level": "Secure" },
+        "loc_cogitator_sanctum": { "threat": "Machine Protected & Power Linked", "level": "Secure" },
+        "loc_hab_block_vermin": { "threat": "Defended by Enforcers", "level": "Secured" },
+        "loc_bastion_gate": { "threat": "Staging Redoubt", "level": "Fortified" },
+        "loc_promethium_cistern": { "threat": "Pressure Normalized", "level": "Secured & Sealed" },
+        "loc_underhive_threshold": { "threat": "Forward Chokepoint Active", "level": "Fortified" },
+        "loc_charnel_trench": { "threat": "Cleared Sector", "level": "Secured & Purged" }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 44,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Garrison Commander",
+          "status": "engaged_at_citadel"
+        },
+        {
+          "id": "npc_kastelan_iron_bastion",
+          "name": "Kastelan Automaton 'Iron Bastion'",
+          "role": "Ancient Cybernetica Siege Titan (250/300 HP)",
+          "status": "dueling_daemonic_heralds"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Titan Breacher / Forward God-Cracker",
+          "status": "engaged_at_citadel"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Master of Foundry Spirits",
+          "status": "directing_plasma_relays"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "High Preceptor & Morale Officer",
+          "status": "chanting_war_prayers"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Plasma Vanguard Marksman",
+          "status": "engaged_at_citadel"
+        }
+      ],
+      "sub_units": [
+        {
+          "unit_name": "Expedition Vanguard Detail (Astra Militarum)",
+          "count": 4,
+          "armament": "Kantrael Lasguns, Mark IV Plasma Guns, Void Carapace",
+          "morale": "Fanatical (100%)",
+          "station": "Citadel outer courtyard breach lines"
+        },
+        {
+          "unit_name": "4th Conscript Platoon (Base Garrison)",
+          "count": 14,
+          "armament": "Kantrael Lasguns, combat knives, scarred flak vests",
+          "morale": "Fanatical Martyrdom (95% — Charging a God)",
+          "station": "Citadel perimeter barricades (2 conscripts fell in the opening charge)"
+        },
+        {
+          "unit_name": "Bastion Heavy Weapons Detachment",
+          "count": 6,
+          "armament": "2x Emplaced Heavy Stubbers, 1x Twin-Linked Autocannon",
+          "morale": "Disciplined (95%)",
+          "station": "Overwatch catwalks targeting daemonic gargoyles"
+        },
+        {
+          "unit_name": "Hive Enforcer Shock Detail",
+          "count": 12,
+          "armament": "Shock-Mauls, Suppression Shields, Combat Shotguns",
+          "morale": "Hardened (90%)",
+          "station": "Underhive threshold secondary cordon"
+        },
+        {
+          "unit_name": "Industrial Defense Servitors (Lobotomized)",
+          "count": 14,
+          "armament": "Hydraulic Claws, Rivet Guns",
+          "morale": "Absolute (Machine-bonded 100%)",
+          "station": "Hauling ammunition crates to the frontline"
+        }
+      ]
+    },
+    "active_resource_stockpile": {
+      "munitions": {
+        "lasgun_charge_packs": {
+          "current": 80,
+          "unit": "standard packs (-50 expended in charge)",
+          "burn_rate_turn": 5
+        },
+        "heavy_stubber_belts": {
+          "current": 32,
+          "unit": "drum belts (-10 expended in suppression)",
+          "burn_rate_turn": 0
+        },
+        "autocannon_magazines": {
+          "current": 6,
+          "unit": "box magazines (-6 armor penetrators expended)",
+          "burn_rate_turn": 0
+        },
+        "shotgun_solid_slugs": {
+          "current": 20,
+          "unit": "rounds (-30 point-blank volleys)",
+          "burn_rate_turn": 2
+        },
+        "frag_grenades": {
+          "current": 13,
+          "unit": "canisters",
+          "burn_rate_turn": 0
+        },
+        "krak_grenades": {
+          "current": 11,
+          "unit": "charges (-8 shaped charges detonated on wards)",
+          "burn_rate_turn": 0
+        },
+        "heavy_bolter_drums": {
+          "current": 0,
+          "unit": "drums (-5 drums emptied into ziggurat gates)"
+        },
+        "mark_iv_plasma_guns": {
+          "current": 3,
+          "unit": "archeotech weapons (Firing continuously)"
+        }
+      },
+      "construction_and_tech": {
+        "promethium_welding_canisters": {
+          "depot_stock": 8,
+          "committed_to_actions": 0,
+          "unit": "pressurized flasks (-4 canisters burned into daemon totems)"
+        }
+      },
+      "sustenance_and_survival": {
+        "combat_med_stims": {
+          "current": 30,
+          "unit": "injector ampoules (-2 field injectors applied to wounded)"
+        }
+      },
+      "quarantine_logistics_alert": "DIVINE SIEGE ACTIVE: 2,795 damage inflicted on Chaos God Malgakor (9,705 HP remaining). Phase 1 wards obliterated!"
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "physical_vitality": -5,
+        "dissonance": 5
+      },
+      "new_decision": {
+        "turn": 16,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "supreme_charge",
+        "decision": "Roared 'EVERYONE CHARGE! FOR THE EMPEROR!' and personally led the vanguard into the courtyard of the Dread Citadel, directing archeotech plasma fire to vaporize Malgakor's outer wards and taking shrapnel from exploding daemonic stone.",
+        "impact": "Shattered Phase 1 wards; inflicted massive net damage (Vitality 115 -> 110)."
+      },
+      "current_location": "loc_chaos_stronghold"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "physical_vitality": -5,
+        "dissonance": 5
+      },
+      "new_decision": {
+        "turn": 16,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "god_striker",
+        "decision": "Bellowed 'FOR DA SARGE AN' DA GOLDEN BOSS!' and charged the bone gates, slamming his overcharged Power Fist into the primary warp-pylon, dealing 246 kinetic disruption damage and toppling the entrance archway.",
+        "impact": "Cleared the breach lane for the assault team (Vitality 75 -> 70)."
+      },
+      "current_location": "loc_chaos_stronghold"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "physical_vitality": -11,
+        "dissonance": 10
+      },
+      "new_decision": {
+        "turn": 16,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "plasma_salvo",
+        "decision": "Emptied overcharged sun-fire salvos from his Mark IV Plasma Gun into Malgakor's daemonic energy conduits, vaporizing heretical runes before being blown backward by the warp-backlash.",
+        "impact": "Inflicted nearly 1,500 damage to the outer shield; took caustic warp burns (Vitality 65 -> 54)."
+      },
+      "current_location": "loc_chaos_stronghold"
+    },
+    {
+      "char_file": "enginseer_kroll.json",
+      "stat_deltas": {
+        "physical_vitality": -17,
+        "dissonance": 5
+      },
+      "new_decision": {
+        "turn": 16,
+        "location": "loc_chaos_stronghold",
+        "choice_type": "cybernetica_assault",
+        "decision": "Marched at the flank of Kastelan Automaton 'Iron Bastion', directing heavy phosphor bursts and autocannon fire into the ziggurat flanks; took daemonic lightning arc across bionic torso.",
+        "impact": "Coordinated suppression fire, breaking the daemon engines (Vitality 85 -> 68)."
+      },
+      "current_location": "loc_chaos_stronghold"
+    }
+  ]
+}

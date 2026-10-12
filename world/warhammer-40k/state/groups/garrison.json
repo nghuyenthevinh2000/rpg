@@ -1,0 +1,52 @@
+{
+  "data": {
+    "members": [
+      "player_vane",
+      "npc_ogryn_bragg",
+      "npc_confessor_malachi",
+      "npc_enginseer_kroll",
+      "npc_trooper_jax"
+    ],
+    "metadata": {
+      "legacy": {
+        "command_and_specialists": [
+          {
+            "id": "player_vane",
+            "name": "Kathryn Vane",
+            "role": "The Immortal Awakened (Vitality: IMMORTAL [-99])",
+            "status": "IMMORTAL AWAKENED // GUARDIAN OF TARTARUS"
+          },
+          {
+            "id": "npc_ogryn_bragg",
+            "name": "Bone 'ead Bragg",
+            "role": "The Awakened Shield",
+            "status": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+          },
+          {
+            "id": "npc_confessor_malachi",
+            "name": "Confessor Preceptor Malachi",
+            "role": "The Awakened Singer",
+            "status": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+          },
+          {
+            "id": "npc_enginseer_kroll",
+            "name": "Enginseer Fabricator Kroll",
+            "role": "The Forge Harmonizer",
+            "status": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+          },
+          {
+            "id": "npc_trooper_jax",
+            "name": "Conscript Trooper Jax",
+            "role": "The Liberated Soul",
+            "status": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+          }
+        ],
+        "total_effective_combatants": 1
+      }
+    },
+    "name": "Garrison"
+  },
+  "id": "garrison",
+  "revision": 0,
+  "schema_version": 1
+}

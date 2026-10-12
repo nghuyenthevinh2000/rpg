@@ -1,0 +1,122 @@
+{
+  "id": "npc_dr_harlan",
+  "name": "Dr. Harlan, MD",
+  "former_role": "Chief of Diagnostic Pathology (32 Years Practice)",
+  "current_state": "Resident Physician & Herbologist",
+  "symbol_alignment": "The Relic & The Awakening Touch",
+  "location": "loc_monastery",
+  "coordinate": {
+    "row": 3,
+    "col": 3
+  },
+  "traits": [
+    {
+      "trait_id": "trait_unyielding_survival",
+      "name": "Will to Live at All Costs",
+      "effect": "Medical training and preservation instincts override passivity.",
+      "failure_probability": 0.25,
+      "vulnerability": "Will to live cannot magically resist kinetic impact or targeted attack; 25% failure chance under physical assault to reflect physiological limits."
+    }
+  ],
+  "stats": {
+    "agency": 100,
+    "max_agency": 100,
+    "clarity": 100,
+    "dissonance": 5,
+    "physical_vitality": 85,
+    "punch_kinetic_impact": 22.0
+  },
+  "equipment": {
+    "hands": "Carefully scrubbed clinical hands",
+    "attire": "Dark tailored overcoat"
+  },
+  "decisions": [
+    {
+      "turn": 1,
+      "decision": "Revealed his idle hands and the obsolescence of diagnostic pathology to Kael at the Atrium.",
+      "impact": "Exposed the visceral bodily wound of unspent competence."
+    },
+    {
+      "turn": 13,
+      "location": "loc_monastery",
+      "choice_type": "reclamation_of_purpose",
+      "decision": "Crossed the perimeter into quadrant (3,3), sat beside the open fire, and used bare hands to inspect and treat Marcus and Lyra's blistered fingers with crushed herbal salve.",
+      "impact": "Severed idle dependence on Atrium automated beds; reclaimed the tactile vocation of healing."
+    },
+    {
+      "turn": 14,
+      "decision": "Quietly laid out dried sprigs of yarrow, mint, and pine needles in neat rows along the cedar sill to dry in the morning sun.",
+      "impact": "Settled into the unhurried cadence of genuine care."
+    },
+    {
+      "turn": 14,
+      "decision": "Quietly laid out dried sprigs of yarrow, mint, and pine needles in neat rows along the cedar sill to dry in the morning sun.",
+      "impact": "Settled into the unhurried cadence of genuine care."
+    },
+    {
+      "turn": 14,
+      "decision": "Quietly laid out dried sprigs of yarrow, mint, and pine needles in neat rows along the cedar sill to dry in the morning sun.",
+      "impact": "Settled into the unhurried cadence of genuine care."
+    },
+    {
+      "turn": 17,
+      "decision": "Closed his eyes beside the warm tea bowl, resting his diagnostic hands entirely flat upon his knees in deep physiological peace.",
+      "impact": "Bodily tension accumulated from years of forced leisure dissolved."
+    },
+    {
+      "turn": 18,
+      "decision": "Watched frost crystallize on the window frame, observing the physiological response of his own shivering body with calm curiosity.",
+      "impact": "Reclaimed the physician's intimate relationship with mortal vulnerability."
+    },
+    {
+      "turn": 19,
+      "decision": "Clinically noted his own declining cognitive clarity as peripheral vasoconstriction set in.",
+      "impact": "Understood that biological organisms cannot survive philosophical paralysis without calories."
+    },
+    {
+      "turn": 20,
+      "decision": "Will to Live triggered: Forced warm woolen blankets around Kael's shuddering shoulders and rubbed his stiff wrists vigorously to stimulate circulation.",
+      "impact": "Applied emergency trauma medicine to pull Kael back from lethal hypothermia."
+    },
+    {
+      "turn": 21,
+      "decision": "Caught Kael as he fell, stabilized his neck, elevated his frozen feet, and monitored his reviving pulse with gentle, attentive fingertips.",
+      "impact": "Fully embodied the sacred duty of the tactile physician."
+    },
+    {
+      "turn": 22,
+      "decision": "Kept watch over Kael's vitals, changing warm stone compresses and administering warm pine-needle decoction.",
+      "impact": "Witnessed the patient cross back into vigorous physiological equilibrium."
+    },
+    {
+      "turn": 23,
+      "decision": "Recognized Kael's acute paradoxical delirium from rewarming shock and administered crushed valerian root to calm the nervous system.",
+      "impact": "Medically stabilized severe post-hypothermic psychic episode."
+    },
+    {
+      "turn": 24,
+      "decision": "Assisted in immobilizing Kael's legs with folded wool quilts, ensuring no joint damage occurred during the struggle.",
+      "impact": "Clinical restraint successfully executed."
+    },
+    {
+      "turn": 25,
+      "decision": "Secured the canvas binding with hemp rope and examined Marcus's bruised clavicle for fracture.",
+      "impact": "Maintained patient safety and triage order."
+    },
+    {
+      "turn": 26,
+      "decision": "Administered oral valerian concentrate to stabilize Kael's convulsions and placed heated river stones beside Marcus's torso to treat hypothermic collapse.",
+      "impact": "Single-handedly managing two critical triage patients."
+    },
+    {
+      "turn": 27,
+      "decision": "Unbound Kael's canvas wraps at midnight after checking pulse and respiration, confirming complete neurological recovery.",
+      "impact": "Witnessed the triumph of natural restorative medicine."
+    },
+    {
+      "turn": 27,
+      "decision": "Unbound Kael's canvas wraps at midnight after checking pulse and respiration, confirming complete neurological recovery.",
+      "impact": "Witnessed the triumph of natural restorative medicine."
+    }
+  ]
+}

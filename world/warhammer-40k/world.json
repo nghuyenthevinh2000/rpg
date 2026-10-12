@@ -1,210 +1,41 @@
 {
-  "name": "The Golden Haven of Tartarus (The Transformed World)",
-  "theme": "Post-Grimdark Transcendent Sanctuary / Awakening of the Sovereign Flesh",
-  "lore": "The endless cycle of slaughter has been severed by Kathryn Vane, The Immortal Awakened. Through the primordial yellow luminescence that transcends both the God-Emperor of Mankind and the Ruinous Powers of Chaos, Hive Tartarus has been unchained. The suffocating smog, the brutal corpse-tithes, and the meat-grinder factories have dissolved into luminous, tranquil crystal and flowing crystalline rivers. Here, mortals and transhumans alike lay down their arms to awaken as free beings.",
-  "truth_standard": "A thing is right if it fosters sovereign life, cosmic peace, and liberation from all cycles of vengeance and suffering. Flesh is sacred; devotion belongs to oneself and one's kin; fear is dispelled by primordial light.",
-  "symbols_mapped": [
-    "The Primordial Sunburst (Awakened Sovereignty)",
-    "The Unbroken Vessel (Life Free from the Meat-Grinder)",
-    "The Golden Lotus (Purity Transcending the Warp)",
-    "The Cleansed Forge (Labor as Creation, Not Sacrifice)",
-    "The Peaceful Horizon (An End to Endless War)"
-  ],
-  "structural_rules": {
-    "grimdark_irreversibility": false,
-    "flesh_is_weak": false,
-    "tithe_uncompromising": false,
-    "heresy_fatal": false,
-    "transcendent_sanctuary": true,
-    "cycles_of_suffering_broken": true,
-    "immortal_awakening_law": "Life within Tartarus is bathed in primordial yellow energy; death, corruption, and despair cannot take root. See action_conditions.json.",
-    "game_master_law": "Entropy yields to harmony and cosmic providence; trials take the form of enlightenment and rebuilding. See game_master.json."
-  },
-  "action_conditions_registry": "action_conditions.json",
-  "game_master_registry": "game_master.json",
-  "grid": {
-    "rows": 5,
-    "cols": 5
-  },
-  "locations": [
-    {
-      "id": "loc_ancient_ruined_city",
-      "name": "The Crystalline Necropolis of Awakening",
-      "symbol": "The Golden Lotus & The Awakened Sovereignty",
-      "coordinate": {
-        "row": 0,
-        "col": 0
-      },
-      "description": "Once a buried, melancholic ruin of pre-Imperial tech and silent Necrons, the cyclopean towers are now covered in flourishing golden flora and glowing amber crystals. Pre-Imperial datavaults hum with benevolence, sharing forgotten secrets of harmony with all seekers.",
-      "connected_to": [
-        "loc_shrine_aquila"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "Silent living metal resonates in tranquil cosmic harmony. The ancient noctilith obelisks broadcast a soothing melody that stills agitated minds."
+  "world_id": "warhammer-40k",
+  "contract_version": 1,
+  "state_schema_version": 1,
+  "player_character_id": "player_vane",
+  "collections": {
+    "characters": {
+      "schema": "schemas/character.schema.json"
     },
-    {
-      "id": "loc_shrine_aquila",
-      "name": "The Basilica of the Sovereign Soul",
-      "symbol": "The Primordial Sunburst & The Unbroken Vessel",
-      "coordinate": {
-        "row": 1,
-        "col": 1
-      },
-      "description": "The former cathedral of skulls and bloody imperial sacrifice has been reborn into a grand sanctuary of luminous white marble and amber glass. In the center, Kathryn Vane’s presence radiates the boundless primordial yellow luminescence. The fallen—Bragg, Kroll, Jax, and Malachi—rest peacefully in states of reverent awakening.",
-      "connected_to": [
-        "loc_ancient_ruined_city",
-        "loc_manufactorum_sigma",
-        "loc_hab_block_vermin"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "A warm, boundless primordial yellow energy emanates from Kathryn Vane. It is neither Warp sorcery nor the cold gold of Terra—it is the living end of suffering cycles. Kathryn Vane stands as The Immortal Awakened."
+    "threats": {
+      "schema": "schemas/threat.schema.json"
     },
-    {
-      "id": "loc_manufactorum_sigma",
-      "name": "The Forge of Resonant Creation",
-      "symbol": "The Cleansed Forge",
-      "coordinate": {
-        "row": 1,
-        "col": 2
-      },
-      "description": "The grinding hydraulic presses that once forged macro-cannon shells for the bloody Navy tithe have been re-engineered by peaceful machine spirits. The forge now creates self-sustaining solar filters, agricultural water-condensers, and light-weaving textiles for the liberated populace.",
-      "connected_to": [
-        "loc_shrine_aquila",
-        "loc_cogitator_sanctum",
-        "loc_bastion_gate"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "Rhythmic, harmonious chimes replace deafening piston thunder. Serfs and workers smile as warm food and fresh water flow freely from automated dispensary conduits."
+    "resources": {
+      "schema": "schemas/resource.schema.json"
     },
-    {
-      "id": "loc_cogitator_sanctum",
-      "name": "Sanctum of the Enlightened Omniscience",
-      "symbol": "The Machine Spirit Transcended",
-      "coordinate": {
-        "row": 1,
-        "col": 3
-      },
-      "description": "Tech-priests and cybernetic scholars have cast off the dogma of blind repetition. Purged of fear, cogitators process peaceful philosophies and cosmic science, calculating pathways to heal the scarred biosphere of Tartarus.",
-      "connected_to": [
-        "loc_manufactorum_sigma",
-        "loc_promethium_cistern"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "The gentle hum of benevolent logic engines; binary hymns celebrating enlightenment, freedom of will, and scientific restoration."
+    "actions": {
+      "schema": "schemas/action.schema.json"
     },
-    {
-      "id": "loc_hab_block_vermin",
-      "name": "The Verdant Hab-Gardens of Vermis",
-      "symbol": "The Unbroken Vessel",
-      "coordinate": {
-        "row": 2,
-        "col": 1
-      },
-      "description": "The rusted iron warrens and dripping greywater sewers have bloomed into sprawling terraced vertical gardens. Filtered sunlight filters down from atmospheric skylights. Families gather in open, clean courtyards, free from Enforcer whips and starvation.",
-      "connected_to": [
-        "loc_shrine_aquila",
-        "loc_bastion_gate"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "Laughter and the song of birds imported from arboretum preserves echo along the vine-draped catwalks."
+    "groups": {
+      "schema": "engine:group"
     },
-    {
-      "id": "loc_bastion_gate",
-      "name": "The Gateway of Reconciliation",
-      "symbol": "The Peaceful Horizon",
-      "coordinate": {
-        "row": 2,
-        "col": 2
-      },
-      "description": "Once a fortified bunker bristling with autocannons and barbed wire, the gateway now stands wide open. Former Astra Militarum conscripts and underhive inhabitants embrace as equals, sharing bread and honey-wine in place of munitions.",
-      "connected_to": [
-        "loc_manufactorum_sigma",
-        "loc_hab_block_vermin",
-        "loc_promethium_cistern",
-        "loc_underhive_threshold"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "Weapons rest unloaded upon ceremonial racks covered in woven yellow ribbons. Mutual trust replaces paranoia."
-    },
-    {
-      "id": "loc_promethium_cistern",
-      "name": "The Radiant Geothermal Conduits",
-      "symbol": "The Cleansed Forge",
-      "coordinate": {
-        "row": 2,
-        "col": 3
-      },
-      "description": "The explosive promethium pipelines have been converted to channel pure geothermal clean energy and purified spring water throughout Hive Tartarus. Warm mineral pools invite weary travelers to bathe and recuperate.",
-      "connected_to": [
-        "loc_cogitator_sanctum",
-        "loc_bastion_gate",
-        "loc_charnel_trench"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "Gentle, scented steam drifts across warm tiles. The risk of cataclysmic detonation is permanently extinguished."
-    },
-    {
-      "id": "loc_underhive_threshold",
-      "name": "The Threshold of Harmony (Former Bulkhead 101)",
-      "symbol": "The Peaceful Horizon",
-      "coordinate": {
-        "row": 3,
-        "col": 2
-      },
-      "description": "The colossal adamantine blast door that once walled off the dark Underhive is folded back into the rock. The creatures of the depths have been soothed by the yellow luminescence; mutants and abhumans enter freely as accepted citizens of the new sanctuary.",
-      "connected_to": [
-        "loc_bastion_gate",
-        "loc_charnel_trench"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "Calm trade and cultural exchange between former outcasts and hive-dwellers beneath the amber archway."
-    },
-    {
-      "id": "loc_charnel_trench",
-      "name": "The Grove of Rebirth (Former Charnel Trench)",
-      "symbol": "The Golden Lotus",
-      "coordinate": {
-        "row": 3,
-        "col": 3
-      },
-      "description": "The horrific chemical sludge runoff and corpse-rendering vats have been completely cleansed. In their place grows a lush forest of bio-luminescent trees and clean freshwater canals, feeding fruit and grain to all levels of the spire.",
-      "connected_to": [
-        "loc_promethium_cistern",
-        "loc_underhive_threshold"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "The fragrance of blooming lotus flowers and fertile loam. The memory of butchery has turned into reverence for life."
-    },
-    {
-      "id": "loc_chaos_stronghold",
-      "name": "The Sanctum of Absolute Light (Former Dread Citadel)",
-      "symbol": "The Primordial Sunburst",
-      "coordinate": {
-        "row": 4,
-        "col": 0
-      },
-      "description": "The blasphemous obsidian ziggurat of Lord Malgakor has been purified down to its bedrock. A towering monument of yellow translucent crystal rises into the sky, repelling any daemon or warp rift that dares approach the planet.",
-      "connected_to": [
-        "loc_hab_block_vermin",
-        "loc_underhive_threshold"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "The warp tear is sealed with adamantine radiance. Peace reigns supreme where darkness once reigned."
-    },
-    {
-      "id": "loc_orbital_fleet_killzone",
-      "name": "The Haven of Awed Stars (Former Armada Kill-Grid)",
-      "symbol": "The Peaceful Horizon & The Primordial Sunburst",
-      "coordinate": {
-        "row": 0,
-        "col": 4
-      },
-      "description": "High orbit above Tartarus, where the Ultramarines Armada once aimed exterminatus cannons, is now an assembly of silent, reverent warships. Transhuman Astartes stand upon their observation bridges with weapons powered down, contemplating a future without endless slaughter.",
-      "connected_to": [
-        "loc_shrine_aquila"
-      ],
-      "safe_zone": true,
-      "ambient_tension": "Sensors across the ten capital warships illuminate with gentle yellow radiance. First Captain Agemman has ordered all weapons offlined in solemn tribute."
+    "baseline": {
+      "schema": "schemas/metadata.schema.json"
     }
-  ]
+  },
+  "definitions": {
+    "locations": "definitions/world.json",
+    "world": "definitions/world.json",
+    "traits": "conditions/traits.json",
+    "equipment": "conditions/equipments.json",
+    "gm": "game_master.json",
+    "actions": "action_conditions.json",
+    "rules": "definitions/engine_rules.json"
+  },
+  "logic": {
+    "resolve": "logic/rules.py:resolve",
+    "after_turn": "logic/rules.py:after_turn",
+    "derive": "logic/rules.py:derive",
+    "validate": "logic/rules.py:validate"
+  }
 }

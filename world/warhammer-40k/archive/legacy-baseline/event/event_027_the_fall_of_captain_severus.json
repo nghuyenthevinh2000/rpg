@@ -1,0 +1,86 @@
+{
+  "id": "event_027_the_fall_of_captain_severus",
+  "name": "The Fall of the Executioner: Kathryn Vane Sleys Captain Severus",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.053.M41",
+    "turn_increment": 1,
+    "world_state": "Captain Severus Slain — The Void Ascendant Commands Sub-Level 404"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The shattered Terminator plate of Captain Severus lies broken across the floating basalt stones of the Basilica. Eclipser's dark-matter blade delivered an apocalyptic 8,846.6 net damage blow, cutting clean through the Iron Halo and adamantium armor. Kathryn Vane stands victorious, her violet warp-aura burning into the open sky as the Ultramarines Strike Cruiser above panics in disarray."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_captain_severus_slain",
+        "title": "The Slaying of Captain Severus (Avenger of the Betrayed)",
+        "completed_at": "41.999.053.M41",
+        "consequence": "Kathryn Vane, The Void Ascendant, surged across the floating debris of Sub-Level 404 and executed Captain Severus with Eclipser, shouting 'You betrayed us, you will pay!' The strike shattered the Ultramarines execution force and avenged the fallen garrison of 404."
+      }
+    ],
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_the_orbital_retribution",
+        "name": "The Assault on the 'Honor of Macragge'",
+        "type": "orbital_ascension_crusade",
+        "threat": "With Captain Severus slain, the Strike Cruiser 'Honor of Macragge' in high orbit prepares emergency orbital lances to glass Hive Tartarus, while Kathryn Vane harnesses the anti-gravitational void singularity to ascend into orbit.",
+        "human_trial": "Ascend through the atmosphere of Hive Tartarus on wings of dark matter and board or destroy the Strike Cruiser that brought the purge order.",
+        "status": "active"
+      }
+    ],
+    "threat_tracking": {
+      "status": "imperial_commander_slain",
+      "total_threats_neutralized": 54,
+      "sublevel_containment_rating": "IMPERIAL FORCES DESTROYED // VOID ASCENDANCY ABSOLUTE",
+      "sector_threat_telemetry": {
+        "loc_shrine_aquila": {
+          "threat": "👑 KATHRYN VANE VICTORIOUS (Severus Slain / 528 HP)",
+          "level": "Absolute Rule"
+        },
+        "loc_bastion_gate": {
+          "threat": "Warp Current Channeling to High Orbit",
+          "level": "Ascension Conduit"
+        }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 1,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Kathryn Vane, The Void Ascendant",
+          "role": "Avatar of the Void / Nemesis of Guilliman",
+          "status": "triumphant_avenger (528/640 HP, Eclipser Dripping Transhuman Blood)"
+        },
+        {
+          "id": "npc_captain_severus",
+          "name": "Captain Severus",
+          "role": "Slain Executioner of Guilliman",
+          "status": "KIA / CLEAVED BY ECLIPSER"
+        }
+      ]
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "dissonance": 5
+      },
+      "new_decision": {
+        "turn": 28,
+        "location": "loc_shrine_aquila",
+        "choice_type": "cleave_the_betrayer",
+        "decision": "Cleaved Captain Severus with Eclipser, screaming the vow of vengeance for Bragg, Kroll, Jax, and Malachi.",
+        "impact": "Slew the transhuman executioner and turned gaze toward the heavens."
+      },
+      "current_location": "loc_shrine_aquila"
+    }
+  ]
+}

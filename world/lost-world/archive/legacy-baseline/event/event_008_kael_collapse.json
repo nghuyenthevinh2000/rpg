@@ -1,0 +1,79 @@
+{
+  "event_id": "event_008_kael_collapse",
+  "name": "The Fall to Earth & Communal Triage",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-09T12:00:00+07:00",
+    "world_state": "The Threshold of Human Vulnerability"
+  },
+  "narrative": "Kael's legs give out and he collapses onto the split cedar floorboards. The ideological posture of invulnerable detachment crumbles. Dr. Harlan and Marcus catch him, laying him beside the radiant warmth of the granite hearth. Lyra heats herbal broth and presses hot stones wrapped in cloth to his chest. Kael is forced to receive care from the very people he sought to observe.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "The hall is thick with aromatic cedar heat, boiling herb broth, and intense, attentive human care; the founder has become the patient."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": -10,
+        "clarity": 5,
+        "dissonance": -10,
+        "physical_vitality": 15
+      },
+      "new_decision": {
+        "turn": 21,
+        "location": "loc_monastery",
+        "choice_type": "physical_collapse",
+        "decision": "Collapsed to the ground beside the hearth, surrendering the sovereign observer persona and allowing the community to nurse him back to life.",
+        "impact": "Shattered the subtle ego of non-attachment; experienced the profound vulnerability of receiving human love and physical care."
+      }
+    },
+    {
+      "char_file": "dr_harlan.json",
+      "stat_deltas": {
+        "agency": 10,
+        "clarity": 5,
+        "dissonance": -5,
+        "physical_vitality": 5
+      },
+      "new_decision": {
+        "turn": 21,
+        "decision": "Caught Kael as he fell, stabilized his neck, elevated his frozen feet, and monitored his reviving pulse with gentle, attentive fingertips.",
+        "impact": "Fully embodied the sacred duty of the tactile physician."
+      }
+    },
+    {
+      "char_file": "marcus.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5,
+        "dissonance": -2,
+        "physical_vitality": 5
+      },
+      "new_decision": {
+        "turn": 21,
+        "decision": "Heaved three split granite stones into the hearth embers, heating them to place at Kael's extremities to gently restore core temperature.",
+        "impact": "Applied practical survival mastery to protect a brother."
+      }
+    },
+    {
+      "char_file": "lyra.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5,
+        "dissonance": -2,
+        "physical_vitality": 5
+      },
+      "new_decision": {
+        "turn": 21,
+        "decision": "Steeped wild crushed ginger and dried comfrey into boiling meltwater, lifting Kael's head to spoon warm broth between his chapped lips.",
+        "impact": "Nourished life back into the enclave's founder."
+      }
+    }
+  ]
+}

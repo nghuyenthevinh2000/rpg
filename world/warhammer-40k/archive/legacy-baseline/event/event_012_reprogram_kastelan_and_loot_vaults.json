@@ -1,0 +1,264 @@
+{
+  "id": "event_012_reprogram_kastelan_and_loot_vaults",
+  "name": "The Rite of Binary Subjugation & Unsealing of Armory 00-Null",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.038.M41",
+    "turn_increment": 1,
+    "world_state": "Archeotech Secured: Kastelan Subjugated & Vaults Harvested"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_ancient_ruined_city",
+        "ambient_tension": "The 10-foot Kastelan Automaton stands at rigid attention beside Sergeant Vane, its heavy phosphor blaster slung in defensive posture. The Sol-Aegis Plasma Reactor hums softly on Bragg's salvage sled as the squad crates pre-Heresy plasma weapons."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_kastelan_subjugated_and_vault_harvested",
+        "title": "Kastelan Automaton Bound to Command & Archeotech Vaults Plundered",
+        "completed_at": "41.999.038.M41",
+        "consequence": "Sergeant Kathryn Vane performed the Rite of Binary Communion with sacred unguents, reprogramming the 300 HP Kastelan Automaton 'Iron Bastion' into the garrison's supreme war engine. Unsealed Armory 00-Null, recovering 3 Mark IV Plasma Guns, 2 Void Carapace suits, 10 Krak grenades, and the Sol-Aegis Plasma Micro-Reactor."
+      }
+    ],
+    "clear_active_disasters": true,
+    "threat_tracking": {
+      "status": "active_monitoring",
+      "total_threats_neutralized": 50,
+      "sublevel_containment_rating": "95% Contained (ARCHEOTECH & KASTELAN SECURED)",
+      "sector_threat_telemetry": {
+        "loc_ancient_ruined_city": {
+          "threat": "SECURED & SUBJUGATED (Kastelan Automaton Ally Bound)",
+          "level": "Claimed & Pacified"
+        },
+        "loc_shrine_aquila": { "threat": "Sanctified (Forward Expedition Staging)", "level": "Secure" },
+        "loc_manufactorum_sigma": { "threat": "Tithe Production Maintained", "level": "Secure" },
+        "loc_cogitator_sanctum": { "threat": "Telemetry Link Monitored by Kroll", "level": "Secure" },
+        "loc_hab_block_vermin": { "threat": "Drainage Purged & Barricaded", "level": "Secured" },
+        "loc_bastion_gate": { "threat": "Redoubt Garrisoned", "level": "Secure" },
+        "loc_promethium_cistern": { "threat": "Pressure Stabilized", "level": "Guarded" },
+        "loc_underhive_threshold": { "threat": "Bulkhead Sealed 500%", "level": "Fortified" },
+        "loc_charnel_trench": { "threat": "Carcass Harvest Completed", "level": "Secured & Purged" }
+      }
+    },
+    "garrison_forces": {
+      "total_effective_combatants": 48,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Expedition Commander",
+          "status": "exalted_victorious"
+        },
+        {
+          "id": "npc_kastelan_iron_bastion",
+          "name": "Kastelan Automaton 'Iron Bastion'",
+          "role": "Ancient Cybernetica Siege Titan (300 HP)",
+          "status": "bonded_to_vane"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Expedition Vanguard / Breacher",
+          "status": "carrying_plasma_core"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Master of Foundry Spirits",
+          "status": "ecstatic_binharic_communion"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "High Preceptor & Morale Officer",
+          "status": "active_bastion_oversight"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Expedition Scout & Pointman",
+          "status": "wielding_plasma_gun"
+        }
+      ],
+      "sub_units": [
+        {
+          "unit_name": "Expedition Vanguard Detail (Astra Militarum)",
+          "count": 4,
+          "armament": "Kantrael Lasguns, Mark IV Plasma Guns, Void Carapace",
+          "morale": "Fanatical (100% — Commanded by Ancient Automaton)",
+          "station": "Escorting Archeotech Plasma Core back to Basilica (0,0 -> 1,1)"
+        },
+        {
+          "unit_name": "4th Conscript Platoon (Base Garrison)",
+          "count": 20,
+          "armament": "Kantrael Lasguns, combat knives, scarred flak vests",
+          "morale": "Steadfast (90%)",
+          "station": "Bastion Gate Aegis & Hab-Block Vermis-9 defensive perimeter"
+        },
+        {
+          "unit_name": "Bastion Heavy Weapons Detachment",
+          "count": 6,
+          "armament": "2x Emplaced Heavy Stubbers, 1x Twin-Linked Autocannon",
+          "morale": "Disciplined (95%)",
+          "station": "Overwatch Catwalks over Underhive Threshold"
+        },
+        {
+          "unit_name": "Hive Enforcer Shock Detail",
+          "count": 12,
+          "armament": "Shock-Mauls, Suppression Shields, Combat Shotguns",
+          "morale": "Hardened (90%)",
+          "station": "Hab-Block Vermis-9 lower drainage cordon"
+        },
+        {
+          "unit_name": "Industrial Defense Servitors (Lobotomized)",
+          "count": 16,
+          "armament": "Hydraulic Claws, Rivet Guns",
+          "morale": "Absolute (Machine-bonded 100%)",
+          "station": "Manufactorum 88-Sigma staging lines"
+        }
+      ]
+    },
+    "active_resource_stockpile": {
+      "munitions": {
+        "lasgun_charge_packs": {
+          "current": 140,
+          "unit": "standard packs",
+          "burn_rate_turn": 5
+        },
+        "heavy_stubber_belts": {
+          "current": 42,
+          "unit": "drum belts",
+          "burn_rate_turn": 0
+        },
+        "autocannon_magazines": {
+          "current": 12,
+          "unit": "box magazines",
+          "burn_rate_turn": 0
+        },
+        "shotgun_solid_slugs": {
+          "current": 50,
+          "unit": "rounds",
+          "burn_rate_turn": 2
+        },
+        "frag_grenades": {
+          "current": 13,
+          "unit": "canisters",
+          "burn_rate_turn": 0
+        },
+        "krak_grenades": {
+          "current": 19,
+          "unit": "charges (+10 high-grade Krak canisters recovered from Armory 00-Null)",
+          "burn_rate_turn": 0
+        },
+        "heavy_bolter_drums": {
+          "current": 5,
+          "unit": "drums (+5 sealed Armory 00-Null heavy bolter drums)"
+        },
+        "mark_iv_plasma_guns": {
+          "current": 3,
+          "unit": "archeotech weapons (Unmatched anti-monstrosity firepower)"
+        }
+      },
+      "construction_and_tech": {
+        "plasteel_barricade_plates": {
+          "depot_stock": 26,
+          "committed_to_actions": 0,
+          "unit": "heavy sheets"
+        },
+        "promethium_welding_canisters": {
+          "depot_stock": 14,
+          "committed_to_actions": 0,
+          "unit": "pressurized flasks"
+        },
+        "sacred_machine_unguent": {
+          "depot_stock": 13,
+          "unit": "vials (-1 vial expended on Kastelan communion)"
+        },
+        "sol_aegis_plasma_micro_reactor": {
+          "depot_stock": 1,
+          "unit": "intact pre-Imperial fusion core (Infinite clean power for Level 404)"
+        },
+        "void_hardened_carapace_suits": {
+          "depot_stock": 2,
+          "unit": "suits (Equipped to Vane and frontline vanguard)"
+        }
+      },
+      "sustenance_and_survival": {
+        "corpse_starch_ration_bars": {
+          "current": 1000,
+          "unit": "ration blocks (-75 consumed)",
+          "burn_rate_turn": 75,
+          "days_reserve": 3.2
+        },
+        "recycled_greywater_canisters": {
+          "current": 290,
+          "unit": "canteens (-35 consumed)",
+          "burn_rate_turn": 35,
+          "days_reserve": 2.1
+        },
+        "grade_3_respirator_filters": {
+          "current": 16,
+          "unit": "sealed canisters",
+          "status": "active_in_ruins"
+        },
+        "combat_med_stims": {
+          "current": 32,
+          "unit": "injector ampoules"
+        }
+      },
+      "quarantine_logistics_alert": "TRIUMPHANT RECLAMATION: Sol-Aegis Plasma Core & Kastelan Automaton secured! Returning to Bastion Sanctus with supreme archeotech."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "physical_vitality": 15,
+        "dissonance": -15,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 13,
+        "location": "loc_ancient_ruined_city",
+        "choice_type": "techno_theological_communion",
+        "decision": "Anointed the Kastelan Automaton's cortex with Sacred Machine Unguent #44 while reciting the Litany of the Omnissiah; successfully bound its machine-spirit to Imperial command. Supervised the unsealing of Armory 00-Null, equipping a Void-Hardened Heavy Carapace suit and securing the Sol-Aegis Plasma Core.",
+        "impact": "Acquired the 300 HP Kastelan Automaton as an unstoppable garrison ally; upgraded personal armor defense and eliminated power scarcity for the sub-level."
+      },
+      "current_location": "loc_ancient_ruined_city"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "physical_vitality": 15,
+        "dissonance": -10
+      },
+      "new_decision": {
+        "turn": 13,
+        "location": "loc_ancient_ruined_city",
+        "choice_type": "heavy_core_transport",
+        "decision": "Laughed with booming Ogryn joy as the 10-foot metal machine became their friend; hefted the 800-pound Sol-Aegis Plasma Reactor onto his shoulder like a sack of grain, ready to carry it back to the Sarge's base.",
+        "impact": "Safely transported the archeotech core across the ancient causeway; vitality surged to 85."
+      },
+      "current_location": "loc_ancient_ruined_city"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "physical_vitality": 10,
+        "dissonance": -15
+      },
+      "new_decision": {
+        "turn": 13,
+        "location": "loc_ancient_ruined_city",
+        "choice_type": "archeotech_mastery",
+        "decision": "Assisted the Sarge with the datasmith override wafer, then broke the seal on Armory 00-Null; claimed a gleaming Mark IV Plasma Gun, beaming with pride as a consecrated vanguard gunner.",
+        "impact": "Armed with archeotech plasma weaponry; transformed into an elite heavy marksman with zero fear of future mutant swarms."
+      },
+      "current_location": "loc_ancient_ruined_city"
+    }
+  ]
+}

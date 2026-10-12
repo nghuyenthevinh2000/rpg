@@ -1,0 +1,62 @@
+{
+  "event_id": "event_010_phantom_gun_sublimation",
+  "name": "The Phantom Weapon & The Iron Poker",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-09T14:15:00+07:00",
+    "world_state": "The Dissolution of Phantom Violence"
+  },
+  "narrative": "Delirious from severe hypothermia recovery, Kael hears a nihilistic voice whisper from the void: 'end Marcus life'. He experiences a violent psychic dissociation, reaching for an imagined weapon. But firearms do not exist in this post-scarcity world. His trembling hand grabs the cold iron hearth poker. He lunges at Marcus, but Marcus's 'Will to Live at All Costs' trait instantly triggers: Marcus sidesteps the clumsy swing, catches Kael's wrists, and pins him gently against the cedar wall until the phantom delusion shatters into reality.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "The iron poker clatters against the granite hearth; heavy panting in the warm hall as the violent phantom delusion is subdued by living fellowship."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": -15,
+        "clarity": 10,
+        "dissonance": 15
+      },
+      "new_decision": {
+        "turn": 23,
+        "location": "loc_monastery",
+        "choice_type": "psychic_dissociation",
+        "decision": "Heard a destructive command from the void to end Marcus, lost consciousness, and grabbed the iron poker believing it was a gun.",
+        "impact": "Exposed the final psychological trap of nihilism: the desire to manufacture melodrama or bloodshed when stillness fails. Subdued without bloodshed."
+      }
+    },
+    {
+      "char_file": "marcus.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5,
+        "dissonance": 2,
+        "physical_vitality": -2
+      },
+      "new_decision": {
+        "turn": 23,
+        "decision": "Will to Live at All Costs triggered: Disarmed a delirious Kael, locked his arms, and forced him to drop the iron poker without inflicting harm.",
+        "impact": "Refused to die; defended his life and preserved the brotherhood."
+      }
+    },
+    {
+      "char_file": "dr_harlan.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 23,
+        "decision": "Recognized Kael's acute paradoxical delirium from rewarming shock and administered crushed valerian root to calm the nervous system.",
+        "impact": "Medically stabilized severe post-hypothermic psychic episode."
+      }
+    }
+  ]
+}

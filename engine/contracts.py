@@ -2,6 +2,9 @@
 from copy import deepcopy
 from dataclasses import dataclass, field
 import hashlib
+import importlib
+from importlib.abc import Loader, MetaPathFinder
+from importlib.machinery import ModuleSpec
 import json
 import math
 from pathlib import Path
@@ -187,6 +190,48 @@ CONTRACT_SCHEMA = object_schema({
 }, ('world_id','contract_version','state_schema_version','player_character_id','collections','logic'))
 
 
+class _RuleSources(MetaPathFinder, Loader):
+    """Import only captured source in registered, hash-scoped rule packages."""
+    def __init__(self):
+        self.packages = {}
+
+    def find_spec(self, fullname, path=None, target=None):
+        namespace, _, relative = fullname.partition('.')
+        if namespace not in self.packages or not relative:
+            return None
+        directory, sources = self.packages[namespace]
+        base = directory.joinpath(*relative.split('.'))
+        module_path = base.with_suffix('.py')
+        package_path = base / '__init__.py'
+        is_package = package_path in sources
+        if is_package:
+            module_path = package_path
+        elif module_path not in sources:
+            if any(source.is_relative_to(base) for source in sources):
+                spec = ModuleSpec(fullname, None, is_package=True)
+                spec.submodule_search_locations = [str(base)]
+                return spec
+            # Do not fall through to filesystem/bytecode imports of unhashed files.
+            raise ModuleNotFoundError(f'No captured rule source: {fullname}', name=fullname)
+        spec = ModuleSpec(fullname, self, origin=str(module_path), is_package=is_package)
+        spec.loader_state = (module_path, sources[module_path])
+        if is_package:
+            spec.submodule_search_locations = [str(base)]
+        return spec
+
+    def create_module(self, spec):
+        return None
+
+    def exec_module(self, module):
+        path, source = module.__spec__.loader_state
+        module.__file__ = str(path)
+        # Compile captured bytes, never timestamp/size-validated cached bytecode.
+        exec(compile(source, str(path), 'exec'), module.__dict__)
+
+
+_RULE_SOURCES = _RuleSources()
+
+
 class WorldContract:
     def __init__(self, world_dir, *, load_hooks=True):
         self.world_dir = Path(world_dir).resolve()
@@ -224,7 +269,7 @@ class WorldContract:
         self.derive = lambda ctx, entity_ref: {}
         self.validate = lambda ctx: []
         source_hash = hashlib.sha256()
-        modules = {}
+        hooks, directories, sources = {}, set(), {}
         for name, reference in sorted(self.config['logic'].items()):
             if reference.count(':') != 1:
                 raise RuleError('invalid_hook', f'Invalid hook reference: {reference}')
@@ -234,24 +279,55 @@ class WorldContract:
             path = contained_path(self.world_dir, filename)
             if path.suffix != '.py':
                 raise RuleError('invalid_hook', 'Rule modules must be Python files')
-            if not load_hooks:
-                continue  # Replay and snapshots never execute rule modules.
-            if filename not in modules:
-                try:
-                    source = path.read_bytes()
-                    source_hash.update(filename.encode()); source_hash.update(b'\0'); source_hash.update(source)
-                    module = ModuleType('rpg_rules_' + hashlib.sha256(str(path).encode() + source).hexdigest())
-                    module.__file__ = str(path)
-                    sys.modules[module.__name__] = module
-                    exec(compile(source, str(path), 'exec'), module.__dict__)
-                    modules[filename] = module
-                except Exception as exc:
-                    raise RuleError('invalid_hook', f'Cannot load {reference}: {exc}') from exc
-            hook = getattr(modules[filename], function, None)
+            hooks[name] = (path, function, reference)
+            directories.add(path.parent)
+        if not load_hooks:
+            self.rule_source_hash = source_hash.hexdigest()
+            return  # Replay/snapshots/recovery validate references, not Python source.
+        try:
+            for directory in sorted(directories):
+                for candidate in directory.rglob('*'):
+                    if '__pycache__' in candidate.relative_to(directory).parts:
+                        continue
+                    path = contained_path(self.world_dir, str(candidate.relative_to(self.world_dir)))
+                    if path.is_file() and path.suffix == '.py':
+                        sources[path] = path.read_bytes()
+            for path, _, reference in hooks.values():
+                if path not in sources:
+                    raise RuleError('invalid_hook', f'Missing rule source: {reference}')
+        except OSError as exc:
+            raise RuleError('invalid_hook', f'Cannot read rule sources: {exc}') from exc
+        for path, source in sorted(sources.items()):
+            source_hash.update(str(path.relative_to(self.world_dir)).encode())
+            source_hash.update(b'\0')
+            source_hash.update(len(source).to_bytes(8, 'big'))
+            source_hash.update(source)
+        self.rule_source_hash = source_hash.hexdigest()
+        if _RULE_SOURCES not in sys.meta_path:
+            sys.meta_path.insert(0, _RULE_SOURCES)
+        packages = {}
+        for directory in sorted(directories):
+            identity = hashlib.sha256(str(directory).encode()).hexdigest()
+            namespace = 'rpg_rules_' + identity + '_' + self.rule_source_hash
+            packages[directory] = namespace
+            if namespace not in sys.modules:
+                package = ModuleType(namespace)
+                package.__package__ = namespace
+                package.__path__ = [str(directory)]
+                package.__spec__ = ModuleSpec(namespace, None, is_package=True)
+                package.__spec__.submodule_search_locations = package.__path__
+                _RULE_SOURCES.packages[namespace] = (directory, sources)
+                sys.modules[namespace] = package
+        for name, (path, function, reference) in hooks.items():
+            try:
+                namespace = packages[path.parent]
+                module = importlib.import_module(namespace + '.' + path.stem)
+            except Exception as exc:
+                raise RuleError('invalid_hook', f'Cannot load {reference}: {exc}') from exc
+            hook = getattr(module, function, None)
             if not callable(hook):
                 raise RuleError('invalid_hook', f'Not a callable hook: {reference}')
             setattr(self, name, hook)
-        self.rule_source_hash = source_hash.hexdigest()
 
     def _load_schema(self, path):
         uri = path.as_uri()

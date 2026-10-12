@@ -1,6 +1,6 @@
 # Execution ledger — plan: projects/rpg/plan/README.md
 
-Scope: the plan's initial deliverable, with opt-in migration and no live gameplay or save cutover during development. User approved working in place on 2026-10-09. Existing RPG files are untracked; unrelated repository changes must remain untouched. No commits or pushes requested.
+Scope: the plan's initial deliverable, with authorized baseline migration and no live gameplay turns. User approved working in place on 2026-10-09, then authorized defining the contract and adapting existing worlds. The user subsequently committed the project as a nested repository (`8dd76df`); retain those files and unrelated repository changes. No agent commits or pushes requested.
 
 ## Tasks
 
@@ -30,6 +30,16 @@ Ruling: Normalize to an explicit imported current-save baseline; snapshot legacy
 
 Task 1: complete — 37 focused engine tests passed. Independent review verified the casefold identity and full-baseline replay fixes; both findings addressed. Engine APIs/report: `engine-report.md`, scoped review: `engine-review.md`.
 
-Task 2: in progress — world integration dispatch was interrupted by an incoming notification/progress question; resume the same implementer session, not a duplicate.
+Task 2: implementation verified on 2026-10-12 — the cancelled worker left world integration which the user committed in nested repository `8dd76df`. Existing 30 world integration tests and 37 engine tests all pass under `uv`. Temporary-copy CLI migration/dry-run/commit/render succeeded for both worlds, live content hashes unchanged. No implementation was restarted or overwritten.
+
+Task 3: complete — pre-cutover review clean (`worlds-review.md`); six additional temporary interrupted-directory-installation probes passed. Post-cutover full suite: 67 tests passed in 8.823s using `uv`; `git diff --check` passed. Both worlds remain at their original turns, with no gameplay events. Changes left uncommitted in place; no push or branch operation.
+
+Live cutover completed on 2026-10-12. Lost World: turn 33/day 4, 27 original JSON archives hash-verified. Warhammer: turn 37/day 9, 48 original JSON archives hash-verified. Both custom validators pass, canonical maps rendered, snapshots unchanged by rendering, only non-gameplay `engine_baseline` receipts exist. Full pre-cutover backup: `/private/var/folders/nm/hp2tb73d0l75gl6jzvy6jfnm0000gn/T/opencode/rpg-pre-cutover-nw0p0fd5`. Durable original JSON archives reside inside each world under `archive/legacy-baseline/`.
+
+Task 2: complete — both existing worlds now use canonical contracts, split-state baselines and world-specific rules. Shared CLI, read-only inspection and canonical rendering are operational. Earlier opt-in-only ruling was superseded by the user's normalization/cutover authorization. Unsupported historical construction, automated production/resource attrition, troop casualties and resurrection remain explicitly deferred; this completes the plan's initial scope, not every later extraction phase.
+
+User instruction: use `uv` for Python package management. Verified command: `uv run --no-project --with-requirements requirements.txt python -m unittest discover -s tests -v` (67 tests, exit 0).
+
+2026-10-12: previous temporary virtualenv/snapshot were not present after session resumption. Live source contents remain available and tests passed using those sources. Capture a fresh full backup immediately before cutover; original JSON bytes are also preserved by the migration archive.
 
 Operational guidance: updated `projects/rpg/AGENTS.md` to world-neutral gameplay roles, canonical proposals, and exactly one runner invocation. Retained 1–2 sub-agent gameplay mandate; excluded development/migration/tests. Original 79 world files are hashed and independently snapshotted in the approved temporary directory before any cutover.

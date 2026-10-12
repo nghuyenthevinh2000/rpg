@@ -1,0 +1,225 @@
+{
+  "id": "event_009_carcass_extraction_and_salvage",
+  "name": "Butchery of the Apex Titan: Munitorum Harvest & Carapace Salvage",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.035.M41",
+    "turn_increment": 1,
+    "world_state": "Sump Trench Harvested — Carcass Rendering Active"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_charnel_trench",
+        "ambient_tension": "The 20-ton bio-titan is surrounded by salvage torches and chain-hoists. Enginseer Kroll's servitors strip adamantine chitin plates while corpse-grinders harvest organic tallow and concentrated adrenaline sacs."
+      }
+    ]
+  },
+  "progress_updates": {
+    "completed_milestones": [
+      {
+        "milestone_id": "ms_apex_carcass_salvaged",
+        "title": "Munitorum Harvest of the Sump Bio-Titan Carcass",
+        "completed_at": "41.999.035.M41",
+        "consequence": "Harvested 24 adamantine chitin plates, rendered 450 ration blocks of protein-tallow, synthesized 12 combat med-stims from adrenal glands, extracted 6 flasks of bioluminescent promethium-tallow, and salvaged swallowed Munitorum munitions."
+      }
+    ],
+    "active_disasters_and_trials": [],
+    "garrison_forces": {
+      "total_effective_combatants": 47,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Garrison Commander",
+          "status": "commanding_salvage"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Breacher / Heavy Shock Asset",
+          "status": "recovering_trophy_bearer"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Master of Foundry Spirits",
+          "status": "directing_harvest"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "High Preceptor & Morale Officer",
+          "status": "consecrating_spoil"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Frontline Scout / Sump Guide",
+          "status": "supervising_butchery"
+        }
+      ],
+      "sub_units": [
+        {
+          "unit_name": "4th Conscript Platoon (Astra Militarum)",
+          "count": 24,
+          "armament": "Kantrael Lasguns, combat knives, scarred flak vests",
+          "morale": "Fanatical (95%)",
+          "station": "Charnel Trench rim (butchering and hauling heavy meat-blocks)"
+        },
+        {
+          "unit_name": "Bastion Heavy Weapons Detachment",
+          "count": 6,
+          "armament": "2x Emplaced Heavy Stubbers, 1x Twin-Linked Autocannon",
+          "morale": "Disciplined (90%)",
+          "station": "Overwatch Catwalks over Underhive Threshold"
+        },
+        {
+          "unit_name": "Hive Enforcer Shock Detail",
+          "count": 12,
+          "armament": "Shock-Mauls, Suppression Shields, Combat Shotguns",
+          "morale": "Hardened (90%)",
+          "station": "Hab-Block Vermis-9 lower drainage cordon"
+        },
+        {
+          "unit_name": "Industrial Defense Servitors (Lobotomized)",
+          "count": 16,
+          "armament": "Hydraulic Claws, Rivet Guns",
+          "morale": "Absolute (Machine-bonded 100%)",
+          "station": "Charnel Trench floor (operating heavy bone-saws and hydraulic cranes)"
+        }
+      ]
+    },
+    "active_resource_stockpile": {
+      "status": "active_tracking",
+      "munitions": {
+        "lasgun_charge_packs": {
+          "current": 160,
+          "unit": "standard packs (+30 salvaged from swallowed patrols)",
+          "burn_rate_turn": 5
+        },
+        "heavy_stubber_belts": {
+          "current": 42,
+          "unit": "drum belts (+4 belts salvaged from previous fallen crew)",
+          "burn_rate_turn": 0
+        },
+        "autocannon_magazines": {
+          "current": 12,
+          "unit": "box magazines (+2 salvaged)",
+          "burn_rate_turn": 0
+        },
+        "shotgun_solid_slugs": {
+          "current": 70,
+          "unit": "rounds (+24 rounds repacked by foundry serfs)",
+          "burn_rate_turn": 2
+        },
+        "frag_grenades": {
+          "current": 19,
+          "unit": "canisters (+4 salvaged)",
+          "burn_rate_turn": 0
+        },
+        "krak_grenades": {
+          "current": 11,
+          "unit": "charges",
+          "burn_rate_turn": 0
+        }
+      },
+      "construction_and_tech": {
+        "plasteel_barricade_plates": {
+          "depot_stock": 26,
+          "committed_to_actions": 0,
+          "unit": "heavy sheets (+24 adamantine carapace slabs cut from beast)"
+        },
+        "promethium_welding_canisters": {
+          "depot_stock": 16,
+          "committed_to_actions": 0,
+          "unit": "pressurized flasks (+6 biological promethium-tallow refined)"
+        },
+        "sacred_machine_unguent": {
+          "depot_stock": 16,
+          "unit": "vials (Cult Mechanicus, +3 distilled from spinal fluid)"
+        },
+        "hydraulic_spare_piston_assemblies": {
+          "depot_stock": 8,
+          "unit": "assemblies"
+        },
+        "water_purification_valves": {
+          "depot_stock": 3,
+          "unit": "salvaged heavy brass valves"
+        }
+      },
+      "sustenance_and_survival": {
+        "corpse_starch_ration_bars": {
+          "current": 1310,
+          "unit": "ration blocks (+450 protein blocks rendered from pure muscle tissue)",
+          "burn_rate_turn": 85,
+          "days_reserve": 3.8
+        },
+        "recycled_greywater_canisters": {
+          "current": 420,
+          "unit": "canteens",
+          "burn_rate_turn": 40,
+          "days_reserve": 2.6
+        },
+        "grade_3_respirator_filters": {
+          "current": 24,
+          "unit": "sealed canisters",
+          "status": "preserved"
+        },
+        "combat_med_stims": {
+          "current": 40,
+          "unit": "injector ampoules (+12 synthesized from Matriarch's adrenal gland sacs)"
+        }
+      },
+      "quarantine_logistics_alert": "HARVEST COMPLETE: Stockpiles replenished across all sectors. 24 armor plates and 450 ration blocks secured."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "physical_vitality": 10,
+        "dissonance": -10,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 10,
+        "location": "loc_charnel_trench",
+        "choice_type": "resource_reclamation",
+        "decision": "Mobilized Enginseer Kroll's industrial servitors and the 4th Conscripts to systematically butcher the 20-ton bio-titan: harvested 24 adamantine chitin plates, 450 ration blocks of protein-tallow, and synthesized 12 combat med-stims.",
+        "impact": "Replenished critical garrison reserves, fortified logistical security for 3.8 days, and recovered unspent munitions from swallowed underhive victims."
+      },
+      "current_location": "loc_charnel_trench"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "physical_vitality": 20,
+        "dissonance": -10
+      },
+      "new_decision": {
+        "turn": 10,
+        "location": "loc_charnel_trench",
+        "choice_type": "trophy_harvest",
+        "decision": "Helped the servitors haul massive 500-pound chitin slabs with his power fist, grinning proudly as he was awarded a roasted ten-pound marrow bone by the cooks.",
+        "impact": "Vitality recovered to 60 as heavy protein and field medicae rest heal torn muscle tissues."
+      },
+      "current_location": "loc_charnel_trench"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "physical_vitality": 15,
+        "dissonance": -10
+      },
+      "new_decision": {
+        "turn": 10,
+        "location": "loc_charnel_trench",
+        "choice_type": "salvage_scouting",
+        "decision": "Pried open the gullet of the beast with gaff-hooks, discovering the intact equipment lockers and web gear of a swallowed Munitorum forward patrol.",
+        "impact": "Recovered 30 lasgun battery packs, 4 heavy stubber belts, and 2 autocannon boxes for the armory."
+      },
+      "current_location": "loc_charnel_trench"
+    }
+  ]
+}

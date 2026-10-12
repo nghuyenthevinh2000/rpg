@@ -1,0 +1,873 @@
+{
+  "world_id": "warhammer-40k",
+  "preview": false,
+  "policy": "current-save baseline; deterministic normalization; no turn",
+  "issues": [
+    {
+      "code": "location_alias",
+      "source": "npc_captain_severus",
+      "detail": {
+        "current_location": "loc_shrine_aquila"
+      }
+    },
+    {
+      "code": "baseline_modifiers",
+      "source": "npc_captain_severus",
+      "detail": {
+        "policy": "current values frozen; configured offsets relative to baseline",
+        "applied": {
+          "physical_vitality": 50,
+          "strength": 130,
+          "agility": -10,
+          "agency": 50,
+          "clarity": 15
+        },
+        "configured": {
+          "physical_vitality": 70,
+          "strength": 145,
+          "agency": 65,
+          "agility": -10,
+          "clarity": 15
+        }
+      }
+    },
+    {
+      "code": "bounds_baseline_exception",
+      "source": "npc_captain_severus",
+      "detail": {
+        "strength": 205,
+        "bounds": [
+          0,
+          100
+        ],
+        "policy": "baseline preserved; bounds expanded to include baseline"
+      }
+    },
+    {
+      "code": "bounds_baseline_exception",
+      "source": "npc_captain_severus",
+      "detail": {
+        "agency": 130,
+        "bounds": [
+          0,
+          100
+        ],
+        "policy": "baseline preserved; bounds expanded to include baseline"
+      }
+    },
+    {
+      "code": "bounds_baseline_exception",
+      "source": "npc_captain_severus",
+      "detail": {
+        "clarity": 110,
+        "bounds": [
+          0,
+          100
+        ],
+        "policy": "baseline preserved; bounds expanded to include baseline"
+      }
+    },
+    {
+      "code": "unsupported_character_fields",
+      "source": "npc_captain_severus",
+      "detail": [
+        "archetype",
+        "current_status",
+        "decisions",
+        "race",
+        "symbol_alignment",
+        "title"
+      ]
+    },
+    {
+      "code": "location_alias",
+      "source": "npc_confessor_malachi",
+      "detail": {
+        "current_location": "loc_shrine_aquila"
+      }
+    },
+    {
+      "code": "baseline_modifiers",
+      "source": "npc_confessor_malachi",
+      "detail": {
+        "policy": "current values frozen; configured offsets relative to baseline",
+        "applied": {
+          "physical_vitality": 20,
+          "agility": -5,
+          "agency": 15,
+          "clarity": 5,
+          "dissonance": -15
+        },
+        "configured": {
+          "agency": 40,
+          "clarity": 15,
+          "physical_vitality": 20,
+          "agility": -5,
+          "dissonance": -15
+        }
+      }
+    },
+    {
+      "code": "unsupported_character_fields",
+      "source": "npc_confessor_malachi",
+      "detail": [
+        "archetype",
+        "current_status",
+        "decisions",
+        "race",
+        "symbol_alignment",
+        "title"
+      ]
+    },
+    {
+      "code": "location_alias",
+      "source": "npc_enginseer_kroll",
+      "detail": {
+        "current_location": "loc_shrine_aquila"
+      }
+    },
+    {
+      "code": "baseline_modifiers",
+      "source": "npc_enginseer_kroll",
+      "detail": {
+        "policy": "current values frozen; configured offsets relative to baseline",
+        "applied": {
+          "strength": 25,
+          "clarity": 40,
+          "physical_vitality": 10,
+          "agency": -5
+        },
+        "configured": {
+          "strength": 45,
+          "physical_vitality": 40,
+          "clarity": 55,
+          "agency": 0
+        }
+      }
+    },
+    {
+      "code": "bounds_baseline_exception",
+      "source": "npc_enginseer_kroll",
+      "detail": {
+        "clarity": 155,
+        "bounds": [
+          0,
+          100
+        ],
+        "policy": "baseline preserved; bounds expanded to include baseline"
+      }
+    },
+    {
+      "code": "duplicate_decisions",
+      "source": "npc_enginseer_kroll",
+      "detail": 1
+    },
+    {
+      "code": "unsupported_character_fields",
+      "source": "npc_enginseer_kroll",
+      "detail": [
+        "archetype",
+        "current_status",
+        "decisions",
+        "race",
+        "title"
+      ]
+    },
+    {
+      "code": "location_alias",
+      "source": "player_vane",
+      "detail": {
+        "current_location": "loc_shrine_aquila"
+      }
+    },
+    {
+      "code": "immortal_sentinel",
+      "source": "player_vane",
+      "detail": {
+        "old": -99,
+        "health": 100
+      }
+    },
+    {
+      "code": "baseline_modifiers",
+      "source": "player_vane",
+      "detail": {
+        "policy": "current values frozen; configured offsets relative to baseline",
+        "applied": {
+          "strength": 100,
+          "agency": 50,
+          "clarity": 20,
+          "physical_vitality": 100,
+          "agility": 15,
+          "dissonance": -10
+        },
+        "configured": {
+          "clarity": 120,
+          "agency": 180,
+          "dissonance": -110,
+          "strength": 150,
+          "physical_vitality": 215,
+          "agility": 15
+        }
+      }
+    },
+    {
+      "code": "bounds_baseline_exception",
+      "source": "player_vane",
+      "detail": {
+        "agency": 200,
+        "bounds": [
+          0,
+          100
+        ],
+        "policy": "baseline preserved; bounds expanded to include baseline"
+      }
+    },
+    {
+      "code": "bounds_baseline_exception",
+      "source": "player_vane",
+      "detail": {
+        "clarity": 200,
+        "bounds": [
+          0,
+          100
+        ],
+        "policy": "baseline preserved; bounds expanded to include baseline"
+      }
+    },
+    {
+      "code": "bounds_baseline_exception",
+      "source": "player_vane",
+      "detail": {
+        "strength": 200,
+        "bounds": [
+          0,
+          100
+        ],
+        "policy": "baseline preserved; bounds expanded to include baseline"
+      }
+    },
+    {
+      "code": "bounds_baseline_exception",
+      "source": "player_vane",
+      "detail": {
+        "agility": 150,
+        "bounds": [
+          0,
+          100
+        ],
+        "policy": "baseline preserved; bounds expanded to include baseline"
+      }
+    },
+    {
+      "code": "duplicate_decisions",
+      "source": "player_vane",
+      "detail": 2
+    },
+    {
+      "code": "unsupported_character_fields",
+      "source": "player_vane",
+      "detail": [
+        "archetype",
+        "current_status",
+        "decisions",
+        "former_title",
+        "race",
+        "symbol_alignment"
+      ]
+    },
+    {
+      "code": "location_alias",
+      "source": "npc_ogryn_bragg",
+      "detail": {
+        "current_location": "loc_shrine_aquila"
+      }
+    },
+    {
+      "code": "baseline_modifiers",
+      "source": "npc_ogryn_bragg",
+      "detail": {
+        "policy": "current values frozen; configured offsets relative to baseline",
+        "applied": {
+          "strength": 40,
+          "agility": -20,
+          "physical_vitality": 20,
+          "agency": 5
+        },
+        "configured": {
+          "strength": 75,
+          "physical_vitality": 60,
+          "agility": -30,
+          "agency": 15,
+          "clarity": -10
+        }
+      }
+    },
+    {
+      "code": "bounds_baseline_exception",
+      "source": "npc_ogryn_bragg",
+      "detail": {
+        "strength": 120,
+        "bounds": [
+          0,
+          100
+        ],
+        "policy": "baseline preserved; bounds expanded to include baseline"
+      }
+    },
+    {
+      "code": "duplicate_decisions",
+      "source": "npc_ogryn_bragg",
+      "detail": 2
+    },
+    {
+      "code": "unsupported_character_fields",
+      "source": "npc_ogryn_bragg",
+      "detail": [
+        "archetype",
+        "current_status",
+        "decisions",
+        "race",
+        "symbol_alignment",
+        "title"
+      ]
+    },
+    {
+      "code": "location_alias",
+      "source": "npc_trooper_jax",
+      "detail": {
+        "current_location": "loc_shrine_aquila"
+      }
+    },
+    {
+      "code": "baseline_modifiers",
+      "source": "npc_trooper_jax",
+      "detail": {
+        "policy": "current values frozen; configured offsets relative to baseline",
+        "applied": {
+          "agility": 5,
+          "clarity": 5,
+          "physical_vitality": 10
+        },
+        "configured": {
+          "physical_vitality": 10,
+          "agency": -5,
+          "clarity": 10,
+          "strength": 10,
+          "agility": 5
+        }
+      }
+    },
+    {
+      "code": "duplicate_decisions",
+      "source": "npc_trooper_jax",
+      "detail": 2
+    },
+    {
+      "code": "unsupported_character_fields",
+      "source": "npc_trooper_jax",
+      "detail": [
+        "archetype",
+        "current_status",
+        "decisions",
+        "former_title",
+        "race",
+        "symbol_alignment"
+      ]
+    },
+    {
+      "code": "status_disagreement",
+      "source": "npc_ogryn_bragg",
+      "detail": {
+        "character": "dead",
+        "garrison": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+      }
+    },
+    {
+      "code": "status_disagreement",
+      "source": "npc_confessor_malachi",
+      "detail": {
+        "character": "dead",
+        "garrison": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+      }
+    },
+    {
+      "code": "status_disagreement",
+      "source": "npc_enginseer_kroll",
+      "detail": {
+        "character": "dead",
+        "garrison": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+      }
+    },
+    {
+      "code": "status_disagreement",
+      "source": "npc_trooper_jax",
+      "detail": {
+        "character": "dead",
+        "garrison": "PEACEFUL REST / BATHED IN PRIMORDIAL LIGHT"
+      }
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_001_enginseer_sacrifice_and_bulkhead_welding.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_002_bulkhead_101_completion.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_003_charge_of_vermis_purge.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_004_expedition_to_charnel_ditches.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_005_command_autonomy_and_slaying_the_horror.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_006_the_true_horror_awakens.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_007_fight_till_death_engagement.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_008_for_the_emperor_charge.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_009_carcass_extraction_and_salvage.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_010_expedition_to_ancient_city.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_011_recon_archeotech_vaults.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_012_reprogram_kastelan_and_loot_vaults.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_013_promethium_rupture_quenched.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_014_awakening_of_chaos_lord_stronghold.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_015_chaos_god_lord_ascendance.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_016_grand_charge_against_chaos_god.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_017_the_second_charge_clash.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_018_martyrdom_charge_of_heroes.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_019_astropathic_cry_for_ultramarines.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_020_wrath_of_guilliman_slaying_of_malgakor.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_021_petition_to_the_silent_king.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_022_the_silent_kings_compact_resurrection.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_023_the_primarchs_harrowing_sanction.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_024_the_purging_of_sublevel_404.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_025_the_void_rebirth_host_of_malgakor.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_026_the_descending_angel_of_guilliman.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_027_the_fall_of_captain_severus.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_028_the_indomitus_strike_fleet_arrives.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_029_the_indomitus_armada_boss_encounter.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_030_the_revelation_of_the_revenge_cycle.json",
+      "detail": [
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "ignored_nested_event_030_updates",
+      "source": "event/event_030_the_revelation_of_the_revenge_cycle.json",
+      "detail": {
+        "character_updates": [
+          {
+            "char_file": "main_char.json",
+            "stat_deltas": {
+              "clarity": 15,
+              "dissonance": -35
+            },
+            "new_decision": {
+              "turn": 31,
+              "location": "loc_shrine_aquila",
+              "choice_type": "revelation_of_the_hollow_cycle",
+              "decision": "Lowered the tip of Eclipser amidst the smoking ruins; saw through the eternal deception of both Terra and the Immaterium: 'I am just a vessel of revenge.' Reclaimed her agency from Malgakor's whispered hatred, halting the immediate slaughter to confront her own soul.",
+              "impact": "Suppressed Malgakor's psychic dominance; transformed the conflict from external carnage into a fight for genuine mortal liberation."
+            },
+            "current_location": "loc_shrine_aquila"
+          }
+        ]
+      }
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_031_the_breaking_of_the_cycle.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "legacy_event_shape",
+      "source": "event/event_032_the_immortal_awakened_yellow_energy.json",
+      "detail": [
+        "character_updates",
+        "cycle_advancement",
+        "id",
+        "name",
+        "progress_updates",
+        "world_updates"
+      ]
+    },
+    {
+      "code": "stale_hostile_gm_templates",
+      "source": "game_master.json",
+      "detail": "Sanctuary rejects hostile introductions; templates retained for inspection"
+    }
+  ],
+  "blocking": [],
+  "source_sha256": {
+    "action_conditions.json": "4dfa898ac2a7f085a2f526c0bf07252d4854bf3c1e7e7b0a1695fcf8269a22bd",
+    "char/captain_severus.json": "5d345bc870e1aadd15ce491892d91b8f92aec577e324a218ee9f2f7af7e2fb99",
+    "char/confessor_malachi.json": "f257e7543e9283db152fec83824433f3aabbd75a21905a0431c43bb59a66d1a9",
+    "char/enginseer_kroll.json": "5f8371dfe934bc1b7f1018d0bc703606ddf370d7a03a35a084c1e2db32942253",
+    "char/main_char.json": "2ce4f2d61ca810d7d7054115ce956822bee6eca424b73917ca4caf526958e6ac",
+    "char/ogryn_bragg.json": "c44121cf3e109c3966e200c2d84564b88884de7446c89af0b4b18ebc7b777ec7",
+    "char/trooper_jax.json": "a86a7e80fcf2205dcccfa66d56289b9b0780273c96fa04adefdf0fe5ad936b3a",
+    "conditions/equipments.json": "4f7607c108f0beb7e32176dbe31065e511b833f2c7050e80f8cd43b3acc0eb87",
+    "conditions/races.json": "8c65cf668033164d3d27ac91f22c9101f25fec25038a62899f8ad6f77a83e4fe",
+    "conditions/traits.json": "d706060730382561a1075a80912e1dc1c95006243a9ec97c2383c92923b8eb6e",
+    "event/event_001_enginseer_sacrifice_and_bulkhead_welding.json": "fd827272d972d55237a4af93208e49c287db45fd6209e24331707d796a61782b",
+    "event/event_002_bulkhead_101_completion.json": "e022213d9687513ae4f2458e80cb24cea2d41ba750b2d09672b158c4d7b64919",
+    "event/event_003_charge_of_vermis_purge.json": "0d3436d724ddce22e6524f1ca6ad05429987ad4a49083aef744142d7cf5e6163",
+    "event/event_004_expedition_to_charnel_ditches.json": "523bc87f02c2e21ce7a679b8cd4e408abfe8c89a6381e94fd0888faef33e9d58",
+    "event/event_005_command_autonomy_and_slaying_the_horror.json": "0e6608eb4ef484cc59c8ad4decec966439fa47d448902d0cc476a5f4db703cf0",
+    "event/event_006_the_true_horror_awakens.json": "fab026721a1be999b628aea8c03fbb1ec34df67d5f89a279f873217476f78eb5",
+    "event/event_007_fight_till_death_engagement.json": "fe2e906aecc48c9208884660968a6a8b4b8d32090f86426b4708264d2a1fc991",
+    "event/event_008_for_the_emperor_charge.json": "7f1add5abdb92eedbe862373fe36f447ace592a8b916196d5066490d2592f604",
+    "event/event_009_carcass_extraction_and_salvage.json": "8cf706cb9c75594e113426760071400103738ec8ebfd59df6f3f854aed4fa841",
+    "event/event_010_expedition_to_ancient_city.json": "7c4ecfb3569cd2a55328501b1c936a6b7f197b6d87ad57115326982540b97ccf",
+    "event/event_011_recon_archeotech_vaults.json": "1348e4285628e721b632369696352a6dc617cf84fa731672bab2259701e36da1",
+    "event/event_012_reprogram_kastelan_and_loot_vaults.json": "9584cceb61dc18242653a20aa61a1298d32b1f1efc2e3a118e3cd54f867e67c2",
+    "event/event_013_promethium_rupture_quenched.json": "1812899636aadf19e3932b0721f494fd7fd17f55277602ee632a00a385821438",
+    "event/event_014_awakening_of_chaos_lord_stronghold.json": "b4fd50728142acae4bdaf70c5a83c7b87d72fda905ce9ab33f3b7cddc02b8955",
+    "event/event_015_chaos_god_lord_ascendance.json": "63b1ae48665528b5082a27b5a880868748d473c95ac0ce8a878f2d749f14cd64",
+    "event/event_016_grand_charge_against_chaos_god.json": "90ef75f4592d0a817607b79cb38d993b785b2f5e74e9bf447bebbe07c1504e04",
+    "event/event_017_the_second_charge_clash.json": "3ce7b2ddfc34152fecbb730ab5383f9101274340d8ad6dff158ed31471967f5a",
+    "event/event_018_martyrdom_charge_of_heroes.json": "c13489f4f09a8be895db9390408811e037ad26fa25d294e104c4a3d4fb56533e",
+    "event/event_019_astropathic_cry_for_ultramarines.json": "e0ab0505ae7964ec0eb8c27771db0486b84a0e1e936e94ee66afff7fd212f2a1",
+    "event/event_020_wrath_of_guilliman_slaying_of_malgakor.json": "6e93f93bd0f4f9849db0c531046c00fcf71a716b3a24ec8a89211760a4f26ef7",
+    "event/event_021_petition_to_the_silent_king.json": "b04be66c27ee028a143158d5c11c7bd6cd0c053b6e68bc4f6d56b75756fbc9e6",
+    "event/event_022_the_silent_kings_compact_resurrection.json": "b8fd9bad4aa7439955c060c04a21b2dc4f80eb63cefb8701c5cb51744e651430",
+    "event/event_023_the_primarchs_harrowing_sanction.json": "0c97979d168c5fa313e3dc8054bacb99d6a130b3b8ad1fd0c1ecafd307b5d67e",
+    "event/event_024_the_purging_of_sublevel_404.json": "cece814e0e222fd2dc59886e8386f96c714655f76c5db49096cf3710cae754fa",
+    "event/event_025_the_void_rebirth_host_of_malgakor.json": "88961edb8aa99ba56fba1562c05a9d39daedf49e674b7c0de420d7d8bea2b493",
+    "event/event_026_the_descending_angel_of_guilliman.json": "c05c79f3a9da5f50e3db3443b36d75c600cb99844ae69a8df8e66a6e010ac335",
+    "event/event_027_the_fall_of_captain_severus.json": "c7ee0bfa2077416e1c644d78e4bfa36eb8542370283bb618d6d97f5c6b792b4f",
+    "event/event_028_the_indomitus_strike_fleet_arrives.json": "bef433102c39ad350815c9181cc4f2e91e2a469d247ccae54e4248fb4d0ea342",
+    "event/event_029_the_indomitus_armada_boss_encounter.json": "c597f7f711d948114515f45207d33b5afb44252de794ea05d175e64ce15af19c",
+    "event/event_030_the_revelation_of_the_revenge_cycle.json": "d264c9789aeb56a270e8fb41a3fc92f461836a742e043e6192c627ae4571e478",
+    "event/event_031_the_breaking_of_the_cycle.json": "88d12a6d197d66f3b5436cf1134c99838479acbb70f95782d603b49992c87f2e",
+    "event/event_032_the_immortal_awakened_yellow_energy.json": "ab3a4022c80c9e1e1353537e12a0b6377155e4425822fbb575cdc2bea04fe222",
+    "game_master.json": "428d3ad4703745d745d73ccb75f72517c47f1b7a091feb08774a2917d8bebf99",
+    "progress/resources.json": "bdd3b41950baa01564d34abb329a16a458833c7fed2eb123cee862ecf3ef0a2b",
+    "progress/threat-resolve.json": "b3b0f2b547fe28890b0689cdceea369e28f8eb01804fe056fdd2dff9724b7fcb",
+    "progress/threats.json": "2d467521ab37413b64ebf7a37e272c1fb4da75f3cdda9e3082eb1b594e54efe7",
+    "progress/world-changing.json": "ad240ee268f5a4703feda7cc5be848bb39709833c678acd5f3ac2f44ecf7fc51",
+    "world.json": "d565703cdaaa44f07685cd6de6029e4e15b2c9368429858f80b6a9dcc7ed965e"
+  }
+}

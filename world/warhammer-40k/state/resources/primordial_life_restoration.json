@@ -1,0 +1,19 @@
+{
+  "data": {
+    "metadata": {
+      "automatic_mechanics": false,
+      "category": "sustenance_and_survival",
+      "legacy": {
+        "current": 999,
+        "status": "infinitely_replenishing",
+        "unit": "radiant essence charges"
+      }
+    },
+    "name": "primordial_life_restoration",
+    "quantity": 999,
+    "unit": "radiant essence charges"
+  },
+  "id": "primordial_life_restoration",
+  "revision": 0,
+  "schema_version": 1
+}

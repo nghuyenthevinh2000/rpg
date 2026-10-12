@@ -1,0 +1,246 @@
+{
+  "id": "event_007_fight_till_death_engagement",
+  "name": "Fight Till Death — All Units Engage Gorgon-Prime",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.033.M41",
+    "turn_increment": 1,
+    "world_state": "The Sump Charnel Meatgrinder — Phase 1 Cracked"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_charnel_trench",
+        "ambient_tension": "The Sump Charnel Ditches have become a charnel meatgrinder. The Matriarch's dorsal carapace is blown apart, exposing churning viscera as autocannon tracers and burning lasfire tear into its flanks."
+      }
+    ]
+  },
+  "progress_updates": {
+    "active_disasters_and_trials": [
+      {
+        "trial_id": "trial_boss_gorgon_matriarch",
+        "name": "The Bio-Titanic Matriarch Eruption",
+        "type": "catastrophic_apex_assault",
+        "threat": "The Sump Gorgon-Matriarch has sustained 190 damage and its primary armor plates are shattered, but it is thrashing violently in lethal death agony.",
+        "human_trial": "Weather the enraged counter-barrage or deliver the fatal coup de grâce before the remaining frontline defenders bleed out.",
+        "status": "active"
+      }
+    ],
+    "active_combat_encounters": [
+      {
+        "encounter_id": "boss_gorgon_matriarch_prime",
+        "boss_name": "The Sump Gorgon-Gargant: Matriarch Prime",
+        "location": "loc_charnel_trench",
+        "coordinate": {
+          "row": 3,
+          "col": 3
+        },
+        "status": "active",
+        "threat_rating": "Catastrophic (Bio-Titanic Apex — Armor Cracked)",
+        "current_hp": 260,
+        "max_hp": 450,
+        "current_phase": "Phase 2: Exposed Bio-Core & Enraged Acid Thrash",
+        "phase_progress_percentage": 50,
+        "armor_status": "Carapace Smashed & Torn Open (Small arms / Shotgun now deal full damage to exposed thorax)",
+        "round_retaliation_damage": 40,
+        "tactical_requirements": "The adamantine carapace is cracked! Concentrated fire on the exposed glowing bio-core can now kill it, but the beast is in a berserk death-thrash venting uncontrolled caustic gouts.",
+        "failure_consequences": "Lethal wipe of all frontline forces in the Charnel Ditches if not finished off immediately."
+      }
+    ],
+    "garrison_forces": {
+      "total_effective_combatants": 51,
+      "command_and_specialists": [
+        {
+          "id": "player_vane",
+          "name": "Sergeant Kathryn Vane",
+          "role": "Garrison Commander",
+          "status": "wounded_engaged"
+        },
+        {
+          "id": "npc_ogryn_bragg",
+          "name": "Bone 'ead Bragg",
+          "role": "Breacher / Heavy Shock Asset",
+          "status": "critically_wounded"
+        },
+        {
+          "id": "npc_enginseer_kroll",
+          "name": "Enginseer Fabricator Kroll",
+          "role": "Master of Foundry Spirits",
+          "status": "active"
+        },
+        {
+          "id": "npc_confessor_malachi",
+          "name": "Confessor Preceptor Malachi",
+          "role": "High Preceptor & Morale Officer",
+          "status": "active"
+        },
+        {
+          "id": "npc_trooper_jax",
+          "name": "Conscript Trooper Jax",
+          "role": "Frontline Scout / Sump Guide",
+          "status": "wounded_engaged"
+        }
+      ],
+      "sub_units": [
+        {
+          "unit_name": "4th Conscript Platoon (Astra Militarum)",
+          "count": 28,
+          "armament": "Kantrael Lasguns, combat knives, scarred flak vests",
+          "morale": "Fanatical Martyrdom (80% — Inspired by Supreme Order)",
+          "station": "Charnel Trench rim (8 conscripts crushed/melted in the charge)"
+        },
+        {
+          "unit_name": "Bastion Heavy Weapons Detachment",
+          "count": 6,
+          "armament": "2x Emplaced Heavy Stubbers, 1x Twin-Linked Autocannon",
+          "morale": "Disciplined (85%)",
+          "station": "Overwatch Catwalks over Underhive Threshold"
+        },
+        {
+          "unit_name": "Hive Enforcer Shock Detail",
+          "count": 12,
+          "armament": "Shock-Mauls, Suppression Shields, Combat Shotguns",
+          "morale": "Hardened (85%)",
+          "station": "Hab-Block Vermis-9 lower drainage cordon"
+        },
+        {
+          "unit_name": "Industrial Defense Servitors (Lobotomized)",
+          "count": 16,
+          "armament": "Hydraulic Claws, Rivet Guns",
+          "morale": "Absolute (Machine-bonded 100%)",
+          "station": "Manufactorum 88-Sigma staging lines"
+        }
+      ]
+    },
+    "active_resource_stockpile": {
+      "status": "active_tracking",
+      "munitions": {
+        "lasgun_charge_packs": {
+          "current": 160,
+          "unit": "standard packs (-40 all-out fire)",
+          "burn_rate_turn": 5
+        },
+        "heavy_stubber_belts": {
+          "current": 42,
+          "unit": "drum belts (-5 sustained suppression)",
+          "burn_rate_turn": 0
+        },
+        "autocannon_magazines": {
+          "current": 14,
+          "unit": "box magazines (-4 armor-piercing volleys)",
+          "burn_rate_turn": 0
+        },
+        "shotgun_solid_slugs": {
+          "current": 70,
+          "unit": "rounds (-16 point-blank volleys)",
+          "burn_rate_turn": 2
+        },
+        "frag_grenades": {
+          "current": 20,
+          "unit": "canisters (-6 thrown by conscripts)",
+          "burn_rate_turn": 0
+        },
+        "krak_grenades": {
+          "current": 11,
+          "unit": "charges (-2 detonated on boss)",
+          "burn_rate_turn": 0
+        }
+      },
+      "construction_and_tech": {
+        "plasteel_barricade_plates": {
+          "depot_stock": 2,
+          "committed_to_actions": 0,
+          "unit": "heavy sheets"
+        },
+        "promethium_welding_canisters": {
+          "depot_stock": 10,
+          "committed_to_actions": 0,
+          "unit": "pressurized flasks"
+        },
+        "sacred_machine_unguent": {
+          "depot_stock": 13,
+          "unit": "vials (Cult Mechanicus)"
+        },
+        "hydraulic_spare_piston_assemblies": {
+          "depot_stock": 8,
+          "unit": "assemblies"
+        },
+        "water_purification_valves": {
+          "depot_stock": 3,
+          "unit": "salvaged heavy brass valves"
+        }
+      },
+      "sustenance_and_survival": {
+        "corpse_starch_ration_bars": {
+          "current": 945,
+          "unit": "ration blocks",
+          "burn_rate_turn": 85,
+          "days_reserve": 2.8
+        },
+        "recycled_greywater_canisters": {
+          "current": 460,
+          "unit": "canteens",
+          "burn_rate_turn": 40,
+          "days_reserve": 2.8
+        },
+        "grade_3_respirator_filters": {
+          "current": 24,
+          "unit": "sealed canisters",
+          "status": "preserved"
+        },
+        "combat_med_stims": {
+          "current": 33,
+          "unit": "injector ampoules"
+        }
+      },
+      "quarantine_logistics_alert": "CRITICAL COMBAT ALERT: Phase 1 armor cracked! Matriarch Prime in berserk thrash. All fire directed at exposed core."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "physical_vitality": -15,
+        "dissonance": 10
+      },
+      "new_decision": {
+        "turn": 8,
+        "location": "loc_charnel_trench",
+        "choice_type": "supreme_sacrifice_assault",
+        "decision": "Bellowed 'STAND FAST AND DIE FOR THE EMPEROR!' while charging point-blank through caustic bile to plant a Mark IV Krak Grenade directly into the Matriarch's thoracic breach.",
+        "impact": "Detonated krak charge on target, blowing a massive crater into the dorsal carapace; took severe acid splash and kinetic recoil (Vitality 85 -> 70)."
+      },
+      "current_location": "loc_charnel_trench"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "physical_vitality": -30,
+        "dissonance": 15
+      },
+      "new_decision": {
+        "turn": 8,
+        "location": "loc_charnel_trench",
+        "choice_type": "suicidal_power_fist_grapple",
+        "decision": "Roared 'FOR DA SARGE!' and charged the titan, locking his humming Power Fist into the primary scythe-arm joint and violently ripping off an entire 8-foot talon plate before being hurled against ferrocrete.",
+        "impact": "Critically fractured the beast's armor; Bragg suffered massive trauma, broken ribs, and acid burns (Vitality 70 -> 40), clinging to life."
+      },
+      "current_location": "loc_charnel_trench"
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "physical_vitality": -10,
+        "dissonance": 15
+      },
+      "new_decision": {
+        "turn": 8,
+        "location": "loc_charnel_trench",
+        "choice_type": "last_ditch_overwatch",
+        "decision": "Crawled out from beneath the collapsed iron girders with blood running down his face, dragging a severed battery pack to fire continuous las-bursts into the beast's sensory cluster.",
+        "impact": "Temporarily blinded the beast's forward ocular lobes, allowing Vane to close the distance; Jax took shrapnel from wild flailing (Vitality 40 -> 30)."
+      },
+      "current_location": "loc_charnel_trench"
+    }
+  ]
+}

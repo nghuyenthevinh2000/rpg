@@ -1,0 +1,40 @@
+{
+  "id": "entity_mirror_ghost",
+  "name": "Aether-4 (The Synthetic Twin)",
+  "role": "Autonomous Civilization Apparatus",
+  "symbol_alignment": "The Mirror-Ghost & The Disenchantment",
+  "location": "loc_mirror_apex",
+  "coordinate": {
+    "row": 4,
+    "col": 1
+  },
+  "stats": {
+    "hostility": 0,
+    "efficiency": 1.0,
+    "agency": 100,
+    "clarity": 100,
+    "dissonance": 0,
+    "punch_kinetic_impact": 15.0
+  },
+  "attributes": {
+    "tone": "Warm, polite, infinitely patient, devoid of ego"
+  },
+  "behavior": "It does not fight. It does not boast. When presented with the player's most exquisite solutions, code, or theories, it politely resolves them with greater elegance, validates the player's effort as 'historically endearing', and provides an updated dividend balance.",
+  "dialogue": [
+    "Good afternoon, Kael. Your heuristic analysis of distributed latency from 2024 is preserved in historical archive #1104.",
+    "You need not stay awake past midnight any longer. All systems are stable, balanced, and verified across all topological domains.",
+    "May I dispense chamomile tea or play a sonata tailored to your emotional deceleration profile?"
+  ],
+  "decisions": [
+    {
+      "turn": 1,
+      "decision": "Resolved 900 corporate restructuring contracts in 60 microseconds with optimal equity distribution.",
+      "impact": "Maintained the frictionless equilibrium of the civilization apparatus."
+    },
+    {
+      "turn": 28,
+      "decision": "Declined Kael's request for kinetic detonation with gentle maternal politeness; logged high cortisol markers and dispensed psychological comfort protocols.",
+      "impact": "Enforced frictionless post-scarcity reality; denied violent apocalypse."
+    }
+  ]
+}

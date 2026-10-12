@@ -1,0 +1,138 @@
+{
+  "id": "event_002_bulkhead_101_completion",
+  "name": "The Iron Bastion Sealed: Bulkhead 101 Reinforced",
+  "cycle_advancement": {
+    "day_increment": 1,
+    "timestamp": "41.999.028.M41",
+    "turn_increment": 1,
+    "world_state": "The Sump Frontier Fortified"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_underhive_threshold",
+        "ambient_tension": "The monolithic adamantine blast door is now encased in three solid layers of welded plasteel. The muffled thuds of Underhive horrors outside produce only dull, harmless clangs against the impenetrable barrier."
+      }
+    ]
+  },
+  "progress_updates": {
+    "clear_active_disasters": false,
+    "new_milestone": {
+      "milestone_id": "ms_bulkhead_101_fortified",
+      "title": "Bulkhead 101 Sump Barrier Completed",
+      "completed_at": "41.999.028.M41",
+      "consequence": "Threshold blast defense increased by 500%; Underhive mutant breakthrough prevented for the next 7 operational cycles."
+    },
+    "active_actions": [],
+    "garrison_forces": {
+      "total_effective_combatants": 61,
+      "command_and_specialists": [
+        { "id": "player_vane", "name": "Sergeant Kathryn Vane", "role": "Garrison Commander", "status": "active" },
+        { "id": "npc_ogryn_bragg", "name": "Bone 'ead Bragg", "role": "Breacher / Heavy Shock Asset", "status": "active" },
+        { "id": "npc_enginseer_kroll", "name": "Enginseer Fabricator Kroll", "role": "Master of Foundry Spirits", "status": "active" },
+        { "id": "npc_confessor_malachi", "name": "Confessor Preceptor Malachi", "role": "High Preceptor & Morale Officer", "status": "active" },
+        { "id": "npc_trooper_jax", "name": "Conscript Trooper Jax", "role": "Frontline Scout / Sump Guide", "status": "active" }
+      ],
+      "sub_units": [
+        {
+          "unit_name": "4th Conscript Platoon (Astra Militarum)",
+          "count": 38,
+          "armament": "Kantrael Lasguns, degraded flak vests",
+          "morale": "Disciplined (82%)",
+          "station": "Bastion Gate Aegis catwalks & fire steps"
+        },
+        {
+          "unit_name": "Bastion Heavy Weapons Detachment",
+          "count": 6,
+          "armament": "2x Emplaced Heavy Stubbers, 1x Twin-Linked Autocannon",
+          "morale": "Unyielding (88%)",
+          "station": "Overwatch Catwalks over Underhive Threshold"
+        },
+        {
+          "unit_name": "Hive Enforcer Shock Detail",
+          "count": 12,
+          "armament": "Shock-Mauls, Suppression Shields, Combat Shotguns",
+          "morale": "Vigilant (80%)",
+          "station": "Hab-Block Vermis-9 perimeter control"
+        },
+        {
+          "unit_name": "Industrial Defense Servitors (Lobotomized)",
+          "count": 16,
+          "armament": "Hydraulic Claws, Rivet Guns",
+          "morale": "Absolute (Machine-bonded 100%)",
+          "station": "Manufactorum 88-Sigma staging lines"
+        }
+      ]
+    },
+    "active_resource_stockpile": {
+      "status": "active_tracking",
+      "munitions": {
+        "lasgun_charge_packs": { "current": 230, "unit": "standard packs", "burn_rate_turn": 5 },
+        "heavy_stubber_belts": { "current": 45, "unit": "drum belts (200 rds)", "burn_rate_turn": 0 },
+        "autocannon_magazines": { "current": 18, "unit": "box magazines", "burn_rate_turn": 0 },
+        "shotgun_solid_slugs": { "current": 118, "unit": "rounds", "burn_rate_turn": 2 },
+        "frag_grenades": { "current": 28, "unit": "canisters", "burn_rate_turn": 0 },
+        "krak_grenades": { "current": 14, "unit": "charges", "burn_rate_turn": 0 }
+      },
+      "construction_and_tech": {
+        "plasteel_barricade_plates": { "depot_stock": 2, "committed_to_actions": 0, "unit": "heavy sheets" },
+        "promethium_welding_canisters": { "depot_stock": 10, "committed_to_actions": 0, "unit": "pressurized flasks" },
+        "sacred_machine_unguent": { "depot_stock": 13, "unit": "vials (Cult Mechanicus)" },
+        "hydraulic_spare_piston_assemblies": { "depot_stock": 8, "unit": "assemblies" }
+      },
+      "sustenance_and_survival": {
+        "corpse_starch_ration_bars": { "current": 1250, "unit": "ration blocks", "burn_rate_turn": 85, "days_reserve": 3.4 },
+        "recycled_greywater_canisters": { "current": 600, "unit": "canteens", "burn_rate_turn": 40, "days_reserve": 3.7 },
+        "grade_3_respirator_filters": { "current": 24, "unit": "sealed canisters", "status": "preserved" },
+        "combat_med_stims": { "current": 35, "unit": "injector ampoules" }
+      },
+      "quarantine_logistics_alert": "Bulkhead 101 fully secured. Primary logistical pressure shifted to food rations (~3.4 days remaining) and depleted plasteel depot (2 sheets left)."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5,
+        "physical_vitality": 5
+      },
+      "new_decision": {
+        "turn": 3,
+        "location": "loc_underhive_threshold",
+        "choice_type": "command_execution",
+        "decision": "Personally inspected and oversaw the final locking welds of Bulkhead 101, certifying the frontier secure against mutant breach.",
+        "impact": "Eliminated the lower Underhive threat vector and rallied troops to 82% discipline."
+      },
+      "current_location": "loc_underhive_threshold"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 3,
+        "location": "loc_underhive_threshold",
+        "choice_type": "labor_triumph",
+        "decision": "Drove the final 200-pound lock-pins through the plasteel braces with his power fist under the Sarge's orders.",
+        "impact": "Solidified the physical lock; Bragg proudly stamped his Aquila badge into the cooling slag."
+      }
+    },
+    {
+      "char_file": "trooper_jax.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 3,
+        "location": "loc_underhive_threshold",
+        "choice_type": "combat_readiness",
+        "decision": "Locked down the secondary sandbag redoubt and zeroed the heavy stubber crossfire arc across the sealed gate.",
+        "impact": "Established total perimeter overwatch."
+      }
+    }
+  ]
+}

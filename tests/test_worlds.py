@@ -1,69 +1,19 @@
 """Temporary-save integration checks; never advance a live world."""
 import copy
-import hashlib
 import json
 from pathlib import Path
 import random
 import shutil
 import subprocess
 import sys
-import tempfile
-import unittest
 from unittest.mock import patch
 
-ROOT = Path(__file__).resolve().parents[1]
-ORIGINALS = Path('/private/var/folders/nm/hp2tb73d0l75gl6jzvy6jfnm0000gn/T/opencode/rpg-original-worlds')
-sys.path.insert(0, str(ROOT))
+from world_fixtures import ROOT, TemporaryWorldCase, hashes
 from engine.contracts import RuleContext, RuleError, StateView, WorldContract
 from engine.runner import read_snapshot, replay_event, run_event
 
 
-def hashes(root):
-    return {str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest()
-            for p in root.rglob('*') if p.is_file() and p.name != '.engine.lock'}
-
-
-class WorldsTests(unittest.TestCase):
-    def setUp(self):
-        self.tmp = tempfile.TemporaryDirectory()
-        self.addCleanup(self.tmp.cleanup)
-
-    def legacy(self, name):
-        live = ROOT / 'world' / name
-        source = live / 'archive/legacy-baseline'
-        if not source.exists():
-            source = ORIGINALS / name if (ORIGINALS / name).exists() else live
-        dest = Path(self.tmp.name) / name
-        shutil.copytree(source, dest)
-        for part in ('logic', 'schemas', 'contract.json', 'definitions/engine_rules.json'):
-            src, target = live / part, dest / part
-            target.parent.mkdir(parents=True, exist_ok=True)
-            if src.is_dir():
-                shutil.copytree(src, target, dirs_exist_ok=True)
-            elif src.exists():
-                shutil.copy2(src, target)
-        return dest
-
-    def world(self, name='lost-world'):
-        from world_migration import migrate_world
-        w = self.legacy(name)
-        migrate_world(w)
-        return w
-
-    def event(self, w, action, identity='test_event'):
-        s = read_snapshot(w)
-        return {'schema_version': 1, 'event_id': identity, 'world_id': WorldContract(w, load_hooks=False).config['world_id'],
-                'expected_turn': s['clock']['data']['turn'], 'action': action}
-
-    def edit_baseline(self, w, edit):
-        from engine.state_store import StateStore
-        s = read_snapshot(w)
-        edit(s)
-        other = Path(self.tmp.name) / ('authored_' + w.name)
-        shutil.copytree(w, other, ignore=shutil.ignore_patterns('state', 'transactions', 'events', '.engine.lock', 'archive', '.migration*'))
-        StateStore(other).initialize_baseline(s)
-        return other
-
+class WorldsTests(TemporaryWorldCase):
     def test_inspection_read_only_both_saves(self):
         from world_migration import inspect_world
         for name in ('lost-world', 'warhammer-40k'):
@@ -91,7 +41,7 @@ class WorldsTests(unittest.TestCase):
         for name, turn, day in [('lost-world', 33, 4), ('warhammer-40k', 37, 9)]:
             live_before = hashes(ROOT / 'world' / name)
             w = self.legacy(name)
-            originals = {p: h for p,h in hashes(w).items() if p.endswith('.json') and not p.startswith(('logic/', 'schemas/', 'definitions/engine_rules')) and p != 'contract.json'}
+            originals = {p: h for p,h in hashes(w).items() if p.endswith('.json') and not p.startswith(('logic/', 'schemas/', 'definitions/engine_rules', 'definitions/gm-pre-sanctuary')) and p != 'contract.json'}
             self.assertTrue(migrate_world(w, dry_run=True)['preview'])
             self.assertFalse((w / 'archive').exists())
             migrate_world(w)
@@ -388,9 +338,12 @@ class WorldsTests(unittest.TestCase):
     def test_warhammer_gm_pool_no_application(self):
         from game_master import propose_event
         w = self.world('warhammer-40k'); before = read_snapshot(w)
-        e = propose_event(w, seed=2, improvise=True)
-        self.assertIn(e['action']['template_id'], [t['id'] for t in WorldContract(w).definitions['gm']['improvisation_templates']])
-        self.assertIn('STALE HOSTILE TEMPLATE', e['narrative'])
+        # Authored hostile GM pool copy retains stale hostile template narrative
+        gm_pre = json.loads((w / 'definitions/gm-pre-sanctuary.json').read_text())
+        (w / 'game_master.json').write_text(json.dumps(gm_pre))
+        with self.assertRaises(RuleError) as err:
+            propose_event(w, seed=2, improvise=True)
+        self.assertEqual('no_templates', err.exception.code)
         self.assertEqual(before, read_snapshot(w))
 
     def test_import_unsupported_fields_metadata_not_executable(self):

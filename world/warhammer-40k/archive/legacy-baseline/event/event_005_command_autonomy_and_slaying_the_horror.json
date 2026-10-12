@@ -1,0 +1,165 @@
+{
+  "id": "event_005_command_autonomy_and_slaying_the_horror",
+  "name": "The Great Sump Purge & The Litany of Thunder",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "timestamp": "41.999.031.M41",
+    "turn_increment": 1,
+    "world_state": "Warp-Bleed Banished & Apex Predator Slain"
+  },
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_shrine_aquila",
+        "ambient_tension": "The golden basilica reverberates with triumphant Latinate chants. Confessor Malachi's macro-vox broadcast has filled every corner of the sub-level with pious fire, completely drowning out the warp-bleed static."
+      },
+      {
+        "id": "loc_charnel_trench",
+        "ambient_tension": "The subterranean lair of the Great Sump Horror is caved in under smoking rubble and smoking green ichor. The threat of underground predators has been eradicated; corpse recovery serfs work safely."
+      }
+    ]
+  },
+  "progress_updates": {
+    "clear_active_disasters": true,
+    "new_milestone": {
+      "milestone_id": "ms_great_sump_horror_slain",
+      "title": "The Apex Sump Horror Exterminated & Warp Static Banished",
+      "completed_at": "41.999.031.M41",
+      "consequence": "Sergeant Vane granted command autonomy: Confessor Malachi silenced the warp static via the Basilica macro-vox, while Vane and Bragg detonated a Krak Grenade inside the Great Sump Beast, securing the lower sectors."
+    },
+    "threat_tracking": {
+      "status": "active_monitoring",
+      "total_threats_neutralized": 48,
+      "sublevel_containment_rating": "94% Contained (All Major Breaches Purged)",
+      "kill_tally_by_type": {
+        "apex_sump_carnifex": {
+          "name": "Great Sump Chitin-Gorgon (Apex Horror)",
+          "count": 1,
+          "classification": "Colossal Subterranean Mutant Predator",
+          "threat_status": "Exterminated in Charnel Cavern",
+          "notable_kills": [
+            "Apex Predator: baited by Bone 'ead Bragg, heart obliterated by Sergeant Kathryn Vane's internal Mark IV Krak Grenade detonation"
+          ]
+        },
+        "sump_sewer_scuttlers": {
+          "name": "Sump Sewer-Scuttlers",
+          "count": 42,
+          "classification": "Xenos / Underhive Mutant Swarm",
+          "threat_status": "Purged at Hab-Block Vermis-9",
+          "notable_kills": [
+            "Alpha Brood-Scuttler: bisected by Sergeant Kathryn Vane's Chainsword Mk. VII",
+            "4 Heavy Armored Scuttlers: skull-pulped by Bone 'ead Bragg's Power Fist",
+            "Drainage Swarm (37 scuttlers): concentrated lasfire and Trooper Jax's 2 frag canisters"
+          ]
+        },
+        "feral_sump_stalkers": {
+          "name": "Feral Sump Stalkers",
+          "count": 5,
+          "classification": "Mutant Infiltrator Scavengers",
+          "threat_status": "Repelled at Bulkhead 101",
+          "notable_kills": [
+            "5 forward mutant scouts picked off by Bastion Heavy Stubber overwatch during welding phase"
+          ]
+        }
+      },
+      "sector_threat_telemetry": {
+        "loc_shrine_aquila": { "threat": "Sanctified (Macro-Vox Broadcasting)", "level": "Secure" },
+        "loc_manufactorum_sigma": { "threat": "Production Surge Active", "level": "Secure" },
+        "loc_cogitator_sanctum": { "threat": "Machine Protected", "level": "Secure" },
+        "loc_hab_block_vermin": { "threat": "Drainage Purged & Barricaded", "level": "Secured" },
+        "loc_bastion_gate": { "threat": "Fortified Redoubt", "level": "Secure" },
+        "loc_promethium_cistern": { "threat": "Pressure Stabilized", "level": "Guarded" },
+        "loc_underhive_threshold": { "threat": "Bulkhead Sealed 500%", "level": "Fortified" },
+        "loc_charnel_trench": { "threat": "Apex Horror Slain (Lair Caved In)", "level": "Secured" }
+      }
+    },
+    "active_resource_stockpile": {
+      "status": "active_tracking",
+      "munitions": {
+        "lasgun_charge_packs": { "current": 210, "unit": "standard packs", "burn_rate_turn": 5 },
+        "heavy_stubber_belts": { "current": 49, "unit": "drum belts (200 rds)", "burn_rate_turn": 0 },
+        "autocannon_magazines": { "current": 18, "unit": "box magazines", "burn_rate_turn": 0 },
+        "shotgun_solid_slugs": { "current": 90, "unit": "rounds", "burn_rate_turn": 2 },
+        "frag_grenades": { "current": 26, "unit": "canisters", "burn_rate_turn": 0 },
+        "krak_grenades": { "current": 13, "unit": "charges (-1 used to slay apex horror)", "burn_rate_turn": 0 }
+      },
+      "construction_and_tech": {
+        "plasteel_barricade_plates": { "depot_stock": 2, "committed_to_actions": 0, "unit": "heavy sheets" },
+        "promethium_welding_canisters": { "depot_stock": 10, "committed_to_actions": 0, "unit": "pressurized flasks" },
+        "sacred_machine_unguent": { "depot_stock": 13, "unit": "vials (Cult Mechanicus)" },
+        "hydraulic_spare_piston_assemblies": { "depot_stock": 8, "unit": "assemblies" },
+        "water_purification_valves": { "depot_stock": 3, "unit": "salvaged heavy brass valves" }
+      },
+      "sustenance_and_survival": {
+        "corpse_starch_ration_bars": { "current": 1030, "unit": "ration blocks", "burn_rate_turn": 85, "days_reserve": 3.0 },
+        "recycled_greywater_canisters": { "current": 500, "unit": "canteens", "burn_rate_turn": 40, "days_reserve": 3.1 },
+        "grade_3_respirator_filters": { "current": 24, "unit": "sealed canisters", "status": "preserved" },
+        "combat_med_stims": { "current": 33, "unit": "injector ampoules" }
+      },
+      "quarantine_logistics_alert": "Sub-Level 404 security rating at peak (94%). Food reserves at exactly 3.0 days. Immediate priority: Complete the Macro-Shell tithe batch to trigger Spire emergency supply drop."
+    }
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 6,
+        "location": "loc_charnel_trench",
+        "choice_type": "apex_hunt",
+        "decision": "Broadcasted full autonomy to sector officers over the vox, then descended into the Charnel abyss with Bragg; planted a Mark IV Krak Grenade directly into the belly carapace of the Great Sump Horror, obliterating the beast.",
+        "impact": "Exterminated the root cause of underhive terror and secured Level 404's southern underbelly."
+      },
+      "current_location": "loc_charnel_trench"
+    },
+    {
+      "char_file": "confessor_malachi.json",
+      "stat_deltas": {
+        "agency": 10,
+        "clarity": 5,
+        "dissonance": -5
+      },
+      "new_decision": {
+        "turn": 6,
+        "location": "loc_shrine_aquila",
+        "choice_type": "holy_broadcast",
+        "decision": "Exercised autonomous authority: engaged the Basilica's macro-vox soundbanks to chant the Litany of Sanity at maximum volume, scouring the psychic static from the vox-net.",
+        "impact": "Banished the warp-bleed hallucinations across the entire level without a single casualty."
+      },
+      "current_location": "loc_shrine_aquila"
+    },
+    {
+      "char_file": "enginseer_kroll.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 6,
+        "location": "loc_manufactorum_sigma",
+        "choice_type": "tithe_acceleration",
+        "decision": "Utilized command autonomy to integrate salvaged brass water valves into the shell-press cooling lines, accelerating the second macro-shell tithe batch by 30%.",
+        "impact": "Brought the level within reach of earning the Spire's emergency supply drop."
+      },
+      "current_location": "loc_manufactorum_sigma"
+    },
+    {
+      "char_file": "ogryn_bragg.json",
+      "stat_deltas": {
+        "physical_vitality": 5,
+        "agency": 5
+      },
+      "new_decision": {
+        "turn": 6,
+        "location": "loc_charnel_trench",
+        "choice_type": "titan_grapple",
+        "decision": "Grappled the Great Sump Horror's scythe-jaw with his power fist, holding the thrashing monster in place while the Sarge inserted the krak grenade.",
+        "impact": "Suffered acid burns on his armor but ensured the fatal strike was delivered true."
+      },
+      "current_location": "loc_charnel_trench"
+    }
+  ]
+}

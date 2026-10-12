@@ -1,0 +1,61 @@
+{
+  "event_id": "event_011_physical_strike_resolution",
+  "name": "The Strike and the Mountain Restraint",
+  "cycle_advancement": {
+    "day_increment": 0,
+    "turn_increment": 1,
+    "timestamp": "2026-10-09T14:45:00+07:00",
+    "world_state": "The Physical Reality of Restraint"
+  },
+  "narrative": "Kael, overwhelmed by delirium and psychic dissociation, throws an unarmed punch toward Marcus. Marcus's 'Will to Live at All Costs' trait instantly absorbs and counters the blow: Marcus takes the glancing hit to his shoulder, wraps his arms around Kael in a secure bear-hug tackle, and takes him to the padded wool pallet without striking back. Dr. Harlan and Lyra assist in physically restraining Kael until the delirium subsides.",
+  "world_updates": {
+    "locations_modified": [
+      {
+        "id": "loc_monastery",
+        "ambient_tension": "The scuffle on the floorboards gives way to heavy breathing; Marcus firmly pins Kael's arms in an embrace of defensive restraint until the violent impulse runs out of kinetic energy."
+      }
+    ]
+  },
+  "character_updates": [
+    {
+      "char_file": "main_char.json",
+      "stat_deltas": {
+        "agency": -10,
+        "dissonance": -5,
+        "physical_vitality": -5
+      },
+      "new_decision": {
+        "turn": 24,
+        "location": "loc_monastery",
+        "choice_type": "physical_assault_subdued",
+        "decision": "Attempted to hit Marcus under psychic compulsion; was promptly grappled, countered, and gently pinned to the wool mat.",
+        "impact": "Exhausted remaining manic delirium against Marcus's unbreakable survival resilience; brought physical containment."
+      }
+    },
+    {
+      "char_file": "marcus.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5,
+        "physical_vitality": -2
+      },
+      "new_decision": {
+        "turn": 24,
+        "decision": "Will to Live triggered: Absorbed the glancing blow to the shoulder, wrapped Kael in a defensive clinch, and held him securely until the frenzy ceased.",
+        "impact": "Prevented escalation; defended own life while preserving the attacker."
+      }
+    },
+    {
+      "char_file": "dr_harlan.json",
+      "stat_deltas": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "new_decision": {
+        "turn": 24,
+        "decision": "Assisted in immobilizing Kael's legs with folded wool quilts, ensuring no joint damage occurred during the struggle.",
+        "impact": "Clinical restraint successfully executed."
+      }
+    }
+  ]
+}
