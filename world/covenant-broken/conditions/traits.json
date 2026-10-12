@@ -1,4 +1,101 @@
 {
-  "description": "Traits for Covenant Broken world",
-  "traits": {}
+  "description": "Comprehensive psychological, augmetic, and biological traits for Covenant Broken characters.",
+  "stat_caps": {
+    "max_vitality_default": 100,
+    "max_agency_default": 100,
+    "max_clarity_default": 100,
+    "max_neural_strain_default": 100,
+    "max_dissonance_default": 100,
+    "min_stat_floor": 0
+  },
+  "traits": {
+    "trait_unaligned_observer": {
+      "trait_id": "trait_unaligned_observer",
+      "name": "Unaligned Observer (The Fourth Path)",
+      "effect": "Grants cognitive agency resilience and questioning of dogmatic faction commands; resists neural subjugation.",
+      "stat_modifiers": {
+        "agency": 15,
+        "clarity": 10,
+        "dissonance": -10
+      },
+      "impact_rules": {
+        "dogma_resistance_multiplier": 1.5,
+        "strike_kinetic_multiplier": 1.0
+      }
+    },
+    "trait_consensus_tether": {
+      "trait_id": "trait_consensus_tether",
+      "name": "Consensus Sub-Neural Tether",
+      "effect": "Direct neural link to Iron Consensus hive network. Dampens emotional variance, increases calculation speed and tactical coordination at the cost of personal autonomy.",
+      "stat_modifiers": {
+        "clarity": 20,
+        "agency": -15,
+        "neural_strain": 10
+      },
+      "impact_rules": {
+        "calculation_speed_multiplier": 1.4,
+        "strike_kinetic_multiplier": 1.1
+      }
+    },
+    "trait_purifier_fervor": {
+      "trait_id": "trait_purifier_fervor",
+      "name": "Ashen Purifier Fervor",
+      "effect": "Fanatical devotion to pure baseline biology. High physical resilience against electromagnetic weaponry; strictly blocks installation of cybernetic augmetics.",
+      "stat_modifiers": {
+        "biological_vitality": 20,
+        "agency": 10,
+        "neural_strain": -10
+      },
+      "impact_rules": {
+        "emp_damage_reduction": 0.5,
+        "strike_kinetic_multiplier": 1.25
+      }
+    },
+    "trait_chimera_graft": {
+      "trait_id": "trait_chimera_graft",
+      "name": "Chimera Biomechanical Graft",
+      "effect": "Warmachine actuators surgically fused into muscle and bone. High environmental hazard tolerance and devastating kinetic power, but steadily drives up neural strain and risk of silicon rot.",
+      "stat_modifiers": {
+        "biological_vitality": 15,
+        "neural_strain": 20,
+        "dissonance": 15
+      },
+      "impact_rules": {
+        "hazard_tolerance_multiplier": 1.4,
+        "strike_kinetic_multiplier": 1.45
+      }
+    },
+    "trait_severed_phantom": {
+      "trait_id": "trait_severed_phantom",
+      "name": "Severed Phantom Synapses",
+      "effect": "Suffers from disconnected cognitive void after forcible severance from a collective warmachine link. Experiences profound empathy and survivor trauma, but possesses hyper-acute danger perception.",
+      "stat_modifiers": {
+        "dissonance": 25,
+        "neural_strain": 15,
+        "clarity": 10
+      },
+      "impact_rules": {
+        "ambush_detection_multiplier": 1.5,
+        "strike_kinetic_multiplier": 0.95
+      }
+    },
+    "trait_genomic_custodian": {
+      "trait_id": "trait_genomic_custodian",
+      "name": "Genomic Custodian",
+      "effect": "Uncompromising medical mastery dedicated to protecting unmutated human genome sequences from viral nanites and irradiated waste.",
+      "stat_modifiers": {
+        "clarity": 15,
+        "agency": 10,
+        "biological_vitality": 10
+      },
+      "impact_rules": {
+        "treatment_efficacy_multiplier": 1.5,
+        "strike_kinetic_multiplier": 1.0
+      }
+    }
+  },
+  "kinetic_formula": {
+    "base_strike_damage": 5.0,
+    "vitality_ratio_scale": 0.2
+  }
 }

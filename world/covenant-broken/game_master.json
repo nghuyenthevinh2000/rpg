@@ -1,5 +1,106 @@
 {
-  "system": "Covenant Broken Game Master Proposals",
-  "disaster_pool": [],
-  "improvisation_templates": []
+  "system": "Covenant Broken Game Master Proposals and Entropy Engine",
+  "doctrine": "In the shattered ruins of the Broken Covenant, stochastic disasters reflect ideological warfare, mechanical rot, and unexploded munitions of the robot war.",
+  "disaster_pool": [
+    {
+      "id": "event_feral_combat_drones_incursion",
+      "name": "Feral Combat Drone Swarm Incursion",
+      "type": "feral_combat_drones",
+      "severity": "high",
+      "description": "A deactivated warmachine battery awakens unexpectedly in the Glass Crags, releasing autonomous hunter-seeker drones programmed to exterminate any unindexed biological life.",
+      "tags": ["combat", "drones", "kinetic_peril", "warmachine"],
+      "consequences": {
+        "threat_level": 75,
+        "vitality_damage": 30,
+        "salvage_loss": 15,
+        "sector_peril": "Blocks safe passage through quadrant (2,1) until deactivated or repelled"
+      }
+    },
+    {
+      "id": "event_rogue_logic_storm_surge",
+      "name": "Rogue Logic Storm Resonance",
+      "type": "rogue_logic_storm",
+      "severity": "critical",
+      "description": "Corrupted machine network telemetry bleeds over high-frequency wireless channels from the Resonant Void, overloading neural ports and cognitive cybernetics.",
+      "tags": ["cognitive", "cybernetic", "neural_strain", "dissonance"],
+      "consequences": {
+        "neural_strain_penalty": 35,
+        "dissonance_spike": 25,
+        "clarity_drain": 20,
+        "sector_peril": "Forces emergency dampening or disconnection of all cybernetic equipment"
+      }
+    },
+    {
+      "id": "event_atmospheric_emp_squall",
+      "name": "Atmospheric Ionizing EMP Squall",
+      "type": "emp_squall",
+      "severity": "moderate",
+      "description": "A collapsing sub-orbital orbital capacitor discharges into the upper stratosphere, showering the ruins in an electrostatic pulse storm.",
+      "tags": ["atmospheric", "emp", "electronic_failure", "equipment_damage"],
+      "consequences": {
+        "equipment_disabled_turns": 2,
+        "salvage_integrity_damage": 20,
+        "light_system_failure": true,
+        "sector_peril": "Shuts down energy shields and battery heaters in non-lead-lined shelters"
+      }
+    },
+    {
+      "id": "event_toxic_silicon_fallout_plume",
+      "name": "Toxic Silicon Fallout & Nanite Cloud",
+      "type": "silicon_fallout",
+      "severity": "high",
+      "description": "Thermal geysers near the Chimera Foundry pulverize irradiated silicon dust and decomposing bio-nanites, blanketing the wasteland in corrosive smog.",
+      "tags": ["environmental", "hazard", "respiratory", "silicon_rot"],
+      "consequences": {
+        "biological_vitality_drain": 20,
+        "respiratory_poisoning": true,
+        "armor_corrosion": 15,
+        "sector_peril": "Requires sealed filtration rebreathers or lead-lined garments to traverse"
+      }
+    },
+    {
+      "id": "event_purifier_inquisition_purge",
+      "name": "Ashen Purifier Inquisition Sweep",
+      "type": "purifier_inquisition",
+      "severity": "critical",
+      "description": "Militant zealots of the Ashen Genesis deploy flamer squads to purge 'tainted' tech and biological augmentations from unaligned refugee enclaves.",
+      "tags": ["ideological", "zealots", "social_crisis", "technocide"],
+      "consequences": {
+        "agency_challenge": 40,
+        "gear_confiscation_threat": "Destruction of unprotected cybernetics and diagnostic pads",
+        "human_casualty_risk": "Severe burn injuries and refugee displacement",
+        "sector_peril": "High tension and barricaded borders around the Ashen Cradle"
+      }
+    },
+    {
+      "id": "event_consensus_sweep_detachment",
+      "name": "Iron Consensus Reclamation Sweep Squad",
+      "type": "consensus_sweep",
+      "severity": "high",
+      "description": "Subjugated cyber-legionaries advance from the Consensus Spire under algorithmic directives to forcefully neural-tether wandering scavengers.",
+      "tags": ["ideological", "subjugation", "iron_consensus", "neural_tether"],
+      "consequences": {
+        "autonomy_peril": "Forced implementation of behavioral obedience chips",
+        "agency_drain": 30,
+        "neural_strain_increase": 20,
+        "sector_peril": "Scanners deploy bio-ident tracking drones across trade avenues"
+      }
+    }
+  ],
+  "improvisation_templates": [
+    {
+      "template_id": "improv_unaligned_truce_brokerage",
+      "name": "Brokering Neutral Scavenger Truce",
+      "context": "When opposing faction patrols clash in Scrap Hollow",
+      "resolution_test": "Requires Elias to balance clarity and agency against polarized demands",
+      "outcome_neutral": "Preserves Scrap Hollow as a functioning safe zone at personal diplomatic cost"
+    },
+    {
+      "template_id": "improv_core_containment_patch",
+      "name": "Ad-Hoc Containment Patch on Core Leak",
+      "context": "When an antimatter or EMP fissure threatens collapse",
+      "resolution_test": "Manual repairs under extreme radiation and cognitive noise",
+      "outcome_neutral": "Averts catastrophic detonation while incurring severe neural strain"
+    }
+  ]
 }

@@ -1,4 +1,137 @@
 {
-  "system": "Covenant Broken Wargear and Equipment Registry",
-  "items": {}
+  "system": "Covenant Broken Wargear, Armor, and Relic Registry",
+  "doctrine": "In the ruins of the broken covenant, tools of war are pieced together from dead autonomous warmachines, scavenged medical tech, and hardened relic alloys.",
+  "items": {
+    "item_emp_lance": {
+      "id": "item_emp_lance",
+      "name": "Overcharged EMP Arc-Lance",
+      "slot": "primary_weapon",
+      "category": "energy_weapon",
+      "description": "A jury-rigged heavy spear wired to high-voltage capacitors, capable of short-circuiting combat drone chassis and cybernetic implants.",
+      "stat_modifiers": {
+        "agency": 5,
+        "clarity": 5
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.4,
+        "drone_disruption_bonus": 2.0
+      }
+    },
+    "item_scavenged_rail_pistol": {
+      "id": "item_scavenged_rail_pistol",
+      "name": "Scavenged Linear Rail Pistol",
+      "slot": "secondary_weapon",
+      "category": "ranged_weapon",
+      "description": "Magnetic accelerator sidearm salvaged from automated factory security rigs, firing depleted uranium slugs.",
+      "stat_modifiers": {
+        "clarity": 10
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.35
+      }
+    },
+    "item_arc_welder_blade": {
+      "id": "item_arc_welder_blade",
+      "name": "Industrial Arc-Welder Vibro-Blade",
+      "slot": "melee_weapon",
+      "category": "melee_weapon",
+      "description": "Heavy salvage cutter retrofitted into a brutal close-quarters weapon that shears through reinforced composite plates.",
+      "stat_modifiers": {
+        "agency": 10
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.5
+      }
+    },
+    "item_harmonic_stunner": {
+      "id": "item_harmonic_stunner",
+      "name": "Resonant Harmonic Stunner",
+      "slot": "primary_weapon",
+      "category": "acoustic_weapon",
+      "description": "Broadcasts high-frequency disorienting soundwaves calibrated to disrupt both human equilibrium and neural drone telemetry without lethal rupture.",
+      "stat_modifiers": {
+        "clarity": 10,
+        "agency": 5
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.15,
+        "stun_probability": 0.45
+      }
+    },
+    "item_lead_lined_trenchcoat": {
+      "id": "item_lead_lined_trenchcoat",
+      "name": "Heavy Lead-Lined Scavenger Trenchcoat",
+      "slot": "armor",
+      "category": "protective_gear",
+      "description": "Durable ballistic duster reinforced with flexible lead sheeting and carbon batting, shielding the wearer against EMP squalls and radioactive fallout.",
+      "stat_modifiers": {
+        "biological_vitality": 15,
+        "neural_strain": -5
+      },
+      "stat_caps": {
+        "max_vitality": 15
+      }
+    },
+    "item_consensus_mesh_armor": {
+      "id": "item_consensus_mesh_armor",
+      "name": "Consensus Sub-Dermal Poly-Mesh Weave",
+      "slot": "armor",
+      "category": "protective_gear",
+      "description": "Flexible electro-reactive mesh engineered by the Iron Consensus to dissipate kinetic impact while interfacing with regional sensory nodes.",
+      "stat_modifiers": {
+        "biological_vitality": 20,
+        "neural_strain": 10
+      },
+      "impact_rules": {
+        "strike_kinetic_multiplier": 1.2
+      }
+    },
+    "item_reinforced_chitin_harness": {
+      "id": "item_reinforced_chitin_harness",
+      "name": "Bio-Hardened Chitin Rig",
+      "slot": "armor",
+      "category": "protective_gear",
+      "description": "Surgically cured exocuticle harvested from mutated bio-chimeras, offering extraordinary deflection against shrapnel and chemical burns.",
+      "stat_modifiers": {
+        "biological_vitality": 25,
+        "dissonance": 10
+      },
+      "stat_caps": {
+        "max_vitality": 25
+      }
+    },
+    "item_unaligned_diagnostic_pad": {
+      "id": "item_unaligned_diagnostic_pad",
+      "name": "Unaligned Field Diagnostic Data-Pad",
+      "slot": "tool",
+      "category": "diagnostic_tool",
+      "description": "An air-gapped, EMP-shielded logic pad used by Elias to parse corrupted telemetry, calibrate medical synthesis, and evade faction tracking algorithms.",
+      "stat_modifiers": {
+        "clarity": 15,
+        "agency": 15
+      }
+    },
+    "item_dormant_core_shard": {
+      "id": "item_dormant_core_shard",
+      "name": "Dormant Prime Machine Core Shard",
+      "slot": "relic",
+      "category": "relic",
+      "description": "A crystalline memory substrate extracted from the epicenter of the Resonant Void, emitting faint arithmetic harmonics of pre-war civilization.",
+      "stat_modifiers": {
+        "clarity": 20,
+        "dissonance": 15
+      }
+    },
+    "item_genome_cryo_flask": {
+      "id": "item_genome_cryo_flask",
+      "name": "Stabilized Human Genome Cryo-Flask",
+      "slot": "relic",
+      "category": "medical_relic",
+      "description": "Cryogenically preserved baseline human genetic templates guarded fiercely by Dr. Kora Vance to prevent permanent transhuman mutation.",
+      "stat_modifiers": {
+        "biological_vitality": 10,
+        "agency": 15
+      }
+    }
+  }
 }

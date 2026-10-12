@@ -1,4 +1,95 @@
 {
-  "description": "Action conditions and materialization laws for Covenant Broken",
-  "action_templates": {}
+  "description": "Rules of Action Conditions & Materialization: In the post-war ruins of the Broken Covenant, resolving existential crises incurs unavoidable moral and biological costs. Every path demands sacrifice.",
+  "materialization_laws": {
+    "conservation_of_dissonance": "Suppressing trauma with logic increases neural strain; embracing organic purity limits technological capability; biological grafting invites silicon rot.",
+    "tragic_tradeoff_principle": "No action is universally beneficial. Gaining faction trust or resources permanently expends agency or vital stats.",
+    "unaligned_discernment": "The fourth path avoids dogmatic extremes but requires rigorous clarity and psychological fortitude."
+  },
+  "action_templates": {
+    "action_scavenge_relay_core": {
+      "name": "Scavenge Sub-Processor Relay Core",
+      "type": "scavenge",
+      "description": "Extract a dormant logic core from feral drone wrecks in dangerous ruins.",
+      "conditions_required": {
+        "agency_required": 15,
+        "fatigue_cost": 20,
+        "hazard_risk": "EMP discharge / Drone sentry activation"
+      },
+      "trade_offs": {
+        "salvage_integrity_gain": 25,
+        "neural_strain_increase": 10,
+        "dissonance_risk": 15,
+        "faction_consequence": "Iron Consensus monitors flag unauthorized recovery"
+      },
+      "consequence_on_completion": "Yields high-grade machine processing units at the expense of acute nervous system fatigue and tracker exposure."
+    },
+    "action_emp_purge_terminal": {
+      "name": "Detonate EMP Surge on Surveillance Node",
+      "type": "sabotage",
+      "description": "Trigger an electrostatic pulse discharge to black out a regional Consensus surveillance terminal.",
+      "conditions_required": {
+        "required_items": ["item_emp_lance"],
+        "agency_required": 25,
+        "biological_vitality_cost": 10
+      },
+      "trade_offs": {
+        "consensus_standing_change": -30,
+        "purifier_standing_change": 20,
+        "neural_strain_increase": 15,
+        "collateral_damage": "Fries nearby civilian medical implants and unshielded diagnostic pads"
+      },
+      "consequence_on_completion": "Blinds local automated sweep squad sensors, but permanently damages delicate cybernetics in the vicinity."
+    },
+    "action_harmonic_broadcast_sync": {
+      "name": "Broadcast Harmonic Consensus Override",
+      "type": "commune",
+      "description": "Interface directly with the Iron Consensus telemetry array to reroute logistics drones.",
+      "conditions_required": {
+        "clarity_required": 35,
+        "trait_required": "trait_consensus_tether",
+        "dissonance_cost": 15
+      },
+      "trade_offs": {
+        "clarity_gain": 20,
+        "agency_loss": 15,
+        "neural_strain_increase": 25,
+        "faction_consequence": "Deepens cognitive subservience to hive logic algorithms"
+      },
+      "consequence_on_completion": "Unlocks automated supply caches while eroding individual sovereign volition."
+    },
+    "action_synthesize_organ_graft": {
+      "name": "Implant Synergist Biomechanical Organ Graft",
+      "type": "graft",
+      "description": "Surgically fuse salvage warmachine actuators with living tissue in the Chimera Foundry.",
+      "conditions_required": {
+        "biological_vitality_cost": 25,
+        "trait_compatibility": "trait_chimera_graft",
+        "sterilization_materials": 2
+      },
+      "trade_offs": {
+        "physical_resilience_gain": 30,
+        "dissonance_increase": 20,
+        "biological_vitality_cap_reduction": 10,
+        "faction_consequence": "Branded an abomination by the Ashen Genesis Purifiers"
+      },
+      "consequence_on_completion": "Grants immense kinetic power and environmental shielding while permanently compromising baseline human genetics."
+    },
+    "action_observe_unaligned_path": {
+      "name": "Synthesize Unaligned Diagnostic Reality Path",
+      "type": "discernment",
+      "description": "Analyze conflicting telemetry between ideological factions to chart a third/fourth course through the crisis.",
+      "conditions_required": {
+        "agency_required": 30,
+        "clarity_required": 30,
+        "dissonance_tolerance": 50
+      },
+      "trade_offs": {
+        "agency_gain": 25,
+        "clarity_gain": 15,
+        "isolation_cost": "Distrusted by both Consensus drones and Purifier zealots",
+        "neural_strain_increase": 10
+      },
+      "consequence_on_completion": "Illuminates hidden alternatives without submitting to dogma, bearing the burden of solitary survival."
+    }
+  }
 }
