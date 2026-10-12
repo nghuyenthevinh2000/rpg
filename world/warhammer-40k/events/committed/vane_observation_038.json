@@ -1,0 +1,77 @@
+{
+  "changes": {
+    "clock": {
+      "after": {
+        "data": {
+          "day": 9,
+          "display_timestamp": "41.999.059.M41 · Day 9 · Watch 2",
+          "turn": 38
+        },
+        "id": "clock",
+        "revision": 1,
+        "schema_version": 1
+      },
+      "before": {
+        "data": {
+          "day": 9,
+          "display_timestamp": "41.999.059.M41",
+          "turn": 37
+        },
+        "id": "clock",
+        "revision": 0,
+        "schema_version": 1
+      }
+    }
+  },
+  "dry_run": false,
+  "effects": [
+    {
+      "collection": "clock",
+      "entity_id": "clock",
+      "op": "set",
+      "path": "/day",
+      "value": 9
+    },
+    {
+      "collection": "clock",
+      "entity_id": "clock",
+      "op": "set",
+      "path": "/display_timestamp",
+      "value": "41.999.059.M41 · Day 9 · Watch 2"
+    }
+  ],
+  "event": {
+    "action": {
+      "actor_id": "player_vane",
+      "type": "wait"
+    },
+    "event_id": "vane_observation_038",
+    "expected_revisions": {
+      "characters/player_vane": 0,
+      "clock": 0
+    },
+    "expected_turn": 37,
+    "narrative": "Kathryn Vane remains in reverent stillness upon the marble dais of the Basilica of the Sovereign Soul as Watch 2 dawns over Hive Tartarus. Radiating gentle primordial yellow luminescence, she communes with the transformed world in peace. Below the dais, weary acolytes and underhive pilgrims lay down their arms upon the marble steps, sitting in concentric circles to begin the peaceful Rites of Radiant Attunement. In the surrounding alcoves, the fallen heroes—Bragg, Kroll, Jax, Severus, and Malachi—rest in sacred, eternal repose, sheltered forever from the broken cycles of war and suffering.",
+    "schema_version": 1,
+    "world_id": "warhammer-40k"
+  },
+  "event_id": "vane_observation_038",
+  "metadata": {
+    "baseline_sha256": "ffd6d4215d2b1b9860d5573a07fcbb48071d191667e18fd602ad8fb19a69e0f5",
+    "contract_version": 1,
+    "rule_source_hash": "623f6be9f5e26571b24e842cd708816ff7e9ebb6d6a63db74fbd87055fc22abb",
+    "seed": 42,
+    "state_schema_version": 1
+  },
+  "notes": [],
+  "outcomes": {
+    "resource_shortages": [],
+    "resources": []
+  },
+  "turn": {
+    "advances_turn": true,
+    "after": 38,
+    "before": 37
+  },
+  "world_id": "warhammer-40k"
+}

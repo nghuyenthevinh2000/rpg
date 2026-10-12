@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "event_id": "vane_observation_038",
+  "world_id": "warhammer-40k",
+  "expected_turn": 37,
+  "expected_revisions": {
+    "clock": 0,
+    "characters/player_vane": 0
+  },
+  "action": {
+    "type": "wait",
+    "actor_id": "player_vane"
+  },
+  "narrative": "Kathryn Vane remains in reverent stillness upon the marble dais of the Basilica of the Sovereign Soul as Watch 2 dawns over Hive Tartarus. Radiating gentle primordial yellow luminescence, she communes with the transformed world in peace. Below the dais, weary acolytes and underhive pilgrims lay down their arms upon the marble steps, sitting in concentric circles to begin the peaceful Rites of Radiant Attunement. In the surrounding alcoves, the fallen heroes—Bragg, Kroll, Jax, Severus, and Malachi—rest in sacred, eternal repose, sheltered forever from the broken cycles of war and suffering."
+}

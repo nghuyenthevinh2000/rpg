@@ -1,10 +1,10 @@
 {
   "data": {
     "day": 9,
-    "display_timestamp": "41.999.059.M41",
-    "turn": 37
+    "display_timestamp": "41.999.059.M41 · Day 9 · Watch 2",
+    "turn": 38
   },
   "id": "clock",
-  "revision": 0,
+  "revision": 1,
   "schema_version": 1
 }
