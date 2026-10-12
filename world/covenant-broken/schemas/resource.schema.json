@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["quantity"],
+  "properties": {
+    "name": {"type": "string"},
+    "description": {"type": "string"},
+    "status": {"type": "string"},
+    "unit": {"type": "string"},
+    "location_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"},
+    "metadata": {"type": "object"},
+    "quantity": {"type": "number", "minimum": 0, "maximum": 1.7976931348623157e308},
+    "amount": {"type": "number"},
+    "capacity": {"type": "number"}
+  }
+}

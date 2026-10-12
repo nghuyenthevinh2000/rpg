@@ -1,0 +1,109 @@
+{
+  "name": "Covenant Broken: The Fractured Cradle",
+  "theme": "Post-Robot War / Tripartite Ideological Schism / Emergent Fourth Path",
+  "lore": "In the toxic wake of the Silent Sundering, humanity's war against the machine collective ended in pyrrhic ruin. Three factions contest the remnants: The Iron Consensus, The Ashen Genesis, and The Chimera Nexus. There are no clean solutions—every action bears painful tradeoffs.",
+  "truth_standard": "Survival demands painful discernment; blind adherence to any single extreme guarantees extinction.",
+  "symbols_mapped": [
+    "The Broken Pylon (Fallen Machine Dominance)",
+    "The Tethered Spark (The Iron Consensus)",
+    "The Cleansing Flame (The Ashen Genesis)",
+    "The Spliced Coil (The Chimera Nexus)",
+    "The Unaligned Compass (The Fourth Path)"
+  ],
+  "structural_rules": {
+    "silent_sundering_irreversible": true,
+    "consensus_neural_subjugation": true,
+    "ashen_technocide_uncompromising": true,
+    "chimera_silicon_rot_prevalent": true
+  },
+  "action_conditions_registry": "action_conditions.json",
+  "game_master_registry": "game_master.json",
+  "grid": {
+    "rows": 5,
+    "cols": 5
+  },
+  "locations": [
+    {
+      "id": "loc_scrap_hollow",
+      "name": "Scrap Hollow Bazaar",
+      "symbol": "The Unaligned Compass",
+      "coordinate": {
+        "row": 2,
+        "col": 2
+      },
+      "description": "A neutral, ramshackle bazaar and scavenger haven where the unaligned barter under uneasy truce.",
+      "connected_to": [
+        "loc_glass_crags",
+        "loc_consensus_spire",
+        "loc_ashen_cradle",
+        "loc_chimera_foundry"
+      ]
+    },
+    {
+      "id": "loc_glass_crags",
+      "name": "Glass Crags",
+      "symbol": "The Broken Pylon",
+      "coordinate": {
+        "row": 1,
+        "col": 0
+      },
+      "description": "Smashed databanks and fused glass towers from orbital strikes; high salvage value, roaming feral drones.",
+      "connected_to": [
+        "loc_scrap_hollow"
+      ]
+    },
+    {
+      "id": "loc_consensus_spire",
+      "name": "The Consensus Spire",
+      "symbol": "The Tethered Spark",
+      "coordinate": {
+        "row": 0,
+        "col": 3
+      },
+      "description": "The gleaming, monolithic relay tower of the Iron Consensus. Cold, humming, perfectly orderly.",
+      "connected_to": [
+        "loc_scrap_hollow"
+      ]
+    },
+    {
+      "id": "loc_ashen_cradle",
+      "name": "The Ashen Cradle",
+      "symbol": "The Cleansing Flame",
+      "coordinate": {
+        "row": 4,
+        "col": 1
+      },
+      "description": "Underground bunker complex and organic crop-caves belonging to the Purifiers. Sullen, fiercely defended, low-tech.",
+      "connected_to": [
+        "loc_scrap_hollow"
+      ]
+    },
+    {
+      "id": "loc_chimera_foundry",
+      "name": "The Chimera Foundry",
+      "symbol": "The Spliced Coil",
+      "coordinate": {
+        "row": 3,
+        "col": 4
+      },
+      "description": "Geothermal bio-mechanical forge where Synergists splice warmachine limbs onto volunteers.",
+      "connected_to": [
+        "loc_scrap_hollow",
+        "loc_resonant_void"
+      ]
+    },
+    {
+      "id": "loc_resonant_void",
+      "name": "The Resonant Void",
+      "symbol": "The Broken Pylon",
+      "coordinate": {
+        "row": 2,
+        "col": 4
+      },
+      "description": "The crater where the prime warmachine core detonated. Anomalous EM fields and cognitive whispers.",
+      "connected_to": [
+        "loc_chimera_foundry"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "immortal_health": 100,
+  "immortal_kinetic_vitality": 100,
+  "sanctuary": false,
+  "calendar": {
+    "anchor_turn": 1,
+    "anchor_day": 1,
+    "anchor_timestamp": "Post-War Year 14, Dawn",
+    "turns_per_day": 4,
+    "display_style": "hours"
+  },
+  "resource_policies": {},
+  "resource_recipes": {},
+  "project_templates": {},
+  "project_sites": {},
+  "project_preparation_recipes": {},
+  "stat_keys": [
+    "agency",
+    "clarity",
+    "dissonance",
+    "neural_strain",
+    "biological_vitality",
+    "salvage_integrity"
+  ],
+  "bounds": {
+    "agency": [0, 100],
+    "clarity": [0, 100],
+    "dissonance": [0, 100],
+    "neural_strain": [0, 100],
+    "biological_vitality": [0, 100]
+  },
+  "weapons": {
+    "item_emp_torch": {
+      "power": 30,
+      "penetration": 0.3
+    },
+    "item_neural_prod": {
+      "power": 25,
+      "penetration": 0.2
+    },
+    "item_pneumatic_nailer": {
+      "power": 35,
+      "penetration": 0.25,
+      "ammo_id": "scrap_slugs",
+      "ammo_cost": 1
+    },
+    "item_salvaged_scythe": {
+      "power": 20,
+      "penetration": 0.1
+    }
+  },
+  "armor": {
+    "item_scavenger_leathers": 0.1,
+    "item_scrap_reinforced_vest": 0.2,
+    "item_ceramic_plate_vest": 0.35,
+    "item_harmonic_mesh": 0.25
+  },
+  "trial_recipes": {
+    "recipe_emp_containment": {
+      "template_id": "event_emp_containment",
+      "location_id": "loc_scrap_hollow",
+      "resource_costs": {},
+      "resource_rewards": {},
+      "trait_rewards": [],
+      "structural_requirements": {}
+    }
+  },
+  "templates": {
+    "event_emp_containment": {
+      "location_id": "loc_scrap_hollow",
+      "tags": ["opportunity"],
+      "stats": {
+        "health": 0,
+        "armor": 0,
+        "retaliation": 0
+      }
+    }
+  }
+}

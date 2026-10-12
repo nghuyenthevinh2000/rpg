@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "active", "activation_turn", "tags", "stats", "metadata"],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "location_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "activation_turn": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "enum": ["hostile", "opportunity", "social", "hazard", "environmental", "dissonance"]
+      },
+      "uniqueItems": true
+    },
+    "stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["health", "armor", "retaliation"],
+      "properties": {
+        "health": {
+          "type": "number",
+          "minimum": 0
+        },
+        "armor": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "retaliation": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}

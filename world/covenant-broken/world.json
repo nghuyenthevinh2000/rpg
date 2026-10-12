@@ -1,0 +1,41 @@
+{
+  "world_id": "covenant-broken",
+  "contract_version": 1,
+  "state_schema_version": 1,
+  "player_character_id": "player_elias",
+  "collections": {
+    "characters": {
+      "schema": "schemas/character.schema.json"
+    },
+    "threats": {
+      "schema": "schemas/threat.schema.json"
+    },
+    "resources": {
+      "schema": "schemas/resource.schema.json"
+    },
+    "actions": {
+      "schema": "schemas/action.schema.json"
+    },
+    "groups": {
+      "schema": "engine:group"
+    },
+    "baseline": {
+      "schema": "schemas/metadata.schema.json"
+    }
+  },
+  "definitions": {
+    "locations": "definitions/world.json",
+    "world": "definitions/world.json",
+    "traits": "conditions/traits.json",
+    "equipment": "conditions/equipments.json",
+    "gm": "game_master.json",
+    "actions": "action_conditions.json",
+    "rules": "definitions/engine_rules.json"
+  },
+  "logic": {
+    "resolve": "logic/rules.py:resolve",
+    "after_turn": "logic/rules.py:after_turn",
+    "derive": "logic/rules.py:derive",
+    "validate": "logic/rules.py:validate"
+  }
+}
