@@ -1,0 +1,16 @@
+{
+  "data": {
+    "capacity": 1000,
+    "description": "Purified non-irradiated nutrient paste and subterranean fungus loaves.",
+    "location_id": "loc_scrap_hollow",
+    "metadata": {
+      "category": "sustenance_and_survival"
+    },
+    "name": "organic_rations",
+    "quantity": 85,
+    "unit": "ration packs"
+  },
+  "id": "organic_rations",
+  "revision": 0,
+  "schema_version": 1
+}

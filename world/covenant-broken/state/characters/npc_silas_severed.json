@@ -1,0 +1,56 @@
+{
+  "data": {
+    "baseline": {
+      "modifiers": {},
+      "stats": {
+        "agency": 65,
+        "biological_vitality": 65,
+        "clarity": 60,
+        "dissonance": 55,
+        "max_agency": 100,
+        "neural_strain": 35
+      }
+    },
+    "capabilities": {
+      "cannot_die": false
+    },
+    "equipment": [],
+    "health": 65,
+    "inventory": [
+      "item_lead_lined_trenchcoat"
+    ],
+    "location_id": "loc_scrap_hollow",
+    "metadata": {
+      "legacy": {
+        "archetype": "The Severed Deserter",
+        "coordinate": {
+          "col": 3,
+          "row": 3
+        },
+        "current_location": "loc_scrap_hollow",
+        "current_status": "Haunted Wanderer among the Scrap Stalls",
+        "decisions": [],
+        "former_role": "Consensus Signal Scout",
+        "id": "npc_silas_severed",
+        "name": "Silas",
+        "symbol_alignment": "The Broken Pylon"
+      }
+    },
+    "name": "Silas",
+    "stats": {
+      "agency": 65,
+      "biological_vitality": 65,
+      "clarity": 60,
+      "dissonance": 55,
+      "max_agency": 100,
+      "neural_strain": 35
+    },
+    "status": "alive",
+    "traits": [
+      "trait_severed_phantom"
+    ]
+  },
+  "id": "npc_silas_severed",
+  "revision": 0,
+  "schema_version": 1
+}

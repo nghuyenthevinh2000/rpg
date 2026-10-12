@@ -1,0 +1,57 @@
+{
+  "data": {
+    "baseline": {
+      "modifiers": {},
+      "stats": {
+        "agency": 85,
+        "biological_vitality": 80,
+        "clarity": 90,
+        "dissonance": 15,
+        "max_agency": 100,
+        "neural_strain": 10
+      }
+    },
+    "capabilities": {
+      "cannot_die": false
+    },
+    "equipment": [],
+    "health": 80,
+    "inventory": [
+      "item_scavenged_rail_pistol",
+      "item_unaligned_diagnostic_pad"
+    ],
+    "location_id": "loc_scrap_hollow",
+    "metadata": {
+      "legacy": {
+        "archetype": "The Unaligned Wanderer",
+        "coordinate": {
+          "col": 3,
+          "row": 3
+        },
+        "current_location": "loc_scrap_hollow",
+        "current_status": "Neutral Scavenger at Scrap Hollow Bazaar",
+        "decisions": [],
+        "former_role": "Scavenger Technician",
+        "id": "player_elias",
+        "name": "Elias",
+        "symbol_alignment": "The Unaligned Compass"
+      }
+    },
+    "name": "Elias",
+    "stats": {
+      "agency": 85,
+      "biological_vitality": 80,
+      "clarity": 90,
+      "dissonance": 15,
+      "max_agency": 100,
+      "neural_strain": 10
+    },
+    "status": "alive",
+    "traits": [
+      "trait_unaligned_observer"
+    ]
+  },
+  "id": "player_elias",
+  "revision": 0,
+  "schema_version": 1
+}

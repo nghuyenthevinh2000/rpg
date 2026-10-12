@@ -1,0 +1,13 @@
+{
+  "data": {
+    "metadata": {
+      "description": "Initial post-war shattered armistice baseline",
+      "installed_turn": 1,
+      "inventory_registry": {},
+      "world_id": "covenant-broken"
+    }
+  },
+  "id": "legacy",
+  "revision": 0,
+  "schema_version": 1
+}

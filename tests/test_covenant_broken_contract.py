@@ -610,6 +610,119 @@ class CovenantBrokenContractTests(unittest.TestCase):
         self.assertEqual(res.effects[0]["path"], "/active")
         self.assertEqual(res.effects[0]["value"], False)
 
+    def test_covenant_broken_canonical_state_and_characters(self):
+        from engine.runner import read_snapshot
+        from engine.state_store import StateStore
+
+        contract = WorldContract.load("world/covenant-broken")
+        self.assertIsNotNone(contract)
+
+        store = StateStore("world/covenant-broken")
+        state = store.snapshot()
+
+        snapshot = read_snapshot("world/covenant-broken")
+        self.assertEqual(state, snapshot)
+
+        # Check clock
+        self.assertIn("clock", snapshot)
+        clock = snapshot["clock"]
+        self.assertEqual(clock["schema_version"], 1)
+        self.assertEqual(clock["id"], "clock")
+        self.assertEqual(clock["revision"], 0)
+        self.assertEqual(clock["data"]["turn"], 1)
+        self.assertEqual(clock["data"]["day"], 1)
+        self.assertEqual(clock["data"]["display_timestamp"], "Post-War Year 14, Dawn")
+
+        # Check baseline/legacy
+        self.assertIn("baseline", snapshot)
+        self.assertIn("legacy", snapshot["baseline"])
+        legacy = snapshot["baseline"]["legacy"]
+        self.assertEqual(legacy["schema_version"], 1)
+        self.assertEqual(legacy["id"], "legacy")
+        self.assertEqual(legacy["revision"], 0)
+        self.assertEqual(legacy["data"]["metadata"]["world_id"], "covenant-broken")
+        self.assertEqual(legacy["data"]["metadata"]["installed_turn"], 1)
+
+        # Check 6 characters
+        self.assertIn("characters", snapshot)
+        chars = snapshot["characters"]
+        expected_chars = [
+            "player_elias",
+            "npc_valen_consensus",
+            "npc_mira_purifier",
+            "npc_archon_synergist",
+            "npc_silas_severed",
+            "npc_kora_vance",
+        ]
+        for cid in expected_chars:
+            self.assertIn(cid, chars, f"Character {cid} missing from snapshot")
+            c_env = chars[cid]
+            self.assertEqual(c_env["schema_version"], 1)
+            self.assertEqual(c_env["id"], cid)
+            self.assertEqual(c_env["revision"], 0)
+            contract.validate_envelope("characters", cid, c_env)
+
+        # Elias check
+        elias_data = chars["player_elias"]["data"]
+        self.assertEqual(elias_data["name"], "Elias")
+        self.assertEqual(elias_data["location_id"], "loc_scrap_hollow")
+        self.assertEqual(elias_data["status"], "alive")
+        self.assertEqual(elias_data["stats"]["agency"], 85)
+        self.assertEqual(elias_data["stats"]["clarity"], 90)
+        self.assertEqual(elias_data["stats"]["dissonance"], 15)
+        self.assertEqual(elias_data["stats"]["neural_strain"], 10)
+        self.assertEqual(elias_data["stats"]["biological_vitality"], 80)
+        self.assertEqual(elias_data["traits"], ["trait_unaligned_observer"])
+        self.assertEqual(sorted(elias_data["inventory"]), sorted(["item_scavenged_rail_pistol", "item_unaligned_diagnostic_pad"]))
+
+        # Valen check
+        valen_data = chars["npc_valen_consensus"]["data"]
+        self.assertEqual(valen_data["name"], "Valen")
+        self.assertEqual(valen_data["location_id"], "loc_consensus_spire")
+        self.assertEqual(valen_data["stats"]["agency"], 30)
+        self.assertEqual(valen_data["traits"], ["trait_consensus_tether"])
+
+        # Mira check
+        mira_data = chars["npc_mira_purifier"]["data"]
+        self.assertEqual(mira_data["name"], "Mira")
+        self.assertEqual(mira_data["location_id"], "loc_ashen_cradle")
+        self.assertEqual(mira_data["stats"]["agency"], 90)
+        self.assertEqual(mira_data["traits"], ["trait_purifier_fervor"])
+
+        # Archon Rex check
+        archon_data = chars["npc_archon_synergist"]["data"]
+        self.assertEqual(archon_data["name"], "Archon Rex")
+        self.assertEqual(archon_data["location_id"], "loc_chimera_foundry")
+        self.assertEqual(archon_data["stats"]["agency"], 60)
+        self.assertEqual(archon_data["traits"], ["trait_chimera_graft"])
+
+        # Silas check
+        silas_data = chars["npc_silas_severed"]["data"]
+        self.assertEqual(silas_data["name"], "Silas")
+        self.assertEqual(silas_data["location_id"], "loc_scrap_hollow")
+        self.assertEqual(silas_data["stats"]["agency"], 65)
+        self.assertEqual(silas_data["traits"], ["trait_severed_phantom"])
+
+        # Dr. Kora Vance check
+        kora_data = chars["npc_kora_vance"]["data"]
+        self.assertEqual(kora_data["name"], "Dr. Kora Vance")
+        self.assertEqual(kora_data["location_id"], "loc_scrap_hollow")
+        self.assertEqual(kora_data["stats"]["agency"], 80)
+        self.assertEqual(kora_data["traits"], ["trait_genomic_custodian"])
+
+        # Check resources
+        self.assertIn("resources", snapshot)
+        for res_id in ["salvage_scrap", "energy_cells", "organic_rations"]:
+            self.assertIn(res_id, snapshot["resources"])
+            contract.validate_envelope("resources", res_id, snapshot["resources"][res_id])
+
+        # State validation via contract logic
+        from engine.contracts import RuleContext, StateView
+        import random
+        ctx = RuleContext(StateView(snapshot), contract.definition_view, random.Random(0), 1)
+        violations = contract.validate(ctx)
+        self.assertEqual(violations, [])
+
 
 if __name__ == "__main__":
     unittest.main()

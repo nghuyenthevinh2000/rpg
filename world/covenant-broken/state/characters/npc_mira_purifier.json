@@ -1,0 +1,57 @@
+{
+  "data": {
+    "baseline": {
+      "modifiers": {},
+      "stats": {
+        "agency": 90,
+        "biological_vitality": 95,
+        "clarity": 75,
+        "dissonance": 20,
+        "max_agency": 100,
+        "neural_strain": 0
+      }
+    },
+    "capabilities": {
+      "cannot_die": false
+    },
+    "equipment": [],
+    "health": 95,
+    "inventory": [
+      "item_emp_lance",
+      "item_lead_lined_trenchcoat"
+    ],
+    "location_id": "loc_ashen_cradle",
+    "metadata": {
+      "legacy": {
+        "archetype": "The Flame Purifier",
+        "coordinate": {
+          "col": 2,
+          "row": 5
+        },
+        "current_location": "loc_ashen_cradle",
+        "current_status": "Vigilant Guard of the Ashen Pyres",
+        "decisions": [],
+        "former_role": "Gene-Purity Inquisitor",
+        "id": "npc_mira_purifier",
+        "name": "Mira",
+        "symbol_alignment": "The Cleansing Flame"
+      }
+    },
+    "name": "Mira",
+    "stats": {
+      "agency": 90,
+      "biological_vitality": 95,
+      "clarity": 75,
+      "dissonance": 20,
+      "max_agency": 100,
+      "neural_strain": 0
+    },
+    "status": "alive",
+    "traits": [
+      "trait_purifier_fervor"
+    ]
+  },
+  "id": "npc_mira_purifier",
+  "revision": 0,
+  "schema_version": 1
+}

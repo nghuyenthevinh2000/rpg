@@ -1,0 +1,16 @@
+{
+  "data": {
+    "capacity": 2000,
+    "description": "Standardized electrochemical batteries harvested from downed combat machines and generators.",
+    "location_id": "loc_scrap_hollow",
+    "metadata": {
+      "category": "power_and_electronics"
+    },
+    "name": "energy_cells",
+    "quantity": 120,
+    "unit": "cells"
+  },
+  "id": "energy_cells",
+  "revision": 0,
+  "schema_version": 1
+}

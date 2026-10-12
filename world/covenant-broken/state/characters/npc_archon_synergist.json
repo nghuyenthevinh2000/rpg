@@ -1,0 +1,58 @@
+{
+  "data": {
+    "baseline": {
+      "modifiers": {},
+      "stats": {
+        "agency": 60,
+        "biological_vitality": 50,
+        "clarity": 80,
+        "dissonance": 45,
+        "max_agency": 100,
+        "neural_strain": 70
+      }
+    },
+    "capabilities": {
+      "cannot_die": false
+    },
+    "equipment": [],
+    "health": 50,
+    "inventory": [
+      "item_arc_welder_blade",
+      "item_reinforced_chitin_harness",
+      "item_dormant_core_shard"
+    ],
+    "location_id": "loc_chimera_foundry",
+    "metadata": {
+      "legacy": {
+        "archetype": "The Bio-Forge Archon",
+        "coordinate": {
+          "col": 5,
+          "row": 4
+        },
+        "current_location": "loc_chimera_foundry",
+        "current_status": "Master of Chimeric Synthesis",
+        "decisions": [],
+        "former_role": "Cybernetic Bio-Engineer",
+        "id": "npc_archon_synergist",
+        "name": "Archon Rex",
+        "symbol_alignment": "The Spliced Coil"
+      }
+    },
+    "name": "Archon Rex",
+    "stats": {
+      "agency": 60,
+      "biological_vitality": 50,
+      "clarity": 80,
+      "dissonance": 45,
+      "max_agency": 100,
+      "neural_strain": 70
+    },
+    "status": "alive",
+    "traits": [
+      "trait_chimera_graft"
+    ]
+  },
+  "id": "npc_archon_synergist",
+  "revision": 0,
+  "schema_version": 1
+}

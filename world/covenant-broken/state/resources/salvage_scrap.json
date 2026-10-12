@@ -1,0 +1,16 @@
+{
+  "data": {
+    "capacity": 5000,
+    "description": "Refined structural metal and cybernetic chassis components recovered from the wasteland.",
+    "location_id": "loc_scrap_hollow",
+    "metadata": {
+      "category": "construction_and_fabrication"
+    },
+    "name": "salvage_scrap",
+    "quantity": 250,
+    "unit": "metric kg"
+  },
+  "id": "salvage_scrap",
+  "revision": 0,
+  "schema_version": 1
+}
