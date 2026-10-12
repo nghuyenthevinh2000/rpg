@@ -8,10 +8,10 @@ from pathlib import Path
 import shutil
 import tempfile
 
-from engine.contracts import (RuleContext, RuleError, StateView, WorldContract,
+from .contracts import (RuleContext, RuleError, StateView, WorldContract,
                               casefold_unique, contained_path, load_json, safe_id)
-from engine.state_store import StateStore
-from world_utils import load_progress
+from .state_store import StateStore
+from .world_utils import load_progress
 
 
 def _atomic(path, value):

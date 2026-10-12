@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from engine.contracts import RuleError, WorldContract
 from engine.runner import read_snapshot, run_event
-from game_master import propose_event, allowed_templates
+from engine.game_master import propose_event, allowed_templates
 from world_fixtures import TemporaryWorldCase, hashes
 
 

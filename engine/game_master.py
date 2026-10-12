@@ -4,9 +4,9 @@ import os
 from pathlib import Path
 import random
 import uuid
-from engine.contracts import RuleError, WorldContract
-from engine.runner import read_snapshot
-from world_utils import require_canonical
+from .contracts import RuleError, WorldContract
+from .runner import read_snapshot
+from .world_utils import require_canonical
 
 
 def allowed_templates(contract):
@@ -83,8 +83,3 @@ def propose_event(world_dir, *, seed=0, improvise=False):
     finally:
         os.close(fd)
     return event
-
-
-if __name__ == '__main__':
-    from world_cli import main
-    raise SystemExit(main('gm'))

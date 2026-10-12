@@ -82,3 +82,24 @@ Resolved the 3 follow-up compliance findings:
 3. **README attack participant example**: Updated the `attack` example in `README.md` to include `player_vane` alongside `npc_trooper_jax` in `participant_ids`, satisfying participant validation.
 
 Full test suite: 161 tests passed in 128.88s (0 errors, 0 failures). 104 authoritative hashes intact.
+
+## Engine Package Consolidation Refactor (2026-10-12)
+
+Consolidated root scripts and utility modules into the `engine/` package and unified CLI:
+1. **Package Relocation & Module Unification:**
+   - Relocated `world_cli.py` -> `engine/cli.py`, `world_migration.py` -> `engine/migration.py`, `game_master.py` -> `engine/game_master.py`, `world_utils.py` -> `engine/world_utils.py`.
+   - Removed retired root wrapper scripts (`apply_event.py`, `change_world.py`, `enforce_char_stats.py`, `enforce_progress_effects.py`, `inspect_world.py`, `migrate_world.py`, `render_map.py`, `resolve-threat.py`).
+   - Created `engine/__main__.py` enabling direct execution via `python -m engine <subcommand>`.
+   - Unified seven subcommands under `engine`: `run`, `inspect`, `migrate`, `render`, `gm`, `stats`, `timing`.
+2. **Strict Package Isolation & Dependency Closure:**
+   - Verified that zero runtime Python imports reference retired root entry points.
+   - Preserved `ROOT` resolution for package and world path discovery without importing legacy modules.
+   - Added subprocess import isolation test (`test_subprocess_import_from_unrelated_cwd` in `tests/test_cli.py`) verifying `engine.cli`, `engine.migration`, `engine.game_master`, `engine.world_utils` can be imported from an empty cwd with `PYTHONPATH=ROOT` without reading gameplay state or writing stdout/stderr.
+   - Added no-hook replay test verifying `engine.cli` imports do not trigger rule execution during event replay.
+3. **Invariants & Non-Mutation Verification:**
+   - Verified world rule source hashes and schema definitions remain identical for both worlds (`lost-world`: `37a8e48b9cc2df1c31651f93b496b60b77984db12ccaf16761cdaa18288644f7`; `warhammer-40k`: `623f6be9f5e26571b24e842cd708816ff7e9ebb6d6a63db74fbd87055fc22abb`).
+   - Clean `git diff --check` with 0 whitespace issues.
+   - All 106 authoritative state, contract, and legacy archive hashes captured prior to this refactor verified 100% byte-identical.
+   - Full test suite: 182 tests passed in 131.90s (0 errors, 0 failures).
+   - Zero commits or pushes performed by the refactor.
+   - Preserved existing uncommitted working-tree changes without rolling them back, including the separately executed Warhammer 40k gameplay turn 37 -> 38 (`vane_observation_038` commit, transaction, and map projection). Refactor verification tests were strictly confined to temporary test fixtures and did not execute, advance, or mutate any live saves.

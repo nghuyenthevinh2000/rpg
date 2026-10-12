@@ -33,12 +33,17 @@ each world's `archive/legacy-baseline/`; implementation tests never advance the
 live worlds. Migration of another legacy copy is not a turn:
 
 ```sh
-python inspect_world.py --world lost-world
-python migrate_world.py --world lost-world --dry-run
-python migrate_world.py --world lost-world
-python migrate_world.py --world warhammer-40k --dry-run
-python migrate_world.py --world warhammer-40k
+python -m engine inspect --world lost-world
+python -m engine migrate --world lost-world --dry-run
+python -m engine migrate --world lost-world
+python -m engine migrate --world warhammer-40k --dry-run
+python -m engine migrate --world warhammer-40k
+
+# Or using uv run:
+uv run --no-project --with-requirements requirements.txt python -m engine inspect --world lost-world
+uv run --no-project --with-requirements requirements.txt python -m engine migrate --world lost-world --dry-run
 ```
+
 
 `--dry-run` is read-only preview. Default migration installs the explicitly
 chosen **current-save baseline**, without an ambiguity approval gate;
@@ -68,8 +73,9 @@ Do not blindly rerun a failed command. Retain the archive, stage, and journal.
 `phase: ready` can finish an interrupted installation explicitly:
 
 ```sh
-python migrate_world.py --world lost-world --resume
+python -m engine migrate --world lost-world --resume
 ```
+
 
 Resume verifies exact original source/archive hashes and the installed full
 baseline fingerprint before contract cutover. A `preparing` journal refuses
@@ -117,27 +123,35 @@ For actual gameplay follow `AGENTS.md`: invoke 1–2 gameplay sub-agents, synthe
 their proposed intent, dry-run, then commit **once**:
 
 ```sh
-python change_world.py world/lost-world/events/proposed/kael_departure_034.json --dry-run --seed 42
-python change_world.py world/lost-world/events/proposed/kael_departure_034.json --seed 42
-python render_map.py --world lost-world
-python enforce_char_stats.py --world lost-world
-python enforce_progress_effects.py --world warhammer-40k
+# Dry-run first, then commit once
+python -m engine run world/lost-world/events/proposed/kael_departure_034.json --dry-run --seed 42
+python -m engine run world/lost-world/events/proposed/kael_departure_034.json --seed 42
+
+# Independent map render retry
+python -m engine render --world lost-world
+
+# Read-only stats and timing inspection
+python -m engine stats --world lost-world
+python -m engine timing --world warhammer-40k
+
+# Or using uv run:
+uv run --no-project --with-requirements requirements.txt python -m engine run world/lost-world/events/proposed/kael_departure_034.json --dry-run
 ```
 
-`apply_event.py` and `resolve-threat.py` are the same runner boundary, not separate
-mutation systems. `--world` accepts a known world name or existing world directory;
+All runner invocations go through `python -m engine run EVENT`. `--world` accepts a known world name or existing world directory;
 event paths under `event/`, `events/proposed/`, or `events/committed/` infer the
 world. Legacy aliases/raw patches/report-only combat specs are explicitly rejected.
-`--no-render` omits map generation. Stat/progress commands are read-only inspection,
+`--no-render` omits map generation. Stat/progress commands (`stats`, `timing`) are read-only inspection,
 never an extra consequence pass. A map failure does not undo or replay a commit;
-retry rendering independently. Maps escape display text and reject stale snapshots
+retry rendering independently via `python -m engine render`. Maps escape display text and reject stale snapshots
 while holding the engine lock through atomic map replacement.
 
 Replay a committed gameplay report **only into an exact matching baseline copy**:
 
 ```sh
-python change_world.py path/to/resolved-event.json --world path/to/baseline-copy --replay --no-render
+python -m engine run path/to/resolved-event.json --world path/to/baseline-copy --replay --no-render
 ```
+
 
 Replay applies recorded effects/outcomes without rules or RNG and checks the
 engine's complete baseline fingerprint. `engine_baseline` receipts are migration
@@ -254,18 +268,41 @@ live save.
 ## GM proposals and sanctuary handling
 
 ```sh
-python game_master.py --world lost-world --seed 7 --improvise
-python game_master.py --world warhammer-40k --seed 7
+python -m engine gm --world lost-world --seed 7 --improvise
+python -m engine gm --world warhammer-40k --seed 7
+
+# Or using uv run:
+uv run --no-project --with-requirements requirements.txt python -m engine gm --world warhammer-40k --seed 7
 ```
 
 GM reads the selected world's `disaster_pool`/`improvisation_templates`, uses seeded
-selection, and exclusively creates a unique proposal. It never applies it. Lost
+selection, and exclusively creates a unique proposal under `events/proposed/`. It never applies it. Lost
 World has no improvisation pool: its configured disaster-pool fallback is disclosed
 in the proposal. Under sanctuary, hostile and cold templates are filtered out;
 Warhammer draws from authored peaceful opportunity and social templates
 (pre-sanctuary combat templates remain archived in `definitions/gm-pre-sanctuary.json`).
-`change_world.py --improvise`/`--force-gm` without an event also only generates a proposal;
-mixing an event with these flags rejects rather than running a hidden mutation pipeline.
+GM generation is dedicated to `python -m engine gm`; `run` rejects `--improvise` or `--force-gm`.
+
+## Retired CLI commands and import replacements
+
+Root wrapper scripts and legacy module names have been retired and consolidated under `engine/`:
+
+| Retired entry point / script | Replacement command / import | Notes |
+| --- | --- | --- |
+| `change_world.py`, `apply_event.py`, `resolve-threat.py` | `python -m engine run EVENT` | Canonical event runner, dry-run, and exact replay |
+| `enforce_char_stats.py` | `python -m engine stats` | Read-only derived stat and invariant audit |
+| `enforce_progress_effects.py` | `python -m engine timing` | Read-only calendar and periodic effect inspection |
+| `render_map.py` | `python -m engine render` | Independent committed-state HTML map rendering retry |
+| `inspect_world.py` | `python -m engine inspect` | Read-only schema and baseline migration inspection |
+| `migrate_world.py` | `python -m engine migrate` | Staged migration and resume |
+| `game_master.py` | `python -m engine gm` | Seeded proposal-only generation |
+| `import world_utils` | `import engine.world_utils` | Internal world discovery and validation utilities |
+| `import world_migration` | `import engine.migration` | World inspection and staged migration engine |
+| `import world_cli` | `import engine.cli` | Unified CLI dispatcher |
+| root `import game_master` | `import engine.game_master` | GM proposal generator |
+
+Note: World-level `game_master.json` files are authored world configuration templates and remain intact.
+
 
 Arbitrary historical freeform action mechanics remain strictly constrained to typed,
 validated schemas and recipes. Imported baseline records remain independently inspectable,

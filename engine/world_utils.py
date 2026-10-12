@@ -1,15 +1,20 @@
 """World selection and read-only compatibility helpers."""
 from pathlib import Path
-from engine.contracts import RuleError, load_json
+from .contracts import RuleError, load_json
 
-RPG_DIR = Path(__file__).resolve().parent
+RPG_DIR = Path(__file__).resolve().parents[1]
 
 
 def resolve_world_dir(world_arg=None, event_path=None):
     if world_arg:
-        candidate = Path(world_arg).expanduser()
-        if not candidate.is_dir():
-            candidate = RPG_DIR / 'world' / world_arg
+        # Check if world_arg matches a known world name in the repository first
+        repo_world = RPG_DIR / 'world' / world_arg
+        if repo_world.is_dir() and (repo_world / 'world.json').is_file() and not Path(world_arg).is_absolute() and not any(sep in world_arg for sep in ('/', '\\', '.')):
+            candidate = repo_world
+        else:
+            candidate = Path(world_arg).expanduser()
+            if not candidate.is_dir():
+                candidate = repo_world
     elif event_path:
         event = Path(event_path).resolve()
         if event.parent.name == 'event':
@@ -29,10 +34,11 @@ def require_canonical(world_dir):
     config = load_json(Path(world_dir) / 'world.json')
     journal = Path(world_dir) / '.migration.json'
     if journal.exists() and load_json(journal).get('phase') != 'complete':
-        raise RuleError('migration_incomplete', 'Migration is pending; inspect .migration.json and use migrate_world.py --resume only for ready staging')
+        raise RuleError('migration_incomplete', 'Migration is pending; inspect .migration.json and use python -m engine migrate --resume only for ready staging')
     if config.get('contract_version') != 1:
-        raise RuleError('legacy_world', 'Gameplay is disabled: run inspect_world.py then migrate_world.py --world WORLD')
+        raise RuleError('legacy_world', 'Gameplay is disabled: run python -m engine inspect then python -m engine migrate --world WORLD')
     return config
+
 
 
 def load_progress(world_dir):
@@ -52,4 +58,4 @@ def load_progress(world_dir):
 
 
 def save_progress(world_dir, progress):
-    raise RuleError('legacy_writer_disabled', 'Direct save mutation is disabled; propose a canonical event and use change_world.py')
+    raise RuleError('legacy_writer_disabled', 'Direct save mutation is disabled; propose a canonical event and use python -m engine run EVENT')

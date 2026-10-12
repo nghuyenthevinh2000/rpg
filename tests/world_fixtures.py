@@ -44,7 +44,7 @@ class TemporaryWorldCase(unittest.TestCase):
         return dest
 
     def make_world(self, name='lost-world'):
-        from world_migration import migrate_world
+        from engine.migration import migrate_world
         world = self.legacy(name)
         migrate_world(world)
         return world

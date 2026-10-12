@@ -139,7 +139,7 @@ class InventoryTests(TemporaryWorldCase):
         self.assertEqual(before_hashes, hashes(world / 'state'))
 
     def test_canonical_inspection_includes_audit(self):
-        from world_migration import inspect_world
+        from engine.migration import inspect_world
         world = ROOT / 'world/warhammer-40k'
         before_hashes = hashes(world / 'state')
         report = inspect_world(world)

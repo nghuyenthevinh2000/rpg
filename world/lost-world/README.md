@@ -39,31 +39,30 @@ There are no goblins, dungeons, hit points, or evil overlords to punch. Everythi
    - Event cards specifying narrative shifts, stat deltas, location migrations, and world tension updates:
      - [`event/event_001_morning_at_monastery.json`](file:///Users/thevinhnguyen/Documents/computer-science/projects/social-content/local/rpg/world/lost-world/event/event_001_morning_at_monastery.json)
 
-6. **[`change_world.py`](file:///Users/thevinhnguyen/Documents/computer-science/projects/social-content/local/rpg/change_world.py)** (Unified Runner)
-   - Runs four core systems sequentially in one call:
-     1. `apply_event.py` (Updates character sheets in `char/`, `world.json`, and `progress.json`)
-     2. `enforce_char_stats.py` (Clamps stats to caps from `conditions/traits.json` & calculates punch kinetic impact)
-     3. `render_map.py` (Re-renders interactive HTML grid map)
-     4. `game_master.py` (Stochastic dice roll against `game_master.json` or emergent improvisation)
+6. **Engine CLI (`python -m engine`)**
+   - Canonical execution and inspection run via the unified engine module from `projects/rpg/`:
+     1. `python -m engine run EVENT`: Canonical event resolution, one-turn progression, validation, transactional commit, and map render.
+     2. `python -m engine stats`: Read-only derived stats and invariant audit (no state mutations).
+     3. `python -m engine timing`: Read-only clock and periodic effect explanation.
+     4. `python -m engine render`: Independent committed-state HTML map rendering retry.
+     5. `python -m engine gm`: Stochastic Entropy & Providence engine: generates proposed events only (never mutates state directly).
    ```bash
-   # Standard turn run
-   python3 local/rpg/change_world.py local/rpg/world/lost-world/event/event_003_sitting_still.json
+   # Standard turn run (dry-run then commit once)
+   python -m engine run world/lost-world/events/proposed/kael_departure_034.json --dry-run
+   python -m engine run world/lost-world/events/proposed/kael_departure_034.json
 
-   # With Game Master emergent improvisation
-   python3 local/rpg/change_world.py local/rpg/world/lost-world/event/event_003_sitting_still.json --improvise
+   # Generate a Game Master proposal (proposal-only)
+   python -m engine gm --world lost-world --seed 7 --improvise
 
-   # Force Game Master crisis roll
-   python3 local/rpg/change_world.py local/rpg/world/lost-world/event/event_003_sitting_still.json --force-gm
+   # Independent map render retry
+   python -m engine render --world lost-world
    ```
 
-7. **[`conditions/traits.json`](file:///Users/thevinhnguyen/Documents/computer-science/projects/social-content/local/rpg/world/lost-world/conditions/traits.json)** & **[`enforce_char_stats.py`](file:///Users/thevinhnguyen/Documents/computer-science/projects/social-content/local/rpg/enforce_char_stats.py)**
-   - Manages trait-based stat caps (e.g. lowering max vitality) and computes kinetic punch damage scaling with physical vitality.
+7. **[`conditions/traits.json`](file:///Users/thevinhnguyen/Documents/computer-science/projects/social-content/local/rpg/world/lost-world/conditions/traits.json)**
+   - Manages trait-based stat caps and kinetic punch formulas, inspected read-only via `python -m engine stats`.
 
-8. **[`game_master.py`](file:///Users/thevinhnguyen/Documents/computer-science/projects/social-content/local/rpg/game_master.py)**
-   - Stochastic Entropy & Providence engine: checks trigger probabilities in `game_master.json` or improvises sudden trials.
-
-9. **[`apply_event.py`](file:///Users/thevinhnguyen/Documents/computer-science/projects/social-content/local/rpg/apply_event.py)**
-   - Minimal event dispatcher that mutates character sheets in `char/` and progress tracking.
+8. **[`game_master.json`](file:///Users/thevinhnguyen/Documents/computer-science/projects/social-content/local/rpg/world/lost-world/game_master.json)**
+   - Authored disaster pools and trigger probabilities, evaluated via `python -m engine gm`.
 
 ---
 

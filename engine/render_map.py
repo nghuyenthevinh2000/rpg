@@ -8,7 +8,7 @@ import random
 import tempfile
 from engine.contracts import RuleContext, RuleError, StateView, WorldContract
 from engine.state_store import StateStore
-from world_utils import require_canonical
+from .world_utils import require_canonical
 
 
 def _fingerprint(snapshot):
@@ -25,7 +25,8 @@ def render_map(world_dir, snapshot=None, *, committed_event=None):
         if snapshot is None:
             snapshot = current
         elif _fingerprint(current) != _fingerprint(snapshot):
-            raise RuleError('stale_render', 'Captured snapshot is no longer current; retry render_map.py without replaying an event')
+            raise RuleError('stale_render', 'Captured snapshot is no longer current; retry python -m engine render without replaying an event')
+
 
         # Find latest matching gameplay receipt if not explicitly provided
         clock = snapshot['clock']['data']

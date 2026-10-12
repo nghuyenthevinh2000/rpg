@@ -2,7 +2,8 @@
 
 Status: initial scope implemented and both live saves migrated to canonical split state on 2026-10-12. Execution and verification are tracked in `progress.md`. Remaining historical subsystems are intentionally incremental.
 
-Follow-up planning: [remaining mechanics implementation plan](remaining-mechanics.md) and [proposed requirements](remaining-mechanics-spec.md). These documents do not activate new mechanics or advance gameplay.
+Follow-up planning: [remaining mechanics implementation plan](remaining-mechanics.md), [proposed requirements](remaining-mechanics-spec.md), and [engine package consolidation plan](engine-package-consolidation.md) (supersedes root wrapper scripts with unified `python -m engine` CLI). These documents do not activate new mechanics or advance gameplay.
+
 
 ## Execution decisions (2026-10-09)
 

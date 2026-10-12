@@ -21,7 +21,7 @@ Whenever executing narrative turns, character choices, combat rounds, or world-a
 
 3. **Synthesis & Engine Execution**:
    - Incorporate the sub-agents' proposed intent and dialogue into canonical event files under `world/<world_id>/events/proposed/`. Narrative never independently authorizes mechanical changes.
-   - Dry-run the proposed event, then execute it once through `change_world.py`. The shared runner resolves mechanics, applies periodic effects once, validates, commits, and renders.
+   - Dry-run the proposed event, then execute it once through `python -m engine run EVENT`. The shared runner resolves mechanics, applies periodic effects once, validates, commits, and renders.
    - Never directly edit `state/`, `events/committed/`, or `transactions/`. Definition and rule authoring are separate from gameplay.
    - Do not separately run stat or progress enforcement to apply another round of consequences. Rendering can be retried without replaying the event.
    - Before save cutover, legacy gameplay mutation is disabled; inspect and migrate the world first. These write boundaries are a workflow convention unless harness filesystem permissions enforce them.

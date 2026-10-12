@@ -15,7 +15,7 @@ from engine.runner import read_snapshot, replay_event, run_event
 
 class WorldsTests(TemporaryWorldCase):
     def test_inspection_read_only_both_saves(self):
-        from world_migration import inspect_world
+        from engine.migration import inspect_world
         for name in ('lost-world', 'warhammer-40k'):
             w = self.legacy(name)
             before = hashes(w)
@@ -37,7 +37,7 @@ class WorldsTests(TemporaryWorldCase):
             self.edit_baseline(w, lambda state: state.update(s))
 
     def test_import_baseline_archive_and_no_live_mutation(self):
-        from world_migration import migrate_world
+        from engine.migration import migrate_world
         for name, turn, day in [('lost-world', 33, 4), ('warhammer-40k', 37, 9)]:
             live_before = hashes(ROOT / 'world' / name)
             w = self.legacy(name)
@@ -175,7 +175,7 @@ class WorldsTests(TemporaryWorldCase):
             self.assertEqual('sanctuary', error.exception.code)
 
     def test_gm_selected_world_proposal_only_and_activation(self):
-        from game_master import propose_event
+        from engine.game_master import propose_event
         w = self.world()
         before = read_snapshot(w)
         proposal = propose_event(w, seed=1, improvise=True)
@@ -205,34 +205,35 @@ class WorldsTests(TemporaryWorldCase):
         self.assertEqual(current, (authored / 'map.html').read_text())
 
     def test_legacy_writer_disabled_and_path_inference(self):
-        from world_utils import resolve_world_dir, save_progress
+        from engine.world_utils import resolve_world_dir, save_progress
         w = self.legacy('lost-world')
         with self.assertRaises(RuleError):
             save_progress(w, {})
         self.assertEqual(w.resolve(), resolve_world_dir(event_path=w / 'events/proposed/one.json'))
         with self.assertRaises(RuleError):
             resolve_world_dir('definitely-unknown')
-        for script in ('change_world.py', 'apply_event.py', 'enforce_char_stats.py', 'enforce_progress_effects.py', 'render_map.py'):
-            r = subprocess.run([sys.executable, str(ROOT/script), '--world', str(w)], capture_output=True, text=True)
+        for subcmd in ('stats', 'timing', 'render'):
+            r = subprocess.run([sys.executable, '-m', 'engine', subcmd, '--world', str(w)], capture_output=True, text=True)
             self.assertNotEqual(0, r.returncode)
 
+
     def test_interrupted_migration_refuses_retry_retains_legacy_authority(self):
-        import world_migration
+        import engine.migration
         w = self.legacy('lost-world')
         original = (w / 'world.json').read_bytes()
-        with patch.object(world_migration, '_cutover', side_effect=OSError('interruption')):
+        with patch.object(engine.migration, '_cutover', side_effect=OSError('interruption')):
             with self.assertRaises(OSError):
-                world_migration.migrate_world(w)
+                engine.migration.migrate_world(w)
         self.assertEqual(original, (w / 'world.json').read_bytes())
         archive = hashes(w / 'archive/legacy-baseline')
         with self.assertRaises(RuleError):
-            world_migration.migrate_world(w)
+            engine.migration.migrate_world(w)
         self.assertEqual(archive, hashes(w / 'archive/legacy-baseline'))
-        self.assertFalse(world_migration.migrate_world(w, resume=True)['preview'])
+        self.assertFalse(engine.migration.migrate_world(w, resume=True)['preview'])
         self.assertEqual(33, read_snapshot(w)['clock']['data']['turn'])
 
     def test_bad_character_reference_blocks_import(self):
-        from world_migration import inspect_world, migrate_world
+        from engine.migration import inspect_world, migrate_world
         w = self.legacy('lost-world')
         p = w / 'char/main_char.json'
         d = json.loads(p.read_text()); d['current_location'] = 'unknown'; p.write_text(json.dumps(d))
@@ -241,7 +242,7 @@ class WorldsTests(TemporaryWorldCase):
             migrate_world(w)
 
     def test_inspect_blocks_active_action_location_reference(self):
-        from world_migration import inspect_world, migrate_world
+        from engine.migration import inspect_world, migrate_world
         w = self.legacy('lost-world')
         p = w / 'progress.json'; d = json.loads(p.read_text())
         d['active_actions'][0]['location'] = 'missing_location'
@@ -252,20 +253,20 @@ class WorldsTests(TemporaryWorldCase):
         self.assertFalse((w / 'archive').exists())
 
     def test_resume_checks_installed_baseline_before_contract(self):
-        import world_migration
+        import engine.migration
         w = self.legacy('lost-world')
-        real_atomic = world_migration._atomic
+        real_atomic = engine.migration._atomic
         def interrupt(path, value):
             if Path(path).resolve() == (w / 'world.json').resolve():
                 raise OSError('before contract')
             return real_atomic(path, value)
-        with patch.object(world_migration, '_atomic', side_effect=interrupt):
+        with patch.object(engine.migration, '_atomic', side_effect=interrupt):
             with self.assertRaises(OSError):
-                world_migration.migrate_world(w)
+                engine.migration.migrate_world(w)
         p = w / 'state/characters/player_kael.json'
         d = json.loads(p.read_text()); d['data']['health'] = 9; p.write_text(json.dumps(d))
         with self.assertRaises(RuleError):
-            world_migration.migrate_world(w, resume=True)
+            engine.migration.migrate_world(w, resume=True)
         self.assertNotIn('contract_version', json.loads((w / 'world.json').read_text()))
 
     def test_cold_movement_overlay_dead_and_failed_survival(self):
@@ -317,7 +318,7 @@ class WorldsTests(TemporaryWorldCase):
         self.assertEqual(4, len(next_report['outcomes']['cold']))
 
     def test_unknown_equipment_id_and_casefold_block(self):
-        from world_migration import inspect_world, migrate_world
+        from engine.migration import inspect_world, migrate_world
         w = self.legacy('warhammer-40k'); p = w / 'char/main_char.json'
         d = json.loads(p.read_text()); d['equipment']['armor'] = 'item_not_real'; p.write_text(json.dumps(d))
         self.assertTrue(inspect_world(w)['blocking'])
@@ -329,20 +330,21 @@ class WorldsTests(TemporaryWorldCase):
             inspect_world(w)
         self.assertEqual('casefold_collision', error.exception.code)
 
-    def test_canonical_inspection_wrappers_do_not_write(self):
+    def test_canonical_inspection_commands_do_not_write(self):
         w = self.world()
         before = hashes(w)
-        for script in ('enforce_char_stats.py','enforce_progress_effects.py'):
-            result = subprocess.run([sys.executable, str(ROOT/script), '--world', str(w)], capture_output=True, text=True)
+        for subcmd in ('stats', 'timing'):
+            result = subprocess.run([sys.executable, '-m', 'engine', subcmd, '--world', str(w)], capture_output=True, text=True)
             self.assertEqual(0, result.returncode, result.stderr)
         self.assertEqual(before, hashes(w))
         p = w / 'legacy_event.json'; p.write_text(json.dumps({'character_updates':{}}))
-        result = subprocess.run([sys.executable, str(ROOT/'apply_event.py'),str(p),'--world',str(w)],capture_output=True,text=True)
-        self.assertEqual(2,result.returncode)
-        self.assertIn('legacy_event',result.stderr)
+        result = subprocess.run([sys.executable, '-m', 'engine', 'run', str(p), '--world', str(w)], capture_output=True, text=True)
+        self.assertEqual(2, result.returncode)
+        self.assertIn('legacy_event', result.stderr)
+
 
     def test_warhammer_gm_pool_no_application(self):
-        from game_master import propose_event
+        from engine.game_master import propose_event
         w = self.world('warhammer-40k'); before = read_snapshot(w)
         # Authored hostile GM pool copy retains stale hostile template narrative
         gm_pre = json.loads((w / 'definitions/gm-pre-sanctuary.json').read_text())
@@ -361,16 +363,16 @@ class WorldsTests(TemporaryWorldCase):
         self.assertNotIn('cold', s['threats']['event_sudden_unregulated_squall']['data']['tags'])
 
     def test_migration_partial_stage_refuses_and_archive_never_overwritten(self):
-        import world_migration
+        import engine.migration
         from engine.state_store import StateStore
         w = self.legacy('lost-world')
         with patch.object(StateStore, 'initialize_baseline', side_effect=OSError('baseline interruption')):
             with self.assertRaises(OSError):
-                world_migration.migrate_world(w)
+                engine.migration.migrate_world(w)
         archive = hashes(w / 'archive/legacy-baseline')
         for resume in (False,True):
             with self.assertRaises(RuleError):
-                world_migration.migrate_world(w,resume=resume)
+                engine.migration.migrate_world(w,resume=resume)
         self.assertEqual(archive, hashes(w / 'archive/legacy-baseline'))
 
     def test_move_rejects_disconnected_and_dry_run_no_writes(self):
@@ -383,19 +385,19 @@ class WorldsTests(TemporaryWorldCase):
         self.assertEqual(before,hashes(w))
 
     def test_contract_installed_journal_pending_refuses_gameplay_until_resume(self):
-        import world_migration
-        from world_utils import require_canonical
+        import engine.migration
+        from engine.world_utils import require_canonical
         w = self.legacy('lost-world')
-        atomic = world_migration._atomic
+        atomic = engine.migration._atomic
         def interrupt(path, value):
             if Path(path).name == '.migration.json' and value['phase'] == 'complete':
                 raise OSError('journal finalization')
             return atomic(path,value)
-        with patch.object(world_migration,'_atomic',side_effect=interrupt):
+        with patch.object(engine.migration,'_atomic',side_effect=interrupt):
             with self.assertRaises(OSError):
-                world_migration.migrate_world(w)
+                engine.migration.migrate_world(w)
         self.assertEqual(1,json.loads((w/'world.json').read_text())['contract_version'])
         with self.assertRaises(RuleError):
             require_canonical(w)
-        world_migration.migrate_world(w,resume=True)
+        engine.migration.migrate_world(w,resume=True)
         require_canonical(w)
