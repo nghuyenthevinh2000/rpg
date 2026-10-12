@@ -2,7 +2,7 @@ from engine.contracts import RuleError, RuleResult
 from .calendar import calendar_effects, validate_calendar
 from .projects import PROJECT_ACTIONS, resolve_project, validate_projects
 from .resources import periodic_resources, resolve_production, validate_resources
-from .trials import resolve_trial
+from .trials import resolve_trial, validate_trials
 
 
 def _set(collection, identity, path, value):
@@ -17,9 +17,11 @@ def _shape(action, required):
 
 
 def resolve(ctx, event):
-    violations = validate_resources(ctx) + validate_projects(ctx) + validate_calendar(ctx)
+    violations = (validate_resources(ctx) + validate_projects(ctx) +
+                  validate_calendar(ctx) + validate_trials(ctx))
     if violations:
-        raise RuleError('resource_config', 'Invalid configuration', violations)
+        code = violations[0].get('code', 'resource_config')
+        raise RuleError(code, 'Invalid configuration', violations)
     action = event['action']
     kind = action['type']
     if kind in PROJECT_ACTIONS:
@@ -37,6 +39,10 @@ def resolve(ctx, event):
         template = templates.get(action['template_id'])
         if source is None or template is None or action['location_id'] not in locations:
             raise RuleError('invalid_template', 'Configured GM template and valid location required')
+        if not template.get('location_id'):
+            raise RuleError('invalid_template', 'Template must author an authorized location_id')
+        if action['location_id'] != template['location_id']:
+            raise RuleError('invalid_location', 'Introduction location must match template location')
         identity = event['event_id']
         data = {'name': source['name'], 'location_id': action['location_id'], 'active': True,
                 'activation_turn': ctx.turn + 1, 'tags': template['tags'], 'stats': template['stats'],
@@ -110,11 +116,13 @@ def derive(ctx, entity_ref):
         return {}
     data = entity['data']; config = ctx.definitions.get('rules')
     traits = ctx.definitions.get('traits')
-    totals, multiplier = {}, 1.0
+    totals, legacy_mods, multiplier = {}, {}, 1.0
     for tid in data['traits']:
         trait = traits['traits'][tid]
         for stat, value in trait.get('stat_modifiers', {}).items():
-            if not stat.startswith('max_'):
+            if stat.startswith('max_') or stat in ('max_agency', 'max_vitality'):
+                legacy_mods[stat] = legacy_mods.get(stat, 0) + value
+            else:
                 totals[stat] = totals.get(stat, 0) + value
         multiplier *= trait.get('impact_rules', {}).get('strike_kinetic_multiplier', 1)
     effective = {}
@@ -132,6 +140,7 @@ def derive(ctx, entity_ref):
         'baseline_modifiers': {k: v for k, v in data.get('baseline', {}).get('modifiers', {}).items()},
         'current_modifiers': totals,
         'effective_values': effective,
+        'legacy_metadata_modifiers': legacy_mods,
         'health': data['health'],
         'bounds_exceptions': {stat: {'value': val, 'bounds': config['bounds'][stat]}
                               for stat, val in effective.items()
@@ -141,7 +150,8 @@ def derive(ctx, entity_ref):
 
 
 def validate(ctx):
-    violations = validate_resources(ctx) + validate_projects(ctx) + validate_calendar(ctx)
+    violations = (validate_resources(ctx) + validate_projects(ctx) +
+                  validate_calendar(ctx) + validate_trials(ctx))
     registry = ctx.definitions.get('traits')['traits']
     legacy = ctx.state.get('baseline', 'legacy')
     inventory = legacy['data']['metadata']['inventory_registry'] if legacy else {}

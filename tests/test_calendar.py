@@ -1,5 +1,5 @@
 """Tests for deterministic two-world calendar progression."""
-from engine.contracts import RuleError
+from engine.contracts import RuleError, WorldContract
 from engine.runner import read_snapshot, run_event
 from world_fixtures import TemporaryWorldCase
 
@@ -68,10 +68,131 @@ class CalendarTests(TemporaryWorldCase):
             run_event(world, self.event(world, {'type': 'move', 'actor_id': 'player_vane', 'location_id': 'loc_charnel_trench'}), render=False)
         self.assertEqual(before, read_snapshot(world)['clock']['data'])
 
-    def test_calendar_rejections_for_invalid_policy(self):
+    def test_no_turn_action_does_not_advance_calendar(self):
+        from unittest.mock import patch
         world = self.make_world('warhammer-40k')
-        # Invalid turns_per_day
-        self.edit_rules(world, lambda r: r['calendar'].update(turns_per_day=0))
+        contract = WorldContract(world)
+        before_snap = read_snapshot(world)
+        before_clock = before_snap['clock']['data']
+
+        # Wrap contract.resolve to return advances_turn=False
+        orig_resolve = contract.resolve
+        def no_turn_resolve(ctx, event):
+            res = orig_resolve(ctx, event)
+            res.advances_turn = False
+            return res
+
+        with patch.object(contract, 'resolve', side_effect=no_turn_resolve):
+            with patch.object(contract, 'after_turn') as mock_after_turn:
+                # Need to use runner with our patched contract
+                from engine.runner import run_event
+                # Monkeypatch WorldContract inside runner
+                with patch('engine.runner.WorldContract', return_value=contract):
+                    report = run_event(world, self.event(world, {'type': 'wait', 'actor_id': 'player_vane'}, 'no_turn_wait'), render=False)
+                    mock_after_turn.assert_not_called()
+                    self.assertFalse(report['turn']['advances_turn'])
+                    self.assertEqual(before_clock['turn'], report['turn']['before'])
+                    self.assertEqual(before_clock['turn'], report['turn']['after'])
+                    self.assertNotIn('clock', report['changes'])
+                    after_clock = read_snapshot(world)['clock']['data']
+                    self.assertEqual(before_clock, after_clock)
+
+    def test_calendar_rejections_for_invalid_policy(self):
+        from unittest.mock import patch
+        from engine.runner import replay_event
+        from engine.state_store import StateStore
+
+        # 1. turns_per_day = True
+        world = self.make_world('warhammer-40k')
+        self.edit_rules(world, lambda r: r['calendar'].update(turns_per_day=True))
+        before = read_snapshot(world)
         with self.assertRaises(RuleError) as err:
             run_event(world, self.event(world, {'type': 'wait', 'actor_id': 'player_vane'}), render=False)
         self.assertEqual('calendar_config', err.exception.code)
+        self.assertEqual(before, read_snapshot(world))
+
+        # 2. anchor_turn = current_turn + 1 (future anchor)
+        self.tmp.cleanup(); self.setUp()
+        world = self.make_world('warhammer-40k')
+        cur_turn = read_snapshot(world)['clock']['data']['turn']
+        self.edit_rules(world, lambda r: r['calendar'].update(anchor_turn=cur_turn + 1))
+        before = read_snapshot(world)
+        with self.assertRaises(RuleError) as err:
+            run_event(world, self.event(world, {'type': 'wait', 'actor_id': 'player_vane'}), render=False)
+        self.assertEqual('calendar_config', err.exception.code)
+        self.assertEqual(before, read_snapshot(world))
+
+        # 3. negative anchor_turn or boolean anchor_turn
+        for bad_anchor in (-1, True, 'thirty-seven'):
+            self.tmp.cleanup(); self.setUp()
+            world = self.make_world('warhammer-40k')
+            self.edit_rules(world, lambda r, a=bad_anchor: r['calendar'].update(anchor_turn=a))
+            before = read_snapshot(world)
+            with self.assertRaises(RuleError) as err:
+                run_event(world, self.event(world, {'type': 'wait', 'actor_id': 'player_vane'}), render=False)
+            self.assertEqual('calendar_config', err.exception.code)
+            self.assertEqual(before, read_snapshot(world))
+
+        # 4. negative anchor_day or boolean anchor_day
+        for bad_day in (-1, True, 'nine'):
+            self.tmp.cleanup(); self.setUp()
+            world = self.make_world('warhammer-40k')
+            self.edit_rules(world, lambda r, d=bad_day: r['calendar'].update(anchor_day=d))
+            before = read_snapshot(world)
+            with self.assertRaises(RuleError) as err:
+                run_event(world, self.event(world, {'type': 'wait', 'actor_id': 'player_vane'}), render=False)
+            self.assertEqual('calendar_config', err.exception.code)
+            self.assertEqual(before, read_snapshot(world))
+
+        # 5. wrong display_style
+        self.tmp.cleanup(); self.setUp()
+        world = self.make_world('warhammer-40k')
+        self.edit_rules(world, lambda r: r['calendar'].update(display_style='iso_hours'))
+        before = read_snapshot(world)
+        with self.assertRaises(RuleError) as err:
+            run_event(world, self.event(world, {'type': 'wait', 'actor_id': 'player_vane'}), render=False)
+        self.assertEqual('calendar_config', err.exception.code)
+        self.assertEqual(before, read_snapshot(world))
+
+        # 6. unknown extra fields
+        self.tmp.cleanup(); self.setUp()
+        world = self.make_world('warhammer-40k')
+        self.edit_rules(world, lambda r: r['calendar'].update(extra_field='invalid'))
+        before = read_snapshot(world)
+        with self.assertRaises(RuleError) as err:
+            run_event(world, self.event(world, {'type': 'wait', 'actor_id': 'player_vane'}), render=False)
+        self.assertEqual('calendar_config', err.exception.code)
+        self.assertEqual(before, read_snapshot(world))
+
+        # 7. Lost World timestamp with no UTC offset
+        self.tmp.cleanup(); self.setUp()
+        lw = self.make_world('lost-world')
+        self.edit_rules(lw, lambda r: r['calendar'].update(anchor_timestamp='2026-10-09T07:30:00'))
+        before_lw = read_snapshot(lw)
+        with self.assertRaises(RuleError) as err:
+            run_event(lw, self.event(lw, {'type': 'wait', 'actor_id': 'player_kael'}), render=False)
+        self.assertEqual('calendar_config', err.exception.code)
+        self.assertEqual(before_lw, read_snapshot(lw))
+
+    def test_calendar_replay_and_interrupted_recovery(self):
+        from unittest.mock import patch
+        from engine.runner import replay_event
+        from engine.state_store import StateStore
+
+        # Exact replay into a fresh matching baseline
+        world = self.make_world('warhammer-40k')
+        twin = self.author_state(world, lambda s: None, 'twin')
+        report = run_event(world, self.event(world, {'type': 'wait', 'actor_id': 'player_vane'}), render=False)
+        replay_event(twin, report, render=False)
+        self.assertEqual(read_snapshot(world)['clock'], read_snapshot(twin)['clock'])
+
+        # Interrupted calendar commit recovery
+        expected_snapshot = read_snapshot(world)
+        expected = run_event(world, self.event(world, {'type': 'wait', 'actor_id': 'player_vane'}, 'ev_rec'), dry_run=True, render=False)
+        expected_snapshot['clock'] = expected['changes']['clock']['after']
+
+        with patch.object(StateStore, '_apply_images', side_effect=OSError('interrupted calendar')):
+            with self.assertRaises(OSError):
+                run_event(world, expected['event'], render=False)
+        actual = read_snapshot(world)
+        self.assertEqual(expected_snapshot['clock'], actual['clock'])

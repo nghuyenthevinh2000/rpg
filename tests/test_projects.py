@@ -126,3 +126,63 @@ class ProjectsTests(TemporaryWorldCase):
             WorldContract(world)
             read_snapshot(world)
             self.assertEqual(before, hashes(world / 'state'))
+
+    def test_project_completion_grants_earned_trait_rewards_both_worlds(self):
+        for world_id in ('warhammer-40k', 'lost-world'):
+            self.tmp.cleanup(); self.setUp()
+            world = self.project_world(world_id)
+            lost = world_id == 'lost-world'
+            actor = 'player_kael' if lost else 'player_vane'
+            tpl_id = 'action_build_structure' if lost else 'action_resonant_pylon_repair'
+            reward_trait = 'trait_unyielding_survival' if lost else 'trait_iron_discipline'
+
+            # Edit template to add trait_rewards
+            self.edit_rules(world, lambda rules, tid=tpl_id, tr=reward_trait: rules['project_templates'][tid].update({
+                'trait_rewards': [tr]
+            }))
+
+            self.start(world)
+            before_hp = read_snapshot(world)['characters'][actor]['data']['health']
+            before_base = read_snapshot(world)['characters'][actor]['data']['baseline']
+
+            if lost:
+                for identity, amount in (('raw_cedar_timber', 40), ('quarried_granite_slabs', 25)):
+                    self.act(world, 'deliver_materials', resource_id=identity, quantity=amount)
+                for recipe in ('sever_telemetry', 'reject_drones'):
+                    self.act(world, 'prepare_project_site', recipe_id=recipe)
+                for _ in range(60):
+                    self.act(world, 'work_project')
+            else:
+                self.act(world, 'deliver_materials', resource_id='resonant_crystal_pylons', quantity=2)
+                for _ in range(12):
+                    self.act(world, 'work_project')
+
+            self.act(world, 'complete_project')
+            s_after = read_snapshot(world)
+            actor_data = s_after['characters'][actor]['data']
+            self.assertIn(reward_trait, actor_data['traits'])
+            self.assertEqual(before_hp, actor_data['health'])
+            self.assertEqual(before_base, actor_data['baseline'])
+            self.assertTrue(s_after['actions']['hall_1']['data']['completed'])
+            # Repeat completion rejected
+            self.reject(world, 'complete_project')
+
+    def test_project_template_missing_required_fields_with_trait_rewards(self):
+        # A template containing trait_rewards but missing required fields (e.g. 'name')
+        # must produce a structured rejection (project_config) instead of KeyError
+        for world_id in ('warhammer-40k', 'lost-world'):
+            self.tmp.cleanup(); self.setUp()
+            world = self.project_world(world_id)
+            actor = 'player_kael' if world_id == 'lost-world' else 'player_vane'
+            self.edit_rules(world, lambda rules: rules['project_templates'].update({
+                'action_incomplete': {
+                    'hours_required': 10,
+                    'trait_rewards': ['trait_unyielding_survival'] if world_id == 'lost-world' else ['trait_iron_discipline']
+                    # missing name, materials, etc.
+                }
+            }))
+            before = read_snapshot(world)
+            with self.assertRaises(RuleError) as err:
+                run_event(world, self.event(world, {'type': 'wait', 'actor_id': actor}), render=False)
+            self.assertEqual('project_config', err.exception.code)
+            self.assertEqual(before, read_snapshot(world))

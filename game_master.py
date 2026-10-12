@@ -43,16 +43,21 @@ def propose_event(world_dir, *, seed=0, improvise=False):
     if not raw_pool:
         raise RuleError('no_templates', 'Selected world has no configured GM pool')
 
-    if sanctuary:
-        pool = [t for t in raw_pool if t['id'] in rules.get('templates', {}) and not any(tag in ('hostile', 'cold') for tag in rules['templates'][t['id']].get('tags', []))]
-        if not pool:
-            raise RuleError('no_templates', 'No templates allowed under current sanctuary constraints')
-    else:
-        pool = raw_pool
+    templates_cfg = rules.get('templates', {})
+    pool = []
+    for t in raw_pool:
+        tid = t.get('id')
+        if tid not in templates_cfg:
+            continue
+        tags = templates_cfg[tid].get('tags', [])
+        if sanctuary and any(tag in ('hostile', 'cold') for tag in tags):
+            continue
+        pool.append(t)
+
+    if not pool:
+        raise RuleError('no_templates', 'No eligible templates under current world constraints')
 
     template = random.Random(seed).choice(pool)
-    if template['id'] not in rules['templates']:
-        raise RuleError('unsupported_template', 'Template lacks explicit mechanical configuration')
     snapshot = read_snapshot(world)
     player = snapshot['characters'][contract.config['player_character_id']]['data']
     event = {'schema_version':1, 'event_id':'gm_'+uuid.uuid4().hex, 'world_id':contract.config['world_id'],

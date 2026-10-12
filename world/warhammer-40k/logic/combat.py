@@ -93,6 +93,9 @@ def resolve_attack(ctx, event, derive_fn):
         g_loc = gdata.get('location_id')
         if g_loc != current_location:
             raise RuleError('invalid_group', f'Group {group_id} must be deployed at actor location')
+        for mid in gdata.get('members', []):
+            if ctx.state.get('characters', mid) is None:
+                raise RuleError('invalid_group', f'Group member reference {mid} does not exist')
         group = group_entity
 
     effects = []
@@ -125,12 +128,12 @@ def resolve_attack(ctx, event, derive_fn):
             w_spec = actor_weapon
         else:
             equipped = p_char['data'].get('equipment', [])
-            # Find companion equipped melee/default weapon
-            melee_id = next((item for item in equipped if item in weapons and equipment_items.get(item, {}).get('slot') == 'melee_weapon'), None)
+            # Find companion equipped melee/default non-ammo weapon
+            melee_id = next((item for item in equipped if item in weapons and equipment_items.get(item, {}).get('slot') == 'melee_weapon' and 'ammo_id' not in weapons[item]), None)
             if melee_id is None:
-                melee_id = next((item for item in equipped if item in weapons), None)
+                melee_id = next((item for item in equipped if item in weapons and 'ammo_id' not in weapons[item]), None)
             if melee_id is None:
-                raise RuleError('companion_weapon', f'Companion {pid} has no recognized equipped weapon')
+                raise RuleError('companion_weapon', f'Companion {pid} has no recognized non-ammo equipped weapon')
             w_id = melee_id
             w_spec = weapons[w_id]
 

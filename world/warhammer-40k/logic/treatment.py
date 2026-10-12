@@ -1,9 +1,66 @@
 """Resource-backed healing and gated restoration for Warhammer 40k."""
 from engine.contracts import RuleError, RuleResult, safe_id
+from .resources import _number
+
+ALLOWED_TREATMENT_FIELDS = {'resource_id', 'resource_cost', 'heal_amount', 'health_ceiling'}
+ALLOWED_RESTORATION_FIELDS = {'enabled', 'resource_id', 'resource_cost', 'restore_health'}
 
 
 def _set(collection, identity, path, value):
     return {'op': 'set', 'collection': collection, 'entity_id': identity, 'path': path, 'value': value}
+
+
+def validate_treatment(ctx):
+    rules = ctx.definitions.get('rules')
+    if rules is None:
+        return []
+    violations = []
+
+    def bad(identity, message):
+        violations.append({'id': identity, 'code': 'treatment_config', 'message': message})
+
+    if 'treatment_recipes' in rules:
+        recipes = rules['treatment_recipes']
+        if not isinstance(recipes, dict):
+            bad('treatment', 'treatment_recipes must be an object')
+        else:
+            for recipe_id, recipe in sorted(recipes.items()):
+                if not isinstance(recipe, dict):
+                    bad(recipe_id, 'recipe must be an object')
+                    continue
+                if set(recipe) != ALLOWED_TREATMENT_FIELDS:
+                    bad(recipe_id, f'Recipe requires exact fields: {sorted(ALLOWED_TREATMENT_FIELDS)}')
+                    continue
+                res_id = recipe['resource_id']
+                if not isinstance(res_id, str) or ctx.state.get('resources', res_id) is None:
+                    bad(recipe_id, f'Unknown resource reference: {res_id}')
+                if not _number(recipe['resource_cost'], positive=True):
+                    bad(recipe_id, 'resource_cost must be finite positive number')
+                if not _number(recipe['heal_amount'], positive=True):
+                    bad(recipe_id, 'heal_amount must be finite positive number')
+                if not _number(recipe['health_ceiling'], positive=True):
+                    bad(recipe_id, 'health_ceiling must be finite positive number')
+
+    if 'restoration_policy' in rules:
+        policy = rules['restoration_policy']
+        if not isinstance(policy, dict):
+            bad('restoration', 'restoration_policy must be an object')
+        else:
+            if 'enabled' not in policy or not isinstance(policy['enabled'], bool):
+                bad('restoration', 'restoration_policy enabled must be a boolean')
+            elif policy['enabled']:
+                if set(policy) != ALLOWED_RESTORATION_FIELDS:
+                    bad('restoration', f'Restoration policy requires exact fields: {sorted(ALLOWED_RESTORATION_FIELDS)}')
+                else:
+                    res_id = policy.get('resource_id')
+                    if res_id != 'primordial_life_restoration' or ctx.state.get('resources', res_id) is None:
+                        bad('restoration', 'restoration requires primordial_life_restoration resource')
+                    if policy.get('resource_cost') != 1 or type(policy.get('resource_cost')) is bool:
+                        bad('restoration', 'restoration resource_cost must be 1')
+                    if policy.get('restore_health') != 100 or type(policy.get('restore_health')) is bool:
+                        bad('restoration', 'restoration restore_health must be 100')
+
+    return violations
 
 
 def resolve_treatment(ctx, event):

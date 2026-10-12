@@ -151,7 +151,7 @@ def _render(world_dir, snapshot, report, render):
             render(deepcopy(snapshot))
         else:
             from .render_map import render_map
-            render_map(world_dir, deepcopy(snapshot))
+            render_map(world_dir, deepcopy(snapshot), committed_event=report)
     except Exception as exc:
         report['render_error'] = str(exc)
     return report

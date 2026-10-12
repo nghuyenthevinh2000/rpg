@@ -199,3 +199,81 @@ class TreatmentTests(TemporaryWorldCase):
         with self.assertRaises(RuleError):
             run_event(world, self.event(world, {'type':'restore_life', 'actor_id':'player_kael',
                 'target_id':'npc_marcus_the_drifter'}), render=False)
+
+    def test_treatment_configuration_rejections_runner_level(self):
+        for bad_val in [-5, 0, True, 'twenty']:
+            self.tmp.cleanup(); self.setUp()
+            world = self.treatment_world()
+            self.edit_rules(world, lambda rules: rules['treatment_recipes']['field_medication'].update(heal_amount=bad_val))
+            before = read_snapshot(world)
+            with self.assertRaises(RuleError) as err:
+                run_event(world, self.event(world, {'type':'heal', 'actor_id':'player_vane',
+                    'target_id':'npc_ogryn_bragg', 'recipe_id':'field_medication'}), render=False)
+            self.assertEqual('treatment_config', err.exception.code)
+            self.assertEqual(before, read_snapshot(world))
+
+        for bad_cost in [-1, 0, True, 'one']:
+            self.tmp.cleanup(); self.setUp()
+            world = self.treatment_world()
+            self.edit_rules(world, lambda rules: rules['treatment_recipes']['field_medication'].update(resource_cost=bad_cost))
+            before = read_snapshot(world)
+            with self.assertRaises(RuleError) as err:
+                run_event(world, self.event(world, {'type':'heal', 'actor_id':'player_vane',
+                    'target_id':'npc_ogryn_bragg', 'recipe_id':'field_medication'}), render=False)
+            self.assertEqual('treatment_config', err.exception.code)
+            self.assertEqual(before, read_snapshot(world))
+
+        for bad_ceil in [-10, 0, True, 'hundred']:
+            self.tmp.cleanup(); self.setUp()
+            world = self.treatment_world()
+            self.edit_rules(world, lambda rules: rules['treatment_recipes']['field_medication'].update(health_ceiling=bad_ceil))
+            before = read_snapshot(world)
+            with self.assertRaises(RuleError) as err:
+                run_event(world, self.event(world, {'type':'heal', 'actor_id':'player_vane',
+                    'target_id':'npc_ogryn_bragg', 'recipe_id':'field_medication'}), render=False)
+            self.assertEqual('treatment_config', err.exception.code)
+            self.assertEqual(before, read_snapshot(world))
+
+    def test_restoration_configuration_rejections(self):
+        # enabled not boolean
+        world = self.treatment_world()
+        self.edit_rules(world, lambda rules: rules.update(restoration_policy={'enabled': 'yes'}))
+        before = read_snapshot(world)
+        with self.assertRaises(RuleError) as err:
+            run_event(world, self.event(world, {'type':'restore_life', 'actor_id':'player_vane',
+                'target_id':'npc_ogryn_bragg'}), render=False)
+        self.assertEqual('treatment_config', err.exception.code)
+        self.assertEqual(before, read_snapshot(world))
+
+        # enabled True but bad cost or wrong resource
+        self.tmp.cleanup(); self.setUp()
+        world2 = self.treatment_world(restoration_enabled=True)
+        self.edit_rules(world2, lambda rules: rules['restoration_policy'].update(resource_cost=5))
+        before2 = read_snapshot(world2)
+        with self.assertRaises(RuleError) as err:
+            run_event(world2, self.event(world2, {'type':'restore_life', 'actor_id':'player_vane',
+                'target_id':'npc_ogryn_bragg'}), render=False)
+        self.assertEqual('treatment_config', err.exception.code)
+        self.assertEqual(before2, read_snapshot(world2))
+
+        # Explicit null treatment_recipes container
+        self.tmp.cleanup(); self.setUp()
+        world3 = self.treatment_world()
+        self.edit_rules(world3, lambda rules: rules.update(treatment_recipes=None))
+        before3 = read_snapshot(world3)
+        with self.assertRaises(RuleError) as err:
+            run_event(world3, self.event(world3, {'type':'heal', 'actor_id':'player_vane',
+                'target_id':'npc_ogryn_bragg', 'recipe_id':'field_medication'}), render=False)
+        self.assertEqual('treatment_config', err.exception.code)
+        self.assertEqual(before3, read_snapshot(world3))
+
+        # Explicit null restoration_policy container
+        self.tmp.cleanup(); self.setUp()
+        world4 = self.treatment_world()
+        self.edit_rules(world4, lambda rules: rules.update(restoration_policy=None))
+        before4 = read_snapshot(world4)
+        with self.assertRaises(RuleError) as err:
+            run_event(world4, self.event(world4, {'type':'restore_life', 'actor_id':'player_vane',
+                'target_id':'npc_ogryn_bragg'}), render=False)
+        self.assertEqual('treatment_config', err.exception.code)
+        self.assertEqual(before4, read_snapshot(world4))

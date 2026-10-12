@@ -163,6 +163,12 @@ class WorldsTests(TemporaryWorldCase):
 
     def test_sanctuary_rejects_combat_and_gm(self):
         w = self.world('warhammer-40k')
+        gm_pre = json.loads((w / 'definitions/gm-pre-sanctuary.json').read_text())
+        (w / 'game_master.json').write_text(json.dumps(gm_pre))
+        rules_path = w / 'definitions/engine_rules.json'
+        rules = json.loads(rules_path.read_text())
+        rules['templates']['event_sump_mutant_breach'] = {'tags': ['hostile'], 'stats': {'health': 120, 'armor': 0.2, 'retaliation': 25}}
+        rules_path.write_text(json.dumps(rules))
         for action in ({'type':'attack', 'actor_id':'player_vane', 'target_id':'enemy', 'weapon_id':'item_void_relic_blade'}, {'type':'introduce_threat', 'template_id':'event_sump_mutant_breach', 'location_id':'loc_shrine_aquila'}):
             with self.assertRaises(RuleError) as error:
                 run_event(w, self.event(w, action), render=False)

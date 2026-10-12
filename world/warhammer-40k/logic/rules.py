@@ -4,8 +4,8 @@ from .combat import resolve_attack
 from .inventory import audit_character, resolve_inventory
 from .projects import PROJECT_ACTIONS, resolve_project, validate_projects
 from .resources import periodic_resources, resolve_production, validate_resources
-from .treatment import resolve_treatment
-from .trials import resolve_trial
+from .treatment import resolve_treatment, validate_treatment
+from .trials import resolve_trial, validate_trials
 
 
 def _set(collection, identity, path, value):
@@ -25,9 +25,12 @@ def _sanctuary(ctx):
 
 
 def resolve(ctx, event):
-    violations = validate_resources(ctx) + validate_projects(ctx) + validate_calendar(ctx)
+    violations = (validate_resources(ctx) + validate_projects(ctx) +
+                  validate_calendar(ctx) + validate_trials(ctx) +
+                  validate_treatment(ctx))
     if violations:
-        raise RuleError('calendar_config' if any(v.get('code') == 'calendar_config' for v in violations) else 'resource_config', 'Invalid configuration', violations)
+        code = violations[0].get('code', 'resource_config')
+        raise RuleError(code, 'Invalid configuration', violations)
     action = event['action']; kind = action['type']; rules = ctx.definitions.get('rules')
     if kind in PROJECT_ACTIONS:
         return resolve_project(ctx, event)
@@ -52,6 +55,10 @@ def resolve(ctx, event):
             raise RuleError('invalid_template', 'Configured GM template and valid location required')
         if _sanctuary(ctx) and any(tag in ('hostile', 'cold') for tag in template.get('tags', [])):
             raise RuleError('sanctuary', 'Current structural sanctuary prohibits hostile and cold GM introductions')
+        if not template.get('location_id'):
+            raise RuleError('invalid_template', 'Template must author an authorized location_id')
+        if action['location_id'] != template['location_id']:
+            raise RuleError('invalid_location', 'Introduction location must match template location')
         data = {'name':source['name'], 'location_id':action['location_id'], 'active':True, 'activation_turn':ctx.turn+1,
                 'tags':template['tags'], 'stats':template['stats'], 'metadata':{'template_id':action['template_id'], 'narrative':source}}
         return RuleResult([{'op':'create','collection':'threats','entity_id':event['event_id'],'value':data}], {'threat_id':event['event_id']})
@@ -107,7 +114,9 @@ def derive(ctx, entity_ref):
 
 
 def validate(ctx):
-    violations = validate_resources(ctx) + validate_projects(ctx) + validate_calendar(ctx)
+    violations = (validate_resources(ctx) + validate_projects(ctx) +
+                  validate_calendar(ctx) + validate_trials(ctx) +
+                  validate_treatment(ctx))
     traits, equipment = ctx.definitions.get('traits')['traits'], ctx.definitions.get('equipment')['items']
     legacy = ctx.state.get('baseline','legacy')
     inventory = legacy['data']['metadata']['inventory_registry'] if legacy else {}

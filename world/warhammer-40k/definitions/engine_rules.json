@@ -83,13 +83,6 @@
   "templates": {
     "event_crystal_garden_repair": {"location_id": "loc_hab_block_vermin", "tags": ["opportunity"], "stats": {"health": 0, "armor": 0, "retaliation": 0}},
     "event_wayfarers_reconciliation": {"location_id": "loc_bastion_gate", "tags": ["social"], "stats": {"health": 0, "armor": 0, "retaliation": 0}},
-    "event_radiant_healing_practice": {"location_id": "loc_shrine_aquila", "tags": ["opportunity"], "stats": {"health": 0, "armor": 0, "retaliation": 0}},
-    "event_warp_bleed_hallucinations": {"tags": ["hostile"], "stats": {"health": 80, "armor": 0.1, "retaliation": 15}},
-    "event_sump_mutant_breach": {"tags": ["hostile"], "stats": {"health": 120, "armor": 0.2, "retaliation": 25}},
-    "event_promethium_pressure_spike": {"tags": ["hostile"], "stats": {"health": 100, "armor": 0, "retaliation": 20}},
-    "event_inquisition_purge_inquiry": {"tags": ["hostile"], "stats": {"health": 150, "armor": 0.4, "retaliation": 35}},
-    "event_improv_corpse_starch_famine": {"tags": ["hostile"], "stats": {"health": 50, "armor": 0, "retaliation": 10}},
-    "event_improv_feral_servitor_spasm": {"tags": ["hostile"], "stats": {"health": 200, "armor": 0.5, "retaliation": 40}},
-    "event_improv_sanctioned_psyker_fit": {"tags": ["hostile"], "stats": {"health": 80, "armor": 0, "retaliation": 30}}
+    "event_radiant_healing_practice": {"location_id": "loc_shrine_aquila", "tags": ["opportunity"], "stats": {"health": 0, "armor": 0, "retaliation": 0}}
   }
 }

@@ -1,7 +1,7 @@
 """Possession-aware equipment and audit tests in authored temporary baselines."""
 import copy
 from world_fixtures import TemporaryWorldCase, ROOT, hashes
-from engine.contracts import RuleError, WorldContract, RuleContext, StateView
+from engine.contracts import RuleError, WorldContract, RuleContext, StateView, DefinitionView
 from engine.runner import read_snapshot, run_event
 
 
@@ -166,3 +166,71 @@ class InventoryTests(TemporaryWorldCase):
             self.assertEqual(expected_gross, res['outcomes']['damage_dealt'])
         finally:
             t.tearDown()
+
+    def test_strict_trait_validation_and_malformed_keys(self):
+        import sys
+        world = self.make_world('warhammer-40k')
+        c = WorldContract(world)
+        pkg_name = c.derive.__module__.rsplit('.', 1)[0]
+        inv_mod = sys.modules[pkg_name + '.inventory']
+        trait_reward_effects = inv_mod.trait_reward_effects
+        validate_trait_rewards = inv_mod.validate_trait_rewards
+        s = read_snapshot(world)
+        ctx = RuleContext(StateView(s), c.definition_view, None, s['clock']['data']['turn'])
+
+        # Unknown ID
+        with self.assertRaises(RuleError) as err:
+            trait_reward_effects(ctx, 'player_vane', ['trait_nonexistent'])
+        self.assertEqual('unknown_trait', err.exception.code)
+        self.assertTrue(len(validate_trait_rewards(ctx, ['trait_nonexistent'])) > 0)
+
+        # String instead of list
+        with self.assertRaises(RuleError) as err:
+            trait_reward_effects(ctx, 'player_vane', 'trait_iron_discipline')
+        self.assertEqual('invalid_trait_rewards', err.exception.code)
+        self.assertTrue(len(validate_trait_rewards(ctx, 'trait_iron_discipline')) > 0)
+
+        # Duplicate IDs
+        with self.assertRaises(RuleError) as err:
+            trait_reward_effects(ctx, 'player_vane', ['trait_iron_discipline', 'trait_iron_discipline'])
+        self.assertEqual('duplicate_trait_reward', err.exception.code)
+        self.assertTrue(len(validate_trait_rewards(ctx, ['trait_iron_discipline', 'trait_iron_discipline'])) > 0)
+
+        # Malformed modifier key max_max_strength
+        traits_dict = c.definitions['traits']['traits']
+        traits_dict['trait_malformed'] = {
+            'name': 'Malformed Trait',
+            'stat_modifiers': {'max_max_strength': 5}
+        }
+        ctx = RuleContext(StateView(s), DefinitionView(c.definitions), None, s['clock']['data']['turn'])
+        with self.assertRaises(RuleError) as err:
+            trait_reward_effects(ctx, 'player_vane', ['trait_malformed'])
+        self.assertEqual('unsupported_trait_stat', err.exception.code)
+        self.assertTrue(len(validate_trait_rewards(ctx, ['trait_malformed'])) > 0)
+
+    def test_negative_trait_modifier_allowed(self):
+        import sys
+        world = self.make_world('warhammer-40k')
+        c = WorldContract(world)
+        pkg_name = c.derive.__module__.rsplit('.', 1)[0]
+        inv_mod = sys.modules[pkg_name + '.inventory']
+        trait_reward_effects = inv_mod.trait_reward_effects
+        validate_trait_rewards = inv_mod.validate_trait_rewards
+        s = read_snapshot(world)
+
+        # Author trait with negative stat modifier (e.g. agility: -10)
+        traits_dict = c.definitions['traits']['traits']
+        traits_dict['trait_colossal_frame'] = {
+            'name': 'Colossal Frame',
+            'stat_modifiers': {'agility': -10, 'strength': 15}
+        }
+        ctx = RuleContext(StateView(s), DefinitionView(c.definitions), None, s['clock']['data']['turn'])
+
+        # Must pass validation without violations
+        violations = validate_trait_rewards(ctx, ['trait_colossal_frame'])
+        self.assertEqual([], violations)
+
+        # Must generate valid trait reward effects without raising RuleError
+        effects = trait_reward_effects(ctx, 'player_vane', ['trait_colossal_frame'])
+        self.assertEqual(1, len(effects))
+        self.assertIn('trait_colossal_frame', effects[0]['value'])

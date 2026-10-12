@@ -172,3 +172,55 @@ class GroupCombatTests(TemporaryWorldCase):
         state = read_snapshot(w_imm)
         self.assertEqual(100, state['characters']['player_vane']['data']['health'])
         self.assertEqual(70, state['characters']['npc_ogryn_bragg']['data']['health'])
+
+    def test_companion_with_only_ranged_ammo_weapon_rejected(self):
+        world = self.group_combat_world()
+        def lasgun_companion(state):
+            # Give bragg only item_lasgun_kantrael (ammo-backed ranged weapon)
+            bragg = state['characters']['npc_ogryn_bragg']['data']
+            bragg['equipment'] = ['item_lasgun_kantrael']
+        w = self.author_state(world, lasgun_companion, 'lasgun_companion')
+        before = read_snapshot(w)
+        with self.assertRaises(RuleError) as err:
+            run_event(w, self.group_attack(w), render=False)
+        self.assertEqual('companion_weapon', err.exception.code)
+        self.assertEqual(before, read_snapshot(w))
+
+    def test_group_with_nonexistent_member_rejected(self):
+        world = self.group_combat_world()
+        def bad_group_member(state):
+            state['groups']['squad']['data']['members'] = ['player_vane', 'nonexistent_character']
+        w = self.author_state(world, bad_group_member, 'bad_group')
+        before = read_snapshot(w)
+        with self.assertRaises(RuleError) as err:
+            run_event(w, self.group_attack(w), render=False)
+        self.assertEqual('invalid_group', err.exception.code)
+        self.assertEqual(before, read_snapshot(w))
+
+    def test_actor_ranged_attack_debits_ammunition_once(self):
+        world = self.group_combat_world()
+        def actor_ranged(state):
+            vane = state['characters']['player_vane']['data']
+            vane['equipment'] = ['item_lasgun_kantrael']
+            state['resources']['lasgun_charge_packs'] = {
+                'id': 'lasgun_charge_packs',
+                'revision': 0,
+                'schema_version': 1,
+                'data': {'name': 'Lasgun Charge Packs', 'quantity': 10}
+            }
+        w = self.author_state(world, actor_ranged, 'actor_ranged')
+        # Actor attacks with lasgun and ammo
+        event = self.event(w, {
+            'type': 'attack',
+            'actor_id': 'player_vane',
+            'target_id': 'enemy',
+            'weapon_id': 'item_lasgun_kantrael',
+            'resource_id': 'lasgun_charge_packs',
+            'participant_ids': ['player_vane', 'npc_ogryn_bragg'],
+            'group_id': 'squad',
+            'stance': 'neutral'
+        })
+        run_event(w, event, render=False)
+        s = read_snapshot(w)
+        # Ammunition debited once: 10 - 1 = 9
+        self.assertEqual(9, s['resources']['lasgun_charge_packs']['data']['quantity'])

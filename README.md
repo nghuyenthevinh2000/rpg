@@ -178,27 +178,78 @@ live save.
   is `weapon['power'] + punch_kinetic_impact` (where punch impact already contains trait and
   equipment kinetic multipliers once, without multiplying weapon power a second time). Resource
   consumption and damage commit together. Each attack retaliates **once, even on
-  a killing blow**; periodic processing never retaliates. Current structural
-  sanctuary rejects combat and hostile GM introductions. Combat tests disable
-  sanctuary only in separately authored temporary copies.
+  a killing blow**; periodic processing never retaliates. Companions (`participants`) can join attacks
+  using melee or non-ammunition weapons without consuming companion ammunition, while invalid group
+  members reject atomically. Current structural sanctuary rejects combat and hostile GM introductions.
+  Combat tests disable sanctuary only in separately authored temporary copies.
+
+  Attack action payload example:
+  ```json
+  {
+    "type": "attack",
+    "actor_id": "player_vane",
+    "target_id": "threat_stalker",
+    "weapon_id": "item_void_relic_blade",
+    "participant_ids": ["npc_trooper_jax"],
+    "group_id": "Garrison",
+    "stance": "defensive_cover"
+  }
+  ```
+
 - Equipment actions (`equip`, `unequip`) require possession, living actors, and recognized
   slots, ensuring items cannot be fabricated or duplicated across slots without explicit unequip.
   Character derivation exposes a read-only `audit` entry detailing static values, baseline
   modifiers, current modifiers, effective values, health, and any bounds baseline exceptions.
+
+  Equip and unequip payload examples:
+  ```json
+  {"type": "equip", "actor_id": "player_vane", "item_id": "item_relic_blade_macragge"}
+  {"type": "unequip", "actor_id": "player_vane", "item_id": "item_relic_blade_macragge"}
+  ```
+
 - Treatment actions (`heal`, `restore_life`): `heal` requires living co-located biological targets,
   valid recipe references, and sufficient stock, clamping to configured ceiling without lowering higher health
-  or charging for full-health no-ops. `restore_life` requires an explicit authored restoration policy, living
-  immortal actor, co-located dead target, and consumes configured stock restoring status alive with health 100
-  while preserving existing capabilities. Lost World strictly rejects treatment and restoration.
-- Trial actions (`trial`) resolve noncombat challenges, social trials, and sanctuary opportunities against
+  or charging for full-health no-ops. `restore_life` is disabled by default and requires an explicit authored
+  restoration policy, living immortal actor, co-located dead target, and consumes configured stock restoring
+  status alive with health 100 while preserving existing capabilities. Lost World strictly rejects treatment
+  and restoration.
+
+  Heal and restore_life payload examples:
+  ```json
+  {"type": "heal", "actor_id": "player_vane", "target_id": "npc_trooper_jax", "recipe_id": "recipe_field_dressing"}
+  {"type": "restore_life", "actor_id": "player_vane", "target_id": "npc_trooper_jax"}
+  ```
+
+- Trial actions (`resolve_trial`) resolve noncombat challenges, social trials, and sanctuary opportunities against
   configured difficulty checks, actor skills, and success/failure outcome stakes without violating sanctuary.
+  Trials must take place at their authored `location_id`.
+
+  Trial resolution payload example:
+  ```json
+  {"type": "resolve_trial", "actor_id": "player_vane", "trial_id": "trial_monastery_dispute", "recipe_id": "recipe_peace_talks"}
+  ```
+
+- Production actions (`produce`) convert registered recipe inputs into outputs at actor's location:
+  ```json
+  {"type": "produce", "actor_id": "player_kael", "recipe_id": "recipe_bread"}
+  ```
+
+- Typed project actions: project progression uses five discrete, validated action types rather than a generic contribution command.
+  Projects require site authorization, material delivery matching bill of materials, site preparation, and authorized labor work:
+  ```json
+  {"type": "start_project", "actor_id": "player_kael", "project_id": "proj_active_distillery", "template_id": "proj_solar_distillery", "participant_ids": ["player_kael", "npc_worker_1"]}
+  {"type": "deliver_materials", "actor_id": "player_kael", "project_id": "proj_active_distillery", "resource_id": "timber", "quantity": 20}
+  {"type": "prepare_project_site", "actor_id": "player_kael", "project_id": "proj_active_distillery", "recipe_id": "prep_site_grading"}
+  {"type": "work_project", "actor_id": "player_kael", "project_id": "proj_active_distillery"}
+  {"type": "complete_project", "actor_id": "player_kael", "project_id": "proj_active_distillery"}
+  ```
+  Completed projects can grant resource rewards and earned trait rewards (applied once without passive healing),
+  and map presentation reflects committed labor hours, materials, and completion state.
+
 - Deterministic calendar progression: Lost World advances 24 turns/day with ISO offset-aware timestamps from
   anchor turn 33 / day 4 / `2026-10-09T07:30:00+07:00`; Warhammer advances 4 turns/day across 4 imperial watches
   from anchor turn 37 / day 9 / `41.999.059.M41`. The runner advances turn count atomically; dry runs and failures
   never advance clock state.
-- Projects and resource mechanics: `contribute_project` advances project labor toward configured goals with labor
-  caps; periodic `after_turn` processes resource production, consumption, and shortage penalties; completed
-  projects can unlock rewards and map presentation reflects labor progress.
 
 ## GM proposals and sanctuary handling
 

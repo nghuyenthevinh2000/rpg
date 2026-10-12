@@ -64,32 +64,78 @@ def resolve_inventory(ctx, event):
         return RuleResult(effects, {'action': 'unequip', 'actor_id': actor_id, 'item_id': item_id, 'slot': slot})
 
 
-def trait_reward_effects(ctx, actor_id, trait_ids):
-    actor = ctx.state.get('characters', actor_id)
-    if actor is None or not trait_ids:
-        return []
+import math
+from .resources import _number
+
+LEGACY_METADATA_KEYS = {'physical_vitality', 'max_agency', 'max_agility', 'max_clarity', 'max_psychic', 'max_strength', 'max_vitality'}
+
+
+def _finite_number(value):
+    try:
+        return type(value) in (int, float) and math.isfinite(value)
+    except OverflowError:
+        return False
+
+
+def validate_trait_rewards(ctx, trait_ids):
+    if not isinstance(trait_ids, list) or isinstance(trait_ids, str):
+        return [{'id': 'trait_rewards', 'code': 'trait_config', 'message': 'trait_rewards must be a list'}]
+    violations = []
     traits_doc = ctx.definitions.get('traits')
     registry = traits_doc.get('traits', {}) if traits_doc else {}
     rules = ctx.definitions.get('rules')
-    allowed_stats = set(rules.get('stat_keys', [])) | {'physical_vitality'}
+    allowed_stats = set(rules.get('stat_keys', []))
+    seen = set()
+    for tid in trait_ids:
+        if not isinstance(tid, str) or tid not in registry:
+            violations.append({'id': str(tid), 'code': 'trait_config', 'message': f'Unknown trait reference: {tid}'})
+            continue
+        if tid in seen:
+            violations.append({'id': str(tid), 'code': 'trait_config', 'message': f'Duplicate trait reward: {tid}'})
+        seen.add(tid)
+        trait_def = registry[tid]
+        for key, val in trait_def.get('stat_modifiers', {}).items():
+            if not _finite_number(val):
+                violations.append({'id': tid, 'code': 'trait_config', 'message': f'Modifier {key} must be finite number'})
+            if key not in allowed_stats and key not in LEGACY_METADATA_KEYS:
+                violations.append({'id': tid, 'code': 'trait_config', 'message': f'Unsupported modifier key {key}'})
+    return violations
+
+
+def trait_reward_effects(ctx, actor_id, trait_ids):
+    actor = ctx.state.get('characters', actor_id)
+    if actor is None:
+        raise RuleError('invalid_actor', f'Character {actor_id} not found')
+    if not trait_ids:
+        return []
+    if not isinstance(trait_ids, list) or isinstance(trait_ids, str):
+        raise RuleError('invalid_trait_rewards', 'trait_rewards must be a list')
+    try:
+        if len(trait_ids) != len(set(trait_ids)):
+            raise RuleError('duplicate_trait_reward', 'Duplicate trait IDs in rewards')
+    except TypeError:
+        raise RuleError('invalid_trait_rewards', 'trait_rewards must contain hashable string IDs')
+
+    traits_doc = ctx.definitions.get('traits')
+    registry = traits_doc.get('traits', {}) if traits_doc else {}
+    rules = ctx.definitions.get('rules')
+    allowed_stats = set(rules.get('stat_keys', []))
     
-    current_traits = set(actor['data'].get('traits', []))
-    to_add = []
     for tid in trait_ids:
         safe_id(tid)
         if tid not in registry:
             raise RuleError('unknown_trait', f'Trait {tid} not recognized')
         trait_def = registry[tid]
-        # Validate modifier keys
-        for key in trait_def.get('stat_modifiers', {}):
-            base_key = key.replace('max_', '')
-            if base_key not in allowed_stats:
+        for key, val in trait_def.get('stat_modifiers', {}).items():
+            if not _finite_number(val):
+                raise RuleError('unsupported_trait_stat', f'Modifier for {key} must be finite number')
+            if key not in allowed_stats and key not in LEGACY_METADATA_KEYS:
                 raise RuleError('unsupported_trait_stat', f'Trait {tid} has unsupported modifier key {key}')
-        if tid not in current_traits:
-            to_add.append(tid)
-    if not to_add:
+
+    current = actor['data'].get('traits', [])
+    new_traits = sorted(set(current) | set(trait_ids))
+    if new_traits == sorted(current):
         return []
-    new_traits = sorted(current_traits | set(to_add))
     return [_set('characters', actor_id, '/traits', new_traits)]
 
 
@@ -105,13 +151,18 @@ def audit_character(ctx, character_id):
     equip_def = equip_doc.get('items', {}) if equip_doc else {}
 
     current_mods = {}
+    legacy_mods = {}
     for tid in d.get('traits', []):
         for stat, val in traits_def.get(tid, {}).get('stat_modifiers', {}).items():
-            if not stat.startswith('max_'):
+            if stat in LEGACY_METADATA_KEYS or stat.startswith('max_'):
+                legacy_mods[stat] = legacy_mods.get(stat, 0) + val
+            else:
                 current_mods[stat] = current_mods.get(stat, 0) + val
     for eqid in d.get('equipment', []):
         for stat, val in equip_def.get(eqid, {}).get('stat_modifiers', {}).items():
-            if not stat.startswith('max_'):
+            if stat in LEGACY_METADATA_KEYS or stat.startswith('max_'):
+                legacy_mods[stat] = legacy_mods.get(stat, 0) + val
+            else:
                 current_mods[stat] = current_mods.get(stat, 0) + val
 
     # Effective stats
@@ -143,6 +194,7 @@ def audit_character(ctx, character_id):
         'baseline_modifiers': copy_dict(d.get('baseline', {}).get('modifiers', {})),
         'current_modifiers': current_mods,
         'effective_values': derived_stats,
+        'legacy_metadata_modifiers': legacy_mods,
         'health': d.get('health'),
         'bounds_exceptions': bounds_exceptions
     }

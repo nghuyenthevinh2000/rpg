@@ -34,3 +34,42 @@ All 9 tasks from `plan/remaining-mechanics.md` are complete. Full suite of 142 t
 
 Ruling: Keep `load_hooks=False` source-independent with its prior empty hash — replay/recovery must not depend on still-readable Python source — non-executable inspection lacks a current source hash, while resolved events record the complete hash.
 
+## Compliance Fixes Execution (plan/mechanics-compliance-fixes.md)
+
+On 2026-10-12, resolved all 7 compliance tasks across both worlds:
+- Task 1 (Treatment/trial validation & net resource conservation): net quantity calculation, finite positive integer costs/yields, wired into validation and resolution hooks.
+- Task 2 (Enforce trial sites & peaceful live GM authoring): location equality enforcement on introduction and resolution, peaceful live GM/engine pool cleaning, seeded selection after filtering.
+- Task 3 (Reject invalid groups & free ranged companion attacks): companion selection restricted to non-ammo/melee weapons, complete character state validation for group members.
+- Task 4 (Complete and validate earned trait rewards in both worlds): implemented `world/lost-world/logic/rewards.py` and enhanced `world/warhammer-40k/logic/inventory.py`, strict modifier key checking (`LEGACY_METADATA_KEYS`), duplicate reward rejection, idempotent union application, and project trait rewards.
+- Task 5 (Strict calendar validation & replay/recovery): exact 5-field calendar configuration check, positive int day, non-future anchor (`0 <= anchor_turn <= ctx.turn`), fixed cadence check, offset-aware ISO timestamps for Lost World.
+- Task 6 (Render captured committed outcomes safely): safely formatted `Last Event Outcomes` section with HTML escaping, `Trials and Opportunities` threat heading under sanctuary, matching after-image receipts under StateStore lock.
+- Task 7 (Composed acceptance flows & operational documentation): updated README action payloads with typed project actions, attack companions/group/stance, equip/unequip, heal, restore_life, resolve_trial; comprehensive multi-entity tests in `test_remaining_mechanics.py`.
+
+Final verification:
+- Full test suite: 161 tests passed (0 errors, 0 failures, 129.35s).
+- Clean `git diff --check` with 0 whitespace issues.
+- All 104 tracked authoritative and legacy archive file hashes verified 100% identical.
+- Zero commits or pushes performed.
+
+## Remaining Review Findings & Coverage Gaps (2026-10-12)
+
+Resolved the 6 remaining review findings and coverage gaps:
+1. **Negative Trait Modifiers:** Replaced nonnegative constraint with `_finite_number(value)` in `world/warhammer-40k/logic/inventory.py` and `world/lost-world/logic/rewards.py`, allowing legitimate negative trait modifiers like Ogryn agility (-10) in `trait_colossal_frame`. Added regression test in `test_inventory.py`.
+2. **Configuration Validation Gaps:**
+   - Trial validation delegates to `validate_trait_rewards(ctx, tr_rewards)`.
+   - Trait reward functions reject unhashable reward IDs with structured `trial_config` / `project_config`.
+   - Rejects explicit null containers for `trial_recipes`, `treatment_recipes`, and `restoration_policy`.
+   - Rejects unknown structural prerequisite names against `structural_rules`.
+   - Added regression tests in `test_trials.py` and `test_treatment.py`.
+3. **Project Required-Field Validation:** Enforced `not TEMPLATE_FIELDS <= set(template)` in `logic/projects.py` for both worlds before indexing `template['name']`, preventing `KeyError` when optional `trait_rewards` are present without required template fields. Added regression test in `test_projects.py`.
+4. **Peaceful Template Authorized Locations:** Required `template.get('location_id')` on introduction in both `logic/rules.py` and in `validate_trials` to prevent misplaced threats that cannot be completed. Sanctuary check evaluated before location matching to maintain expected rejection priority for hostile/cold templates.
+5. **Renderer Compliance:**
+   - Validates supplied `committed_event` receipt after-images against snapshot entities (`snapshot.get(col, {}).get(ident) == img.get('after')`) under lock.
+   - Handles `outcomes['resources']` whether formatted as a dictionary or a list of periodic consequence records.
+   - Added regression tests in `test_remaining_mechanics.py`.
+6. **Documentation & Coverage:**
+   - Corrected action payload schemas in `README.md` (`participant_ids`, stance `defensive_cover`, removed `slot`/`facility_id`, supplied required project fields).
+   - Expanded composed peaceful test in `test_remaining_mechanics.py` to author a recipe, execute a `produce` action, and advance 18+ turns across the 24-hour day rollover boundary (day 4 -> day 5 at turn 57, advancing to turn 58).
+   - Added `test_no_turn_action_does_not_advance_calendar` regression in `test_calendar.py` confirming non-advancing actions execute zero after-turn hooks and do not advance calendar clocks.
+
+Full test suite: 161 tests passed in 129.36s (0 errors, 0 failures). 104 authoritative hashes intact.

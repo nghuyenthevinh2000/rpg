@@ -62,7 +62,8 @@ def validate_projects(ctx):
         if recipe['resource_costs'] != {}:
             bad(identity, 'initial fixed preparations have no stock cost')
     for identity, template in templates.items():
-        if not isinstance(template, dict) or set(template) != TEMPLATE_FIELDS:
+        allowed_fields = TEMPLATE_FIELDS | {'trait_rewards'}
+        if not isinstance(template, dict) or set(template) - allowed_fields or not TEMPLATE_FIELDS <= set(template):
             bad(identity, 'template fields must match the typed project policy')
             continue
         if not isinstance(template['name'], str) or not template['name']:
@@ -78,6 +79,9 @@ def validate_projects(ctx):
         requirements = template['structural_requirements']
         if not isinstance(requirements, dict) or any(k not in structural or type(v) is not bool for k, v in requirements.items()):
             bad(identity, 'structural requirements must reference actual named world booleans')
+        if 'trait_rewards' in template:
+            from .inventory import validate_trait_rewards
+            violations.extend(validate_trait_rewards(ctx, template['trait_rewards']))
         for field in ('materials', 'resource_rewards'):
             amounts = template[field]
             if not isinstance(amounts, dict) or (field == 'materials' and not amounts):
@@ -239,6 +243,10 @@ def resolve_project(ctx, event):
     elif kind == 'complete_project':
         if data['hours_committed'] != template['hours_required'] or data['materials_committed'] != template['materials'] or not all(data['conditions'].values()):
             raise RuleError('project_incomplete', 'All labor, materials and structural conditions required')
+        trait_ids = template.get('trait_rewards', [])
+        if trait_ids:
+            from .inventory import trait_reward_effects
+            effects.extend(trait_reward_effects(ctx, data['actor_id'], trait_ids))
         for resource_id, amount in template['resource_rewards'].items():
             stock = ctx.state.get('resources', resource_id)
             quantity = stock['data']['quantity'] + amount

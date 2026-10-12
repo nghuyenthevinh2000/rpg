@@ -25,61 +25,7 @@
       "trigger_probability": 0.30,
       "threat": "Weary acolytes at the Basilica of the Sovereign Soul require guiding presence and spiritual renewal.",
       "human_trial": "Channel primordial solace and wisdom to anchor minds in enduring serenity."
-    },
-    {
-      "id": "event_warp_bleed_hallucinations",
-      "name": "Warp-Bleed Psychic Static",
-      "type": "warp_entropy",
-      "trigger_probability": 0.25,
-      "threat": "The Geller Field of an overhead orbital bulk-freighter flickers, leaking phantom whispers and crying blood into the vox-network.",
-      "human_trial": "Troopers and citizens must recite the Litany of Sanity without pause; any who scream or gouge out their eyes must be purged immediately."
-    },
-    {
-      "id": "event_sump_mutant_breach",
-      "name": "The Sump Beast Incursion",
-      "type": "xenos_mutant_assault",
-      "trigger_probability": 0.30,
-      "threat": "A swarm of chitinous clawed sewer-scuttlers claws through the rust-eaten drainage grating beneath Hab Vermis.",
-      "human_trial": "Garrison squad must lock down the junction with flamers and chainswords before the creatures nest in the hab ventilation ducts."
-    },
-    {
-      "id": "event_promethium_pressure_spike",
-      "name": "Promethium Siphon Rupture",
-      "type": "industrial_cataclysm",
-      "trigger_probability": 0.20,
-      "threat": "High-pressure fuel main overheats; roaring flame jets threaten to ignite the entire foundry district.",
-      "human_trial": "Tech-Priest Enginseer and brave conscripts must venture into the scalding heat to manual-crank the isolation lock."
-    },
-    {
-      "id": "event_inquisition_purge_inquiry",
-      "name": "The Inquisitorial Redacted Sweep",
-      "type": "inquisitorial_terror",
-      "trigger_probability": 0.15,
-      "threat": "Acolytes of the Ordo Hereticus arrive unannounced, demanding 50 randomly selected workers for neural-interrogation.",
-      "human_trial": "Maintain iron discipline and offer the tithe without resistance, or risk the entire sub-level being condemned as heretical."
     }
   ],
-  "improvisation_templates": [
-    {
-      "id": "event_improv_corpse_starch_famine",
-      "name": "The Corpse-Starch Spoiled Batch",
-      "type": "famine_crisis",
-      "threat": "A fungal blight rots the weekly food dispenser tanks; serfs resort to cannibalism or violent mutiny.",
-      "human_trial": "Enforcers must ration reserve emergency grox-jerky and suppress rioters with shock-mauls while hunting the blight source."
-    },
-    {
-      "id": "event_improv_feral_servitor_spasm",
-      "name": "The Rampant Heavy Loader Servitor",
-      "type": "machine_rage",
-      "threat": "A 10-ton hydraulic industrial servitor suffers neural feedback, swinging its mining drill through iron support columns.",
-      "human_trial": "Disable its power core with a krak grenade or precision sniper fire before it brings the hab ceiling down."
-    },
-    {
-      "id": "event_improv_sanctioned_psyker_fit",
-      "name": "The Screaming Astropathic Seizure",
-      "type": "psychic_hazard",
-      "threat": "A sanctioned communication psyker goes into violent convulsions; frost crawls up the walls and gravity reverses.",
-      "human_trial": "Affix null-collars immediately and chant the Rite of Iron Will before a minor daemon breaches the veil."
-    }
-  ]
+  "improvisation_templates": []
 }

@@ -1,9 +1,104 @@
-"""Peaceful trial resolution and validated rewards."""
+"""Peaceful trial resolution, configuration validation, and conserved rewards."""
 from engine.contracts import RuleError, RuleResult, safe_id
 from .resources import _number, _capacity
 
+ALLOWED_TRIAL_RECIPE_FIELDS = {
+    'template_id', 'location_id', 'resource_costs',
+    'resource_rewards', 'trait_rewards', 'structural_requirements'
+}
+
+
 def _set(collection, identity, path, value):
     return {'op': 'set', 'collection': collection, 'entity_id': identity, 'path': path, 'value': value}
+
+
+def validate_trials(ctx):
+    rules = ctx.definitions.get('rules')
+    if rules is None:
+        return []
+    if 'trial_recipes' not in rules:
+        return []
+    recipes = rules['trial_recipes']
+    if not isinstance(recipes, dict):
+        return [{'id': 'trials', 'code': 'trial_config', 'message': 'trial_recipes must be an object'}]
+
+    violations = []
+
+    def bad(identity, message):
+        violations.append({'id': identity, 'code': 'trial_config', 'message': message})
+
+    loc_doc = ctx.definitions.get('locations')
+    locations = {loc['id'] for loc in loc_doc.get('locations', [])} if loc_doc else set()
+    templates = rules.get('templates', {})
+    world_doc = ctx.definitions.get('world')
+    structural = world_doc.get('structural_rules', {}) if world_doc else {}
+    traits_doc = ctx.definitions.get('traits')
+    traits = traits_doc.get('traits', {}) if traits_doc else {}
+
+    for recipe_id, recipe in sorted(recipes.items()):
+        if not isinstance(recipe, dict):
+            bad(recipe_id, 'recipe must be an object')
+            continue
+        if set(recipe) - ALLOWED_TRIAL_RECIPE_FIELDS:
+            bad(recipe_id, f'Unknown fields in trial recipe: {sorted(set(recipe) - ALLOWED_TRIAL_RECIPE_FIELDS)}')
+            continue
+        if 'template_id' not in recipe or 'location_id' not in recipe:
+            bad(recipe_id, 'recipe requires template_id and location_id')
+            continue
+
+        tid = recipe['template_id']
+        if not isinstance(tid, str) or tid not in templates:
+            bad(recipe_id, f'Unknown template reference: {tid}')
+        else:
+            tpl = templates[tid]
+            if not isinstance(tpl, dict) or 'location_id' not in tpl or not tpl['location_id']:
+                bad(recipe_id, f'Template {tid} must author an explicit location_id')
+            elif tpl['location_id'] != recipe['location_id']:
+                bad(recipe_id, 'recipe location_id does not match template location_id')
+
+        loc_id = recipe['location_id']
+        if not isinstance(loc_id, str) or loc_id not in locations:
+            bad(recipe_id, f'Unknown location reference: {loc_id}')
+
+        costs = recipe.get('resource_costs', {})
+        if not isinstance(costs, dict):
+            bad(recipe_id, 'resource_costs must be an object')
+        else:
+            for res_id, cost in sorted(costs.items()):
+                if ctx.state.get('resources', res_id) is None:
+                    bad(recipe_id, f'Unknown resource in costs: {res_id}')
+                if not _number(cost, positive=False):
+                    bad(recipe_id, f'Cost for {res_id} must be finite nonnegative number')
+
+        rewards = recipe.get('resource_rewards', {})
+        if not isinstance(rewards, dict):
+            bad(recipe_id, 'resource_rewards must be an object')
+        else:
+            for res_id, reward in sorted(rewards.items()):
+                if ctx.state.get('resources', res_id) is None:
+                    bad(recipe_id, f'Unknown resource in rewards: {res_id}')
+                if not _number(reward, positive=False):
+                    bad(recipe_id, f'Reward for {res_id} must be finite nonnegative number')
+
+        if 'structural_requirements' in recipe:
+            struct_req = recipe['structural_requirements']
+            if not isinstance(struct_req, dict):
+                bad(recipe_id, 'structural_requirements must be an object')
+            else:
+                for k, v in sorted(struct_req.items()):
+                    if k not in structural:
+                        bad(recipe_id, f'Unknown structural requirement name: {k}')
+                    elif not isinstance(v, bool):
+                        bad(recipe_id, f'Structural requirement {k} must be a boolean')
+
+        if 'trait_rewards' in recipe:
+            tr_rewards = recipe['trait_rewards']
+            from .inventory import validate_trait_rewards
+            for v in validate_trait_rewards(ctx, tr_rewards):
+                bad(recipe_id, v['message'])
+
+    return violations
+
 
 def resolve_trial(ctx, event):
     action = event['action']
@@ -22,19 +117,19 @@ def resolve_trial(ctx, event):
     threat = ctx.state.get('threats', trial_id)
     if threat is None or not threat['data'].get('active'):
         raise RuleError('invalid_trial', 'Active trial required')
-    
-    # Trial must be active and activation_turn <= ctx.turn
+
     if threat['data'].get('activation_turn', 0) > ctx.turn:
         raise RuleError('trial_inactive', 'Trial is not yet active on current turn')
-
-    if actor['data']['location_id'] != threat['data'].get('location_id'):
-        raise RuleError('trial_location', 'Actor and trial must be co-located')
 
     rules = ctx.definitions.get('rules')
     recipes = rules.get('trial_recipes', {})
     if recipe_id not in recipes:
         raise RuleError('unknown_recipe', f'Trial recipe {recipe_id} not recognized')
     recipe = recipes[recipe_id]
+
+    site = recipe['location_id']
+    if actor['data']['location_id'] != site or threat['data'].get('location_id') != site:
+        raise RuleError('trial_location', 'Configured trial site required')
 
     if recipe.get('template_id') != threat['data'].get('metadata', {}).get('template_id'):
         raise RuleError('invalid_recipe', 'Recipe does not match trial template')
@@ -47,23 +142,23 @@ def resolve_trial(ctx, event):
             raise RuleError('trial_structural', f'Structural requirement {req_key} unmet')
 
     effects = []
-    # Deduct resource costs
-    for res_id, cost in sorted(recipe.get('resource_costs', {}).items()):
-        stock = ctx.state.get('resources', res_id)
-        if stock is None or stock['data']['quantity'] < cost:
-            raise RuleError('insufficient_resources', f'Insufficient resource {res_id}')
-        effects.append(_set('resources', res_id, '/quantity', stock['data']['quantity'] - cost))
-
-    # Grant resource rewards
-    for res_id, reward in sorted(recipe.get('resource_rewards', {}).items()):
-        stock = ctx.state.get('resources', res_id)
+    costs = recipe.get('resource_costs', {})
+    rewards = recipe.get('resource_rewards', {})
+    for resource_id in sorted(set(costs) | set(rewards)):
+        stock = ctx.state.get('resources', resource_id)
         if stock is None:
-            raise RuleError('unknown_resource', f'Resource {res_id} does not exist')
-        cap = _capacity(ctx, res_id)
-        new_qty = stock['data']['quantity'] + reward
-        if cap is not None and new_qty > cap:
-            raise RuleError('resource_capacity', f'Resource reward exceeds capacity for {res_id}')
-        effects.append(_set('resources', res_id, '/quantity', new_qty))
+            raise RuleError('unknown_resource', f'Resource {resource_id} does not exist')
+        old = stock['data']['quantity']
+        cost = costs.get(resource_id, 0)
+        reward = rewards.get(resource_id, 0)
+        if old < cost:
+            raise RuleError('insufficient_resources', resource_id)
+        final = old - cost + reward
+        capacity = _capacity(ctx, resource_id)
+        if capacity is not None and final > capacity:
+            raise RuleError('resource_capacity', resource_id)
+        if final != old:
+            effects.append(_set('resources', resource_id, '/quantity', final))
 
     # Trait rewards if any
     trait_ids = recipe.get('trait_rewards', [])
