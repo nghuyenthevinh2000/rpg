@@ -723,6 +723,73 @@ class CovenantBrokenContractTests(unittest.TestCase):
         violations = contract.validate(ctx)
         self.assertEqual(violations, [])
 
+    def test_covenant_broken_engine_cli_and_artifacts(self):
+        from engine.migration import inspect_world
+        from engine.render_map import render_map
+        from engine.contracts import WorldContract, RuleContext, StateView
+        from engine.runner import read_snapshot
+        import json
+
+        world_path = Path(__file__).resolve().parents[1] / "world/covenant-broken"
+
+        # 1. Inspect world check
+        report = inspect_world(world_path)
+        self.assertTrue(report.get("canonical"), "World must be canonical")
+        self.assertEqual(report.get("blocking", 0), 0, "inspect_world must report 0 blocking issues")
+
+        # 2. Stats / derivations check for all 6 characters
+        contract = WorldContract(world_path, load_hooks=True)
+        snapshot = read_snapshot(world_path)
+        ctx = RuleContext(StateView(snapshot), contract.definition_view, None, snapshot["clock"]["data"]["turn"])
+
+        expected_chars = [
+            "player_elias",
+            "npc_valen_consensus",
+            "npc_mira_purifier",
+            "npc_archon_synergist",
+            "npc_silas_severed",
+            "npc_kora_vance",
+        ]
+        for cid in expected_chars:
+            derived = contract.derive(ctx, f"characters/{cid}")
+            self.assertIn("stats", derived, f"Missing derived stats for {cid}")
+            self.assertIn("agency", derived["stats"], f"Missing agency for {cid}")
+
+        violations = contract.validate(ctx)
+        self.assertEqual(violations, [], f"Expected 0 violations, got {violations}")
+
+        # 3. Render map check
+        map_path = render_map(world_path)
+        self.assertTrue(map_path.exists(), f"Map file not found: {map_path}")
+        self.assertEqual(map_path.name, "map.html")
+        content = map_path.read_text(encoding="utf-8")
+        self.assertIn("The Broken Covenant", content)
+        self.assertIn("Elias", content)
+
+        # 4. Baseline event and transaction artifacts check
+        ev_path = world_path / "events/committed/engine_baseline.json"
+        tx_path = world_path / "transactions/engine_baseline.json"
+        prop_dir = world_path / "events/proposed"
+        readme_path = world_path / "README.md"
+
+        self.assertTrue(prop_dir.is_dir(), "events/proposed directory must exist")
+        self.assertTrue(ev_path.exists(), "events/committed/engine_baseline.json must exist")
+        self.assertTrue(tx_path.exists(), "transactions/engine_baseline.json must exist")
+        self.assertTrue(readme_path.exists(), "world/covenant-broken/README.md must exist")
+
+        ev_data = json.loads(ev_path.read_text(encoding="utf-8"))
+        tx_data = json.loads(tx_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(ev_data["event_id"], "engine_baseline")
+        self.assertEqual(ev_data["action"]["actor_id"], "player_elias")
+        self.assertEqual(ev_data["action"]["type"], "baseline")
+        self.assertEqual(ev_data["clock"]["turn"], 1)
+        self.assertIn("Silent Sundering", ev_data["narrative"])
+
+        self.assertEqual(tx_data["event_id"], "engine_baseline")
+        self.assertEqual(tx_data["status"], "committed")
+        self.assertEqual(tx_data["archive"], ev_data)
+
 
 if __name__ == "__main__":
     unittest.main()

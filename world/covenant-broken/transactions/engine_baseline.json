@@ -1,0 +1,932 @@
+{
+  "archive": {
+    "action": {
+      "actor_id": "player_elias",
+      "type": "baseline"
+    },
+    "changes": {
+      "baseline/legacy": {
+        "before": null,
+        "after": {
+          "data": {
+            "metadata": {
+              "description": "Initial post-war shattered armistice baseline",
+              "installed_turn": 1,
+              "inventory_registry": {},
+              "world_id": "covenant-broken"
+            }
+          },
+          "id": "legacy",
+          "revision": 0,
+          "schema_version": 1
+        }
+      },
+      "clock": {
+        "before": null,
+        "after": {
+          "data": {
+            "day": 1,
+            "display_timestamp": "Post-War Year 14, Dawn",
+            "turn": 1
+          },
+          "id": "clock",
+          "revision": 0,
+          "schema_version": 1
+        }
+      },
+      "characters/npc_archon_synergist": {
+        "before": null,
+        "after": {
+          "data": {
+            "baseline": {
+              "modifiers": {},
+              "stats": {
+                "agency": 60,
+                "biological_vitality": 50,
+                "clarity": 80,
+                "dissonance": 45,
+                "max_agency": 100,
+                "neural_strain": 70
+              }
+            },
+            "capabilities": {
+              "cannot_die": false
+            },
+            "equipment": [],
+            "health": 50,
+            "inventory": [
+              "item_arc_welder_blade",
+              "item_reinforced_chitin_harness",
+              "item_dormant_core_shard"
+            ],
+            "location_id": "loc_chimera_foundry",
+            "metadata": {
+              "legacy": {
+                "archetype": "The Bio-Forge Archon",
+                "coordinate": {
+                  "col": 5,
+                  "row": 4
+                },
+                "current_location": "loc_chimera_foundry",
+                "current_status": "Master of Chimeric Synthesis",
+                "decisions": [],
+                "former_role": "Cybernetic Bio-Engineer",
+                "id": "npc_archon_synergist",
+                "name": "Archon Rex",
+                "symbol_alignment": "The Spliced Coil"
+              }
+            },
+            "name": "Archon Rex",
+            "stats": {
+              "agency": 60,
+              "biological_vitality": 50,
+              "clarity": 80,
+              "dissonance": 45,
+              "max_agency": 100,
+              "neural_strain": 70
+            },
+            "status": "alive",
+            "traits": [
+              "trait_chimera_graft"
+            ]
+          },
+          "id": "npc_archon_synergist",
+          "revision": 0,
+          "schema_version": 1
+        }
+      },
+      "characters/npc_kora_vance": {
+        "before": null,
+        "after": {
+          "data": {
+            "baseline": {
+              "modifiers": {},
+              "stats": {
+                "agency": 80,
+                "biological_vitality": 60,
+                "clarity": 85,
+                "dissonance": 30,
+                "max_agency": 100,
+                "neural_strain": 15
+              }
+            },
+            "capabilities": {
+              "cannot_die": false
+            },
+            "equipment": [],
+            "health": 60,
+            "inventory": [
+              "item_genome_cryo_flask"
+            ],
+            "location_id": "loc_scrap_hollow",
+            "metadata": {
+              "legacy": {
+                "archetype": "The Genomic Archivist",
+                "coordinate": {
+                  "col": 3,
+                  "row": 3
+                },
+                "current_location": "loc_scrap_hollow",
+                "current_status": "Field Physician at Scrap Hollow Field Clinic",
+                "decisions": [],
+                "former_role": "Chief Geneticist",
+                "id": "npc_kora_vance",
+                "name": "Dr. Kora Vance",
+                "symbol_alignment": "The Unaligned Compass"
+              }
+            },
+            "name": "Dr. Kora Vance",
+            "stats": {
+              "agency": 80,
+              "biological_vitality": 60,
+              "clarity": 85,
+              "dissonance": 30,
+              "max_agency": 100,
+              "neural_strain": 15
+            },
+            "status": "alive",
+            "traits": [
+              "trait_genomic_custodian"
+            ]
+          },
+          "id": "npc_kora_vance",
+          "revision": 0,
+          "schema_version": 1
+        }
+      },
+      "characters/npc_mira_purifier": {
+        "before": null,
+        "after": {
+          "data": {
+            "baseline": {
+              "modifiers": {},
+              "stats": {
+                "agency": 90,
+                "biological_vitality": 95,
+                "clarity": 75,
+                "dissonance": 20,
+                "max_agency": 100,
+                "neural_strain": 0
+              }
+            },
+            "capabilities": {
+              "cannot_die": false
+            },
+            "equipment": [],
+            "health": 95,
+            "inventory": [
+              "item_emp_lance",
+              "item_lead_lined_trenchcoat"
+            ],
+            "location_id": "loc_ashen_cradle",
+            "metadata": {
+              "legacy": {
+                "archetype": "The Flame Purifier",
+                "coordinate": {
+                  "col": 2,
+                  "row": 5
+                },
+                "current_location": "loc_ashen_cradle",
+                "current_status": "Vigilant Guard of the Ashen Pyres",
+                "decisions": [],
+                "former_role": "Gene-Purity Inquisitor",
+                "id": "npc_mira_purifier",
+                "name": "Mira",
+                "symbol_alignment": "The Cleansing Flame"
+              }
+            },
+            "name": "Mira",
+            "stats": {
+              "agency": 90,
+              "biological_vitality": 95,
+              "clarity": 75,
+              "dissonance": 20,
+              "max_agency": 100,
+              "neural_strain": 0
+            },
+            "status": "alive",
+            "traits": [
+              "trait_purifier_fervor"
+            ]
+          },
+          "id": "npc_mira_purifier",
+          "revision": 0,
+          "schema_version": 1
+        }
+      },
+      "characters/npc_silas_severed": {
+        "before": null,
+        "after": {
+          "data": {
+            "baseline": {
+              "modifiers": {},
+              "stats": {
+                "agency": 65,
+                "biological_vitality": 65,
+                "clarity": 60,
+                "dissonance": 55,
+                "max_agency": 100,
+                "neural_strain": 35
+              }
+            },
+            "capabilities": {
+              "cannot_die": false
+            },
+            "equipment": [],
+            "health": 65,
+            "inventory": [
+              "item_lead_lined_trenchcoat"
+            ],
+            "location_id": "loc_scrap_hollow",
+            "metadata": {
+              "legacy": {
+                "archetype": "The Severed Deserter",
+                "coordinate": {
+                  "col": 3,
+                  "row": 3
+                },
+                "current_location": "loc_scrap_hollow",
+                "current_status": "Haunted Wanderer among the Scrap Stalls",
+                "decisions": [],
+                "former_role": "Consensus Signal Scout",
+                "id": "npc_silas_severed",
+                "name": "Silas",
+                "symbol_alignment": "The Broken Pylon"
+              }
+            },
+            "name": "Silas",
+            "stats": {
+              "agency": 65,
+              "biological_vitality": 65,
+              "clarity": 60,
+              "dissonance": 55,
+              "max_agency": 100,
+              "neural_strain": 35
+            },
+            "status": "alive",
+            "traits": [
+              "trait_severed_phantom"
+            ]
+          },
+          "id": "npc_silas_severed",
+          "revision": 0,
+          "schema_version": 1
+        }
+      },
+      "characters/npc_valen_consensus": {
+        "before": null,
+        "after": {
+          "data": {
+            "baseline": {
+              "modifiers": {},
+              "stats": {
+                "agency": 30,
+                "biological_vitality": 70,
+                "clarity": 95,
+                "dissonance": 5,
+                "max_agency": 100,
+                "neural_strain": 60
+              }
+            },
+            "capabilities": {
+              "cannot_die": false
+            },
+            "equipment": [],
+            "health": 70,
+            "inventory": [
+              "item_harmonic_stunner",
+              "item_consensus_mesh_armor"
+            ],
+            "location_id": "loc_consensus_spire",
+            "metadata": {
+              "legacy": {
+                "archetype": "The Consensus Node",
+                "coordinate": {
+                  "col": 4,
+                  "row": 1
+                },
+                "current_location": "loc_consensus_spire",
+                "current_status": "Synchronized to Collective Relay",
+                "decisions": [],
+                "former_role": "Consensus Sub-Arbiter",
+                "id": "npc_valen_consensus",
+                "name": "Valen",
+                "symbol_alignment": "The Tethered Spark"
+              }
+            },
+            "name": "Valen",
+            "stats": {
+              "agency": 30,
+              "biological_vitality": 70,
+              "clarity": 95,
+              "dissonance": 5,
+              "max_agency": 100,
+              "neural_strain": 60
+            },
+            "status": "alive",
+            "traits": [
+              "trait_consensus_tether"
+            ]
+          },
+          "id": "npc_valen_consensus",
+          "revision": 0,
+          "schema_version": 1
+        }
+      },
+      "characters/player_elias": {
+        "before": null,
+        "after": {
+          "data": {
+            "baseline": {
+              "modifiers": {},
+              "stats": {
+                "agency": 85,
+                "biological_vitality": 80,
+                "clarity": 90,
+                "dissonance": 15,
+                "max_agency": 100,
+                "neural_strain": 10
+              }
+            },
+            "capabilities": {
+              "cannot_die": false
+            },
+            "equipment": [],
+            "health": 80,
+            "inventory": [
+              "item_scavenged_rail_pistol",
+              "item_unaligned_diagnostic_pad"
+            ],
+            "location_id": "loc_scrap_hollow",
+            "metadata": {
+              "legacy": {
+                "archetype": "The Unaligned Wanderer",
+                "coordinate": {
+                  "col": 3,
+                  "row": 3
+                },
+                "current_location": "loc_scrap_hollow",
+                "current_status": "Neutral Scavenger at Scrap Hollow Bazaar",
+                "decisions": [],
+                "former_role": "Scavenger Technician",
+                "id": "player_elias",
+                "name": "Elias",
+                "symbol_alignment": "The Unaligned Compass"
+              }
+            },
+            "name": "Elias",
+            "stats": {
+              "agency": 85,
+              "biological_vitality": 80,
+              "clarity": 90,
+              "dissonance": 15,
+              "max_agency": 100,
+              "neural_strain": 10
+            },
+            "status": "alive",
+            "traits": [
+              "trait_unaligned_observer"
+            ]
+          },
+          "id": "player_elias",
+          "revision": 0,
+          "schema_version": 1
+        }
+      },
+      "resources/energy_cells": {
+        "before": null,
+        "after": {
+          "data": {
+            "capacity": 2000,
+            "description": "Standardized electrochemical batteries harvested from downed combat machines and generators.",
+            "location_id": "loc_scrap_hollow",
+            "metadata": {
+              "category": "power_and_electronics"
+            },
+            "name": "energy_cells",
+            "quantity": 120,
+            "unit": "cells"
+          },
+          "id": "energy_cells",
+          "revision": 0,
+          "schema_version": 1
+        }
+      },
+      "resources/organic_rations": {
+        "before": null,
+        "after": {
+          "data": {
+            "capacity": 1000,
+            "description": "Purified non-irradiated nutrient paste and subterranean fungus loaves.",
+            "location_id": "loc_scrap_hollow",
+            "metadata": {
+              "category": "sustenance_and_survival"
+            },
+            "name": "organic_rations",
+            "quantity": 85,
+            "unit": "ration packs"
+          },
+          "id": "organic_rations",
+          "revision": 0,
+          "schema_version": 1
+        }
+      },
+      "resources/salvage_scrap": {
+        "before": null,
+        "after": {
+          "data": {
+            "capacity": 5000,
+            "description": "Refined structural metal and cybernetic chassis components recovered from the wasteland.",
+            "location_id": "loc_scrap_hollow",
+            "metadata": {
+              "category": "construction_and_fabrication"
+            },
+            "name": "salvage_scrap",
+            "quantity": 250,
+            "unit": "metric kg"
+          },
+          "id": "salvage_scrap",
+          "revision": 0,
+          "schema_version": 1
+        }
+      }
+    },
+    "clock": {
+      "turn": 1,
+      "day": 1,
+      "display_timestamp": "Post-War Year 14, Dawn"
+    },
+    "dry_run": false,
+    "event_id": "engine_baseline",
+    "kind": "baseline",
+    "metadata": {
+      "contract_version": 1,
+      "state_schema_version": 1
+    },
+    "narrative": "Fourteen years after the Silent Sundering, the armistice lies shattered across the ruins. In Scrap Hollow, Elias navigates the escalating crossfire among the Iron Consensus, Ashen Genesis, and Chimera Nexus. Alongside the haunted node Silas and geneticist Dr. Kora Vance, the seeds of an unaligned path begin to stir.",
+    "world_id": "covenant-broken"
+  },
+  "changes": {
+    "baseline/legacy": {
+      "before": null,
+      "after": {
+        "data": {
+          "metadata": {
+            "description": "Initial post-war shattered armistice baseline",
+            "installed_turn": 1,
+            "inventory_registry": {},
+            "world_id": "covenant-broken"
+          }
+        },
+        "id": "legacy",
+        "revision": 0,
+        "schema_version": 1
+      }
+    },
+    "clock": {
+      "before": null,
+      "after": {
+        "data": {
+          "day": 1,
+          "display_timestamp": "Post-War Year 14, Dawn",
+          "turn": 1
+        },
+        "id": "clock",
+        "revision": 0,
+        "schema_version": 1
+      }
+    },
+    "characters/npc_archon_synergist": {
+      "before": null,
+      "after": {
+        "data": {
+          "baseline": {
+            "modifiers": {},
+            "stats": {
+              "agency": 60,
+              "biological_vitality": 50,
+              "clarity": 80,
+              "dissonance": 45,
+              "max_agency": 100,
+              "neural_strain": 70
+            }
+          },
+          "capabilities": {
+            "cannot_die": false
+          },
+          "equipment": [],
+          "health": 50,
+          "inventory": [
+            "item_arc_welder_blade",
+            "item_reinforced_chitin_harness",
+            "item_dormant_core_shard"
+          ],
+          "location_id": "loc_chimera_foundry",
+          "metadata": {
+            "legacy": {
+              "archetype": "The Bio-Forge Archon",
+              "coordinate": {
+                "col": 5,
+                "row": 4
+              },
+              "current_location": "loc_chimera_foundry",
+              "current_status": "Master of Chimeric Synthesis",
+              "decisions": [],
+              "former_role": "Cybernetic Bio-Engineer",
+              "id": "npc_archon_synergist",
+              "name": "Archon Rex",
+              "symbol_alignment": "The Spliced Coil"
+            }
+          },
+          "name": "Archon Rex",
+          "stats": {
+            "agency": 60,
+            "biological_vitality": 50,
+            "clarity": 80,
+            "dissonance": 45,
+            "max_agency": 100,
+            "neural_strain": 70
+          },
+          "status": "alive",
+          "traits": [
+            "trait_chimera_graft"
+          ]
+        },
+        "id": "npc_archon_synergist",
+        "revision": 0,
+        "schema_version": 1
+      }
+    },
+    "characters/npc_kora_vance": {
+      "before": null,
+      "after": {
+        "data": {
+          "baseline": {
+            "modifiers": {},
+            "stats": {
+              "agency": 80,
+              "biological_vitality": 60,
+              "clarity": 85,
+              "dissonance": 30,
+              "max_agency": 100,
+              "neural_strain": 15
+            }
+          },
+          "capabilities": {
+            "cannot_die": false
+          },
+          "equipment": [],
+          "health": 60,
+          "inventory": [
+            "item_genome_cryo_flask"
+          ],
+          "location_id": "loc_scrap_hollow",
+          "metadata": {
+            "legacy": {
+              "archetype": "The Genomic Archivist",
+              "coordinate": {
+                "col": 3,
+                "row": 3
+              },
+              "current_location": "loc_scrap_hollow",
+              "current_status": "Field Physician at Scrap Hollow Field Clinic",
+              "decisions": [],
+              "former_role": "Chief Geneticist",
+              "id": "npc_kora_vance",
+              "name": "Dr. Kora Vance",
+              "symbol_alignment": "The Unaligned Compass"
+            }
+          },
+          "name": "Dr. Kora Vance",
+          "stats": {
+            "agency": 80,
+            "biological_vitality": 60,
+            "clarity": 85,
+            "dissonance": 30,
+            "max_agency": 100,
+            "neural_strain": 15
+          },
+          "status": "alive",
+          "traits": [
+            "trait_genomic_custodian"
+          ]
+        },
+        "id": "npc_kora_vance",
+        "revision": 0,
+        "schema_version": 1
+      }
+    },
+    "characters/npc_mira_purifier": {
+      "before": null,
+      "after": {
+        "data": {
+          "baseline": {
+            "modifiers": {},
+            "stats": {
+              "agency": 90,
+              "biological_vitality": 95,
+              "clarity": 75,
+              "dissonance": 20,
+              "max_agency": 100,
+              "neural_strain": 0
+            }
+          },
+          "capabilities": {
+            "cannot_die": false
+          },
+          "equipment": [],
+          "health": 95,
+          "inventory": [
+            "item_emp_lance",
+            "item_lead_lined_trenchcoat"
+          ],
+          "location_id": "loc_ashen_cradle",
+          "metadata": {
+            "legacy": {
+              "archetype": "The Flame Purifier",
+              "coordinate": {
+                "col": 2,
+                "row": 5
+              },
+              "current_location": "loc_ashen_cradle",
+              "current_status": "Vigilant Guard of the Ashen Pyres",
+              "decisions": [],
+              "former_role": "Gene-Purity Inquisitor",
+              "id": "npc_mira_purifier",
+              "name": "Mira",
+              "symbol_alignment": "The Cleansing Flame"
+            }
+          },
+          "name": "Mira",
+          "stats": {
+            "agency": 90,
+            "biological_vitality": 95,
+            "clarity": 75,
+            "dissonance": 20,
+            "max_agency": 100,
+            "neural_strain": 0
+          },
+          "status": "alive",
+          "traits": [
+            "trait_purifier_fervor"
+          ]
+        },
+        "id": "npc_mira_purifier",
+        "revision": 0,
+        "schema_version": 1
+      }
+    },
+    "characters/npc_silas_severed": {
+      "before": null,
+      "after": {
+        "data": {
+          "baseline": {
+            "modifiers": {},
+            "stats": {
+              "agency": 65,
+              "biological_vitality": 65,
+              "clarity": 60,
+              "dissonance": 55,
+              "max_agency": 100,
+              "neural_strain": 35
+            }
+          },
+          "capabilities": {
+            "cannot_die": false
+          },
+          "equipment": [],
+          "health": 65,
+          "inventory": [
+            "item_lead_lined_trenchcoat"
+          ],
+          "location_id": "loc_scrap_hollow",
+          "metadata": {
+            "legacy": {
+              "archetype": "The Severed Deserter",
+              "coordinate": {
+                "col": 3,
+                "row": 3
+              },
+              "current_location": "loc_scrap_hollow",
+              "current_status": "Haunted Wanderer among the Scrap Stalls",
+              "decisions": [],
+              "former_role": "Consensus Signal Scout",
+              "id": "npc_silas_severed",
+              "name": "Silas",
+              "symbol_alignment": "The Broken Pylon"
+            }
+          },
+          "name": "Silas",
+          "stats": {
+            "agency": 65,
+            "biological_vitality": 65,
+            "clarity": 60,
+            "dissonance": 55,
+            "max_agency": 100,
+            "neural_strain": 35
+          },
+          "status": "alive",
+          "traits": [
+            "trait_severed_phantom"
+          ]
+        },
+        "id": "npc_silas_severed",
+        "revision": 0,
+        "schema_version": 1
+      }
+    },
+    "characters/npc_valen_consensus": {
+      "before": null,
+      "after": {
+        "data": {
+          "baseline": {
+            "modifiers": {},
+            "stats": {
+              "agency": 30,
+              "biological_vitality": 70,
+              "clarity": 95,
+              "dissonance": 5,
+              "max_agency": 100,
+              "neural_strain": 60
+            }
+          },
+          "capabilities": {
+            "cannot_die": false
+          },
+          "equipment": [],
+          "health": 70,
+          "inventory": [
+            "item_harmonic_stunner",
+            "item_consensus_mesh_armor"
+          ],
+          "location_id": "loc_consensus_spire",
+          "metadata": {
+            "legacy": {
+              "archetype": "The Consensus Node",
+              "coordinate": {
+                "col": 4,
+                "row": 1
+              },
+              "current_location": "loc_consensus_spire",
+              "current_status": "Synchronized to Collective Relay",
+              "decisions": [],
+              "former_role": "Consensus Sub-Arbiter",
+              "id": "npc_valen_consensus",
+              "name": "Valen",
+              "symbol_alignment": "The Tethered Spark"
+            }
+          },
+          "name": "Valen",
+          "stats": {
+            "agency": 30,
+            "biological_vitality": 70,
+            "clarity": 95,
+            "dissonance": 5,
+            "max_agency": 100,
+            "neural_strain": 60
+          },
+          "status": "alive",
+          "traits": [
+            "trait_consensus_tether"
+          ]
+        },
+        "id": "npc_valen_consensus",
+        "revision": 0,
+        "schema_version": 1
+      }
+    },
+    "characters/player_elias": {
+      "before": null,
+      "after": {
+        "data": {
+          "baseline": {
+            "modifiers": {},
+            "stats": {
+              "agency": 85,
+              "biological_vitality": 80,
+              "clarity": 90,
+              "dissonance": 15,
+              "max_agency": 100,
+              "neural_strain": 10
+            }
+          },
+          "capabilities": {
+            "cannot_die": false
+          },
+          "equipment": [],
+          "health": 80,
+          "inventory": [
+            "item_scavenged_rail_pistol",
+            "item_unaligned_diagnostic_pad"
+          ],
+          "location_id": "loc_scrap_hollow",
+          "metadata": {
+            "legacy": {
+              "archetype": "The Unaligned Wanderer",
+              "coordinate": {
+                "col": 3,
+                "row": 3
+              },
+              "current_location": "loc_scrap_hollow",
+              "current_status": "Neutral Scavenger at Scrap Hollow Bazaar",
+              "decisions": [],
+              "former_role": "Scavenger Technician",
+              "id": "player_elias",
+              "name": "Elias",
+              "symbol_alignment": "The Unaligned Compass"
+            }
+          },
+          "name": "Elias",
+          "stats": {
+            "agency": 85,
+            "biological_vitality": 80,
+            "clarity": 90,
+            "dissonance": 15,
+            "max_agency": 100,
+            "neural_strain": 10
+          },
+          "status": "alive",
+          "traits": [
+            "trait_unaligned_observer"
+          ]
+        },
+        "id": "player_elias",
+        "revision": 0,
+        "schema_version": 1
+      }
+    },
+    "resources/energy_cells": {
+      "before": null,
+      "after": {
+        "data": {
+          "capacity": 2000,
+          "description": "Standardized electrochemical batteries harvested from downed combat machines and generators.",
+          "location_id": "loc_scrap_hollow",
+          "metadata": {
+            "category": "power_and_electronics"
+          },
+          "name": "energy_cells",
+          "quantity": 120,
+          "unit": "cells"
+        },
+        "id": "energy_cells",
+        "revision": 0,
+        "schema_version": 1
+      }
+    },
+    "resources/organic_rations": {
+      "before": null,
+      "after": {
+        "data": {
+          "capacity": 1000,
+          "description": "Purified non-irradiated nutrient paste and subterranean fungus loaves.",
+          "location_id": "loc_scrap_hollow",
+          "metadata": {
+            "category": "sustenance_and_survival"
+          },
+          "name": "organic_rations",
+          "quantity": 85,
+          "unit": "ration packs"
+        },
+        "id": "organic_rations",
+        "revision": 0,
+        "schema_version": 1
+      }
+    },
+    "resources/salvage_scrap": {
+      "before": null,
+      "after": {
+        "data": {
+          "capacity": 5000,
+          "description": "Refined structural metal and cybernetic chassis components recovered from the wasteland.",
+          "location_id": "loc_scrap_hollow",
+          "metadata": {
+            "category": "construction_and_fabrication"
+          },
+          "name": "salvage_scrap",
+          "quantity": 250,
+          "unit": "metric kg"
+        },
+        "id": "salvage_scrap",
+        "revision": 0,
+        "schema_version": 1
+      }
+    }
+  },
+  "event_id": "engine_baseline",
+  "expected_revisions": {
+    "baseline/legacy": null,
+    "clock": null,
+    "characters/npc_archon_synergist": null,
+    "characters/npc_kora_vance": null,
+    "characters/npc_mira_purifier": null,
+    "characters/npc_silas_severed": null,
+    "characters/npc_valen_consensus": null,
+    "characters/player_elias": null,
+    "resources/energy_cells": null,
+    "resources/organic_rations": null,
+    "resources/salvage_scrap": null
+  },
+  "status": "committed",
+  "version": 1
+}
