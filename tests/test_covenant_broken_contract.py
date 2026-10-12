@@ -187,6 +187,432 @@ class CovenantBrokenContractTests(unittest.TestCase):
             self.assertIn("description", item)
 
 
+    def test_covenant_broken_logic_derive_and_audit(self):
+        contract = WorldContract(Path(__file__).resolve().parents[1] / "world/covenant-broken", load_hooks=True)
+        from engine.contracts import RuleContext, StateView
+        import random
+
+        state = {
+            "characters": {
+                "player_elias": {
+                    "id": "player_elias",
+                    "revision": 0,
+                    "schema_version": 1,
+                    "data": {
+                        "name": "Elias Thorne",
+                        "location_id": "loc_scrap_hollow",
+                        "status": "alive",
+                        "health": 75,
+                        "stats": {
+                            "agency": 60,
+                            "clarity": 55,
+                            "dissonance": 20,
+                            "neural_strain": 15,
+                            "biological_vitality": 75,
+                        },
+                        "capabilities": {"cannot_die": False},
+                        "traits": ["trait_unaligned_observer"],
+                        "equipment": ["item_emp_lance"],
+                        "inventory": [],
+                        "baseline": {
+                            "stats": {
+                                "agency": 60,
+                                "clarity": 55,
+                                "dissonance": 20,
+                                "neural_strain": 15,
+                                "biological_vitality": 75,
+                            },
+                            "modifiers": {},
+                        },
+                        "metadata": {},
+                    },
+                }
+            },
+            "resources": {},
+            "threats": {},
+            "clock": {
+                "id": "clock",
+                "revision": 0,
+                "schema_version": 1,
+                "data": {"turn": 1, "day": 1, "display_timestamp": "Post-War Year 14, Dawn"},
+            },
+        }
+
+        ctx = RuleContext(StateView(state), contract.definition_view, random.Random(0), 1)
+        derived = contract.derive(ctx, "characters/player_elias")
+        self.assertIn("stats", derived)
+        self.assertIn("audit", derived)
+        audit = derived["audit"]
+        self.assertIn("static", audit)
+        self.assertIn("baseline_modifiers", audit)
+        self.assertIn("current_modifiers", audit)
+        self.assertIn("effective_values", audit)
+        self.assertIn("bounds_exceptions", audit)
+        # Check trait_unaligned_observer (+15 agency, +10 clarity, -10 dissonance) and item_emp_lance (+5 agency, +5 clarity)
+        # Total agency: 60 + 15 + 5 = 80
+        # Total clarity: 55 + 10 + 5 = 70
+        # Total dissonance: 20 - 10 = 10
+        self.assertEqual(derived["stats"]["agency"], 80)
+        self.assertEqual(derived["stats"]["clarity"], 70)
+        self.assertEqual(derived["stats"]["dissonance"], 10)
+        self.assertEqual(derived["health"], 75)
+        self.assertIn("punch_kinetic_impact", derived)
+
+    def test_covenant_broken_logic_validate(self):
+        contract = WorldContract(Path(__file__).resolve().parents[1] / "world/covenant-broken", load_hooks=True)
+        from engine.contracts import RuleContext, StateView
+        import random
+
+        # Valid state should produce no violations
+        valid_state = {
+            "characters": {
+                "player_elias": {
+                    "id": "player_elias",
+                    "revision": 0,
+                    "schema_version": 1,
+                    "data": {
+                        "name": "Elias Thorne",
+                        "location_id": "loc_scrap_hollow",
+                        "status": "alive",
+                        "health": 75,
+                        "stats": {
+                            "agency": 60,
+                            "clarity": 55,
+                            "dissonance": 20,
+                            "neural_strain": 15,
+                            "biological_vitality": 75,
+                        },
+                        "capabilities": {"cannot_die": False},
+                        "traits": ["trait_unaligned_observer"],
+                        "equipment": ["item_emp_lance"],
+                        "inventory": [],
+                        "baseline": {
+                            "stats": {
+                                "agency": 60,
+                                "clarity": 55,
+                                "dissonance": 20,
+                                "neural_strain": 15,
+                                "biological_vitality": 75,
+                            },
+                            "modifiers": {},
+                        },
+                        "metadata": {},
+                    },
+                }
+            },
+            "resources": {},
+            "threats": {},
+            "clock": {
+                "id": "clock",
+                "revision": 0,
+                "schema_version": 1,
+                "data": {"turn": 1, "day": 1, "display_timestamp": "Post-War Year 14, Dawn"},
+            },
+        }
+        ctx_valid = RuleContext(StateView(valid_state), contract.definition_view, random.Random(0), 1)
+        violations = contract.validate(ctx_valid)
+        self.assertEqual(violations, [])
+
+        # Invalid state with dead character with health > 0 and invalid location
+        invalid_state = {
+            "characters": {
+                "player_elias": {
+                    "id": "player_elias",
+                    "revision": 0,
+                    "schema_version": 1,
+                    "data": {
+                        "name": "Elias Thorne",
+                        "location_id": "loc_nonexistent",
+                        "status": "dead",
+                        "health": 75,
+                        "stats": {
+                            "agency": 60,
+                            "clarity": 55,
+                            "dissonance": 20,
+                            "neural_strain": 15,
+                            "biological_vitality": 75,
+                        },
+                        "capabilities": {"cannot_die": False},
+                        "traits": ["unknown_trait"],
+                        "equipment": [],
+                        "inventory": [],
+                        "baseline": {
+                            "stats": {
+                                "agency": 60,
+                                "clarity": 55,
+                                "dissonance": 20,
+                                "neural_strain": 15,
+                                "biological_vitality": 75,
+                            },
+                            "modifiers": {},
+                        },
+                        "metadata": {},
+                    },
+                }
+            },
+            "resources": {},
+            "threats": {},
+            "clock": {
+                "id": "clock",
+                "revision": 0,
+                "schema_version": 1,
+                "data": {"turn": 1, "day": 1, "display_timestamp": "Post-War Year 14, Dawn"},
+            },
+        }
+        ctx_invalid = RuleContext(StateView(invalid_state), contract.definition_view, random.Random(0), 1)
+        violations = contract.validate(ctx_invalid)
+        self.assertTrue(len(violations) > 0)
+        codes = {v.get("code") for v in violations}
+        self.assertIn("mortality", codes)
+        self.assertIn("broken_character_reference", codes)
+
+    def test_covenant_broken_logic_resolve_move_and_dilemma(self):
+        contract = WorldContract(Path(__file__).resolve().parents[1] / "world/covenant-broken", load_hooks=True)
+        from engine.contracts import RuleContext, StateView
+        import random
+
+        state = {
+            "characters": {
+                "player_elias": {
+                    "id": "player_elias",
+                    "revision": 0,
+                    "schema_version": 1,
+                    "data": {
+                        "name": "Elias Thorne",
+                        "location_id": "loc_scrap_hollow",
+                        "status": "alive",
+                        "health": 75,
+                        "stats": {
+                            "agency": 60,
+                            "clarity": 55,
+                            "dissonance": 20,
+                            "neural_strain": 15,
+                            "biological_vitality": 75,
+                        },
+                        "capabilities": {"cannot_die": False},
+                        "traits": ["trait_unaligned_observer"],
+                        "equipment": ["item_emp_lance"],
+                        "inventory": [],
+                        "baseline": {
+                            "stats": {
+                                "agency": 60,
+                                "clarity": 55,
+                                "dissonance": 20,
+                                "neural_strain": 15,
+                                "biological_vitality": 75,
+                            },
+                            "modifiers": {},
+                        },
+                        "metadata": {},
+                    },
+                }
+            },
+            "resources": {},
+            "threats": {},
+            "clock": {
+                "id": "clock",
+                "revision": 0,
+                "schema_version": 1,
+                "data": {"turn": 1, "day": 1, "display_timestamp": "Post-War Year 14, Dawn"},
+            },
+        }
+        ctx = RuleContext(StateView(state), contract.definition_view, random.Random(0), 1)
+
+        # 1. Resolve move to connected location (loc_glass_crags is connected to loc_scrap_hollow)
+        move_event = {
+            "schema_version": 1,
+            "event_id": "event_move_01",
+            "world_id": "covenant-broken",
+            "expected_turn": 1,
+            "action": {
+                "type": "move",
+                "actor_id": "player_elias",
+                "location_id": "loc_glass_crags",
+            },
+        }
+        res = contract.resolve(ctx, move_event)
+        self.assertEqual(len(res.effects), 1)
+        self.assertEqual(res.effects[0]["op"], "set")
+        self.assertEqual(res.effects[0]["path"], "/location_id")
+        self.assertEqual(res.effects[0]["value"], "loc_glass_crags")
+
+        # 2. Resolve dilemma action: action_observe_unaligned_path
+        observe_event = {
+            "schema_version": 1,
+            "event_id": "event_observe_01",
+            "world_id": "covenant-broken",
+            "expected_turn": 1,
+            "action": {
+                "type": "action_observe_unaligned_path",
+                "actor_id": "player_elias",
+            },
+        }
+        res_observe = contract.resolve(ctx, observe_event)
+        self.assertTrue(len(res_observe.effects) > 0)
+        self.assertEqual(res_observe.outcomes.get("action_type"), "action_observe_unaligned_path")
+
+    def test_covenant_broken_logic_introduce_threat_and_after_turn(self):
+        contract = WorldContract(Path(__file__).resolve().parents[1] / "world/covenant-broken", load_hooks=True)
+        from engine.contracts import RuleContext, StateView
+        import random
+
+        state = {
+            "characters": {
+                "player_elias": {
+                    "id": "player_elias",
+                    "revision": 0,
+                    "schema_version": 1,
+                    "data": {
+                        "name": "Elias Thorne",
+                        "location_id": "loc_scrap_hollow",
+                        "status": "alive",
+                        "health": 75,
+                        "stats": {
+                            "agency": 60,
+                            "clarity": 55,
+                            "dissonance": 20,
+                            "neural_strain": 15,
+                            "biological_vitality": 75,
+                        },
+                        "capabilities": {"cannot_die": False},
+                        "traits": ["trait_unaligned_observer", "trait_chimera_graft"],
+                        "equipment": ["item_emp_lance"],
+                        "inventory": [],
+                        "baseline": {
+                            "stats": {
+                                "agency": 60,
+                                "clarity": 55,
+                                "dissonance": 20,
+                                "neural_strain": 15,
+                                "biological_vitality": 75,
+                            },
+                            "modifiers": {},
+                        },
+                        "metadata": {},
+                    },
+                }
+            },
+            "resources": {},
+            "threats": {},
+            "clock": {
+                "id": "clock",
+                "revision": 0,
+                "schema_version": 1,
+                "data": {"turn": 1, "day": 1, "display_timestamp": "Post-War Year 14, Dawn"},
+            },
+        }
+        ctx = RuleContext(StateView(state), contract.definition_view, random.Random(0), 1)
+
+        # introduce_threat event
+        threat_event = {
+            "schema_version": 1,
+            "event_id": "event_threat_01",
+            "world_id": "covenant-broken",
+            "expected_turn": 1,
+            "action": {
+                "type": "introduce_threat",
+                "template_id": "event_atmospheric_emp_squall",
+                "location_id": "loc_scrap_hollow",
+            },
+        }
+        res_threat = contract.resolve(ctx, threat_event)
+        self.assertEqual(len(res_threat.effects), 1)
+        self.assertEqual(res_threat.effects[0]["op"], "create")
+        self.assertEqual(res_threat.effects[0]["collection"], "threats")
+
+        # after_turn test: periodic decay/fallout with trait_chimera_graft
+        outcome = contract.after_turn(ctx, threat_event, res_threat)
+        self.assertTrue(len(outcome.effects) > 0)
+        self.assertIn("environmental_fallout", outcome.outcomes)
+
+    def test_covenant_broken_logic_resolve_trial(self):
+        contract = WorldContract(Path(__file__).resolve().parents[1] / "world/covenant-broken", load_hooks=True)
+        from engine.contracts import RuleContext, StateView
+        import random
+
+        state = {
+            "characters": {
+                "player_elias": {
+                    "id": "player_elias",
+                    "revision": 0,
+                    "schema_version": 1,
+                    "data": {
+                        "name": "Elias Thorne",
+                        "location_id": "loc_scrap_hollow",
+                        "status": "alive",
+                        "health": 75,
+                        "stats": {
+                            "agency": 60,
+                            "clarity": 55,
+                            "dissonance": 20,
+                            "neural_strain": 15,
+                            "biological_vitality": 75,
+                        },
+                        "capabilities": {"cannot_die": False},
+                        "traits": ["trait_unaligned_observer"],
+                        "equipment": ["item_emp_lance"],
+                        "inventory": [],
+                        "baseline": {
+                            "stats": {
+                                "agency": 60,
+                                "clarity": 55,
+                                "dissonance": 20,
+                                "neural_strain": 15,
+                                "biological_vitality": 75,
+                            },
+                            "modifiers": {},
+                        },
+                        "metadata": {},
+                    },
+                }
+            },
+            "resources": {},
+            "threats": {
+                "threat_emp_01": {
+                    "id": "threat_emp_01",
+                    "revision": 0,
+                    "schema_version": 1,
+                    "data": {
+                        "name": "EMP Containment",
+                        "location_id": "loc_scrap_hollow",
+                        "active": True,
+                        "activation_turn": 1,
+                        "tags": ["opportunity"],
+                        "stats": {"health": 0, "armor": 0, "retaliation": 0},
+                        "metadata": {"template_id": "event_emp_containment"},
+                    },
+                }
+            },
+            "clock": {
+                "id": "clock",
+                "revision": 0,
+                "schema_version": 1,
+                "data": {"turn": 1, "day": 1, "display_timestamp": "Post-War Year 14, Dawn"},
+            },
+        }
+        ctx = RuleContext(StateView(state), contract.definition_view, random.Random(0), 1)
+
+        trial_event = {
+            "schema_version": 1,
+            "event_id": "event_trial_01",
+            "world_id": "covenant-broken",
+            "expected_turn": 1,
+            "action": {
+                "type": "resolve_trial",
+                "actor_id": "player_elias",
+                "trial_id": "threat_emp_01",
+                "recipe_id": "recipe_emp_containment",
+            },
+        }
+        res = contract.resolve(ctx, trial_event)
+        self.assertEqual(len(res.effects), 1)
+        self.assertEqual(res.effects[0]["op"], "set")
+        self.assertEqual(res.effects[0]["path"], "/active")
+        self.assertEqual(res.effects[0]["value"], False)
+
+
 if __name__ == "__main__":
     unittest.main()
+
+
 
