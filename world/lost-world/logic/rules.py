@@ -39,10 +39,13 @@ def resolve(ctx, event):
         template = templates.get(action['template_id'])
         if source is None or template is None or action['location_id'] not in locations:
             raise RuleError('invalid_template', 'Configured GM template and valid location required')
-        if not template.get('location_id'):
-            raise RuleError('invalid_template', 'Template must author an authorized location_id')
-        if action['location_id'] != template['location_id']:
-            raise RuleError('invalid_location', 'Introduction location must match template location')
+        if 'location_id' in template:
+            if not template['location_id']:
+                raise RuleError('invalid_template', 'Template location_id must not be empty')
+            if action['location_id'] != template['location_id']:
+                raise RuleError('invalid_location', 'Introduction location must match template location')
+        elif not any(tag in ('hostile', 'cold') for tag in template.get('tags', [])):
+            raise RuleError('invalid_template', 'Peaceful template must author an authorized location_id')
         identity = event['event_id']
         data = {'name': source['name'], 'location_id': action['location_id'], 'active': True,
                 'activation_turn': ctx.turn + 1, 'tags': template['tags'], 'stats': template['stats'],

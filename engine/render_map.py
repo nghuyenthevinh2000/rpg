@@ -61,11 +61,12 @@ def render_map(world_dir, snapshot=None, *, committed_event=None):
                         continue
         else:
             # Validate provided receipt matches snapshot turn and after-images
-            r_turn = receipt.get('turn', {}).get('after')
-            if r_turn is not None and r_turn != current_turn:
+            r_turn = receipt.get('turn', {}).get('after') if isinstance(receipt.get('turn'), dict) else None
+            changes = receipt.get('changes')
+            if r_turn is None or r_turn != current_turn or not isinstance(changes, dict):
                 receipt = None
-            elif receipt.get('changes'):
-                for ref, img in receipt['changes'].items():
+            else:
+                for ref, img in changes.items():
                     if ref == 'clock':
                         if snapshot.get('clock') != img.get('after'):
                             receipt = None; break

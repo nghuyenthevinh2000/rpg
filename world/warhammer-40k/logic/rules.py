@@ -55,10 +55,13 @@ def resolve(ctx, event):
             raise RuleError('invalid_template', 'Configured GM template and valid location required')
         if _sanctuary(ctx) and any(tag in ('hostile', 'cold') for tag in template.get('tags', [])):
             raise RuleError('sanctuary', 'Current structural sanctuary prohibits hostile and cold GM introductions')
-        if not template.get('location_id'):
-            raise RuleError('invalid_template', 'Template must author an authorized location_id')
-        if action['location_id'] != template['location_id']:
-            raise RuleError('invalid_location', 'Introduction location must match template location')
+        if 'location_id' in template:
+            if not template['location_id']:
+                raise RuleError('invalid_template', 'Template location_id must not be empty')
+            if action['location_id'] != template['location_id']:
+                raise RuleError('invalid_location', 'Introduction location must match template location')
+        elif not any(tag in ('hostile', 'cold') for tag in template.get('tags', [])):
+            raise RuleError('invalid_template', 'Peaceful template must author an authorized location_id')
         data = {'name':source['name'], 'location_id':action['location_id'], 'active':True, 'activation_turn':ctx.turn+1,
                 'tags':template['tags'], 'stats':template['stats'], 'metadata':{'template_id':action['template_id'], 'narrative':source}}
         return RuleResult([{'op':'create','collection':'threats','entity_id':event['event_id'],'value':data}], {'threat_id':event['event_id']})

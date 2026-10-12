@@ -73,3 +73,12 @@ Resolved the 6 remaining review findings and coverage gaps:
    - Added `test_no_turn_action_does_not_advance_calendar` regression in `test_calendar.py` confirming non-advancing actions execute zero after-turn hooks and do not advance calendar clocks.
 
 Full test suite: 161 tests passed in 129.36s (0 errors, 0 failures). 104 authoritative hashes intact.
+
+## Post-Commit Follow-Up Fixes (2026-10-12)
+
+Resolved the 3 follow-up compliance findings:
+1. **Combat-template exception preserved**: In `rules.py` for both worlds, allowed location-less hostile and cold templates to be introduced when sanctuary is disabled, while maintaining strict `location_id` enforcement for peaceful/trial templates. Added regression test in `test_remaining_mechanics.py`.
+2. **Incomplete receipt rejection in renderer**: In `render_map.py`, required provided receipts to contain both a valid `turn.after` matching `current_turn` and a valid `changes` dictionary before rendering outcomes, omitting incomplete receipts that contain only `outcomes`. Added regression test in `test_remaining_mechanics.py`.
+3. **README attack participant example**: Updated the `attack` example in `README.md` to include `player_vane` alongside `npc_trooper_jax` in `participant_ids`, satisfying participant validation.
+
+Full test suite: 161 tests passed in 128.88s (0 errors, 0 failures). 104 authoritative hashes intact.

@@ -190,7 +190,7 @@ live save.
     "actor_id": "player_vane",
     "target_id": "threat_stalker",
     "weapon_id": "item_void_relic_blade",
-    "participant_ids": ["npc_trooper_jax"],
+    "participant_ids": ["player_vane", "npc_trooper_jax"],
     "group_id": "Garrison",
     "stance": "defensive_cover"
   }

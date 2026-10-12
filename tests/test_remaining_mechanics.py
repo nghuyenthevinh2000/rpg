@@ -152,6 +152,14 @@ class RemainingMechanicsIntegrationTests(TemporaryWorldCase):
         self.assertIn('Last Event Outcomes', list_html)
         self.assertIn('crystalline_spring_water', list_html)
 
+        # 7. Incomplete receipt (outcomes only, no turn or changes) is omitted
+        incomplete_receipt = {
+            'outcomes': {'trial_id': 'incomplete_trial', 'resolved_by': 'player_vane'}
+        }
+        render_map(world, committed_event=incomplete_receipt, snapshot=latest_snap)
+        incomplete_html = (world / 'map.html').read_text()
+        self.assertNotIn('incomplete_trial', incomplete_html)
+
     def test_composed_peaceful_production_project_trial_calendar_flow(self):
         world = self.make_world('lost-world')
         # Setup small project & trial flow
@@ -394,6 +402,27 @@ class RemainingMechanicsIntegrationTests(TemporaryWorldCase):
             run_event(w, self.event(w, {
                 'type': 'restore_life', 'actor_id': 'player_vane', 'target_id': 'npc_trooper_jax'
             }, 'ev_rest_again'), render=False)
+
+        # 5. Combat-template regression: location-less hostile template introduction succeeds in combat-enabled world
+        gm_pre = json.loads((w / 'definitions/gm-pre-sanctuary.json').read_text())
+        (w / 'game_master.json').write_text(json.dumps(gm_pre))
+        self.edit_rules(w, lambda rules: rules['templates'].update({
+            'event_sump_mutant_breach': {
+                'tags': ['hostile'],
+                'stats': {'health': 120, 'armor': 0.2, 'retaliation': 25}
+                # No location_id authored in template
+            }
+        }))
+        intro_hostile = self.event(w, {
+            'type': 'introduce_threat',
+            'template_id': 'event_sump_mutant_breach',
+            'location_id': 'loc_shrine_aquila'
+        }, 'ev_intro_hostile')
+        intro_rep = run_event(w, intro_hostile, render=False)
+        self.assertEqual('ev_intro_hostile', intro_rep['outcomes']['threat_id'])
+        s_hostile = read_snapshot(w)
+        self.assertTrue(s_hostile['threats']['ev_intro_hostile']['data']['active'])
+        self.assertEqual('loc_shrine_aquila', s_hostile['threats']['ev_intro_hostile']['data']['location_id'])
 
     def test_archived_effects_replay_and_interrupted_recovery(self):
         world = self.make_world('lost-world')
