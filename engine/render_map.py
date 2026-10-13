@@ -9,6 +9,7 @@ import tempfile
 from engine.contracts import RuleContext, RuleError, StateView, WorldContract
 from engine.state_store import StateStore
 from .world_utils import require_canonical
+from .map_view import atlas_html
 
 
 def _fingerprint(snapshot):
@@ -78,13 +79,9 @@ def render_map(world_dir, snapshot=None, *, committed_event=None):
 
         view = StateView(snapshot)
         ctx = RuleContext(view, contract.definition_view, random.Random(0), current_turn)
-        lore = contract.definitions['world']; locations = lore['locations']
         text = lambda value: escape(str(value), quote=True)
 
-        parts = ['<!doctype html><html><head><meta charset="utf-8"><title>'+text(lore['name'])+'</title>',
-                 '<style>body{font:16px system-ui;margin:2em;background:#101820;color:#eee}table{border-collapse:collapse}td{border:1px solid #678;padding:1em;vertical-align:top}small{display:block}li{margin:.6em}</style></head><body>',
-                 '<h1>'+text(lore['name'])+'</h1><p>Turn '+text(clock['turn'])+' · Day '+text(clock['day'])+' · '+text(clock['display_timestamp'])+'</p>',
-                 '<p>'+text(lore.get('theme', ''))+'</p>']
+        parts = []
 
         # Render Last Event Outcomes if a valid committed receipt is found
         if receipt is not None:
@@ -93,7 +90,7 @@ def render_map(world_dir, snapshot=None, *, committed_event=None):
             narrative = event_obj.get('narrative') or receipt.get('narrative', '')
             parts.append('<h2>Last Event Outcomes</h2><div class="outcomes">')
             if narrative:
-                parts.append('<p><strong>Narrative:</strong> '+text(narrative)+'</p>')
+                parts.append('<details><summary>Read the chronicle</summary><p>'+text(narrative)+'</p></details>')
             if 'damage_dealt' in outcomes:
                 rem_hp = outcomes.get('remaining_health', 0)
                 parts.append(f'<p>Damage Dealt: {text(outcomes["damage_dealt"])} · Remaining Threat Health: {text(rem_hp)}</p>')
@@ -112,7 +109,7 @@ def render_map(world_dir, snapshot=None, *, committed_event=None):
                 parts.append(f'<p>Trial Resolved: {text(outcomes["trial_id"])} by {text(outcomes.get("resolved_by", ""))}</p>')
             if 'project_action' in outcomes:
                 parts.append(f'<p>Project Action: {text(outcomes["project_action"])} · Project: {text(outcomes.get("project_id", ""))}</p>')
-            if 'resources' in outcomes:
+            if outcomes.get('resources'):
                 parts.append(f'<p>Resource Outcomes: {text(json.dumps(outcomes["resources"], sort_keys=True))}</p>')
             # Other outcome keys
             handled = {'damage_dealt', 'remaining_health', 'retaliations', 'retaliation_raw',
@@ -121,47 +118,11 @@ def render_map(world_dir, snapshot=None, *, committed_event=None):
                        'recipe_id', 'restored_health', 'trial_id', 'resolved_by',
                        'project_action', 'project_id', 'resources'}
             for k, v in sorted(outcomes.items()):
-                if k not in handled:
+                if k not in handled and v not in ([], {}):
                     parts.append(f'<p>{text(k)}: {text(str(v))}</p>')
             parts.append('</div>')
 
-        parts.append('<table>')
-        cells = {}
-        for location in locations:
-            coord = location['coordinate']; key = (coord['row'], coord['col'])
-            cells.setdefault(key, []).append(location)
-        grid = lore.get('grid', {})
-        for row in range(grid.get('rows', max((k[0] for k in cells), default=0)+1)):
-            parts.append('<tr>')
-            for col in range(grid.get('cols', max((k[1] for k in cells), default=0)+1)):
-                parts.append('<td>')
-                for location in cells.get((row,col), []):
-                    parts.append('<strong>'+text(location['name'])+'</strong><small>'+text(location.get('description',''))+'</small>')
-                    for character in view.list('characters'):
-                        if character['data']['location_id'] == location['id']:
-                            marker = '★ ' if character['id'] == contract.config['player_character_id'] else ''
-                            parts.append('<p>'+marker+text(character['data']['name'])+' · '+text(character['data']['status'])+'</p>')
-                parts.append('</td>')
-            parts.append('</tr>')
-        parts.append('</table>')
-
-        sanctuary = contract.definitions['rules'].get('sanctuary', False) or contract.definitions['world'].get('structural_rules', {}).get('transcendent_sanctuary', False)
-
-        for collection in contract.collections:
-            entities = view.list(collection)
-            if not entities or collection == 'baseline':
-                continue
-            section_title = 'Trials and Opportunities' if collection == 'threats' and sanctuary else collection.replace('_',' ').title()
-            parts.append('<h2>'+text(section_title)+'</h2><ul>')
-            for entity in entities:
-                data = entity['data']
-                projection = contract.derive(ctx, collection+'/'+entity['id']) if collection == 'characters' else {k:v for k,v in data.items() if k != 'metadata'}
-                extra = ''
-                if collection == 'actions' and data.get('kind') == 'project':
-                    extra = f"<p>Progress: {text(data.get('hours_committed', 0))} / {text(contract.definitions['rules'].get('project_templates', {}).get(data.get('template_id'), {}).get('hours_required', '?'))} hours · Status: {text(data.get('status', 'active')).title()}</p>"
-                parts.append('<li><strong>'+text(data.get('name',entity['id']))+'</strong>'+extra+'<pre>'+text(json.dumps(projection,ensure_ascii=False,sort_keys=True))+'</pre></li>')
-            parts.append('</ul>')
-        parts.append('</body></html>'); html = ''.join(parts)
+        html = atlas_html(contract, ctx, view, snapshot, ''.join(parts))
 
         target = world / 'map.html'
         if target.is_symlink():
